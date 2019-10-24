@@ -5,10 +5,10 @@ import FilterPanel from "./components/FilterPanel/FilterPanel";
 function App() {
   return (
     <div className="App" style={{display: 'flex'}}>
-      <div style = {{'flexGrow': 1}}>
+      <div className='filter-panel'>
         <FilterPanel></FilterPanel>
       </div>
-      <div style = {{'flexGrow': 4}}>
+      <div className="chart-panel">
         <header className="App-header">
             Digital Equity
             <p>Brewing...</p>

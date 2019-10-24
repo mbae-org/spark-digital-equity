@@ -20,3 +20,13 @@
 .App-link {
   color: #09d3ac;
 }
+
+.filter-panel {
+  width: 25%;
+  min-width: 250px;
+}
+
+.chart-panel {
+  width: 75%;
+  min-width: 750px;
+}

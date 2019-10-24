@@ -4,7 +4,7 @@ import SchoolDistrictFilter from "../SchoolDistrictFilter/SchoolDistrictFilter";
 
 function FilterPanel() {
   return (
-    <div className="filter-panel">
+    <div>
         <div style={{display: 'flex', flexDirection:"column"}}>
             <div><SchoolDistrictFilter></SchoolDistrictFilter></div>
             <div>Filter 2</div>
