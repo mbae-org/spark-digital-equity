@@ -8,5 +8,8 @@ Express js
 ## Database
 Postgres SQL
 
+## Hosting
+AWS
+
 ## Author
 Shubham Arora
