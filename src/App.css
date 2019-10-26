@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  min-width: 800px;
 }
 
 .App-logo {
@@ -23,10 +24,18 @@
 
 .filter-panel {
   width: 25%;
-  min-width: 250px;
+  margin: 5px;
+  padding: 5px;
 }
 
 .chart-panel {
   width: 75%;
-  min-width: 750px;
+  /* margin: 5px;
+  padding: 5px; */
+}
+
+.filter-container > div {
+  border-style: groove;
+  border-width: thin;
+  padding: 5px;
 }

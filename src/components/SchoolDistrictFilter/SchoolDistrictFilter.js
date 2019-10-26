@@ -12,11 +12,16 @@ const options = [
 
 function SchoolDistrictFilter() {
     return (
-        <div>
-            <Select
-                options={options}
-                isMulti
-            />
+        <div style={{ display: 'flex', 'flex-direction': 'column' }}>
+            <div style={{ padding: '10px' }}>
+                Select School / District
+                </div>
+            <div>
+                <Select
+                    options={options}
+                    isMulti
+                />
+            </div>
         </div>
     );
 }
