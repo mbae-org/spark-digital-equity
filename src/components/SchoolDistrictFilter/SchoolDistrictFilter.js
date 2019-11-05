@@ -1,13 +1,13 @@
 import React from 'react';
 import Select from 'react-select';
 
-const options = [
-    { value: 's1', label: 'School 1' },
-    { value: 's2', label: 'School 2' },
-    { value: 's3', label: 'School 3' },
-    { value: 'd1', label: 'District 1' },
-    { value: 'd2', label: 'District 2' }
-];
+// const options = [
+//     { value: 's1', label: 'School 1' },
+//     { value: 's2', label: 'School 2' },
+//     { value: 's3', label: 'School 3' },
+//     { value: 'd1', label: 'District 1' },
+//     { value: 'd2', label: 'District 2' }
+// ];
 
 function getSchools(schoolData) {
     let schools = new Set();
@@ -22,17 +22,18 @@ function createSchoolOptions(schoolSet) {
     let optionList = [];
     let i = 0;
     for (let schoolName of schoolSet) {
-        console.log(schoolName);
-
         optionList = optionList.concat({
             value: i,
             label: schoolName
         });
         i++;
     }
-    console.log(optionList);
     return optionList;
 }
+
+// function handleOptionsChange(selectedOptions) {
+//     console.log(selectedOptions);
+// }
 
 
 function SchoolDistrictFilter(props) {
@@ -54,6 +55,7 @@ function SchoolDistrictFilter(props) {
                 <Select
                     options={schoolOptions}
                     isMulti
+                    onChange={(selectedOptions) => props.onOptionsChange(selectedOptions)}
                 />
             </div>
         </div>
