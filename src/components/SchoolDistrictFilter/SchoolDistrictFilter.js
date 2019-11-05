@@ -7,18 +7,52 @@ const options = [
     { value: 's3', label: 'School 3' },
     { value: 'd1', label: 'District 1' },
     { value: 'd2', label: 'District 2' }
-]
+];
+
+function getSchools(schoolData) {
+    let schools = new Set();
+    for (let schoolRow of schoolData) {
+        schools.add(schoolRow['SCH_NAME']);
+    }
+
+    return schools;
+}
+
+function createSchoolOptions(schoolSet) {
+    let optionList = [];
+    let i = 0;
+    for (let schoolName of schoolSet) {
+        console.log(schoolName);
+
+        optionList = optionList.concat({
+            value: i,
+            label: schoolName
+        });
+        i++;
+    }
+    console.log(optionList);
+    return optionList;
+}
 
 
-function SchoolDistrictFilter() {
+function SchoolDistrictFilter(props) {
+
+    // console.log('recieved school data' + props.data);
+    // console.log(this.props.data);
+    const schools = getSchools(props.data);
+    const schoolOptions = createSchoolOptions(schools);
+
+    // console.log(schools);
+
+
     return (
-        <div style={{ display: 'flex', 'flex-direction': 'column' }}>
+        <div style={{ display: 'flex', 'flexDirection': 'column' }}>
             <div style={{ padding: '10px' }}>
-                Select School / District
+                Select School / District to compare
                 </div>
             <div>
                 <Select
-                    options={options}
+                    options={schoolOptions}
                     isMulti
                 />
             </div>
