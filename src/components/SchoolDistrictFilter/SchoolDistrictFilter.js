@@ -12,7 +12,8 @@ import Select from 'react-select';
 function getSchools(schoolData) {
     let schools = new Set();
     for (let schoolRow of schoolData) {
-        schools.add(schoolRow['SCH_NAME']);
+        if (parseInt(schoolRow['FEMALE']) && parseInt(schoolRow['MALE']))
+            schools.add(schoolRow['SCH_NAME']);
     }
 
     return schools;
