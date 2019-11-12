@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import FilterPanel from "./components/FilterPanel/FilterPanel";
 import ChartPanel from "./components/ChartPanel/ChartPanel";
+// import EthnicityChart from "./components/ChartPanel/EthnicityChart";
 import schoolData from "./data/data-2016";
 // const data2 = '../2016.json';
 // console.log(schoolData);
@@ -54,6 +55,9 @@ class App extends React.Component {
           <ChartPanel options={this.state.schoolOptions}
             schoolData={schoolData}
           ></ChartPanel>
+          {/* <EthnicityChart options={this.state.schoolOptions}
+            schoolData={schoolData}
+          ></EthnicityChart> */}
         </div>
 
       </div >
