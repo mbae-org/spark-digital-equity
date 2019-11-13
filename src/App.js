@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import FilterPanel from "./components/FilterPanel/FilterPanel";
-import ChartPanel from "./components/ChartPanel/ChartPanel";
+import GenderChart from "./components/ChartPanel/GenderChart";
 // import EthnicityChart from "./components/ChartPanel/EthnicityChart";
 import schoolData from "./data/data-2016";
 // const data2 = '../2016.json';
@@ -52,9 +52,9 @@ class App extends React.Component {
           {/* <header className="App-header"> */}
           Digital Equity <p>Brewing...</p>
           {/* </header> */}
-          <ChartPanel options={this.state.schoolOptions}
+          <GenderChart options={this.state.schoolOptions}
             schoolData={schoolData}
-          ></ChartPanel>
+          ></GenderChart>
           {/* <EthnicityChart options={this.state.schoolOptions}
             schoolData={schoolData}
           ></EthnicityChart> */}
