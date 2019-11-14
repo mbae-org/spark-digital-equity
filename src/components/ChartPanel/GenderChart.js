@@ -1,11 +1,5 @@
-import React from 'react';
-import {
-    PieChart, Pie, Tooltip, ResponsiveContainer
-} from 'recharts';
-
-// const data = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }, { name: 'Page B', uv: 400, pv: 2400, amt: 2400 }];
-// const data2 = '../../../2016.json';
-// console.log(data2);
+import React from "react";
+import { ResponsivePie } from "nivo";
 
 /**
  * return array: x->schoolName, male, female
@@ -14,53 +8,102 @@ function getGenderForSchool(allData, options) {
     let chartData = [];
     for (let schoolName of options) {
         for (let schoolRow of allData) {
-            if (schoolRow['SCH_NAME'] === schoolName.label) {
+            if (schoolRow["SCH_NAME"] === schoolName.label) {
                 chartData = chartData.concat({
-                    name: schoolRow['SCH_NAME'],
-                    female: parseInt(schoolRow['FEMALE']),
-                    male: parseInt(schoolRow['MALE'])
+                    name: schoolRow["SCH_NAME"],
+                    female: parseInt(schoolRow["FEMALE"]),
+                    male: parseInt(schoolRow["MALE"])
                 });
             }
         }
-
     }
     // console.log(chartData);
     return chartData;
 }
 
 function GenderChart(props) {
-    console.log(props);
+    // console.log(props);
     const chartData = getGenderForSchool(props.schoolData, props.options);
-    console.log("chart data: ")
-    console.log(chartData);
+    // console.log("chart data: ");
+    // console.log(chartData);
 
     let genderDataBySchool = {};
-    chartData.forEach(function (row) {
-        genderDataBySchool[row.name] = [{ name: 'male', value: row.male }, { name: 'female', value: row.female }];
+    chartData.forEach(function(row) {
+        genderDataBySchool[row.name] = [
+            { id: "male", value: row.male },
+            { id: "female", value: row.female }
+        ];
     });
-    console.log(genderDataBySchool);
+    // console.log("by school: ");
+    // console.log(genderDataBySchool);
     let pieCharts = [];
     for (let schoolName in genderDataBySchool) {
-        let schoolData = genderDataBySchool[schoolName];
+        const schoolData = genderDataBySchool[schoolName];
+        // console.log("schoolData");
+        // console.log(schoolData);
+        // let chartMargin = {
+
+        // }
         pieCharts.push(
-            <div>
-                <ResponsiveContainer width='100%' height={200}>
-                    <PieChart
-                    >
-                        <Pie data={schoolData} dataKey="value" nameKey="name" cx='50%' cy='50%' outerRadius={100} fill="#8884d8" label key={schoolName} />
-                        <Tooltip />
-                    </PieChart>
-                </ResponsiveContainer>
+            <div
+                key={schoolName}
+                style={{
+                    height: "300px",
+                    width: "25%",
+                    flexGrow: "1",
+                    display: "flex",
+                    flexDirection: "column"
+                }}
+            >
+                <div style={{ height: "90%", flexGrow: "1" }}>
+                    <ResponsivePie
+                        // id={schoolName}
+                        isInteractive={false}
+                        data={schoolData}
+                        // margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+                        sliceLabel={function(e) {
+                            return e.id + " (" + e.value + ")";
+                        }}
+                        enableRadialLabels={false}
+                        legends={[
+                            {
+                                anchor: "bottom",
+                                direction: "row",
+                                translateY: 56,
+                                itemWidth: 100,
+                                itemHeight: 18,
+                                itemTextColor: "#999",
+                                symbolSize: 18,
+                                symbolShape: "circle",
+                                effects: [
+                                    {
+                                        on: "hover",
+                                        style: {
+                                            itemTextColor: "#000"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]}
+                    />
+                </div>
+                <div style={{ flexGrow: "1" }}>{schoolName}</div>
             </div>
         );
     }
-    console.log(pieCharts);
-
+    // console.log(pieCharts);
 
     return (
-        <div style={{ display: 'flex', flexDirection: "row" }} >
+        <div
+            style={{
+                display: "flex",
+                flexDirection: "row",
+                height: "100%",
+                width: "100%"
+            }}
+        >
             {pieCharts}
-        </div >
+        </div>
     );
 }
 
