@@ -22,6 +22,7 @@ function getGenderForSchool(allData, options) {
 }
 
 function GenderChart(props) {
+    // console.log("props");
     // console.log(props);
     const chartData = getGenderForSchool(props.schoolData, props.options);
     // console.log("chart data: ");
@@ -91,6 +92,14 @@ function GenderChart(props) {
             </div>
         );
     }
+
+    if (pieCharts && pieCharts.length > 0) {
+        // console.log("this is pie");
+        // console.log(pieCharts);
+        const heading = [];
+        heading.push(<h3>Gender</h3>);
+        pieCharts = heading.concat(pieCharts);
+    }
     // console.log(pieCharts);
 
     return (
@@ -98,7 +107,7 @@ function GenderChart(props) {
             style={{
                 display: "flex",
                 flexDirection: "row",
-                height: "100%",
+                height: "50%",
                 width: "100%"
             }}
         >
