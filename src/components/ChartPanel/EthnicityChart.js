@@ -1,5 +1,5 @@
 import React from "react";
-import { ResponsivePie } from "nivo";
+import { ResponsivePie } from "@nivo/pie";
 
 function EthnicityChart(props) {
     const chartData = getGroupedEthnicData(
@@ -23,37 +23,6 @@ function EthnicityChart(props) {
     );
 }
 
-const ethnicityAcronyms = [
-    {
-        id: "AA",
-        desc: "African American"
-    },
-    {
-        id: "AS",
-        desc: "Asian"
-    },
-    {
-        id: "HI",
-        desc: "Hispanic"
-    },
-    {
-        id: "MR",
-        desc: "Multiracial"
-    },
-    {
-        id: "NA",
-        desc: "NA"
-    },
-    {
-        id: "NH_PI",
-        desc: "Native Hawaiian and Pacific Islander"
-    },
-    {
-        id: "WH",
-        desc: "White"
-    }
-];
-
 /**
  * return array->[schoolName, array[schoolData]]
  * ignoring zero values
@@ -62,16 +31,29 @@ function getGroupedEthnicData(allData, options, ethnicityAcronymList) {
     let chartData = [];
     options.forEach(schoolName => {
         const schoolObj = allData[schoolName];
+
         let thisSchoolData = {};
         let schoolDataArray = [];
         ethnicityAcronymList.forEach(ethnicityObj => {
-            // if (schoolObj[ethnicityObj.id] > 0) {
             schoolDataArray.push({
                 id: ethnicityObj.id,
-                value: schoolObj[ethnicityObj.id]
+                value: parseInt(schoolObj[ethnicityObj.id]),
+                label: ethnicityObj.desc,
+                chartColor: ethnicityObj.chartColor
             });
-            // }
         });
+
+        // get percentage calculation out of total students that we consider
+        let totalStudents = 0;
+        schoolDataArray.forEach(element => (totalStudents += element.value));
+        schoolDataArray.forEach(
+            element =>
+                (element.percentage = (
+                    (element.value / totalStudents) *
+                    100
+                ).toFixed(2))
+        );
+
         thisSchoolData.schoolName = schoolName;
         thisSchoolData.dataArray = schoolDataArray;
         chartData.push(thisSchoolData);
@@ -83,6 +65,9 @@ function getGroupedEthnicData(allData, options, ethnicityAcronymList) {
 function createPieCharts(chartData) {
     let pieCharts = [];
     chartData.forEach(row => {
+        // console.log("row data arrray");
+        // console.log(row.dataArray);
+
         pieCharts.push(
             <div
                 key={row.schoolName}
@@ -97,33 +82,25 @@ function createPieCharts(chartData) {
             >
                 <div style={{ height: "90%", flexGrow: "1" }}>
                     <ResponsivePie
-                        id={row.schoolName}
-                        // isInteractive={false}
+                        key={row.schoolName}
                         data={row.dataArray}
                         // margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
-                        // sliceLabel={function(e) {
-                        //     return e.id + " (" + e.value + ")";
-                        // }}
+                        colors={d => d.chartColor}
                         sortByValue={true}
                         enableRadialLabels={false}
+                        enableSlicesLabels={false}
+                        tooltip={data => {
+                            return getTooltipHTML(data);
+                        }}
                         legends={[
                             {
                                 anchor: "bottom",
                                 direction: "row",
-                                translateY: 56,
                                 itemWidth: 100,
-                                itemHeight: 18,
-                                itemTextColor: "#999",
-                                symbolSize: 18,
-                                symbolShape: "circle",
-                                effects: [
-                                    {
-                                        on: "hover",
-                                        style: {
-                                            itemTextColor: "#1243"
-                                        }
-                                    }
-                                ]
+                                itemHeight: 10,
+                                translateY: 20
+                                // symbolSize: 18,
+                                // symbolShape: "circle"
                             }
                         ]}
                     />
@@ -137,7 +114,7 @@ function createPieCharts(chartData) {
         // console.log("this is pie");
         // console.log(pieCharts);
         const heading = [];
-        heading.push(<h3>Ethnicity</h3>);
+        heading.push(<h3 key="ethnicityHeading">Ethnicity</h3>);
         pieCharts = heading.concat(pieCharts);
     }
 
@@ -145,3 +122,52 @@ function createPieCharts(chartData) {
 }
 
 export default EthnicityChart;
+
+const ethnicityAcronyms = [
+    {
+        id: "AA",
+        desc: "African American",
+        chartColor: "#f6d18a"
+    },
+    {
+        id: "AS",
+        desc: "Asian",
+        chartColor: "blue"
+    },
+    {
+        id: "HI",
+        desc: "Hispanic",
+        chartColor: "green"
+    },
+    {
+        id: "MR",
+        desc: "Multiracial",
+        chartColor: "yellow"
+    },
+    {
+        id: "NA",
+        desc: "NA",
+        chartColor: "pink"
+    },
+    {
+        id: "NH_PI",
+        desc: "Native Hawaiian and Pacific Islander",
+        chartColor: "red"
+    },
+    {
+        id: "WH",
+        desc: "White",
+        chartColor: "brown"
+    }
+];
+
+function getTooltipHTML(data) {
+    return (
+        <div style={{ display: "flex", flexDirection: "column" }}>
+            <div>
+                {data.label}: {data.value}
+            </div>
+            <div>Percentage: {data.percentage}%</div>
+        </div>
+    );
+}

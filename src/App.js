@@ -64,6 +64,7 @@ class App extends React.Component {
                 <GenderChart
                     options={this.state.schoolOptions}
                     schoolData={schoolData}
+                    key="genderChart"
                 />
             );
         }
@@ -73,6 +74,7 @@ class App extends React.Component {
                 <EthnicityChart
                     options={this.state.newSchoolOptions}
                     schoolData={this.state.schoolData}
+                    key="ethnicityChart"
                 />
             );
         }

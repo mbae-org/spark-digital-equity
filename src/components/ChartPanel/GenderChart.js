@@ -1,5 +1,5 @@
 import React from "react";
-import { ResponsivePie } from "nivo";
+import { ResponsivePie } from "@nivo/pie";
 
 function GenderChart(props) {
     // console.log("props");
@@ -44,12 +44,12 @@ function getGenderForSchool(allData, options) {
                 const maleCount = parseInt(schoolRow["MALE"]);
                 const femaleCount = parseInt(schoolRow["FEMALE"]);
                 const malePercentage = (
-                    maleCount /
-                    (maleCount + femaleCount)
+                    (maleCount / (maleCount + femaleCount)) *
+                    100
                 ).toFixed(2);
                 const femalePercentage = (
-                    femaleCount /
-                    (maleCount + femaleCount)
+                    (femaleCount / (maleCount + femaleCount)) *
+                    100
                 ).toFixed(2);
                 chartData = chartData.concat({
                     name: schoolRow["SCH_NAME"],
@@ -81,23 +81,24 @@ function getPieCharts(schoolDataArray) {
                 id: "male",
                 value: row.male,
                 percentage: row.malePercentage,
-                color: "red"
+                color: "orange",
+                label: "Male"
             },
             {
                 id: "female",
                 value: row.female,
                 percentage: row.femalePercentage,
-                color: "blue"
+                color: "blue",
+                label: "Female"
             }
         ];
     });
+
     // console.log("by school: ");
     // console.log(genderDataBySchool);
     let pieCharts = [];
     for (let schoolName in genderDataBySchool) {
         const schoolData = genderDataBySchool[schoolName];
-        console.log("schoolData");
-        console.log(schoolData);
         // let chartMargin = {
 
         // }
@@ -106,27 +107,27 @@ function getPieCharts(schoolDataArray) {
                 <div style={{ height: "90%", flexGrow: "1" }}>
                     <ResponsivePie
                         key={schoolName}
-                        // isInteractive={true}
+                        colors={d => d.color}
+                        isInteractive={true}
                         data={schoolData}
-                        enableSliceLabels={false}
-                        // margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
-                        tooltip={data => {
-                            console.log("aka2 : " + data);
-                            // console.log("aka : " + id + value + color);
-                            return (
-                                <strong>
-                                    {data.id}: {data.value}
-                                </strong>
-                            );
-                        }}
-                        // theme={{
-                        //     tooltip: {
-                        //         container: {
-                        //             background: "#333"
-                        //         }
-                        //     }
-                        // }}
+                        sortByValue={true}
+                        enableSlicesLabels={false}
                         enableRadialLabels={false}
+                        margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+                        tooltip={data => {
+                            return getTooltipHTML(data);
+                        }}
+                        legends={[
+                            {
+                                anchor: "bottom",
+                                direction: "row",
+                                itemWidth: 100,
+                                itemHeight: 10,
+                                translateY: 20
+                                // symbolSize: 18,
+                                // symbolShape: "circle"
+                            }
+                        ]}
                     />
                 </div>
                 <div style={{ flexGrow: "1" }}>{schoolName}</div>
@@ -135,6 +136,17 @@ function getPieCharts(schoolDataArray) {
     }
 
     return pieCharts;
+}
+
+function getTooltipHTML(data) {
+    return (
+        <div style={{ display: "flex", flexDirection: "column" }}>
+            <div>
+                {data.label}: {data.value}
+            </div>
+            <div>Percentage: {data.percentage}%</div>
+        </div>
+    );
 }
 
 export default GenderChart;
