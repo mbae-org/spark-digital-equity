@@ -1,41 +1,44 @@
 .App {
-  text-align: center;
-  min-width: 800px;
+    text-align: center;
+    min-width: 800px;
+    /* background-color: #282c34;
+    color: white; */
+    height: 100vh;
 }
 
 .App-logo {
-  height: 40vmin;
+    height: 40vmin;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #09d3ac;
+    color: #09d3ac;
 }
 
 .filter-panel {
-  width: 30%;
-  margin: 5px;
-  padding: 5px;
+    width: 30%;
+    margin: 5px;
+    padding: 5px;
 }
 
 .chart-panel {
-  width: 70%;
-  /* margin: 5px;
-  padding: 5px; */
+    width: 70%;
+    margin: 5px;
+    padding: 5px;
 }
 
 .filter-container > div {
-  border-style: groove;
-  border-width: thin;
-  padding: 5px;
+    border-style: groove;
+    border-width: thin;
+    padding: 5px;
 }

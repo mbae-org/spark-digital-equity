@@ -1,5 +1,5 @@
-import React from 'react';
-import Select from 'react-select';
+import React from "react";
+import Select from "react-select";
 
 // const options = [
 //     { value: 's1', label: 'School 1' },
@@ -12,8 +12,8 @@ import Select from 'react-select';
 function getSchools(schoolData) {
     let schools = new Set();
     for (let schoolRow of schoolData) {
-        if (parseInt(schoolRow['FEMALE']) && parseInt(schoolRow['MALE']))
-            schools.add(schoolRow['SCH_NAME']);
+        if (parseInt(schoolRow["FEMALE"]) && parseInt(schoolRow["MALE"]))
+            schools.add(schoolRow["SCH_NAME"]);
     }
 
     return schools;
@@ -36,9 +36,7 @@ function createSchoolOptions(schoolSet) {
 //     console.log(selectedOptions);
 // }
 
-
 function SchoolDistrictFilter(props) {
-
     // console.log('recieved school data' + props.data);
     // console.log(this.props.data);
     const schools = getSchools(props.data);
@@ -46,17 +44,18 @@ function SchoolDistrictFilter(props) {
 
     // console.log(schools);
 
-
     return (
-        <div style={{ display: 'flex', 'flexDirection': 'column' }}>
-            <div style={{ padding: '10px' }}>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ padding: "10px" }}>
                 Select School / District to compare
-                </div>
-            <div>
+            </div>
+            <div style={{ color: "black" }}>
                 <Select
                     options={schoolOptions}
                     isMulti
-                    onChange={(selectedOptions) => props.onOptionsChange(selectedOptions)}
+                    onChange={selectedOptions =>
+                        props.onOptionsChange(selectedOptions)
+                    }
                 />
             </div>
         </div>

@@ -2,55 +2,19 @@ import React from "react";
 import { ResponsivePie } from "nivo";
 
 function EthnicityChart(props) {
-    const ethnicityAcronyms = [
-        {
-            id: "AA",
-            desc: "African American"
-        },
-        {
-            id: "AS",
-            desc: "Asian"
-        },
-        {
-            id: "HI",
-            desc: "Hispanic"
-        },
-        {
-            id: "MR",
-            desc: "Multiracial"
-        },
-        {
-            id: "NA",
-            desc: "NA"
-        },
-        {
-            id: "NH_PI",
-            desc: "Native Hawaiian and Pacific Islander"
-        },
-        {
-            id: "WH",
-            desc: "White"
-        }
-    ];
-
-    // console.log(props);
     const chartData = getGroupedEthnicData(
         props.schoolData,
         props.options,
         ethnicityAcronyms
     );
-    // console.log("chart data: ");
-    // console.log(chartData);
 
     const pieCharts = createPieCharts(chartData);
-    console.log("pieCharts");
-    console.log(pieCharts);
     return (
         <div
             style={{
                 display: "flex",
                 flexDirection: "row",
-                height: "100%",
+                height: "50%",
                 width: "100%"
             }}
         >
@@ -59,25 +23,54 @@ function EthnicityChart(props) {
     );
 }
 
+const ethnicityAcronyms = [
+    {
+        id: "AA",
+        desc: "African American"
+    },
+    {
+        id: "AS",
+        desc: "Asian"
+    },
+    {
+        id: "HI",
+        desc: "Hispanic"
+    },
+    {
+        id: "MR",
+        desc: "Multiracial"
+    },
+    {
+        id: "NA",
+        desc: "NA"
+    },
+    {
+        id: "NH_PI",
+        desc: "Native Hawaiian and Pacific Islander"
+    },
+    {
+        id: "WH",
+        desc: "White"
+    }
+];
+
 /**
  * return array->[schoolName, array[schoolData]]
  * ignoring zero values
  */
 function getGroupedEthnicData(allData, options, ethnicityAcronymList) {
-    // console.log("options");
-    // console.log(options);
     let chartData = [];
     options.forEach(schoolName => {
         const schoolObj = allData[schoolName];
         let thisSchoolData = {};
         let schoolDataArray = [];
         ethnicityAcronymList.forEach(ethnicityObj => {
-            if (schoolObj[ethnicityObj.id] > 0) {
-                schoolDataArray.push({
-                    id: ethnicityObj.id,
-                    value: schoolObj[ethnicityObj.id]
-                });
-            }
+            // if (schoolObj[ethnicityObj.id] > 0) {
+            schoolDataArray.push({
+                id: ethnicityObj.id,
+                value: schoolObj[ethnicityObj.id]
+            });
+            // }
         });
         thisSchoolData.schoolName = schoolName;
         thisSchoolData.dataArray = schoolDataArray;
@@ -108,10 +101,11 @@ function createPieCharts(chartData) {
                         // isInteractive={false}
                         data={row.dataArray}
                         // margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
-                        sliceLabel={function(e) {
-                            return e.id + " (" + e.value + ")";
-                        }}
-                        enableRadialLabels={true}
+                        // sliceLabel={function(e) {
+                        //     return e.id + " (" + e.value + ")";
+                        // }}
+                        sortByValue={true}
+                        enableRadialLabels={false}
                         legends={[
                             {
                                 anchor: "bottom",

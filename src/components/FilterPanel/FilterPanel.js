@@ -23,7 +23,12 @@ function FilterPanel(props) {
                     ></SchoolDistrictFilter>
                 </div>
                 <div>
-                    <PrimaryGraphsChoose />
+                    <PrimaryGraphsChoose
+                        selectedFilters={props.selectedFilters}
+                        onSelectionChange={newSelection =>
+                            props.onGraphSelectionChange(newSelection)
+                        }
+                    />
                 </div>
                 {/* <div>Filter 2</div>
         <div>Filter 3</div>

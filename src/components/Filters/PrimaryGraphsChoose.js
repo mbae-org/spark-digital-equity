@@ -1,7 +1,7 @@
 import React from "react";
 
 function PrimaryGraphChoose(props) {
-    console.log(props);
+    // console.log(props);
 
     return (
         <div
@@ -17,12 +17,25 @@ function PrimaryGraphChoose(props) {
                     <input
                         type="checkbox"
                         id="gender"
-                        defaultChecked
-                        // onChange={optionChooseClicKHandler}
+                        onChange={option =>
+                            optionChooseClicKHandler(props, option)
+                        }
+                        checked={props.selectedFilters.gender}
                     />
                     <label>Gender</label>
                 </div>
                 <div>
+                    <input
+                        type="checkbox"
+                        id="ethnicity"
+                        onChange={option =>
+                            optionChooseClicKHandler(props, option)
+                        }
+                        checked={props.selectedFilters.ethnicity}
+                    />
+                    <label>Ethnicity</label>
+                </div>
+                {/* <div>
                     <input type="checkbox" id="econ-disad" />
                     <label>Economically Disadvantaged</label>
                 </div>
@@ -33,7 +46,7 @@ function PrimaryGraphChoose(props) {
                 <div>
                     <input type="checkbox" id="eng-lang-learner" />
                     <label>English Language Learner</label>
-                </div>
+                </div> */}
             </div>
         </div>
     );
@@ -41,6 +54,12 @@ function PrimaryGraphChoose(props) {
 
 export default PrimaryGraphChoose;
 
-function optionChooseClicKHandler(option) {
-    console.log(option);
+function optionChooseClicKHandler(props, option) {
+    const targetId = option.target.id;
+    const newTargetVal = option.target.checked;
+    const oldState = props.selectedFilters;
+
+    let newState = oldState;
+    newState[targetId] = newTargetVal;
+    props.onSelectionChange(newState);
 }
