@@ -94,8 +94,9 @@ function createPieCharts(chartData) {
             <div
                 key={row.schoolName}
                 style={{
-                    height: "400px",
+                    height: "300px",
                     width: "25%",
+                    minWidth: "300px",
                     flexGrow: "1",
                     display: "flex",
                     flexDirection: "column"
@@ -106,11 +107,11 @@ function createPieCharts(chartData) {
                         id={row.schoolName}
                         // isInteractive={false}
                         data={row.dataArray}
-                        margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+                        // margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
                         sliceLabel={function(e) {
                             return e.id + " (" + e.value + ")";
                         }}
-                        enableRadialLabels={false}
+                        enableRadialLabels={true}
                         legends={[
                             {
                                 anchor: "bottom",
@@ -125,7 +126,7 @@ function createPieCharts(chartData) {
                                     {
                                         on: "hover",
                                         style: {
-                                            itemTextColor: "#000"
+                                            itemTextColor: "#1243"
                                         }
                                     }
                                 ]

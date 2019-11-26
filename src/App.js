@@ -40,7 +40,8 @@ class App extends React.Component {
                 </div>
                 <div className="chart-panel">
                     {/* <header className="App-header"> */}
-                    Digital Equity <p>Brewing...</p>
+                    Digital Equity
+                    {/* <p>Brewing...</p> */}
                     {/* </header> */}
                     <GenderChart
                         options={this.state.schoolOptions}
