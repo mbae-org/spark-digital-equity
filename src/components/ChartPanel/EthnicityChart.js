@@ -64,7 +64,8 @@ function getGroupedEthnicData(allData, options, ethnicityAcronymList) {
 
 function createPieCharts(chartData) {
     let pieCharts = [];
-    chartData.forEach(row => {
+    const dataLength = chartData.length;
+    chartData.forEach((row, index) => {
         // console.log("row data arrray");
         // console.log(row.dataArray);
 
@@ -84,7 +85,7 @@ function createPieCharts(chartData) {
                     <ResponsivePie
                         key={row.schoolName}
                         data={row.dataArray}
-                        // margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+                        margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
                         colors={d => d.chartColor}
                         sortByValue={true}
                         enableRadialLabels={false}
@@ -92,17 +93,21 @@ function createPieCharts(chartData) {
                         tooltip={data => {
                             return getTooltipHTML(data);
                         }}
-                        legends={[
-                            {
-                                anchor: "bottom",
-                                direction: "row",
-                                itemWidth: 100,
-                                itemHeight: 10,
-                                translateY: 20
-                                // symbolSize: 18,
-                                // symbolShape: "circle"
-                            }
-                        ]}
+                        legends={
+                            index + 1 === dataLength
+                                ? [
+                                      {
+                                          anchor: "top-right",
+                                          direction: "column",
+                                          itemWidth: 20,
+                                          itemHeight: 20,
+                                          translateY: 20
+                                          // symbolSize: 18,
+                                          // symbolShape: "circle"
+                                      }
+                                  ]
+                                : undefined
+                        }
                     />
                 </div>
                 <div style={{ flexGrow: "1" }}>{row.schoolName}</div>
