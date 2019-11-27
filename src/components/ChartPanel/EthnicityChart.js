@@ -1,13 +1,18 @@
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
 
+/**
+ * Main class component
+ * @param {*} props
+ */
 function EthnicityChart(props) {
     const chartData = getGroupedEthnicData(
         props.schoolData,
         props.options,
         ethnicityAcronyms
     );
-
+    console.log("eth chart");
+    console.log(chartData);
     const pieCharts = createPieCharts(chartData);
     return (
         <div
@@ -22,6 +27,10 @@ function EthnicityChart(props) {
         </div>
     );
 }
+
+//
+// Helper Functions
+//
 
 /**
  * return array->[schoolName, array[schoolData]]
@@ -66,9 +75,6 @@ function createPieCharts(chartData) {
     let pieCharts = [];
     const dataLength = chartData.length;
     chartData.forEach((row, index) => {
-        // console.log("row data arrray");
-        // console.log(row.dataArray);
-
         pieCharts.push(
             <div
                 key={row.schoolName}
@@ -85,7 +91,7 @@ function createPieCharts(chartData) {
                     <ResponsivePie
                         key={row.schoolName}
                         data={row.dataArray}
-                        margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+                        margin={{ top: 40, right: 40, bottom: 40, left: 40 }}
                         colors={d => d.chartColor}
                         sortByValue={true}
                         enableRadialLabels={false}
@@ -116,8 +122,6 @@ function createPieCharts(chartData) {
     });
 
     if (pieCharts && pieCharts.length > 0) {
-        // console.log("this is pie");
-        // console.log(pieCharts);
         const heading = [];
         heading.push(<h3 key="ethnicityHeading">Ethnicity</h3>);
         pieCharts = heading.concat(pieCharts);

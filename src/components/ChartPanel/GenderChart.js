@@ -1,23 +1,16 @@
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
 
+/**
+ * Main class component
+ * @param {*} props
+ */
 function GenderChart(props) {
-    // console.log("props");
-    // console.log(props);
     const schoolDataArray = getGenderForSchool(props.schoolData, props.options);
-    // console.log("chart data: ");
-    // console.log(chartData);
+    console.log("chart data: ");
+    console.log(schoolDataArray);
 
     let pieCharts = getPieCharts(schoolDataArray);
-
-    if (pieCharts && pieCharts.length > 0) {
-        // console.log("this is pie");
-        // console.log(pieCharts);
-        const heading = [];
-        heading.push(<h3 key={"gender-heading"}>Gender</h3>);
-        pieCharts = heading.concat(pieCharts);
-    }
-    // console.log(pieCharts);
 
     return (
         <div
@@ -38,30 +31,44 @@ function GenderChart(props) {
  */
 function getGenderForSchool(allData, options) {
     let chartData = [];
-    for (let schoolName of options) {
-        for (let schoolRow of allData) {
-            if (schoolRow["SCH_NAME"] === schoolName.label) {
-                const maleCount = parseInt(schoolRow["MALE"]);
-                const femaleCount = parseInt(schoolRow["FEMALE"]);
-                const malePercentage = (
-                    (maleCount / (maleCount + femaleCount)) *
-                    100
-                ).toFixed(2);
-                const femalePercentage = (
-                    (femaleCount / (maleCount + femaleCount)) *
-                    100
-                ).toFixed(2);
-                chartData = chartData.concat({
-                    name: schoolRow["SCH_NAME"],
-                    female: femaleCount,
-                    male: maleCount,
-                    malePercentage: malePercentage,
-                    femalePercentage: femalePercentage
-                });
+    options.forEach(schoolName => {
+        const schoolRow = allData[schoolName];
+
+        const maleCount = parseInt(schoolRow["MALE"]);
+        const femaleCount = parseInt(schoolRow["FEMALE"]);
+        const malePercentage = (
+            (maleCount / (maleCount + femaleCount)) *
+            100
+        ).toFixed(2);
+        const femalePercentage = (
+            (femaleCount / (maleCount + femaleCount)) *
+            100
+        ).toFixed(2);
+
+        let thisSchoolData = {};
+        let schoolDataArray = [
+            {
+                id: "male",
+                value: maleCount,
+                percentage: malePercentage,
+                color: "orange",
+                label: "Male"
+            },
+            {
+                id: "female",
+                value: femaleCount,
+                percentage: femalePercentage,
+                color: "blue",
+                label: "Female"
             }
-        }
-    }
-    // console.log(chartData);
+        ];
+        thisSchoolData.schoolName = schoolName;
+        thisSchoolData.dataArray = schoolDataArray;
+        chartData.push(thisSchoolData);
+    });
+
+    console.log("gender chart");
+    console.log(chartData);
     return chartData;
 }
 
@@ -74,34 +81,12 @@ const pieChartParentDivStyle = {
 };
 
 function getPieCharts(schoolDataArray) {
-    let genderDataBySchool = {};
-    schoolDataArray.forEach(function(row) {
-        genderDataBySchool[row.name] = [
-            {
-                id: "male",
-                value: row.male,
-                percentage: row.malePercentage,
-                color: "orange",
-                label: "Male"
-            },
-            {
-                id: "female",
-                value: row.female,
-                percentage: row.femalePercentage,
-                color: "blue",
-                label: "Female"
-            }
-        ];
-    });
-
-    // console.log("by school: ");
-    // console.log(genderDataBySchool);
+    const dataLength = schoolDataArray.length;
     let pieCharts = [];
-    for (let schoolName in genderDataBySchool) {
-        const schoolData = genderDataBySchool[schoolName];
-        // let chartMargin = {
 
-        // }
+    schoolDataArray.forEach((row, index) => {
+        const schoolName = row.schoolName;
+        const schoolData = row.dataArray;
         pieCharts.push(
             <div key={schoolName} style={pieChartParentDivStyle}>
                 <div style={{ height: "90%", flexGrow: "1" }}>
@@ -113,26 +98,36 @@ function getPieCharts(schoolDataArray) {
                         sortByValue={true}
                         enableSlicesLabels={false}
                         enableRadialLabels={false}
-                        margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+                        margin={{ top: 40, right: 40, bottom: 40, left: 40 }}
                         tooltip={data => {
                             return getTooltipHTML(data);
                         }}
-                        legends={[
-                            {
-                                anchor: "bottom",
-                                direction: "row",
-                                itemWidth: 100,
-                                itemHeight: 10,
-                                translateY: 20
-                                // symbolSize: 18,
-                                // symbolShape: "circle"
-                            }
-                        ]}
+                        legends={
+                            index + 1 === dataLength
+                                ? [
+                                      {
+                                          anchor: "top-right",
+                                          direction: "column",
+                                          itemWidth: 20,
+                                          itemHeight: 20,
+                                          translateY: 20
+                                          // symbolSize: 18,
+                                          // symbolShape: "circle"
+                                      }
+                                  ]
+                                : undefined
+                        }
                     />
                 </div>
                 <div style={{ flexGrow: "1" }}>{schoolName}</div>
             </div>
         );
+    });
+
+    if (pieCharts && pieCharts.length > 0) {
+        const heading = [];
+        heading.push(<h3 key={"gender-heading"}>Gender</h3>);
+        pieCharts = heading.concat(pieCharts);
     }
 
     return pieCharts;

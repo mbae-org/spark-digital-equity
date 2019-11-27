@@ -13,10 +13,8 @@ class App extends React.Component {
             this
         );
         this.state = {
-            schoolOptions: [],
-            schoolOptionsToChart: [],
             schoolData: this.transformSchoolData(schoolData),
-            newSchoolOptions: [],
+            schoolOptions: [],
             selectedFilters: {
                 gender: true,
                 ethnicity: true
@@ -63,7 +61,7 @@ class App extends React.Component {
             charts.push(
                 <GenderChart
                     options={this.state.schoolOptions}
-                    schoolData={schoolData}
+                    schoolData={this.state.schoolData}
                     key="genderChart"
                 />
             );
@@ -72,7 +70,7 @@ class App extends React.Component {
         if (selectedFilters.ethnicity === true) {
             charts.push(
                 <EthnicityChart
-                    options={this.state.newSchoolOptions}
+                    options={this.state.schoolOptions}
                     schoolData={this.state.schoolData}
                     key="ethnicityChart"
                 />
@@ -93,8 +91,7 @@ class App extends React.Component {
             selectedOptions = [];
         }
         this.setState({
-            schoolOptions: selectedOptions,
-            newSchoolOptions: this.transformSelectedOptions(selectedOptions)
+            schoolOptions: this.transformSelectedOptions(selectedOptions)
         });
     }
 
