@@ -1,5 +1,6 @@
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
+// import { EntityType, EthnicityAcronymList } from "../../Constants";
 
 /**
  * Main class component
@@ -11,8 +12,6 @@ function EthnicityChart(props) {
         props.options,
         ethnicityAcronyms
     );
-    console.log("eth chart");
-    console.log(chartData);
     const pieCharts = createPieCharts(chartData);
     return (
         <div
@@ -43,14 +42,16 @@ function getGroupedEthnicData(allData, options, ethnicityAcronymList) {
 
         let thisSchoolData = {};
         let schoolDataArray = [];
-        ethnicityAcronymList.forEach(ethnicityObj => {
-            schoolDataArray.push({
-                id: ethnicityObj.id,
-                value: parseInt(schoolObj[ethnicityObj.id]),
-                label: ethnicityObj.desc,
-                chartColor: ethnicityObj.chartColor
-            });
-        });
+        // ethnicityAcronymList.forEach(ethnicityObj => {
+        //     schoolDataArray.push({
+        //         id: ethnicityObj.id,
+        //         value: parseInt(schoolObj[ethnicityObj.id]),
+        //         label: ethnicityObj.desc,
+        //         chartColor: ethnicityObj.chartColor
+        //     });
+        // });
+
+        schoolDataArray = schoolObj._ethnicity;
 
         // get percentage calculation out of total students that we consider
         let totalStudents = 0;

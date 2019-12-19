@@ -35,6 +35,33 @@ function PrimaryGraphChoose(props) {
                     />
                     <label>Ethnicity</label>
                 </div>
+
+                <div>
+                    <input
+                        type="checkbox"
+                        id="economicallyDisadvantaged"
+                        onChange={option =>
+                            optionChooseClicKHandler(props, option)
+                        }
+                        checked={
+                            props.selectedFilters.economicallyDisadvantaged
+                        }
+                    />
+                    <label>Economically Disadvantaged</label>
+                </div>
+
+                <div>
+                    <input
+                        type="checkbox"
+                        id="disability"
+                        onChange={option =>
+                            optionChooseClicKHandler(props, option)
+                        }
+                        checked={props.selectedFilters.disability}
+                    />
+                    <label>Students With Disability</label>
+                </div>
+
                 {/* <div>
                     <input type="checkbox" id="econ-disad" />
                     <label>Economically Disadvantaged</label>

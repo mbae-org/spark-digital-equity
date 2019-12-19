@@ -1,5 +1,6 @@
 import React from "react";
 import Select from "react-select";
+import { EntityType } from "../../Constants";
 
 function SchoolDistrictFilter(props) {
     const filteredSchools = filterSchooldata(props.data);
@@ -29,25 +30,31 @@ function SchoolDistrictFilter(props) {
 }
 
 function filterSchooldata(schoolData) {
-    let filteredArray = [];
-    for (let schoolRow of schoolData) {
-        if (
-            parseInt(schoolRow["FEMALE"]) &&
-            parseInt(schoolRow["MALE"]) &&
-            schoolRow["DIST_NAME"]
-        ) {
-            filteredArray = filteredArray.concat(schoolRow);
-        }
-    }
+    // let filteredArray = [];
+    // for (let schoolRow of schoolData) {
+    //     if (
+    //         parseInt(schoolRow["FEMALE"]) &&
+    //         parseInt(schoolRow["MALE"]) &&
+    //         schoolRow["DIST_NAME"]
+    //     ) {
+    //         filteredArray = filteredArray.concat(schoolRow);
+    //     }
+    // }
 
-    return filteredArray;
+    // return filteredArray;
+    return schoolData;
 }
 
 function getSchools(schoolData) {
     let schools = new Set();
-    for (let schoolRow of schoolData) {
-        if (parseInt(schoolRow["FEMALE"]) && parseInt(schoolRow["MALE"]))
-            schools.add(schoolRow["SCH_NAME"]);
+    for (let schoolName in schoolData) {
+        // if (parseInt(schoolRow["FEMALE"]) && parseInt(schoolRow["MALE"])){
+        //     schools.add(schoolRow["SCH_NAME"]);
+        // }
+        const schoolRow = schoolData[schoolName];
+        if (schoolRow._type === EntityType.SCHOOL) {
+            schools.add(schoolRow._name);
+        }
     }
 
     return schools;
@@ -68,9 +75,13 @@ function createSchoolOptions(schoolSet) {
 
 function getDistricts(schoolData) {
     let districtSet = new Set();
-    for (let schoolRow of schoolData) {
-        if (schoolRow["DIST_NAME"]) {
-            districtSet.add(schoolRow["DIST_NAME"]);
+    for (let schoolName in schoolData) {
+        // if (schoolRow["DIST_NAME"]) {
+        //     districtSet.add(schoolRow["DIST_NAME"]);
+        // }
+        const schoolRow = schoolData[schoolName];
+        if (schoolRow._type === EntityType.DISTRICT) {
+            districtSet.add(schoolRow._name);
         }
     }
 

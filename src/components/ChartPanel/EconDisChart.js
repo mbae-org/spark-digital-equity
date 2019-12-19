@@ -6,8 +6,11 @@ import { ResponsivePie } from "@nivo/pie";
  * Main class component
  * @param {*} props
  */
-function GenderChart(props) {
-    const schoolDataArray = getGenderForSchool(props.schoolData, props.options);
+function EconDisChart(props) {
+    const schoolDataArray = getEconDisForSchool(
+        props.schoolData,
+        props.options
+    );
 
     let pieCharts = getPieCharts(schoolDataArray);
 
@@ -28,37 +31,39 @@ function GenderChart(props) {
 /**
  * return array: x->schoolName, male, female
  */
-function getGenderForSchool(allData, options) {
+function getEconDisForSchool(allData, options) {
     let chartData = [];
     options.forEach(schoolName => {
-        const schoolRow = allData[schoolName];
+        const schoolObject = allData[schoolName];
 
-        const maleCount = schoolRow._male;
-        const femaleCount = schoolRow._female;
-        const malePercentage = (
-            (maleCount / (maleCount + femaleCount)) *
+        const disadvantagedCount = schoolObject._economicallyDisadvantaged;
+        const totalCount = schoolObject._enrolled;
+        const nonDisadvantagedCount = totalCount - disadvantagedCount;
+
+        const disadvantagedPercentage = (
+            (disadvantagedCount / totalCount) *
             100
         ).toFixed(2);
-        const femalePercentage = (
-            (femaleCount / (maleCount + femaleCount)) *
+        const nonDisadvantagedPercentage = (
+            (nonDisadvantagedCount / totalCount) *
             100
         ).toFixed(2);
 
         let thisSchoolData = {};
         let schoolDataArray = [
             {
-                id: "male",
-                value: maleCount,
-                percentage: malePercentage,
+                id: "economicallyDisadvantaged",
+                value: disadvantagedCount,
+                percentage: disadvantagedPercentage,
                 color: "orange",
-                label: "Male"
+                label: "Economically Disadvantaged"
             },
             {
-                id: "female",
-                value: femaleCount,
-                percentage: femalePercentage,
+                id: "Others",
+                value: nonDisadvantagedCount,
+                percentage: nonDisadvantagedPercentage,
                 color: "blue",
-                label: "Female"
+                label: "Others"
             }
         ];
         thisSchoolData.schoolName = schoolName;
@@ -66,6 +71,8 @@ function getGenderForSchool(allData, options) {
         chartData.push(thisSchoolData);
     });
 
+    // console.log("econ dis chart");
+    // console.log(chartData);
     return chartData;
 }
 
@@ -124,7 +131,9 @@ function getPieCharts(schoolDataArray) {
 
     if (pieCharts && pieCharts.length > 0) {
         const heading = [];
-        heading.push(<h3 key={"gender-heading"}>Gender</h3>);
+        heading.push(
+            <h3 key={"econdis-heading"}>Economically Disadvantaged</h3>
+        );
         pieCharts = heading.concat(pieCharts);
     }
 
@@ -142,4 +151,4 @@ function getTooltipHTML(data) {
     );
 }
 
-export default GenderChart;
+export default EconDisChart;

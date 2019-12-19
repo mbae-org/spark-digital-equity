@@ -6,8 +6,8 @@ import { ResponsivePie } from "@nivo/pie";
  * Main class component
  * @param {*} props
  */
-function GenderChart(props) {
-    const schoolDataArray = getGenderForSchool(props.schoolData, props.options);
+function DisabilityChart(props) {
+    const schoolDataArray = getDisabilityData(props.schoolData, props.options);
 
     let pieCharts = getPieCharts(schoolDataArray);
 
@@ -28,37 +28,39 @@ function GenderChart(props) {
 /**
  * return array: x->schoolName, male, female
  */
-function getGenderForSchool(allData, options) {
+function getDisabilityData(allData, options) {
     let chartData = [];
     options.forEach(schoolName => {
-        const schoolRow = allData[schoolName];
+        const schoolObject = allData[schoolName];
 
-        const maleCount = schoolRow._male;
-        const femaleCount = schoolRow._female;
-        const malePercentage = (
-            (maleCount / (maleCount + femaleCount)) *
+        const disabilityCount = schoolObject._studentsWithDisability;
+        const totalCount = schoolObject._enrolled;
+        const nonDisabilityCount = totalCount - disabilityCount;
+
+        const disabilityPercentage = (
+            (disabilityCount / totalCount) *
             100
         ).toFixed(2);
-        const femalePercentage = (
-            (femaleCount / (maleCount + femaleCount)) *
+        const nonDisabilityPercentage = (
+            (nonDisabilityCount / totalCount) *
             100
         ).toFixed(2);
 
         let thisSchoolData = {};
         let schoolDataArray = [
             {
-                id: "male",
-                value: maleCount,
-                percentage: malePercentage,
+                id: "studentsWithDisability",
+                value: disabilityCount,
+                percentage: disabilityPercentage,
                 color: "orange",
-                label: "Male"
+                label: "Students With Disability"
             },
             {
-                id: "female",
-                value: femaleCount,
-                percentage: femalePercentage,
+                id: "Others",
+                value: nonDisabilityCount,
+                percentage: nonDisabilityPercentage,
                 color: "blue",
-                label: "Female"
+                label: "Others"
             }
         ];
         thisSchoolData.schoolName = schoolName;
@@ -66,6 +68,8 @@ function getGenderForSchool(allData, options) {
         chartData.push(thisSchoolData);
     });
 
+    // console.log("disability chart");
+    // console.log(chartData);
     return chartData;
 }
 
@@ -124,7 +128,9 @@ function getPieCharts(schoolDataArray) {
 
     if (pieCharts && pieCharts.length > 0) {
         const heading = [];
-        heading.push(<h3 key={"gender-heading"}>Gender</h3>);
+        heading.push(
+            <h3 key={"disability-heading"}>Students With Disability</h3>
+        );
         pieCharts = heading.concat(pieCharts);
     }
 
@@ -142,4 +148,4 @@ function getTooltipHTML(data) {
     );
 }
 
-export default GenderChart;
+export default DisabilityChart;
