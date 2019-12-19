@@ -1,3 +1,6 @@
+/*eslint-env es6*/
+"use strict";
+
 import React from "react";
 import "./App.css";
 import FilterPanel from "./components/FilterPanel/FilterPanel";
@@ -5,6 +8,9 @@ import GenderChart from "./components/ChartPanel/GenderChart";
 // import GenderChart2 from "./components/ChartPanel/GenderChart2";
 import EthnicityChart from "./components/ChartPanel/EthnicityChart";
 import schoolData from "./data/data-2016";
+import { log } from "util";
+import { EntityType, EthnicityAcronymList } from "./Constants";
+import School from "./School";
 
 class App extends React.Component {
     constructor(props) {
@@ -14,6 +20,7 @@ class App extends React.Component {
         );
         this.state = {
             schoolData: this.transformSchoolData(schoolData),
+            newSchoolData: this.extractSchoolData(schoolData),
             schoolOptions: [],
             selectedFilters: {
                 gender: true,
@@ -61,7 +68,7 @@ class App extends React.Component {
             charts.push(
                 <GenderChart
                     options={this.state.schoolOptions}
-                    schoolData={this.state.schoolData}
+                    schoolData={this.state.newSchoolData}
                     key="genderChart"
                 />
             );
@@ -114,6 +121,82 @@ class App extends React.Component {
             schoolNameArray.push(row.label);
         });
         return schoolNameArray;
+    }
+
+    extractSchoolData(schoolDataArray) {
+        let filteredArray = [];
+        let schoolObjectMap = {};
+        // filter out schools with all available data
+        schoolDataArray.forEach(schoolRow => {
+            if (
+                parseInt(schoolRow["FEMALE"]) &&
+                parseInt(schoolRow["MALE"]) &&
+                schoolRow["DIST_NAME"]
+            ) {
+                filteredArray.push(schoolRow);
+            }
+        });
+
+        // add all school data
+        filteredArray.forEach(schoolRow => {
+            const schoolName = schoolRow["SCH_NAME"];
+            const districtName = schoolRow["DIST_NAME"];
+
+            let thisSchool = new School();
+            thisSchool.setName(schoolName);
+            thisSchool.setType(EntityType.SCHOOL);
+            thisSchool.setMale(parseInt(schoolRow["MALE"]));
+            thisSchool.setFemale(parseInt(schoolRow["FEMALE"]));
+            thisSchool.setDistrictName(districtName);
+            thisSchool.setEthnicity([]);
+
+            let thisSchoolEthnicityArray = [];
+
+            EthnicityAcronymList.forEach(ethnicityObj => {
+                thisSchoolEthnicityArray.push({
+                    id: ethnicityObj.id,
+                    value: parseInt(schoolRow[ethnicityObj.id]),
+                    label: ethnicityObj.desc,
+                    chartColor: ethnicityObj.chartColor
+                });
+            });
+
+            thisSchool.setEthnicity(thisSchoolEthnicityArray);
+
+            schoolObjectMap[schoolName] = thisSchool;
+        });
+
+        // add info for all districts
+        const allSchoolNames = Object.keys(schoolObjectMap);
+        for (let schoolName of allSchoolNames) {
+            const schoolObject = schoolObjectMap[schoolName];
+            const districtName = schoolObject._districtName;
+            console.log(schoolName);
+            console.log(districtName);
+
+            let districtObject = schoolObjectMap[districtName];
+            if (!districtObject) {
+                districtObject = new School();
+                districtObject.setName(schoolName);
+                districtObject.setType(EntityType.DISTRICT);
+                districtObject.setMale(0);
+                districtObject.setFemale(0);
+                districtObject.setDistrictName(districtName);
+                districtObject.setEthnicity([]);
+            }
+            districtObject.setMale(
+                (districtObject._male += schoolObject._male)
+            );
+            districtObject.setFemale(
+                (districtObject._female += schoolObject._female)
+            );
+
+            schoolObjectMap[districtName] = districtObject;
+        }
+
+        console.log("schoolObjectMap");
+        console.log(schoolObjectMap);
+        return schoolObjectMap;
     }
 }
 

@@ -2,6 +2,8 @@ import React from "react";
 import SchoolDistrictFilter from "../Filters/SchoolDistrictFilter";
 import PrimaryGraphsChoose from "../Filters/PrimaryGraphsChoose";
 
+// defaultSchoolOptions =
+
 function FilterPanel(props) {
     // console.log('panel recieved school data' + props.data);
 
@@ -29,12 +31,6 @@ function FilterPanel(props) {
                             props.onGraphSelectionChange(newSelection)
                         }
                     />
-                </div>
-                {/* <div>Filter 2</div>
-        <div>Filter 3</div>
-        <div>Filter 4</div> */}
-                <div>
-                    <button onClick={props.onSearchClick}>Search</button>
                 </div>
             </div>
         </div>

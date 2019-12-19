@@ -1,13 +1,47 @@
 import React from "react";
 import Select from "react-select";
 
-// const options = [
-//     { value: 's1', label: 'School 1' },
-//     { value: 's2', label: 'School 2' },
-//     { value: 's3', label: 'School 3' },
-//     { value: 'd1', label: 'District 1' },
-//     { value: 'd2', label: 'District 2' }
-// ];
+function SchoolDistrictFilter(props) {
+    const filteredSchools = filterSchooldata(props.data);
+
+    const schoolSet = getSchools(filteredSchools);
+    const districtSet = getDistricts(filteredSchools);
+    const schoolOptions = createSchoolOptions(schoolSet);
+    const districtOptions = createDistrictOptions(districtSet);
+    const allOptions = schoolOptions.concat(districtOptions);
+
+    return (
+        <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ padding: "10px" }}>
+                Select School / District to compare
+            </div>
+            <div style={{ color: "black" }}>
+                <Select
+                    options={allOptions}
+                    isMulti
+                    onChange={selectedOptions =>
+                        props.onOptionsChange(selectedOptions)
+                    }
+                />
+            </div>
+        </div>
+    );
+}
+
+function filterSchooldata(schoolData) {
+    let filteredArray = [];
+    for (let schoolRow of schoolData) {
+        if (
+            parseInt(schoolRow["FEMALE"]) &&
+            parseInt(schoolRow["MALE"]) &&
+            schoolRow["DIST_NAME"]
+        ) {
+            filteredArray = filteredArray.concat(schoolRow);
+        }
+    }
+
+    return filteredArray;
+}
 
 function getSchools(schoolData) {
     let schools = new Set();
@@ -21,45 +55,37 @@ function getSchools(schoolData) {
 
 function createSchoolOptions(schoolSet) {
     let optionList = [];
-    let i = 0;
+    // let i = 0;
     for (let schoolName of schoolSet) {
         optionList = optionList.concat({
-            value: i,
+            value: schoolName,
             label: schoolName
         });
-        i++;
+        // i++;
     }
     return optionList;
 }
 
-// function handleOptionsChange(selectedOptions) {
-//     console.log(selectedOptions);
-// }
+function getDistricts(schoolData) {
+    let districtSet = new Set();
+    for (let schoolRow of schoolData) {
+        if (schoolRow["DIST_NAME"]) {
+            districtSet.add(schoolRow["DIST_NAME"]);
+        }
+    }
 
-function SchoolDistrictFilter(props) {
-    // console.log('recieved school data' + props.data);
-    // console.log(this.props.data);
-    const schools = getSchools(props.data);
-    const schoolOptions = createSchoolOptions(schools);
+    return districtSet;
+}
 
-    // console.log(schools);
-
-    return (
-        <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ padding: "10px" }}>
-                Select School / District to compare
-            </div>
-            <div style={{ color: "black" }}>
-                <Select
-                    options={schoolOptions}
-                    isMulti
-                    onChange={selectedOptions =>
-                        props.onOptionsChange(selectedOptions)
-                    }
-                />
-            </div>
-        </div>
-    );
+function createDistrictOptions(districtSet) {
+    let optionList = [];
+    for (let districtName of districtSet) {
+        optionList = optionList.concat({
+            value: districtName,
+            label: districtName
+        });
+    }
+    return optionList;
 }
 
 export default SchoolDistrictFilter;

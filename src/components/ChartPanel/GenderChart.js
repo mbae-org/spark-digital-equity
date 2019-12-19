@@ -1,5 +1,6 @@
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
+import School from "../../School";
 
 /**
  * Main class component
@@ -34,8 +35,8 @@ function getGenderForSchool(allData, options) {
     options.forEach(schoolName => {
         const schoolRow = allData[schoolName];
 
-        const maleCount = parseInt(schoolRow["MALE"]);
-        const femaleCount = parseInt(schoolRow["FEMALE"]);
+        const maleCount = schoolRow._male;
+        const femaleCount = schoolRow._female;
         const malePercentage = (
             (maleCount / (maleCount + femaleCount)) *
             100
@@ -75,6 +76,7 @@ function getGenderForSchool(allData, options) {
 const pieChartParentDivStyle = {
     height: "300px",
     width: "25%",
+    minWidth: "250px",
     flexGrow: "1",
     display: "flex",
     flexDirection: "column"

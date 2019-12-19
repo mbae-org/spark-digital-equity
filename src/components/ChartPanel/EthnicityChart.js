@@ -71,22 +71,21 @@ function getGroupedEthnicData(allData, options, ethnicityAcronymList) {
     return chartData;
 }
 
+const pieChartParentDivStyle = {
+    height: "300px",
+    width: "25%",
+    minWidth: "250px",
+    flexGrow: "1",
+    display: "flex",
+    flexDirection: "column"
+};
+
 function createPieCharts(chartData) {
     let pieCharts = [];
     const dataLength = chartData.length;
     chartData.forEach((row, index) => {
         pieCharts.push(
-            <div
-                key={row.schoolName}
-                style={{
-                    height: "300px",
-                    width: "25%",
-                    minWidth: "300px",
-                    flexGrow: "1",
-                    display: "flex",
-                    flexDirection: "column"
-                }}
-            >
+            <div key={row.schoolName} style={pieChartParentDivStyle}>
                 <div style={{ height: "90%", flexGrow: "1" }}>
                     <ResponsivePie
                         key={row.schoolName}
