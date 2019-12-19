@@ -32,6 +32,7 @@ function FilterPanel(props) {
                         }
                     />
                 </div>
+                <div></div>
             </div>
         </div>
     );

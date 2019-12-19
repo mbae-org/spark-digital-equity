@@ -172,9 +172,9 @@ const ethnicityAcronyms = [
 
 function getTooltipHTML(data) {
     return (
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div id={data.id} style={{ display: "flex", flexDirection: "column" }}>
             <div>
-                {data.label}: {data.value}
+                {data.desc}: {data.value}
             </div>
             <div>Percentage: {data.percentage}%</div>
         </div>

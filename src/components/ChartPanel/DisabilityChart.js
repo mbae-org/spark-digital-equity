@@ -53,7 +53,8 @@ function getDisabilityData(allData, options) {
                 value: disabilityCount,
                 percentage: disabilityPercentage,
                 color: "orange",
-                label: "Students With Disability"
+                label: "SWD"
+                // Students With Disability
             },
             {
                 id: "Others",
@@ -129,7 +130,9 @@ function getPieCharts(schoolDataArray) {
     if (pieCharts && pieCharts.length > 0) {
         const heading = [];
         heading.push(
-            <h3 key={"disability-heading"}>Students With Disability</h3>
+            <div key={"disability-heading"}>
+                <h3>Students With Disability</h3>
+            </div>
         );
         pieCharts = heading.concat(pieCharts);
     }

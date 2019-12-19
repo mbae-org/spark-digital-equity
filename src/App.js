@@ -12,7 +12,11 @@ import DisabilityChart from "./components/ChartPanel/DisabilityChart";
 
 import schoolData from "./data/data-2016";
 // import { log } from "util";
-import { EntityType, EthnicityAcronymList } from "./Constants";
+import {
+    EntityType,
+    EthnicityAcronymList,
+    EthnicityDefaultMap
+} from "./Constants";
 import School from "./School";
 
 class App extends React.Component {
@@ -151,18 +155,93 @@ class App extends React.Component {
     extractSchoolData(schoolDataArray) {
         let filteredArray = [];
         let schoolObjectMap = {};
+
+        filteredArray = this.filterSchoolDataWithFields(schoolDataArray);
+        schoolObjectMap = this.getSchoolObjectMap(filteredArray);
+
+        // add info for all districts
+        const allSchoolNames = Object.keys(schoolObjectMap);
+        for (let schoolName of allSchoolNames) {
+            const schoolObject = schoolObjectMap[schoolName];
+            const districtName = schoolObject._districtName;
+
+            let districtObject = schoolObjectMap[districtName];
+            if (!districtObject) {
+                districtObject = new School();
+                districtObject.setName(districtName);
+                districtObject.setType(EntityType.DISTRICT);
+                districtObject.setEthnicityMap(EthnicityDefaultMap);
+            } else {
+                // console.log(districtName);
+                // console.log(schoolName);
+            }
+            districtObject.setMale(districtObject._male + schoolObject._male);
+            districtObject.setFemale(
+                districtObject._female + schoolObject._female
+            );
+
+            districtObject.setEconomicallyDisadvantaged(
+                districtObject._economicallyDisadvantaged +
+                    schoolObject._economicallyDisadvantaged
+            );
+
+            districtObject.setEnrolled(
+                districtObject._enrolled + schoolObject._enrolled
+            );
+            districtObject.setStudentsWithDisability(
+                districtObject._studentsWithDisability +
+                    schoolObject._studentsWithDisability
+            );
+
+            let thisDistrictEthnicityArray = [];
+            let thisDistrictEthnicityMap = districtObject._ethnicityMap;
+
+            for (let key in schoolObject._ethnicityMap) {
+                const ethnicityObj = schoolObject._ethnicityMap[key];
+                thisDistrictEthnicityMap[key].value += ethnicityObj.value;
+                thisDistrictEthnicityArray.push(thisDistrictEthnicityMap[key]);
+            }
+
+            districtObject.setEthnicityMap(thisDistrictEthnicityMap);
+            districtObject.setEthnicity(thisDistrictEthnicityArray);
+
+            schoolObjectMap[districtName] = districtObject;
+        }
+
+        // console.log("schoolObjectMap");
+        // console.log(schoolObjectMap);
+        return schoolObjectMap;
+    }
+
+    // only use schooldata that have the fields available
+    filterSchoolDataWithFields(schoolDataArray) {
+        let filteredArray = [];
+        let schoolsWithMissingEntry = [];
         // filter out schools with all available data
         schoolDataArray.forEach(schoolRow => {
             if (
-                parseInt(schoolRow["FEMALE"]) &&
-                parseInt(schoolRow["MALE"]) &&
+                Number.isInteger(parseInt(schoolRow["FEMALE"])) &&
+                Number.isInteger(parseInt(schoolRow["MALE"])) &&
                 schoolRow["DIST_NAME"] &&
-                parseInt(schoolRow["ECODIS"]) &&
-                parseInt(schoolRow["SWD"])
+                Number.isInteger(parseInt(schoolRow["ECODIS"])) &&
+                Number.isInteger(parseInt(schoolRow["SWD"]))
             ) {
                 filteredArray.push(schoolRow);
+            } else {
+                schoolsWithMissingEntry.push(schoolRow);
             }
         });
+
+        if (schoolsWithMissingEntry.length > 0) {
+            console.log("missing entry for schools: ");
+            console.log(schoolsWithMissingEntry);
+        }
+
+        return filteredArray;
+    }
+
+    getSchoolObjectMap(filteredArray) {
+        let schoolObjectMap = {};
 
         // add all school data
         filteredArray.forEach(schoolRow => {
@@ -190,12 +269,14 @@ class App extends React.Component {
                     id: ethnicityObj.id,
                     value: parseInt(schoolRow[ethnicityObj.id]),
                     label: ethnicityObj.desc,
+                    desc: ethnicityObj.desc,
                     chartColor: ethnicityObj.chartColor
                 };
 
                 thisSchoolEthnicityArray.push(ethnicityArrayMember);
-                thisSchoolEthnicityMap[ethnicityArrayMember.id] =
-                    ethnicityArrayMember.value;
+                thisSchoolEthnicityMap[
+                    ethnicityArrayMember.id
+                ] = ethnicityArrayMember;
             });
 
             thisSchool.setEthnicity(thisSchoolEthnicityArray);
@@ -204,75 +285,6 @@ class App extends React.Component {
             schoolObjectMap[schoolName] = thisSchool;
         });
 
-        // add info for all districts
-        const allSchoolNames = Object.keys(schoolObjectMap);
-        for (let schoolName of allSchoolNames) {
-            const schoolObject = schoolObjectMap[schoolName];
-            const districtName = schoolObject._districtName;
-            // console.log(schoolName);
-            // console.log(districtName);
-
-            let districtObject = schoolObjectMap[districtName];
-            if (!districtObject) {
-                districtObject = new School();
-                districtObject.setName(schoolName);
-                districtObject.setType(EntityType.DISTRICT);
-                // districtObject.setMale(0);
-                // districtObject.setFemale(0);
-                // districtObject.setDistrictName(districtName);
-                // districtObject.setEthnicity([]);
-                // districtObject.setEconomicallyDisadvantaged(0);
-
-                // let emptyEthnicityMap = {}
-
-                // districtObject.setEthnicityMap();
-            } else {
-                // console.log(districtName);
-                // console.log(schoolName);
-            }
-            districtObject.setMale(districtObject._male + schoolObject._male);
-            districtObject.setFemale(
-                districtObject._female + schoolObject._female
-            );
-
-            districtObject.setEconomicallyDisadvantaged(
-                districtObject._economicallyDisadvantaged +
-                    schoolObject._economicallyDisadvantaged
-            );
-
-            districtObject.setEnrolled(
-                districtObject._enrolled + schoolObject._enrolled
-            );
-            districtObject.setStudentsWithDisability(
-                districtObject._studentsWithDisability +
-                    schoolObject._studentsWithDisability
-            );
-
-            let thisDistrictEthnicityArray = districtObject._ethnicity;
-            if (!thisDistrictEthnicityArray) {
-                thisDistrictEthnicityArray = [];
-            }
-
-            // let thisDistrictEthnicityMap = districtObject._ethnicityMap;
-            // if (!thisDistrictEthnicityMap) {
-            //     thisDistrictEthnicityMap = {};
-            // }
-
-            // for (let key in schoolObject._ethnicityMap) {
-            // }
-
-            // TODO: fix this, cannot just concat array, will have to add entities
-
-            thisDistrictEthnicityArray = districtObject._ethnicity.concat(
-                schoolObject._ethnicity
-            );
-            districtObject.setEthnicity(thisDistrictEthnicityArray);
-
-            schoolObjectMap[districtName] = districtObject;
-        }
-
-        // console.log("schoolObjectMap");
-        // console.log(schoolObjectMap);
         return schoolObjectMap;
     }
 }
