@@ -19,6 +19,9 @@ function SchoolDistrictFilter(props) {
             <div style={{ color: "black" }}>
                 <Select
                     options={allOptions}
+                    defaultValue={allOptions.filter(
+                        option => option.label === "Massachussets"
+                    )}
                     isMulti
                     onChange={selectedOptions =>
                         props.onOptionsChange(selectedOptions)

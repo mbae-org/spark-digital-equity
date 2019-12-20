@@ -172,7 +172,10 @@ const ethnicityAcronyms = [
 
 function getTooltipHTML(data) {
     return (
-        <div id={data.id} style={{ display: "flex", flexDirection: "column" }}>
+        <div
+            id={data.id}
+            style={{ display: "flex", flexDirection: "column", color: "black" }}
+        >
             <div>
                 {data.desc}: {data.value}
             </div>

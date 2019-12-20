@@ -1,9 +1,9 @@
 .App {
     text-align: center;
-    min-width: 800px;
-    /* background-color: #282c34;
-    color: white; */
-    height: 100vh;
+    min-width: 900px;
+    background-color: #4272d2;
+    color: white;
+    height: 90vh;
 }
 
 .App-logo {
@@ -26,15 +26,17 @@
 }
 
 .filter-panel {
-    width: 30%;
+    min-width: 30%;
     margin: 5px;
     padding: 5px;
+    overflow-y: auto;
 }
 
 .chart-panel {
     width: 70%;
     margin: 5px;
     padding: 5px;
+    overflow-y: auto;
 }
 
 .filter-container > div {

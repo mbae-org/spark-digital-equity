@@ -9,6 +9,7 @@ import GenderChart from "./components/ChartPanel/GenderChart";
 import EthnicityChart from "./components/ChartPanel/EthnicityChart";
 import EconDisChart from "./components/ChartPanel/EconDisChart";
 import DisabilityChart from "./components/ChartPanel/DisabilityChart";
+import NextStepsPanel from "./components/NextStepsPanel";
 
 import schoolData from "./data/data-2016";
 // import { log } from "util";
@@ -28,12 +29,12 @@ class App extends React.Component {
         this.state = {
             schoolData: this.transformSchoolData(schoolData),
             newSchoolData: this.extractSchoolData(schoolData),
-            schoolOptions: [],
+            schoolOptions: ["Massachussets"],
             selectedFilters: {
                 gender: true,
                 ethnicity: true,
-                economicallyDisadvantaged: false,
-                disability: false
+                economicallyDisadvantaged: true,
+                disability: true
             }
         };
     }
@@ -47,7 +48,6 @@ class App extends React.Component {
                 style={{ display: "flex", flexDirection: "column" }}
             >
                 <div style={{ height: "10%" }}>
-                    {" "}
                     <h3> Digital Equity </h3>
                 </div>
                 <div className="App" style={{ display: "flex" }}>
@@ -65,6 +65,7 @@ class App extends React.Component {
                     </div>
                     <div className="chart-panel">{charts}</div>
                 </div>
+                <NextStepsPanel />
             </div>
         );
     }

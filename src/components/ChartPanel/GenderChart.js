@@ -133,7 +133,9 @@ function getPieCharts(schoolDataArray) {
 
 function getTooltipHTML(data) {
     return (
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div
+            style={{ display: "flex", flexDirection: "column", color: "black" }}
+        >
             <div>
                 {data.label}: {data.value}
             </div>
