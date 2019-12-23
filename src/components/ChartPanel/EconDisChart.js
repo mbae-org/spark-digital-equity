@@ -52,7 +52,7 @@ function getEconDisForSchool(allData, options) {
         let thisSchoolData = {};
         let schoolDataArray = [
             {
-                id: "economicallyDisadvantaged",
+                id: "Disadvantaged",
                 value: disadvantagedCount,
                 percentage: disadvantagedPercentage,
                 color: "orange",
@@ -85,6 +85,20 @@ const pieChartParentDivStyle = {
     flexDirection: "column"
 };
 
+const styles = {
+    root: {
+        fontFamily: "consolas, sans-serif",
+        textAlign: "center",
+        position: "relative",
+        width: 250,
+        height: 300
+    },
+
+    totalLabel: {
+        fontSize: 24
+    }
+};
+
 function getPieCharts(schoolDataArray) {
     const dataLength = schoolDataArray.length;
     let pieCharts = [];
@@ -93,7 +107,7 @@ function getPieCharts(schoolDataArray) {
         const schoolName = row.schoolName;
         const schoolData = row.dataArray;
         pieCharts.push(
-            <div key={schoolName} style={pieChartParentDivStyle}>
+            <div key={schoolName} style={styles.root}>
                 <div style={{ height: "90%", flexGrow: "1" }}>
                     <ResponsivePie
                         key={schoolName}
@@ -103,7 +117,8 @@ function getPieCharts(schoolDataArray) {
                         sortByValue={true}
                         enableSlicesLabels={false}
                         enableRadialLabels={false}
-                        margin={{ top: 40, right: 40, bottom: 40, left: 40 }}
+                        margin={{ top: 40, right: 40, bottom: 60, left: 40 }}
+                        innerRadius={0.5}
                         tooltip={data => {
                             return getTooltipHTML(data);
                         }}
@@ -111,11 +126,12 @@ function getPieCharts(schoolDataArray) {
                             index + 1 === dataLength
                                 ? [
                                       {
-                                          anchor: "top-right",
-                                          direction: "column",
-                                          itemWidth: 20,
+                                          anchor: "bottom",
+                                          direction: "row",
+                                          itemWidth: 120,
                                           itemHeight: 20,
-                                          translateY: 20
+                                          translateY: 30,
+                                          translateX: 10
                                           // symbolSize: 18,
                                           // symbolShape: "circle"
                                       }
@@ -132,7 +148,8 @@ function getPieCharts(schoolDataArray) {
     if (pieCharts && pieCharts.length > 0) {
         const heading = [];
         heading.push(
-            <h3 key={"econdis-heading"}>Economically Disadvantaged</h3>
+            // <h3 key={"econdis-heading"}>Economically Disadvantaged</h3>
+            <h3 key={"econdis-heading"}>EconDis</h3>
         );
         pieCharts = heading.concat(pieCharts);
     }

@@ -157,6 +157,8 @@ class App extends React.Component {
         let filteredArray = [];
         let schoolObjectMap = {};
 
+        //  TODO: do this by year
+
         filteredArray = this.filterSchoolDataWithFields(schoolDataArray);
         schoolObjectMap = this.getSchoolObjectMap(filteredArray);
 
@@ -225,7 +227,8 @@ class App extends React.Component {
                 Number.isInteger(parseInt(schoolRow["MALE"])) &&
                 schoolRow["DIST_NAME"] &&
                 Number.isInteger(parseInt(schoolRow["ECODIS"])) &&
-                Number.isInteger(parseInt(schoolRow["SWD"]))
+                Number.isInteger(parseInt(schoolRow["SWD"])) &&
+                Number.isInteger(parseInt(schoolRow["SY"]))
             ) {
                 filteredArray.push(schoolRow);
             } else {
@@ -261,6 +264,7 @@ class App extends React.Component {
             );
             thisSchool.setEnrolled(parseInt(schoolRow["STUDENTS_ENROLLED"]));
             thisSchool.setStudentsWithDisability(parseInt(schoolRow["SWD"]));
+            thisSchool.setSchoolYear(parseInt(schoolRow["SY"]));
 
             let thisSchoolEthnicityArray = [];
             let thisSchoolEthnicityMap = {};

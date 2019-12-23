@@ -13,6 +13,7 @@ class School {
         this._enrolled = 0;
         this._testTakers = 0;
         this._studentsWithDisability = 0;
+        this._schoolYear = 2016;
     }
 
     setType(entityType) {
@@ -67,6 +68,10 @@ class School {
 
     setStudentsWithDisability(count) {
         this._studentsWithDisability = count;
+    }
+
+    setSchoolYear(year) {
+        this._schoolYear = year;
     }
 }
 

@@ -81,21 +81,36 @@ const pieChartParentDivStyle = {
     flexDirection: "column"
 };
 
+const styles = {
+    root: {
+        fontFamily: "consolas, sans-serif",
+        textAlign: "center",
+        position: "relative",
+        width: 250,
+        height: 300
+    },
+
+    totalLabel: {
+        fontSize: 24
+    }
+};
+
 function createPieCharts(chartData) {
     let pieCharts = [];
     const dataLength = chartData.length;
     chartData.forEach((row, index) => {
         pieCharts.push(
-            <div key={row.schoolName} style={pieChartParentDivStyle}>
+            <div key={row.schoolName} style={styles.root}>
                 <div style={{ height: "90%", flexGrow: "1" }}>
                     <ResponsivePie
                         key={row.schoolName}
                         data={row.dataArray}
-                        margin={{ top: 40, right: 40, bottom: 40, left: 40 }}
+                        margin={{ top: 40, right: 60, bottom: 40, left: 40 }}
                         colors={d => d.chartColor}
                         sortByValue={true}
                         enableRadialLabels={false}
                         enableSlicesLabels={false}
+                        innerRadius={0.5}
                         tooltip={data => {
                             return getTooltipHTML(data);
                         }}
@@ -107,7 +122,8 @@ function createPieCharts(chartData) {
                                           direction: "column",
                                           itemWidth: 20,
                                           itemHeight: 20,
-                                          translateY: 20
+                                          translateY: 20,
+                                          translateX: 30
                                           // symbolSize: 18,
                                           // symbolShape: "circle"
                                       }

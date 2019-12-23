@@ -49,11 +49,12 @@ function getDisabilityData(allData, options) {
         let thisSchoolData = {};
         let schoolDataArray = [
             {
-                id: "studentsWithDisability",
+                // id: "Students With Disability",
+                id: "SWD",
                 value: disabilityCount,
                 percentage: disabilityPercentage,
                 color: "orange",
-                label: "SWD"
+                label: "Students With Disability"
                 // Students With Disability
             },
             {
@@ -83,6 +84,20 @@ const pieChartParentDivStyle = {
     flexDirection: "column"
 };
 
+const styles = {
+    root: {
+        fontFamily: "consolas, sans-serif",
+        textAlign: "center",
+        position: "relative",
+        width: 250,
+        height: 300
+    },
+
+    totalLabel: {
+        fontSize: 24
+    }
+};
+
 function getPieCharts(schoolDataArray) {
     const dataLength = schoolDataArray.length;
     let pieCharts = [];
@@ -91,7 +106,7 @@ function getPieCharts(schoolDataArray) {
         const schoolName = row.schoolName;
         const schoolData = row.dataArray;
         pieCharts.push(
-            <div key={schoolName} style={pieChartParentDivStyle}>
+            <div key={schoolName} style={styles.root}>
                 <div style={{ height: "90%", flexGrow: "1" }}>
                     <ResponsivePie
                         key={schoolName}
@@ -101,7 +116,8 @@ function getPieCharts(schoolDataArray) {
                         sortByValue={true}
                         enableSlicesLabels={false}
                         enableRadialLabels={false}
-                        margin={{ top: 40, right: 40, bottom: 40, left: 40 }}
+                        innerRadius={0.5}
+                        margin={{ top: 40, right: 60, bottom: 40, left: 40 }}
                         tooltip={data => {
                             return getTooltipHTML(data);
                         }}
@@ -113,7 +129,8 @@ function getPieCharts(schoolDataArray) {
                                           direction: "column",
                                           itemWidth: 20,
                                           itemHeight: 20,
-                                          translateY: 20
+                                          translateY: 20,
+                                          translateX: 20
                                           // symbolSize: 18,
                                           // symbolShape: "circle"
                                       }
@@ -131,7 +148,8 @@ function getPieCharts(schoolDataArray) {
         const heading = [];
         heading.push(
             <div key={"disability-heading"}>
-                <h3>Students With Disability</h3>
+                {/* <h3>Students With Disability</h3> */}
+                <h3>Disability</h3>
             </div>
         );
         pieCharts = heading.concat(pieCharts);

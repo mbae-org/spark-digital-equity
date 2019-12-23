@@ -7,7 +7,8 @@ function NextStepsPanel() {
             style={{
                 display: "flex",
                 minHeight: "90vh",
-                flexDirection: "column"
+                flexDirection: "column",
+                backgroundColor: "#d24242"
             }}
         >
             <div style={{ height: "30%" }}>
