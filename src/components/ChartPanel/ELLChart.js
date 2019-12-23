@@ -1,13 +1,16 @@
+/**
+ * English Language Learners
+ */
+
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
-// import School from "../../School";
 
 /**
  * Main class component
  * @param {*} props
  */
-function EconDisChart(props) {
-    const schoolDataArray = getEconDisForSchool(
+function ELLChart(props) {
+    const schoolDataArray = getLanguageLearnerData(
         props.schoolData,
         props.options
     );
@@ -31,37 +34,35 @@ function EconDisChart(props) {
 /**
  * return array: x->schoolName, male, female
  */
-function getEconDisForSchool(allData, options) {
+function getLanguageLearnerData(allData, options) {
     let chartData = [];
     options.forEach(schoolName => {
         const schoolObject = allData[schoolName];
 
-        const disadvantagedCount = schoolObject._economicallyDisadvantaged;
+        const languageLearnerCount = schoolObject._englishLanguageLearner;
         const totalCount = schoolObject._enrolled;
-        const nonDisadvantagedCount = totalCount - disadvantagedCount;
+        const otherCount = totalCount - languageLearnerCount;
 
-        const disadvantagedPercentage = (
-            (disadvantagedCount / totalCount) *
+        const learnerPercentage = (
+            (languageLearnerCount / totalCount) *
             100
         ).toFixed(2);
-        const nonDisadvantagedPercentage = (
-            (nonDisadvantagedCount / totalCount) *
-            100
-        ).toFixed(2);
+        const otherPercentage = ((otherCount / totalCount) * 100).toFixed(2);
 
         let thisSchoolData = {};
         let schoolDataArray = [
             {
-                id: "Disadvantaged",
-                value: disadvantagedCount,
-                percentage: disadvantagedPercentage,
+                // id: "Students With Disability",
+                id: "ELL",
+                value: languageLearnerCount,
+                percentage: learnerPercentage,
                 color: "orange",
-                label: "Economically Disadvantaged"
+                label: "English Language Learner"
             },
             {
                 id: "Others",
-                value: nonDisadvantagedCount,
-                percentage: nonDisadvantagedPercentage,
+                value: otherCount,
+                percentage: otherPercentage,
                 color: "blue",
                 label: "Others"
             }
@@ -71,19 +72,8 @@ function getEconDisForSchool(allData, options) {
         chartData.push(thisSchoolData);
     });
 
-    // console.log("econ dis chart");
-    // console.log(chartData);
     return chartData;
 }
-
-const pieChartParentDivStyle = {
-    height: "300px",
-    width: "25%",
-    minWidth: "250px",
-    flexGrow: "1",
-    display: "flex",
-    flexDirection: "column"
-};
 
 const styles = {
     root: {
@@ -117,8 +107,8 @@ function getPieCharts(schoolDataArray) {
                         sortByValue={true}
                         enableSlicesLabels={false}
                         enableRadialLabels={false}
-                        margin={{ top: 40, right: 40, bottom: 60, left: 40 }}
                         innerRadius={0.5}
+                        margin={{ top: 40, right: 60, bottom: 40, left: 40 }}
                         tooltip={data => {
                             return getTooltipHTML(data);
                         }}
@@ -146,8 +136,10 @@ function getPieCharts(schoolDataArray) {
     if (pieCharts && pieCharts.length > 0) {
         const heading = [];
         heading.push(
-            // <h3 key={"econdis-heading"}>Economically Disadvantaged</h3>
-            <h3 key={"econdis-heading"}>EconDis</h3>
+            <div key={"ell-heading"}>
+                {/* <h3>English Language Learners</h3> */}
+                <h3>Learners</h3>
+            </div>
         );
         pieCharts = heading.concat(pieCharts);
     }
@@ -168,4 +160,4 @@ function getTooltipHTML(data) {
     );
 }
 
-export default EconDisChart;
+export default ELLChart;

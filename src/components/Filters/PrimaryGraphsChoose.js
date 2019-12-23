@@ -1,5 +1,11 @@
 import React from "react";
 
+const styles = {
+    checkbox: {
+        marginTop: "5px"
+    }
+};
+
 function PrimaryGraphChoose(props) {
     // console.log(props);
 
@@ -13,7 +19,7 @@ function PrimaryGraphChoose(props) {
         >
             <div style={{ padding: "10px" }}>Select To View:</div>
             <div>
-                <div>
+                <div style={styles.checkbox}>
                     <input
                         type="checkbox"
                         id="gender"
@@ -24,7 +30,7 @@ function PrimaryGraphChoose(props) {
                     />
                     <label>Gender</label>
                 </div>
-                <div>
+                <div style={styles.checkbox}>
                     <input
                         type="checkbox"
                         id="ethnicity"
@@ -36,7 +42,7 @@ function PrimaryGraphChoose(props) {
                     <label>Ethnicity</label>
                 </div>
 
-                <div>
+                <div style={styles.checkbox}>
                     <input
                         type="checkbox"
                         id="economicallyDisadvantaged"
@@ -50,7 +56,7 @@ function PrimaryGraphChoose(props) {
                     <label>Economically Disadvantaged</label>
                 </div>
 
-                <div>
+                <div style={styles.checkbox}>
                     <input
                         type="checkbox"
                         id="disability"
@@ -62,18 +68,17 @@ function PrimaryGraphChoose(props) {
                     <label>Students With Disability</label>
                 </div>
 
-                {/* <div>
-                    <input type="checkbox" id="econ-disad" />
-                    <label>Economically Disadvantaged</label>
+                <div style={styles.checkbox}>
+                    <input
+                        type="checkbox"
+                        id="englishLanguageLearner"
+                        onChange={option =>
+                            optionChooseClicKHandler(props, option)
+                        }
+                        checked={props.selectedFilters.englishLanguageLearner}
+                    />
+                    <label>English Language Learners</label>
                 </div>
-                <div>
-                    <input type="checkbox" id="disabilities" />
-                    <label>Disabilities</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="eng-lang-learner" />
-                    <label>English Language Learner</label>
-                </div> */}
             </div>
         </div>
     );

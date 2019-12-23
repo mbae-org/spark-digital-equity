@@ -9,6 +9,7 @@ import GenderChart from "./components/ChartPanel/GenderChart";
 import EthnicityChart from "./components/ChartPanel/EthnicityChart";
 import EconDisChart from "./components/ChartPanel/EconDisChart";
 import DisabilityChart from "./components/ChartPanel/DisabilityChart";
+import ELLChart from "./components/ChartPanel/ELLChart";
 import NextStepsPanel from "./components/NextStepsPanel";
 
 import schoolData from "./data/data-2016";
@@ -34,7 +35,8 @@ class App extends React.Component {
                 gender: true,
                 ethnicity: true,
                 economicallyDisadvantaged: false,
-                disability: false
+                disability: false,
+                englishLanguageLearner: true
             }
         };
     }
@@ -107,6 +109,16 @@ class App extends React.Component {
         if (selectedFilters.disability === true) {
             charts.push(
                 <DisabilityChart
+                    options={this.state.schoolOptions}
+                    schoolData={this.state.newSchoolData}
+                    key="disabilityChart"
+                />
+            );
+        }
+
+        if (selectedFilters.englishLanguageLearner === true) {
+            charts.push(
+                <ELLChart
                     options={this.state.schoolOptions}
                     schoolData={this.state.newSchoolData}
                     key="disabilityChart"
@@ -209,6 +221,11 @@ class App extends React.Component {
             districtObject.setEthnicityMap(thisDistrictEthnicityMap);
             districtObject.setEthnicity(thisDistrictEthnicityArray);
 
+            districtObject.setEnglishLanguageLearner(
+                districtObject._englishLanguageLearner +
+                    schoolObject._englishLanguageLearner
+            );
+
             schoolObjectMap[districtName] = districtObject;
         }
 
@@ -229,7 +246,8 @@ class App extends React.Component {
                 schoolRow["DIST_NAME"] &&
                 Number.isInteger(parseInt(schoolRow["ECODIS"])) &&
                 Number.isInteger(parseInt(schoolRow["SWD"])) &&
-                Number.isInteger(parseInt(schoolRow["SY"]))
+                Number.isInteger(parseInt(schoolRow["SY"])) &&
+                Number.isInteger(parseInt(schoolRow["ELL"]))
             ) {
                 filteredArray.push(schoolRow);
             } else {
@@ -266,6 +284,7 @@ class App extends React.Component {
             thisSchool.setEnrolled(parseInt(schoolRow["STUDENTS_ENROLLED"]));
             thisSchool.setStudentsWithDisability(parseInt(schoolRow["SWD"]));
             thisSchool.setSchoolYear(parseInt(schoolRow["SY"]));
+            thisSchool.setEnglishLanguageLearner(parseInt(schoolRow["ELL"]));
 
             let thisSchoolEthnicityArray = [];
             let thisSchoolEthnicityMap = {};
