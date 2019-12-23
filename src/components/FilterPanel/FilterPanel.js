@@ -19,8 +19,11 @@ function FilterPanel(props) {
                 <div>
                     <SchoolDistrictFilter
                         data={props.data}
-                        onOptionsChange={selectedOptions =>
-                            props.onSchoolFilterChange(selectedOptions)
+                        onOptionsChange={(selectedOptions, actionMeta) =>
+                            props.onSchoolFilterChange(
+                                selectedOptions,
+                                actionMeta
+                            )
                         }
                     ></SchoolDistrictFilter>
                 </div>

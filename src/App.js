@@ -55,8 +55,8 @@ class App extends React.Component {
                         <FilterPanel
                             data={this.state.newSchoolData}
                             selectedFilters={this.state.selectedFilters}
-                            onSchoolFilterChange={opts =>
-                                this.schoolFilterChangeHandler(opts)
+                            onSchoolFilterChange={(opts, actionMeta) =>
+                                this.schoolFilterChangeHandler(opts, actionMeta)
                             }
                             onGraphSelectionChange={
                                 this.graphSelectionChangeHandler
@@ -123,7 +123,8 @@ class App extends React.Component {
         });
     }
 
-    schoolFilterChangeHandler(selectedOptions) {
+    schoolFilterChangeHandler(selectedOptions, actionMeta) {
+        console.log(actionMeta);
         if (!selectedOptions) {
             selectedOptions = [];
         }

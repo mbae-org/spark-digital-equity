@@ -1,5 +1,9 @@
 import React from "react";
 import Select from "react-select";
+
+import Creatable from "react-select/creatable";
+import { components } from "react-select";
+
 import { EntityType } from "../../Constants";
 
 function SchoolDistrictFilter(props) {
@@ -11,13 +15,16 @@ function SchoolDistrictFilter(props) {
     const districtOptions = createDistrictOptions(districtSet);
     const allOptions = schoolOptions.concat(districtOptions);
 
+    const isValidNewOption = (inputValue, selectValue) =>
+        inputValue.length > 0 && selectValue.length < 5;
+
     return (
         <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ padding: "10px" }}>
                 Select School / District to compare
             </div>
             <div style={{ color: "black" }}>
-                <Select
+                {/* <Select
                     options={allOptions}
                     defaultValue={allOptions.filter(
                         option => option.label === "Massachussets"
@@ -26,34 +33,63 @@ function SchoolDistrictFilter(props) {
                     onChange={selectedOptions =>
                         props.onOptionsChange(selectedOptions)
                     }
+                /> */}
+
+                <Creatable
+                    components={{ Menu }}
+                    isValidNewOption={isValidNewOption}
+                    options={allOptions}
+                    defaultValue={allOptions.filter(
+                        option => option.label === "Massachussets"
+                    )}
+                    isMulti
+                    required
+                    onChange={(selectedOptions, actionMeta) =>
+                        props.onOptionsChange(selectedOptions, actionMeta)
+                    }
                 />
             </div>
         </div>
     );
 }
 
-function filterSchooldata(schoolData) {
-    // let filteredArray = [];
-    // for (let schoolRow of schoolData) {
-    //     if (
-    //         parseInt(schoolRow["FEMALE"]) &&
-    //         parseInt(schoolRow["MALE"]) &&
-    //         schoolRow["DIST_NAME"]
-    //     ) {
-    //         filteredArray = filteredArray.concat(schoolRow);
-    //     }
-    // }
+const Menu = props => {
+    const optionSelectedLength = props.getValue().length || 0;
+    return (
+        <components.Menu {...props}>
+            {optionSelectedLength < 3 ? (
+                props.children
+            ) : (
+                <div style={{ margin: 15 }}>
+                    Cannot view more than 3 schools/districts
+                </div>
+            )}
+        </components.Menu>
+    );
+};
 
-    // return filteredArray;
+// function App() {
+//     const isValidNewOption = (inputValue, selectValue) =>
+//         inputValue.length > 0 && selectValue.length < 5;
+//     return (
+//         <div className="App">
+//             <Creatable
+//                 components={{ Menu }}
+//                 isMulti
+//                 isValidNewOption={isValidNewOption}
+//                 options={options}
+//             />
+//         </div>
+//     );
+// }
+
+function filterSchooldata(schoolData) {
     return schoolData;
 }
 
 function getSchools(schoolData) {
     let schools = new Set();
     for (let schoolName in schoolData) {
-        // if (parseInt(schoolRow["FEMALE"]) && parseInt(schoolRow["MALE"])){
-        //     schools.add(schoolRow["SCH_NAME"]);
-        // }
         const schoolRow = schoolData[schoolName];
         if (schoolRow._type === EntityType.SCHOOL) {
             schools.add(schoolRow._name);
@@ -65,13 +101,11 @@ function getSchools(schoolData) {
 
 function createSchoolOptions(schoolSet) {
     let optionList = [];
-    // let i = 0;
     for (let schoolName of schoolSet) {
         optionList = optionList.concat({
             value: schoolName,
             label: schoolName
         });
-        // i++;
     }
     return optionList;
 }
@@ -79,9 +113,6 @@ function createSchoolOptions(schoolSet) {
 function getDistricts(schoolData) {
     let districtSet = new Set();
     for (let schoolName in schoolData) {
-        // if (schoolRow["DIST_NAME"]) {
-        //     districtSet.add(schoolRow["DIST_NAME"]);
-        // }
         const schoolRow = schoolData[schoolName];
         if (schoolRow._type === EntityType.DISTRICT) {
             districtSet.add(schoolRow._name);
