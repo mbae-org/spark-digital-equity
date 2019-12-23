@@ -33,8 +33,8 @@ class App extends React.Component {
             selectedFilters: {
                 gender: true,
                 ethnicity: true,
-                economicallyDisadvantaged: true,
-                disability: true
+                economicallyDisadvantaged: false,
+                disability: false
             }
         };
     }
