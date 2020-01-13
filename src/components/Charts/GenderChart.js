@@ -7,7 +7,10 @@ import { ResponsivePie } from "@nivo/pie";
  * @param {*} props
  */
 function GenderChart(props) {
-    const schoolDataArray = getGenderForSchool(props.schoolData, props.options);
+    const schoolDataArray = getGenderForSchool(
+        props.schoolData,
+        props.selectedSchoolOptions
+    );
 
     let pieCharts = getPieCharts(schoolDataArray);
 
@@ -28,9 +31,9 @@ function GenderChart(props) {
 /**
  * return array: x->schoolName, male, female
  */
-function getGenderForSchool(allData, options) {
+function getGenderForSchool(allData, selectedSchools) {
     let chartData = [];
-    options.forEach(schoolName => {
+    selectedSchools.forEach(schoolName => {
         const schoolRow = allData[schoolName];
 
         const schoolYear = schoolRow._schoolYear;
