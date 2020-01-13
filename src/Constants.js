@@ -85,3 +85,5 @@ export const EthnicityDefaultMap = {
         value: 0
     }
 };
+
+export const YearList = [2016, 2017, 2018];

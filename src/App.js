@@ -4,20 +4,21 @@
 import React from "react";
 import "./App.css";
 import FilterPanel from "./components/FilterPanel/FilterPanel";
-import GenderChart from "./components/ChartPanel/GenderChart";
-// import GenderChart2 from "./components/ChartPanel/GenderChart2";
-import EthnicityChart from "./components/ChartPanel/EthnicityChart";
-import EconDisChart from "./components/ChartPanel/EconDisChart";
-import DisabilityChart from "./components/ChartPanel/DisabilityChart";
-import ELLChart from "./components/ChartPanel/ELLChart";
+import GenderChart from "./components/Charts/GenderChart";
+import EthnicityChart from "./components/Charts/EthnicityChart";
+import EconDisChart from "./components/Charts/EconDisChart";
+import DisabilityChart from "./components/Charts/DisabilityChart";
+import ELLChart from "./components/Charts/ELLChart";
 import NextStepsPanel from "./components/NextStepsPanel";
+// import GenderChart2 from "./components/Charts/GenderChart2";
 
 import schoolData from "./data/data-all";
 
 import {
     EntityType,
     EthnicityAcronymList,
-    EthnicityDefaultMap
+    EthnicityDefaultMap,
+    YearList
 } from "./Constants";
 import School from "./School";
 
@@ -27,21 +28,40 @@ class App extends React.Component {
         this.graphSelectionChangeHandler = this.graphSelectionChangeHandler.bind(
             this
         );
+        this.yearSelectionChangeHandler = this.yearSelectionChangeHandler.bind(this);
+
+        let selectedYearsMap = {};
+        YearList.forEach(year => {
+            selectedYearsMap[year] = false;
+        });
+        selectedYearsMap[YearList[YearList.length - 1]] = true;
+        const selectedSchools = ["Massachussets"];
+        const yearSchoolObjectMap = this.transformSchoolData(
+            schoolData,
+            selectedSchools,
+            selectedYearsMap
+        );
+
         this.state = {
-            newSchoolData: this.transformSchoolData(schoolData),
+            newSchoolData: yearSchoolObjectMap,
             schoolData: this.extractSchoolData(schoolData),
-            schoolOptions: ["Massachussets"],
+            // filteredData: this.filterSchoolData(
+            //     this.extractSchoolData(schoolData)
+            // ),
+            schoolOptions: selectedSchools,
             selectedFilters: {
                 gender: true,
                 ethnicity: true,
                 economicallyDisadvantaged: false,
                 disability: false,
-                englishLanguageLearner: true
-            }
+                englishLanguageLearner: false
+            },
+            selectedYearsMap: selectedYearsMap,
+            filteredSchoolData: this.filterYearSchoolObjectMap(yearSchoolObjectMap, selectedSchools, selectedYearsMap)
         };
 
-        console.log("schoolData");
-        console.log(schoolData);
+        // console.log("schoolData");
+        // console.log(schoolData);
     }
 
     render() {
@@ -56,17 +76,22 @@ class App extends React.Component {
                     <h3> Digital Equity </h3>
                 </div>
                 <div className="App" style={{ display: "flex" }}>
-                    <div className="filter-panel">
+                    <div
+                        className="filter-panel"
+                        style={{ backgroundColor: "darkgreen" }}
+                    >
                         <FilterPanel
                             data={this.state.schoolData}
                             selectedFilters={this.state.selectedFilters}
+                            selectedYears={this.state.selectedYearsMap}
                             onSchoolFilterChange={(opts, actionMeta) =>
                                 this.schoolFilterChangeHandler(opts, actionMeta)
                             }
                             onGraphSelectionChange={
                                 this.graphSelectionChangeHandler
                             }
-                        ></FilterPanel>
+                            onYearSelectionChange={this.yearSelectionChangeHandler}
+                        />
                     </div>
                     <div className="chart-panel">{charts}</div>
                 </div>
@@ -82,7 +107,7 @@ class App extends React.Component {
         if (selectedFilters.gender === true) {
             charts.push(
                 <GenderChart
-                    options={this.state.schoolOptions}
+                    selectedSchoolOptions={this.state.schoolOptions}
                     schoolData={this.state.schoolData}
                     key="genderChart"
                 />
@@ -138,28 +163,37 @@ class App extends React.Component {
         });
     }
 
+    yearSelectionChangeHandler(newSelection) {
+        this.setState({
+            selectedYears: newSelection,
+            filteredSchoolData: this.filterYearSchoolObjectMap(this.state.newSchoolData, this.state.schoolOptions, newSelection)
+        });
+    }
+
     schoolFilterChangeHandler(selectedOptions, actionMeta) {
         console.log(actionMeta);
         if (!selectedOptions) {
             selectedOptions = [];
         }
+
+        const selectedSchoolOptions = this.transformSelectedOptions(selectedOptions);
         this.setState({
-            schoolOptions: this.transformSelectedOptions(selectedOptions)
+            schoolOptions: selectedSchoolOptions,
+            filteredSchoolData: this.filterYearSchoolObjectMap(this.state.newSchoolData, selectedSchoolOptions, this.state.selectedYearsMap)
         });
     }
 
     /**
      *
      * @param {array} schoolDataArray
+     * @param {array} selectedSchools list of selected schools
+     * @param {Map} selectedYears
+     * @returns {[]}
      */
-    transformSchoolData(schoolDataArray) {
-        let filteredArray = [];
-        let yearSchoolObjectMap = {};
+    transformSchoolData(schoolDataArray, selectedSchools, selectedYears) {
+        let validDataArray = this.filterSchoolDataWithFields(schoolDataArray);
+        let yearSchoolObjectMap = this.getYearSchoolObjectMapNew(validDataArray);
 
-        //  TODO: do this by year
-
-        filteredArray = this.filterSchoolDataWithFields(schoolDataArray);
-        yearSchoolObjectMap = this.getYearSchoolObjectMapNew(filteredArray);
 
         // add info for all districts
         const allYears = Object.keys(yearSchoolObjectMap);
@@ -226,9 +260,6 @@ class App extends React.Component {
             }
             yearSchoolObjectMap[year] = thisYearSchoolObjectMap;
         }
-
-        console.log("yearSchoolObjectMap");
-        console.log(yearSchoolObjectMap);
 
         return yearSchoolObjectMap;
     }
@@ -331,12 +362,13 @@ class App extends React.Component {
         });
 
         if (schoolsWithMissingEntry.length > 0) {
-            console.log("missing entry for schools: ");
-            console.log(schoolsWithMissingEntry);
+            // console.log("missing entry for schools: ");
+            // console.log(schoolsWithMissingEntry);
         }
 
         return filteredArray;
     }
+
 
     getSchoolObjectMap(filteredArray) {
         let schoolObjectMap = {};
@@ -388,6 +420,11 @@ class App extends React.Component {
         return schoolObjectMap;
     }
 
+    /**
+     *
+     * @param {array} filteredArray
+     * @returns {Map} yearSchoolObjectMap
+     */
     getYearSchoolObjectMapNew(filteredArray) {
         let schoolObjectMap = {};
         let yearSchoolObjectMap = {};
@@ -445,11 +482,39 @@ class App extends React.Component {
 
         // return schoolObjectMap;
 
-        console.log("yearSchoolObjectMap");
-        console.log(yearSchoolObjectMap);
+        // console.log("yearSchoolObjectMap");
+        // console.log(yearSchoolObjectMap);
 
         return yearSchoolObjectMap;
     }
+
+    /**
+     *
+     * @param {Map} yearSchoolObjectMap
+     * @param {Array} selectedSchoolsArray
+     * @param {Map} selectedYearsMap
+     * @returns {Array} filteredSchoolDataArray
+     */
+    filterYearSchoolObjectMap(yearSchoolObjectMap, selectedSchoolsArray, selectedYearsMap) {
+        let filteredSchoolDataArray = [];
+        let selectedYearsArray = [];
+        Object.keys(selectedYearsMap).forEach((key) => {
+            if(selectedYearsMap[key]===true)
+                selectedYearsArray.push(key)
+        });
+
+        selectedYearsArray.forEach(year => {
+           selectedSchoolsArray.forEach(schoolName => {
+               filteredSchoolDataArray.push(yearSchoolObjectMap[year][schoolName]);
+           });
+        });
+
+        console.log("filteredSchoolDataArray");
+        console.log(filteredSchoolDataArray);
+
+        return filteredSchoolDataArray;
+    }
+
 }
 
 export default App;

@@ -74,14 +74,14 @@ function getGenderForSchool(allData, selectedSchools) {
     return chartData;
 }
 
-const pieChartParentDivStyle = {
-    height: "300px",
-    width: "25%",
-    minWidth: "250px",
-    flexGrow: "1",
-    display: "flex",
-    flexDirection: "column"
-};
+// const pieChartParentDivStyle = {
+//     height: "300px",
+//     width: "25%",
+//     minWidth: "250px",
+//     flexGrow: "1",
+//     display: "flex",
+//     flexDirection: "column"
+// };
 
 const margin = { top: 30, right: 200, bottom: 30, left: 30 };
 

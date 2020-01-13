@@ -75,14 +75,14 @@ function getDisabilityData(allData, options) {
     return chartData;
 }
 
-const pieChartParentDivStyle = {
-    height: "300px",
-    width: "25%",
-    minWidth: "250px",
-    flexGrow: "1",
-    display: "flex",
-    flexDirection: "column"
-};
+// const pieChartParentDivStyle = {
+//     height: "300px",
+//     width: "25%",
+//     minWidth: "250px",
+//     flexGrow: "1",
+//     display: "flex",
+//     flexDirection: "column"
+// };
 
 const styles = {
     root: {

@@ -1,6 +1,7 @@
 import React from "react";
 import SchoolDistrictFilter from "../Filters/SchoolDistrictFilter";
 import PrimaryGraphsChoose from "../Filters/PrimaryGraphsChoose";
+import YearFilter from "../Filters/YearFilter";
 
 // defaultSchoolOptions =
 
@@ -25,7 +26,15 @@ function FilterPanel(props) {
                                 actionMeta
                             )
                         }
-                    ></SchoolDistrictFilter>
+                    />
+                </div>
+                <div>
+                    <YearFilter
+                        selectedYears={props.selectedYears}
+                        onYearChange = {newYearSelection =>
+                            props.onYearSelectionChange(newYearSelection)
+                        }
+                    />
                 </div>
                 <div>
                     <PrimaryGraphsChoose
@@ -35,7 +44,6 @@ function FilterPanel(props) {
                         }
                     />
                 </div>
-                <div></div>
             </div>
         </div>
     );
