@@ -7,22 +7,30 @@ import { ResponsivePie } from "@nivo/pie";
  * @param {*} props
  */
 function EthnicityChart(props) {
-    const chartData = getGroupedEthnicData(
-        props.schoolData,
-        props.options,
-        ethnicityAcronyms
-    );
-    const pieCharts = createPieCharts(chartData);
+
+
+    const yearToSchoolArrayDataMap = props.yearToSchoolArrayDataMap;
+    const dataYears = Object.keys(yearToSchoolArrayDataMap);
+    let allYearPieCharts = [];
+
+    dataYears.forEach(year => {
+        const thisYearSchoolDataArray = getGroupedEthnicData(yearToSchoolArrayDataMap[year]);
+        let thisYearPieCharts = createPieCharts(thisYearSchoolDataArray);
+
+        allYearPieCharts.push(
+            <div key={year} style={styles.yearChartsParent}>
+                <span>{year}</span>
+                {thisYearPieCharts}
+            </div>
+        )
+    });
+
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "row",
-                height: "50%",
-                width: "100%"
-            }}
+        <div id="ethnicity-pie-charts"
+            style={styles.categoryChartsParent}
         >
-            {pieCharts}
+            <h3 key="ethnicityHeading">Ethnicity</h3>
+            {allYearPieCharts}
         </div>
     );
 }
@@ -35,21 +43,12 @@ function EthnicityChart(props) {
  * return array->[schoolName, array[schoolData]]
  * ignoring zero values
  */
-function getGroupedEthnicData(allData, options, ethnicityAcronymList) {
+function getGroupedEthnicData(schoolArrayForYear) {
     let chartData = [];
-    options.forEach(schoolName => {
-        const schoolObj = allData[schoolName];
-
+    schoolArrayForYear.forEach(schoolObj => {
+        const schoolName = schoolObj._name;
         let thisSchoolData = {};
         let schoolDataArray = [];
-        // ethnicityAcronymList.forEach(ethnicityObj => {
-        //     schoolDataArray.push({
-        //         id: ethnicityObj.id,
-        //         value: parseInt(schoolObj[ethnicityObj.id]),
-        //         label: ethnicityObj.desc,
-        //         chartColor: ethnicityObj.chartColor
-        //     });
-        // });
 
         schoolDataArray = schoolObj._ethnicity;
 
@@ -92,6 +91,19 @@ const styles = {
 
     totalLabel: {
         fontSize: 24
+    },
+    categoryChartsParent: {
+        display: "flex",
+        flexDirection: "column",
+        // height: "50%",
+        width: "100%",
+        borderStyle: "ridge",
+        padding: "10px",
+        backgroundColor: "#6f7348"
+    },
+    yearChartsParent: {
+        display: "flex",
+        flexDirection: "row"
     }
 };
 
@@ -137,11 +149,11 @@ function createPieCharts(chartData) {
         );
     });
 
-    if (pieCharts && pieCharts.length > 0) {
-        const heading = [];
-        heading.push(<h3 key="ethnicityHeading">Ethnicity</h3>);
-        pieCharts = heading.concat(pieCharts);
-    }
+    // if (pieCharts && pieCharts.length > 0) {
+    //     const heading = [];
+    //     heading.push(<h3 key="ethnicityHeading">Ethnicity</h3>);
+    //     pieCharts = heading.concat(pieCharts);
+    // }
 
     return pieCharts;
 }

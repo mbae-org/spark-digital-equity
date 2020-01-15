@@ -4,41 +4,70 @@
 
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
+import {CategoryChartPanelBackgroundColor} from "../../Constants"
 
 /**
  * Main class component
  * @param {*} props
  */
 function ELLChart(props) {
-    const schoolDataArray = getLanguageLearnerData(
-        props.schoolData,
-        props.options
-    );
 
-    let pieCharts = getPieCharts(schoolDataArray);
+    const yearToSchoolArrayDataMap = props.yearToSchoolArrayDataMap;
+    const dataYears = Object.keys(yearToSchoolArrayDataMap);
+    let allYearPieCharts = [];
+
+    dataYears.forEach(year => {
+        const thisYearSchoolDataArray = getLanguageLearnerData(yearToSchoolArrayDataMap[year]);
+        let thisYearPieCharts = getPieCharts(thisYearSchoolDataArray);
+
+        allYearPieCharts.push(
+            <div key={year} style={styles.yearChartsParent}>
+                <span>{year}</span>
+                {thisYearPieCharts}
+            </div>
+        )
+    });
 
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "row",
-                height: "50%",
-                width: "100%"
-            }}
+        <div id="disability-pie-charts"
+             style={styles.categoryChartsParent}
         >
-            {pieCharts}
+            <h3 key="ethnicityHeading">English Language Learners</h3>
+            {allYearPieCharts}
         </div>
     );
+
+
+
+
+    // const schoolDataArray = getLanguageLearnerData(
+    //     props.schoolData,
+    //     props.options
+    // );
+    //
+    // let pieCharts = getPieCharts(schoolDataArray);
+    //
+    // return (
+    //     <div
+    //         style={{
+    //             display: "flex",
+    //             flexDirection: "row",
+    //             height: "50%",
+    //             width: "100%"
+    //         }}
+    //     >
+    //         {pieCharts}
+    //     </div>
+    // );
 }
 
 /**
  * return array: x->schoolName, male, female
  */
-function getLanguageLearnerData(allData, options) {
+function getLanguageLearnerData(schoolArrayForYear) {
     let chartData = [];
-    options.forEach(schoolName => {
-        const schoolObject = allData[schoolName];
-
+    schoolArrayForYear.forEach(schoolObject => {
+        const schoolName = schoolObject._name;
         const languageLearnerCount = schoolObject._englishLanguageLearner;
         const totalCount = schoolObject._enrolled;
         const otherCount = totalCount - languageLearnerCount;
@@ -86,6 +115,19 @@ const styles = {
 
     totalLabel: {
         fontSize: 24
+    },
+    categoryChartsParent: {
+        display: "flex",
+        flexDirection: "column",
+        // height: "50%",
+        width: "100%",
+        borderStyle: "ridge",
+        padding: "10px",
+        backgroundColor: CategoryChartPanelBackgroundColor
+    },
+    yearChartsParent: {
+        display: "flex",
+        flexDirection: "row"
     }
 };
 
@@ -133,16 +175,16 @@ function getPieCharts(schoolDataArray) {
         );
     });
 
-    if (pieCharts && pieCharts.length > 0) {
-        const heading = [];
-        heading.push(
-            <div key={"ell-heading"}>
-                {/* <h3>English Language Learners</h3> */}
-                <h3>Learners</h3>
-            </div>
-        );
-        pieCharts = heading.concat(pieCharts);
-    }
+    // if (pieCharts && pieCharts.length > 0) {
+    //     const heading = [];
+    //     heading.push(
+    //         <div key={"ell-heading"}>
+    //             {/* <h3>English Language Learners</h3> */}
+    //             <h3>Learners</h3>
+    //         </div>
+    //     );
+    //     pieCharts = heading.concat(pieCharts);
+    // }
 
     return pieCharts;
 }

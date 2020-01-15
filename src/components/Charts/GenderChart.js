@@ -118,8 +118,11 @@ const styles = {
     genderChartsParent: {
         display: "flex",
         flexDirection: "column",
-        height: "50%",
-        width: "100%"
+        // height: "50%",
+        width: "100%",borderStyle: "ridge",
+        padding: "10px",
+        backgroundColor: "#4f4954"
+
     },
     yearChartsParent: {
         display: "flex",

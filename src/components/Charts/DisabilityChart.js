@@ -7,32 +7,41 @@ import { ResponsivePie } from "@nivo/pie";
  * @param {*} props
  */
 function DisabilityChart(props) {
-    const schoolDataArray = getDisabilityData(props.schoolData, props.options);
 
-    let pieCharts = getPieCharts(schoolDataArray);
+    const yearToSchoolArrayDataMap = props.yearToSchoolArrayDataMap;
+    const dataYears = Object.keys(yearToSchoolArrayDataMap);
+    let allYearPieCharts = [];
+
+    dataYears.forEach(year => {
+        const thisYearSchoolDataArray = getDisabilityData(yearToSchoolArrayDataMap[year]);
+        let thisYearPieCharts = getPieCharts(thisYearSchoolDataArray);
+
+        allYearPieCharts.push(
+            <div key={year} style={styles.yearChartsParent}>
+                <span>{year}</span>
+                {thisYearPieCharts}
+            </div>
+        )
+    });
 
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "row",
-                height: "50%",
-                width: "100%"
-            }}
+        <div id="disability-pie-charts"
+             style={styles.categoryChartsParent}
         >
-            {pieCharts}
+            <h3 key="ethnicityHeading">Students With Disability</h3>
+            {allYearPieCharts}
         </div>
     );
+
 }
 
 /**
  * return array: x->schoolName, male, female
  */
-function getDisabilityData(allData, options) {
+function getDisabilityData(schoolArrayForYear) {
     let chartData = [];
-    options.forEach(schoolName => {
-        const schoolObject = allData[schoolName];
-
+    schoolArrayForYear.forEach(schoolObject => {
+        const schoolName = schoolObject._name;
         const disabilityCount = schoolObject._studentsWithDisability;
         const totalCount = schoolObject._enrolled;
         const nonDisabilityCount = totalCount - disabilityCount;
@@ -55,7 +64,6 @@ function getDisabilityData(allData, options) {
                 percentage: disabilityPercentage,
                 color: "orange",
                 label: "Students With Disability"
-                // Students With Disability
             },
             {
                 id: "Others",
@@ -75,14 +83,6 @@ function getDisabilityData(allData, options) {
     return chartData;
 }
 
-// const pieChartParentDivStyle = {
-//     height: "300px",
-//     width: "25%",
-//     minWidth: "250px",
-//     flexGrow: "1",
-//     display: "flex",
-//     flexDirection: "column"
-// };
 
 const styles = {
     root: {
@@ -95,6 +95,19 @@ const styles = {
 
     totalLabel: {
         fontSize: 24
+    },
+    categoryChartsParent: {
+        display: "flex",
+        flexDirection: "column",
+        // height: "50%",
+        width: "100%",
+        borderStyle: "ridge",
+        padding: "10px",
+        backgroundColor: "#6f7348"
+    },
+    yearChartsParent: {
+        display: "flex",
+        flexDirection: "row"
     }
 };
 
@@ -144,16 +157,16 @@ function getPieCharts(schoolDataArray) {
         );
     });
 
-    if (pieCharts && pieCharts.length > 0) {
-        const heading = [];
-        heading.push(
-            <div key={"disability-heading"}>
-                {/* <h3>Students With Disability</h3> */}
-                <h3>Disability</h3>
-            </div>
-        );
-        pieCharts = heading.concat(pieCharts);
-    }
+    // if (pieCharts && pieCharts.length > 0) {
+    //     const heading = [];
+    //     heading.push(
+    //         <div key={"disability-heading"}>
+    //             {/* <h3>Students With Disability</h3> */}
+    //             <h3>Disability</h3>
+    //         </div>
+    //     );
+    //     pieCharts = heading.concat(pieCharts);
+    // }
 
     return pieCharts;
 }

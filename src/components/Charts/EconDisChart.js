@@ -7,23 +7,38 @@ import { ResponsivePie } from "@nivo/pie";
  * @param {*} props
  */
 function EconDisChart(props) {
-    const schoolDataArray = getEconDisForSchool(
-        props.schoolData,
-        props.options
-    );
 
-    let pieCharts = getPieCharts(schoolDataArray);
+    const yearToSchoolArrayDataMap = props.yearToSchoolArrayDataMap;
+    const dataYears = Object.keys(yearToSchoolArrayDataMap);
+    let allYearPieCharts = [];
+
+    dataYears.forEach(year => {
+        const thisYearSchoolDataArray = getEconDisForSchool(yearToSchoolArrayDataMap[year]);
+        let thisYearPieCharts = getPieCharts(thisYearSchoolDataArray);
+
+        allYearPieCharts.push(
+            <div key={year} style={styles.yearChartsParent}>
+                <span>{year}</span>
+                {thisYearPieCharts}
+            </div>
+        )
+    });
+
+
+
+    // const schoolDataArray = getEconDisForSchool(
+    //     props.schoolData,
+    //     props.options
+    // );
+    //
+    // let pieCharts = getPieCharts(schoolDataArray);
 
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "row",
-                height: "50%",
-                width: "100%"
-            }}
+        <div id="econdis-pie-charts"
+             style={styles.categoryChartsParent}
         >
-            {pieCharts}
+            <h3 key="ethnicityHeading">Economically Disadvantaged</h3>
+            {allYearPieCharts}
         </div>
     );
 }
@@ -31,11 +46,10 @@ function EconDisChart(props) {
 /**
  * return array: x->schoolName, male, female
  */
-function getEconDisForSchool(allData, options) {
+function getEconDisForSchool(schoolArrayForYear) {
     let chartData = [];
-    options.forEach(schoolName => {
-        const schoolObject = allData[schoolName];
-
+    schoolArrayForYear.forEach(schoolObject => {
+        const schoolName = schoolObject._name;
         const disadvantagedCount = schoolObject._economicallyDisadvantaged;
         const totalCount = schoolObject._enrolled;
         const nonDisadvantagedCount = totalCount - disadvantagedCount;
@@ -96,6 +110,19 @@ const styles = {
 
     totalLabel: {
         fontSize: 24
+    },
+    categoryChartsParent: {
+        display: "flex",
+        flexDirection: "column",
+        // height: "50%",
+        width: "100%",
+        borderStyle: "ridge",
+        padding: "10px",
+        backgroundColor: "#4f4954"
+    },
+    yearChartsParent: {
+        display: "flex",
+        flexDirection: "row"
     }
 };
 
@@ -143,14 +170,14 @@ function getPieCharts(schoolDataArray) {
         );
     });
 
-    if (pieCharts && pieCharts.length > 0) {
-        const heading = [];
-        heading.push(
-            // <h3 key={"econdis-heading"}>Economically Disadvantaged</h3>
-            <h3 key={"econdis-heading"}>EconDis</h3>
-        );
-        pieCharts = heading.concat(pieCharts);
-    }
+    // if (pieCharts && pieCharts.length > 0) {
+    //     const heading = [];
+    //     heading.push(
+    //         // <h3 key={"econdis-heading"}>Economically Disadvantaged</h3>
+    //         <h3 key={"econdis-heading"}>EconDis</h3>
+    //     );
+    //     pieCharts = heading.concat(pieCharts);
+    // }
 
     return pieCharts;
 }

@@ -116,8 +116,9 @@ class App extends React.Component {
         if (selectedFilters.ethnicity === true) {
             charts.push(
                 <EthnicityChart
-                    options={this.state.schoolOptions}
-                    schoolData={this.state.schoolData}
+                    // options={this.state.schoolOptions}
+                    // schoolData={this.state.schoolData}
+                    yearToSchoolArrayDataMap={this.state.filteredSchoolData}
                     key="ethnicityChart"
                 />
             );
@@ -126,8 +127,9 @@ class App extends React.Component {
         if (selectedFilters.economicallyDisadvantaged === true) {
             charts.push(
                 <EconDisChart
-                    options={this.state.schoolOptions}
-                    schoolData={this.state.schoolData}
+                    yearToSchoolArrayDataMap={this.state.filteredSchoolData}
+                    // options={this.state.schoolOptions}
+                    // schoolData={this.state.schoolData}
                     key="economicallyDisadvantagedChart"
                 />
             );
@@ -136,8 +138,9 @@ class App extends React.Component {
         if (selectedFilters.disability === true) {
             charts.push(
                 <DisabilityChart
-                    options={this.state.schoolOptions}
-                    schoolData={this.state.schoolData}
+                    yearToSchoolArrayDataMap={this.state.filteredSchoolData}
+                    // options={this.state.schoolOptions}
+                    // schoolData={this.state.schoolData}
                     key="disabilityChart"
                 />
             );
@@ -146,8 +149,9 @@ class App extends React.Component {
         if (selectedFilters.englishLanguageLearner === true) {
             charts.push(
                 <ELLChart
-                    options={this.state.schoolOptions}
-                    schoolData={this.state.schoolData}
+                    yearToSchoolArrayDataMap={this.state.filteredSchoolData}
+                    // options={this.state.schoolOptions}
+                    // schoolData={this.state.schoolData}
                     key="disabilityChart"
                 />
             );
