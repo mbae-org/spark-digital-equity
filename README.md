@@ -3,6 +3,9 @@
 ## Before installations
 
 1. Ensure you have node and npm installed
+npm.version >= 6.13.4
+node.version >= v10.18.1
+
 2. Ensure you have git installed
 
 ## installation
