@@ -107,8 +107,7 @@ class App extends React.Component {
         if (selectedFilters.gender === true) {
             charts.push(
                 <GenderChart
-                    selectedSchoolOptions={this.state.schoolOptions}
-                    schoolData={this.state.schoolData}
+                    yearToSchoolArrayDataMap={this.state.filteredSchoolData}
                     key="genderChart"
                 />
             );
@@ -493,10 +492,10 @@ class App extends React.Component {
      * @param {Map} yearSchoolObjectMap
      * @param {Array} selectedSchoolsArray
      * @param {Map} selectedYearsMap
-     * @returns {Array} filteredSchoolDataArray
+     * @returns {Map} filteredSchoolDataMap
      */
     filterYearSchoolObjectMap(yearSchoolObjectMap, selectedSchoolsArray, selectedYearsMap) {
-        let filteredSchoolDataArray = [];
+        let filteredSchoolDataMap = {};
         let selectedYearsArray = [];
         Object.keys(selectedYearsMap).forEach((key) => {
             if(selectedYearsMap[key]===true)
@@ -504,15 +503,16 @@ class App extends React.Component {
         });
 
         selectedYearsArray.forEach(year => {
+            if(!filteredSchoolDataMap[year]) filteredSchoolDataMap[year] = [];
            selectedSchoolsArray.forEach(schoolName => {
-               filteredSchoolDataArray.push(yearSchoolObjectMap[year][schoolName]);
+               filteredSchoolDataMap[year].push(yearSchoolObjectMap[year][schoolName]);
            });
         });
 
-        console.log("filteredSchoolDataArray");
-        console.log(filteredSchoolDataArray);
+        console.log("filteredSchoolDataMap");
+        console.log(filteredSchoolDataMap);
 
-        return filteredSchoolDataArray;
+        return filteredSchoolDataMap;
     }
 
 }

@@ -7,81 +7,83 @@ import { ResponsivePie } from "@nivo/pie";
  * @param {*} props
  */
 function GenderChart(props) {
-    const schoolDataArray = getGenderForSchool(
-        props.schoolData,
-        props.selectedSchoolOptions
-    );
+    // const schoolDataArray = getGenderForSchool(
+    //     props.schoolData,
+    //     props.selectedSchoolOptions
+    // );
 
-    let pieCharts = getPieCharts(schoolDataArray);
+    const yearToSchoolArrayDataMap = props.yearToSchoolArrayDataMap;
+    const dataYears = Object.keys(yearToSchoolArrayDataMap);
+
+    let allYearPieCharts = [];
+
+    dataYears.forEach(year => {
+        const thisYearSchoolDataArray = getGenderForSchool(yearToSchoolArrayDataMap[year]);
+        let thisYearPieCharts = getPieCharts(thisYearSchoolDataArray);
+
+            allYearPieCharts.push(
+            <div key={year} style={styles.yearChartsParent}>
+                <span>{year}</span>
+                {thisYearPieCharts}
+            </div>
+        )
+    });
+
 
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "row",
-                height: "50%",
-                width: "100%"
-            }}
+        <div id="gender-pie-charts"
+            style={styles.genderChartsParent}
         >
-            {pieCharts}
+            <h3 key={"gender-heading"}>Gender</h3>
+            {allYearPieCharts}
         </div>
     );
 }
 
-/**
- * return array: x->schoolName, male, female
- */
-function getGenderForSchool(allData, selectedSchools) {
+
+function getGenderForSchool(schoolArrayForYear) {
     let chartData = [];
-    selectedSchools.forEach(schoolName => {
-        const schoolRow = allData[schoolName];
 
-        const schoolYear = schoolRow._schoolYear;
-        const maleCount = schoolRow._male;
-        const femaleCount = schoolRow._female;
-        const malePercentage = (
-            (maleCount / (maleCount + femaleCount)) *
-            100
-        ).toFixed(2);
-        const femalePercentage = (
-            (femaleCount / (maleCount + femaleCount)) *
-            100
-        ).toFixed(2);
+        schoolArrayForYear.forEach(schoolRow => {
+            const schoolName = schoolRow._name;
+            const schoolYear = schoolRow._schoolYear;
+            const maleCount = schoolRow._male;
+            const femaleCount = schoolRow._female;
+            const malePercentage = (
+                (maleCount / (maleCount + femaleCount)) *
+                100
+            ).toFixed(2);
+            const femalePercentage = (
+                (femaleCount / (maleCount + femaleCount)) *
+                100
+            ).toFixed(2);
 
-        let thisSchoolData = {};
-        let schoolDataArray = [
-            {
-                id: "male",
-                value: maleCount,
-                percentage: malePercentage,
-                color: "orange",
-                label: "Male"
-            },
-            {
-                id: "female",
-                value: femaleCount,
-                percentage: femalePercentage,
-                color: "blue",
-                label: "Female"
-            }
-        ];
-        thisSchoolData.schoolName = schoolName;
-        thisSchoolData.dataArray = schoolDataArray;
-        thisSchoolData.schoolYear = schoolYear;
-        chartData.push(thisSchoolData);
-    });
+            let thisSchoolData = {};
+            let schoolDataArray = [
+                {
+                    id: "male",
+                    value: maleCount,
+                    percentage: malePercentage,
+                    color: "orange",
+                    label: "Male"
+                },
+                {
+                    id: "female",
+                    value: femaleCount,
+                    percentage: femalePercentage,
+                    color: "blue",
+                    label: "Female"
+                }
+            ];
+            thisSchoolData.schoolName = schoolName;
+            thisSchoolData.dataArray = schoolDataArray;
+            thisSchoolData.schoolYear = schoolYear;
+            chartData.push(thisSchoolData);
+        });
 
     return chartData;
 }
 
-// const pieChartParentDivStyle = {
-//     height: "300px",
-//     width: "25%",
-//     minWidth: "250px",
-//     flexGrow: "1",
-//     display: "flex",
-//     flexDirection: "column"
-// };
 
 const margin = { top: 30, right: 200, bottom: 30, left: 30 };
 
@@ -112,6 +114,16 @@ const styles = {
     },
     totalLabel: {
         fontSize: 24
+    },
+    genderChartsParent: {
+        display: "flex",
+        flexDirection: "column",
+        height: "50%",
+        width: "100%"
+    },
+    yearChartsParent: {
+        display: "flex",
+        flexDirection: "row"
     }
 };
 
@@ -167,11 +179,11 @@ function getPieCharts(schoolDataArray) {
         );
     });
 
-    if (pieCharts && pieCharts.length > 0) {
-        const heading = [];
-        heading.push(<h3 key={"gender-heading"}>Gender</h3>);
-        pieCharts = heading.concat(pieCharts);
-    }
+    // if (pieCharts && pieCharts.length > 0) {
+    //     const heading = [];
+    //     heading.push(<h3 key={"gender-heading"}>Gender</h3>);
+    //     pieCharts = heading.concat(pieCharts);
+    // }
 
     return pieCharts;
 }
