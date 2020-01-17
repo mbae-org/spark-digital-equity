@@ -37,7 +37,7 @@ function EconDisChart(props) {
         <div id="econdis-pie-charts"
              style={styles.categoryChartsParent}
         >
-            <h3 key="ethnicityHeading">Economically Disadvantaged</h3>
+            <h3 key="econdisHeading">Economically Disadvantaged</h3>
             {allYearPieCharts}
         </div>
     );

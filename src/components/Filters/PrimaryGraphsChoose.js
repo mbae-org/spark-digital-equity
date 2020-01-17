@@ -79,6 +79,19 @@ function PrimaryGraphChoose(props) {
                     />
                     <label>English Language Learners</label>
                 </div>
+
+                <div style={styles.checkbox}>
+                    <input
+                        type="checkbox"
+                        id="courseEnrollment"
+                        onChange={option =>
+                            optionChooseClicKHandler(props, option)
+                        }
+                        checked={props.selectedFilters.courseEnrollment}
+                    />
+                    <label>CS Course Enrollment</label>
+                </div>
+
             </div>
         </div>
     );

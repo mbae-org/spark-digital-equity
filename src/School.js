@@ -15,6 +15,8 @@ class School {
         this._studentsWithDisability = 0;
         this._schoolYear = 2016;
         this._englishLanguageLearner = 0;
+        this._primaryEnrolled = 0;
+        this._secondaryEnrolled = 0;
     }
 
     setType(entityType) {
@@ -77,6 +79,15 @@ class School {
 
     setEnglishLanguageLearner(count) {
         this._englishLanguageLearner = count;
+    }
+
+
+    setPrimaryEnrolled(value) {
+        this._primaryEnrolled = value;
+    }
+
+    setSecondaryEnrolled(value) {
+        this._secondaryEnrolled = value;
     }
 }
 

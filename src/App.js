@@ -9,10 +9,10 @@ import EthnicityChart from "./components/Charts/EthnicityChart";
 import EconDisChart from "./components/Charts/EconDisChart";
 import DisabilityChart from "./components/Charts/DisabilityChart";
 import ELLChart from "./components/Charts/ELLChart";
+import CourseEnrollmentChart from "./components/Charts/CourseEnrollment"
 import NextStepsPanel from "./components/NextStepsPanel";
-// import GenderChart2 from "./components/Charts/GenderChart2";
 
-import schoolData from "./data/data-all";
+import schoolData from "./data/data-new";
 
 import {
     EntityType,
@@ -55,6 +55,7 @@ class App extends React.Component {
                 economicallyDisadvantaged: false,
                 disability: false,
                 englishLanguageLearner: false
+                courseEnrollment: true
             },
             selectedYearsMap: selectedYearsMap,
             filteredSchoolData: this.filterYearSchoolObjectMap(yearSchoolObjectMap, selectedSchools, selectedYearsMap)
@@ -152,7 +153,16 @@ class App extends React.Component {
                     yearToSchoolArrayDataMap={this.state.filteredSchoolData}
                     // options={this.state.schoolOptions}
                     // schoolData={this.state.schoolData}
-                    key="disabilityChart"
+                    key="ellChart"
+                />
+            );
+        }
+
+        if (selectedFilters.courseEnrollment === true) {
+            charts.push(
+                <CourseEnrollmentChart
+                    yearToSchoolArrayDataMap={this.state.filteredSchoolData}
+                    key="enrollmentChart"
                 />
             );
         }
@@ -259,6 +269,9 @@ class App extends React.Component {
                         schoolObject._englishLanguageLearner
                 );
 
+                districtObject.setPrimaryEnrolled(districtObject._primaryEnrolled + schoolObject._primaryEnrolled);
+                districtObject.setSecondaryEnrolled(districtObject._secondaryEnrolled + schoolObject._secondaryEnrolled);
+
                 thisYearSchoolObjectMap[districtName] = districtObject;
             }
             yearSchoolObjectMap[year] = thisYearSchoolObjectMap;
@@ -356,7 +369,9 @@ class App extends React.Component {
                 Number.isInteger(parseInt(schoolRow["ECODIS"])) &&
                 Number.isInteger(parseInt(schoolRow["SWD"])) &&
                 Number.isInteger(parseInt(schoolRow["SY"])) &&
-                Number.isInteger(parseInt(schoolRow["ELL"]))
+                Number.isInteger(parseInt(schoolRow["ELL"])) &&
+                Number.isInteger(parseInt(schoolRow["primary"])) &&
+                Number.isInteger(parseInt(schoolRow["secondary"]))
             ) {
                 filteredArray.push(schoolRow);
             } else {
@@ -452,6 +467,8 @@ class App extends React.Component {
             thisSchool.setStudentsWithDisability(parseInt(schoolRow["SWD"]));
             thisSchool.setSchoolYear(schoolYear);
             thisSchool.setEnglishLanguageLearner(parseInt(schoolRow["ELL"]));
+            thisSchool.setPrimaryEnrolled(parseInt(schoolRow["primary"]));
+            thisSchool.setSecondaryEnrolled(parseInt(schoolRow["secondary"]));
 
             let thisSchoolEthnicityArray = [];
             let thisSchoolEthnicityMap = {};
@@ -492,11 +509,11 @@ class App extends React.Component {
     }
 
     /**
-     *
+     * Filter School data on schools and years selected
      * @param {Map} yearSchoolObjectMap
      * @param {Array} selectedSchoolsArray
      * @param {Map} selectedYearsMap
-     * @returns {Map} filteredSchoolDataMap
+     * @returns {Map} filteredSchoolDataMap of type Map[year] -> Array{SchoolObject}
      */
     filterYearSchoolObjectMap(yearSchoolObjectMap, selectedSchoolsArray, selectedYearsMap) {
         let filteredSchoolDataMap = {};

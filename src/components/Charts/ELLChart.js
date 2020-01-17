@@ -29,36 +29,15 @@ function ELLChart(props) {
     });
 
     return (
-        <div id="disability-pie-charts"
+        <div id="ell-pie-charts"
              style={styles.categoryChartsParent}
         >
-            <h3 key="ethnicityHeading">English Language Learners</h3>
+            <h3 key="ellHeading">English Language Learners</h3>
             {allYearPieCharts}
         </div>
     );
 
 
-
-
-    // const schoolDataArray = getLanguageLearnerData(
-    //     props.schoolData,
-    //     props.options
-    // );
-    //
-    // let pieCharts = getPieCharts(schoolDataArray);
-    //
-    // return (
-    //     <div
-    //         style={{
-    //             display: "flex",
-    //             flexDirection: "row",
-    //             height: "50%",
-    //             width: "100%"
-    //         }}
-    //     >
-    //         {pieCharts}
-    //     </div>
-    // );
 }
 
 /**
@@ -174,17 +153,6 @@ function getPieCharts(schoolDataArray) {
             </div>
         );
     });
-
-    // if (pieCharts && pieCharts.length > 0) {
-    //     const heading = [];
-    //     heading.push(
-    //         <div key={"ell-heading"}>
-    //             {/* <h3>English Language Learners</h3> */}
-    //             <h3>Learners</h3>
-    //         </div>
-    //     );
-    //     pieCharts = heading.concat(pieCharts);
-    // }
 
     return pieCharts;
 }

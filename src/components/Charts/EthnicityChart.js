@@ -71,14 +71,6 @@ function getGroupedEthnicData(schoolArrayForYear) {
     return chartData;
 }
 
-// const pieChartParentDivStyle = {
-//     height: "300px",
-//     width: "25%",
-//     minWidth: "250px",
-//     flexGrow: "1",
-//     display: "flex",
-//     flexDirection: "column"
-// };
 
 const styles = {
     root: {
@@ -159,44 +151,6 @@ function createPieCharts(chartData) {
 }
 
 export default EthnicityChart;
-
-const ethnicityAcronyms = [
-    {
-        id: "AA",
-        desc: "African American",
-        chartColor: "#f6d18a"
-    },
-    {
-        id: "AS",
-        desc: "Asian",
-        chartColor: "blue"
-    },
-    {
-        id: "HI",
-        desc: "Hispanic",
-        chartColor: "green"
-    },
-    {
-        id: "MR",
-        desc: "Multiracial",
-        chartColor: "yellow"
-    },
-    {
-        id: "NA",
-        desc: "NA",
-        chartColor: "pink"
-    },
-    {
-        id: "NH_PI",
-        desc: "Native Hawaiian and Pacific Islander",
-        chartColor: "red"
-    },
-    {
-        id: "WH",
-        desc: "White",
-        chartColor: "brown"
-    }
-];
 
 function getTooltipHTML(data) {
     return (

@@ -27,6 +27,7 @@
 
 .filter-panel {
     min-width: 30%;
+    max-width: 30%;
     margin: 5px;
     padding: 5px;
     overflow-y: auto;

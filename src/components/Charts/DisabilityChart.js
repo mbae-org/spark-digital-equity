@@ -28,7 +28,7 @@ function DisabilityChart(props) {
         <div id="disability-pie-charts"
              style={styles.categoryChartsParent}
         >
-            <h3 key="ethnicityHeading">Students With Disability</h3>
+            <h3 key="disabilityHeading">Students With Disability</h3>
             {allYearPieCharts}
         </div>
     );
