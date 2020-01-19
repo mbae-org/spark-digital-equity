@@ -17,6 +17,10 @@ class School {
         this._englishLanguageLearner = 0;
         this._primaryEnrolled = 0;
         this._secondaryEnrolled = 0;
+
+        this._apArray = [];
+        this._apMap = {};
+
     }
 
     setType(entityType) {
@@ -88,6 +92,15 @@ class School {
 
     setSecondaryEnrolled(value) {
         this._secondaryEnrolled = value;
+    }
+
+
+    setApArray(value) {
+        this._apArray = value;
+    }
+
+    setApMap(value) {
+        this._apMap = value;
     }
 }
 

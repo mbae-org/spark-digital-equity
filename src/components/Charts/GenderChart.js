@@ -138,7 +138,7 @@ function getPieCharts(schoolDataArray) {
         const schoolName = row.schoolName;
         const schoolData = row.dataArray;
         const schoolYear = row.schoolYear;
-        console.log("school year: " + schoolYear);
+        // console.log("school year: " + schoolYear);
 
         pieCharts.push(
             <div key={schoolName} style={styles.root}>

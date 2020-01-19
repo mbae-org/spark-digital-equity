@@ -22,7 +22,12 @@
     "MALE": "30",
     "SCH_NAME": "Andover High",
     "primary": 0,
-    "secondary": 303
+    "secondary": 303,
+    "AP1": "0",
+    "AP2": "1",
+    "AP3": "6",
+    "AP4": "9",
+    "AP5": "22"
   },
   {
     "SY": 2016,
@@ -47,7 +52,12 @@
     "MALE": "13",
     "SCH_NAME": "Arlington High",
     "primary": 0,
-    "secondary": 89
+    "secondary": 89,
+    "AP1": "3",
+    "AP2": "2",
+    "AP3": "1",
+    "AP4": "3",
+    "AP5": "4"
   },
   {
     "SY": 2016,
@@ -72,7 +82,12 @@
     "MALE": "13",
     "SCH_NAME": "Attleboro High",
     "primary": 0,
-    "secondary": 45
+    "secondary": 45,
+    "AP1": "8",
+    "AP2": "1",
+    "AP3": "2",
+    "AP4": "1",
+    "AP5": "1"
   },
   {
     "SY": 2016,
@@ -97,7 +112,12 @@
     "MALE": "16",
     "SCH_NAME": "Auburn Senior High",
     "primary": 0,
-    "secondary": 116
+    "secondary": 116,
+    "AP1": "8",
+    "AP2": "2",
+    "AP3": "6",
+    "AP4": "0",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -122,7 +142,12 @@
     "MALE": "21",
     "SCH_NAME": "Barnstable High",
     "primary": 0,
-    "secondary": 23
+    "secondary": 23,
+    "AP1": "17",
+    "AP2": "3",
+    "AP3": "3",
+    "AP4": "0",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -147,7 +172,12 @@
     "MALE": "***",
     "SCH_NAME": "Bedford High",
     "primary": 0,
-    "secondary": 168
+    "secondary": 168,
+    "AP1": "***",
+    "AP2": "***",
+    "AP3": "***",
+    "AP4": "***",
+    "AP5": "***"
   },
   {
     "SY": 2016,
@@ -172,7 +202,12 @@
     "MALE": "12",
     "SCH_NAME": "Billerica Memorial High School",
     "primary": 0,
-    "secondary": 212
+    "secondary": 212,
+    "AP1": "0",
+    "AP2": "1",
+    "AP3": "1",
+    "AP4": "3",
+    "AP5": "7"
   },
   {
     "SY": 2016,
@@ -197,7 +232,12 @@
     "MALE": "6",
     "SCH_NAME": "Braintree High",
     "primary": 0,
-    "secondary": 24
+    "secondary": 24,
+    "AP1": "1",
+    "AP2": "0",
+    "AP3": "3",
+    "AP4": "3",
+    "AP5": "2"
   },
   {
     "SY": 2016,
@@ -222,7 +262,12 @@
     "MALE": "11",
     "SCH_NAME": "Burlington High",
     "primary": 0,
-    "secondary": 169
+    "secondary": 169,
+    "AP1": "0",
+    "AP2": "1",
+    "AP3": "2",
+    "AP4": "3",
+    "AP5": "4"
   },
   {
     "SY": 2016,
@@ -247,7 +292,12 @@
     "MALE": "66",
     "SCH_NAME": "Cambridge Rindge and Latin",
     "primary": 0,
-    "secondary": 254
+    "secondary": 254,
+    "AP1": "4",
+    "AP2": "2",
+    "AP3": "11",
+    "AP4": "13",
+    "AP5": "7"
   },
   {
     "SY": 2016,
@@ -272,7 +322,12 @@
     "MALE": "33",
     "SCH_NAME": "Chelmsford High",
     "primary": 0,
-    "secondary": 177
+    "secondary": 177,
+    "AP1": "3",
+    "AP2": "4",
+    "AP3": "3",
+    "AP4": "0",
+    "AP5": "2"
   },
   {
     "SY": 2016,
@@ -297,7 +352,12 @@
     "MALE": "***",
     "SCH_NAME": "Chicopee Comprehensive High School",
     "primary": 0,
-    "secondary": 172
+    "secondary": 172,
+    "AP1": "***",
+    "AP2": "***",
+    "AP3": "***",
+    "AP4": "***",
+    "AP5": "***"
   },
   {
     "SY": 2016,
@@ -322,7 +382,12 @@
     "MALE": "11",
     "SCH_NAME": "Dartmouth High",
     "primary": 0,
-    "secondary": 78
+    "secondary": 78,
+    "AP1": "2",
+    "AP2": "3",
+    "AP3": "3",
+    "AP4": "2",
+    "AP5": "2"
   },
   {
     "SY": 2016,
@@ -347,7 +412,12 @@
     "MALE": "9",
     "SCH_NAME": "Dedham High",
     "primary": 0,
-    "secondary": 79
+    "secondary": 79,
+    "AP1": "7",
+    "AP2": "1",
+    "AP3": "0",
+    "AP4": "1",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -372,7 +442,12 @@
     "MALE": "13",
     "SCH_NAME": "Duxbury High",
     "primary": 0,
-    "secondary": 57
+    "secondary": 57,
+    "AP1": "5",
+    "AP2": "1",
+    "AP3": "1",
+    "AP4": "3",
+    "AP5": "2"
   },
   {
     "SY": 2016,
@@ -397,7 +472,12 @@
     "MALE": "19",
     "SCH_NAME": "East Longmeadow High",
     "primary": 0,
-    "secondary": 125
+    "secondary": 125,
+    "AP1": "2",
+    "AP2": "2",
+    "AP3": "3",
+    "AP4": "5",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -422,7 +502,12 @@
     "MALE": "16",
     "SCH_NAME": "B M C Durfee High",
     "primary": 0,
-    "secondary": 133
+    "secondary": 133,
+    "AP1": "5",
+    "AP2": "2",
+    "AP3": "2",
+    "AP4": "3",
+    "AP5": "2"
   },
   {
     "SY": 2016,
@@ -447,7 +532,12 @@
     "MALE": "18",
     "SCH_NAME": "Framingham High School",
     "primary": 0,
-    "secondary": 206
+    "secondary": 206,
+    "AP1": "0",
+    "AP2": "1",
+    "AP3": "0",
+    "AP4": "2",
+    "AP5": "10"
   },
   {
     "SY": 2016,
@@ -472,7 +562,12 @@
     "MALE": "14",
     "SCH_NAME": "Franklin High",
     "primary": 5,
-    "secondary": 251
+    "secondary": 251,
+    "AP1": "7",
+    "AP2": "3",
+    "AP3": "6",
+    "AP4": "3",
+    "AP5": "3"
   },
   {
     "SY": 2016,
@@ -497,7 +592,12 @@
     "MALE": "22",
     "SCH_NAME": "Gloucester High",
     "primary": 0,
-    "secondary": 243
+    "secondary": 243,
+    "AP1": "10",
+    "AP2": "3",
+    "AP3": "2",
+    "AP4": "1",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -522,7 +622,12 @@
     "MALE": "19",
     "SCH_NAME": "Grafton High School",
     "primary": 0,
-    "secondary": 156
+    "secondary": 156,
+    "AP1": "1",
+    "AP2": "2",
+    "AP3": "10",
+    "AP4": "2",
+    "AP5": "2"
   },
   {
     "SY": 2016,
@@ -547,7 +652,12 @@
     "MALE": "14",
     "SCH_NAME": "Haverhill High",
     "primary": 0,
-    "secondary": 434
+    "secondary": 434,
+    "AP1": "5",
+    "AP2": "2",
+    "AP3": "3",
+    "AP4": "1",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -572,7 +682,12 @@
     "MALE": "13",
     "SCH_NAME": "Hopkinton High",
     "primary": 0,
-    "secondary": 100
+    "secondary": 100,
+    "AP1": "3",
+    "AP2": "2",
+    "AP3": "4",
+    "AP4": "1",
+    "AP5": "1"
   },
   {
     "SY": 2016,
@@ -597,7 +712,12 @@
     "MALE": "***",
     "SCH_NAME": "Ipswich High",
     "primary": 0,
-    "secondary": 20
+    "secondary": 20,
+    "AP1": "***",
+    "AP2": "***",
+    "AP3": "***",
+    "AP4": "***",
+    "AP5": "***"
   },
   {
     "SY": 2016,
@@ -622,7 +742,12 @@
     "MALE": "***",
     "SCH_NAME": "Lee Middle/High School",
     "primary": 102,
-    "secondary": 19
+    "secondary": 19,
+    "AP1": "***",
+    "AP2": "***",
+    "AP3": "***",
+    "AP4": "***",
+    "AP5": "***"
   },
   {
     "SY": 2016,
@@ -647,7 +772,12 @@
     "MALE": "61",
     "SCH_NAME": "Lexington High",
     "primary": 0,
-    "secondary": 328
+    "secondary": 328,
+    "AP1": "0",
+    "AP2": "3",
+    "AP3": "6",
+    "AP4": "10",
+    "AP5": "40"
   },
   {
     "SY": 2016,
@@ -672,7 +802,12 @@
     "MALE": "18",
     "SCH_NAME": "Longmeadow High",
     "primary": 0,
-    "secondary": 62
+    "secondary": 62,
+    "AP1": "0",
+    "AP2": "0",
+    "AP3": "2",
+    "AP4": "5",
+    "AP5": "8"
   },
   {
     "SY": 2016,
@@ -697,7 +832,12 @@
     "MALE": "16",
     "SCH_NAME": "Marshfield High",
     "primary": 0,
-    "secondary": 379
+    "secondary": 379,
+    "AP1": "10",
+    "AP2": "4",
+    "AP3": "1",
+    "AP4": "0",
+    "AP5": "1"
   },
   {
     "SY": 2016,
@@ -722,7 +862,12 @@
     "MALE": "25",
     "SCH_NAME": "Milton High",
     "primary": 0,
-    "secondary": 375
+    "secondary": 375,
+    "AP1": "7",
+    "AP2": "2",
+    "AP3": "3",
+    "AP4": "1",
+    "AP5": "1"
   },
   {
     "SY": 2016,
@@ -747,7 +892,12 @@
     "MALE": "17",
     "SCH_NAME": "Natick High",
     "primary": 0,
-    "secondary": 397
+    "secondary": 397,
+    "AP1": "2",
+    "AP2": "2",
+    "AP3": "5",
+    "AP4": "8",
+    "AP5": "8"
   },
   {
     "SY": 2016,
@@ -772,7 +922,12 @@
     "MALE": "37",
     "SCH_NAME": "Needham High",
     "primary": 0,
-    "secondary": 142
+    "secondary": 142,
+    "AP1": "1",
+    "AP2": "2",
+    "AP3": "5",
+    "AP4": "7",
+    "AP5": "18"
   },
   {
     "SY": 2016,
@@ -797,7 +952,12 @@
     "MALE": "7",
     "SCH_NAME": "New Bedford High",
     "primary": 0,
-    "secondary": 489
+    "secondary": 489,
+    "AP1": "7",
+    "AP2": "2",
+    "AP3": "2",
+    "AP4": "1",
+    "AP5": "1"
   },
   {
     "SY": 2016,
@@ -822,7 +982,12 @@
     "MALE": "***",
     "SCH_NAME": "Northbridge High",
     "primary": 0,
-    "secondary": 324
+    "secondary": 324,
+    "AP1": "***",
+    "AP2": "***",
+    "AP3": "***",
+    "AP4": "***",
+    "AP5": "***"
   },
   {
     "SY": 2016,
@@ -847,7 +1012,12 @@
     "MALE": "6",
     "SCH_NAME": "North Reading High",
     "primary": 0,
-    "secondary": 134
+    "secondary": 134,
+    "AP1": "0",
+    "AP2": "0",
+    "AP3": "2",
+    "AP4": "1",
+    "AP5": "3"
   },
   {
     "SY": 2016,
@@ -872,7 +1042,12 @@
     "MALE": "9",
     "SCH_NAME": "Peabody Veterans Memorial High",
     "primary": 0,
-    "secondary": 303
+    "secondary": 303,
+    "AP1": "3",
+    "AP2": "2",
+    "AP3": "4",
+    "AP4": "0",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -897,7 +1072,12 @@
     "MALE": "8",
     "SCH_NAME": "Pittsfield High",
     "primary": 0,
-    "secondary": 108
+    "secondary": 108,
+    "AP1": "***",
+    "AP2": "***",
+    "AP3": "***",
+    "AP4": "***",
+    "AP5": "***"
   },
   {
     "SY": 2016,
@@ -922,7 +1102,12 @@
     "MALE": "8",
     "SCH_NAME": "Taconic High",
     "primary": 0,
-    "secondary": 110
+    "secondary": 110,
+    "AP1": "8",
+    "AP2": "0",
+    "AP3": "2",
+    "AP4": "0",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -947,7 +1132,12 @@
     "MALE": "10",
     "SCH_NAME": "Quincy High",
     "primary": 0,
-    "secondary": 74
+    "secondary": 74,
+    "AP1": "1",
+    "AP2": "3",
+    "AP3": "9",
+    "AP4": "6",
+    "AP5": "2"
   },
   {
     "SY": 2016,
@@ -972,7 +1162,12 @@
     "MALE": "13",
     "SCH_NAME": "North Quincy High",
     "primary": 0,
-    "secondary": 258
+    "secondary": 258,
+    "AP1": "0",
+    "AP2": "2",
+    "AP3": "5",
+    "AP4": "2",
+    "AP5": "7"
   },
   {
     "SY": 2016,
@@ -997,7 +1192,12 @@
     "MALE": "20",
     "SCH_NAME": "Reading Memorial High",
     "primary": 0,
-    "secondary": 229
+    "secondary": 229,
+    "AP1": "2",
+    "AP2": "7",
+    "AP3": "9",
+    "AP4": "4",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -1022,7 +1222,12 @@
     "MALE": "12",
     "SCH_NAME": "Revere High",
     "primary": 0,
-    "secondary": 480
+    "secondary": 480,
+    "AP1": "7",
+    "AP2": "3",
+    "AP3": "2",
+    "AP4": "2",
+    "AP5": "1"
   },
   {
     "SY": 2016,
@@ -1047,7 +1252,12 @@
     "MALE": "12",
     "SCH_NAME": "Saugus High",
     "primary": 0,
-    "secondary": 75
+    "secondary": 75,
+    "AP1": "6",
+    "AP2": "4",
+    "AP3": "6",
+    "AP4": "2",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -1072,7 +1282,12 @@
     "MALE": "21",
     "SCH_NAME": "Scituate High School",
     "primary": 0,
-    "secondary": 46
+    "secondary": 46,
+    "AP1": "***",
+    "AP2": "***",
+    "AP3": "***",
+    "AP4": "***",
+    "AP5": "***"
   },
   {
     "SY": 2016,
@@ -1097,7 +1312,12 @@
     "MALE": "21",
     "SCH_NAME": "Sharon High",
     "primary": 0,
-    "secondary": 109
+    "secondary": 109,
+    "AP1": "1",
+    "AP2": "0",
+    "AP3": "3",
+    "AP4": "3",
+    "AP5": "8"
   },
   {
     "SY": 2016,
@@ -1122,7 +1342,12 @@
     "MALE": "30",
     "SCH_NAME": "Somerville High",
     "primary": 0,
-    "secondary": 121
+    "secondary": 121,
+    "AP1": "8",
+    "AP2": "12",
+    "AP3": "6",
+    "AP4": "4",
+    "AP5": "5"
   },
   {
     "SY": 2016,
@@ -1147,7 +1372,12 @@
     "MALE": "5",
     "SCH_NAME": "South Hadley High",
     "primary": 0,
-    "secondary": 53
+    "secondary": 53,
+    "AP1": "***",
+    "AP2": "***",
+    "AP3": "***",
+    "AP4": "***",
+    "AP5": "***"
   },
   {
     "SY": 2016,
@@ -1172,7 +1402,12 @@
     "MALE": "19",
     "SCH_NAME": "Springfield Central High",
     "primary": 0,
-    "secondary": 406
+    "secondary": 406,
+    "AP1": "20",
+    "AP2": "2",
+    "AP3": "5",
+    "AP4": "1",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -1197,7 +1432,12 @@
     "MALE": "6",
     "SCH_NAME": "Roger L. Putnam Vocational Technical Academy",
     "primary": 0,
-    "secondary": 225
+    "secondary": 225,
+    "AP1": "***",
+    "AP2": "***",
+    "AP3": "***",
+    "AP4": "***",
+    "AP5": "***"
   },
   {
     "SY": 2016,
@@ -1222,7 +1462,12 @@
     "MALE": "15",
     "SCH_NAME": "Stoughton High",
     "primary": 0,
-    "secondary": 471
+    "secondary": 471,
+    "AP1": "6",
+    "AP2": "4",
+    "AP3": "1",
+    "AP4": "4",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -1247,7 +1492,12 @@
     "MALE": "8",
     "SCH_NAME": "Joseph Case High",
     "primary": 0,
-    "secondary": 163
+    "secondary": 163,
+    "AP1": "4",
+    "AP2": "0",
+    "AP3": "4",
+    "AP4": "1",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -1272,7 +1522,12 @@
     "MALE": "9",
     "SCH_NAME": "Wakefield Memorial High",
     "primary": 0,
-    "secondary": 88
+    "secondary": 88,
+    "AP1": "***",
+    "AP2": "***",
+    "AP3": "***",
+    "AP4": "***",
+    "AP5": "***"
   },
   {
     "SY": 2016,
@@ -1297,7 +1552,12 @@
     "MALE": "10",
     "SCH_NAME": "Watertown High",
     "primary": 0,
-    "secondary": 83
+    "secondary": 83,
+    "AP1": "1",
+    "AP2": "1",
+    "AP3": "3",
+    "AP4": "1",
+    "AP5": "1"
   },
   {
     "SY": 2016,
@@ -1322,7 +1582,12 @@
     "MALE": "38",
     "SCH_NAME": "Wellesley Sr High",
     "primary": 0,
-    "secondary": 150
+    "secondary": 150,
+    "AP1": "1",
+    "AP2": "3",
+    "AP3": "16",
+    "AP4": "17",
+    "AP5": "4"
   },
   {
     "SY": 2016,
@@ -1347,7 +1612,12 @@
     "MALE": "6",
     "SCH_NAME": "Westfield High",
     "primary": 0,
-    "secondary": 103
+    "secondary": 103,
+    "AP1": "***",
+    "AP2": "***",
+    "AP3": "***",
+    "AP4": "***",
+    "AP5": "***"
   },
   {
     "SY": 2016,
@@ -1372,7 +1642,12 @@
     "MALE": "13",
     "SCH_NAME": "Westford Academy",
     "primary": 0,
-    "secondary": 673
+    "secondary": 673,
+    "AP1": "0",
+    "AP2": "0",
+    "AP3": "1",
+    "AP4": "3",
+    "AP5": "11"
   },
   {
     "SY": 2016,
@@ -1397,7 +1672,12 @@
     "MALE": "15",
     "SCH_NAME": "Weston High",
     "primary": 0,
-    "secondary": 275
+    "secondary": 275,
+    "AP1": "0",
+    "AP2": "2",
+    "AP3": "11",
+    "AP4": "5",
+    "AP5": "5"
   },
   {
     "SY": 2016,
@@ -1422,7 +1702,12 @@
     "MALE": "20",
     "SCH_NAME": "Westwood High",
     "primary": 0,
-    "secondary": 147
+    "secondary": 147,
+    "AP1": "0",
+    "AP2": "0",
+    "AP3": "4",
+    "AP4": "3",
+    "AP5": "13"
   },
   {
     "SY": 2016,
@@ -1447,7 +1732,12 @@
     "MALE": "17",
     "SCH_NAME": "Weymouth High School",
     "primary": 0,
-    "secondary": 467
+    "secondary": 467,
+    "AP1": "3",
+    "AP2": "2",
+    "AP3": "6",
+    "AP4": "1",
+    "AP5": "1"
   },
   {
     "SY": 2016,
@@ -1472,7 +1762,12 @@
     "MALE": "37",
     "SCH_NAME": "Winchester High School",
     "primary": 0,
-    "secondary": 208
+    "secondary": 208,
+    "AP1": "3",
+    "AP2": "4",
+    "AP3": "6",
+    "AP4": "2",
+    "AP5": "12"
   },
   {
     "SY": 2016,
@@ -1497,7 +1792,12 @@
     "MALE": "28",
     "SCH_NAME": "Advanced Math and Science Academy Charter School",
     "primary": 424,
-    "secondary": 285
+    "secondary": 285,
+    "AP1": "3",
+    "AP2": "5",
+    "AP3": "12",
+    "AP4": "15",
+    "AP5": "19"
   },
   {
     "SY": 2016,
@@ -1522,7 +1822,12 @@
     "MALE": "18",
     "SCH_NAME": "Prospect Hill Academy Charter School",
     "primary": 0,
-    "secondary": 97
+    "secondary": 97,
+    "AP1": "11",
+    "AP2": "2",
+    "AP3": "4",
+    "AP4": "1",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -1547,7 +1852,12 @@
     "MALE": "7",
     "SCH_NAME": "Pioneer Charter School of Science",
     "primary": 140,
-    "secondary": 108
+    "secondary": 108,
+    "AP1": "2",
+    "AP2": "1",
+    "AP3": "5",
+    "AP4": "2",
+    "AP5": "2"
   },
   {
     "SY": 2016,
@@ -1572,7 +1882,12 @@
     "MALE": "12",
     "SCH_NAME": "Bridgewater-Raynham Regional",
     "primary": 0,
-    "secondary": 543
+    "secondary": 543,
+    "AP1": "2",
+    "AP2": "1",
+    "AP3": "7",
+    "AP4": "2",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -1597,7 +1912,12 @@
     "MALE": "19",
     "SCH_NAME": "Dennis-Yarmouth Regional High",
     "primary": 0,
-    "secondary": 329
+    "secondary": 329,
+    "AP1": "5",
+    "AP2": "6",
+    "AP3": "2",
+    "AP4": "0",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -1622,7 +1942,12 @@
     "MALE": "11",
     "SCH_NAME": "Shepherd Hill Regional High",
     "primary": 0,
-    "secondary": 91
+    "secondary": 91,
+    "AP1": "6",
+    "AP2": "1",
+    "AP3": "1",
+    "AP4": "3",
+    "AP5": "1"
   },
   {
     "SY": 2016,
@@ -1647,7 +1972,12 @@
     "MALE": "12",
     "SCH_NAME": "Hamilton-Wenham Regional High",
     "primary": 0,
-    "secondary": 29
+    "secondary": 29,
+    "AP1": "3",
+    "AP2": "1",
+    "AP3": "3",
+    "AP4": "2",
+    "AP5": "2"
   },
   {
     "SY": 2016,
@@ -1672,7 +2002,12 @@
     "MALE": "8",
     "SCH_NAME": "Minnechaug Regional High",
     "primary": 0,
-    "secondary": 127
+    "secondary": 127,
+    "AP1": "***",
+    "AP2": "***",
+    "AP3": "***",
+    "AP4": "***",
+    "AP5": "***"
   },
   {
     "SY": 2016,
@@ -1697,7 +2032,12 @@
     "MALE": "32",
     "SCH_NAME": "Masconomet Regional High School",
     "primary": 0,
-    "secondary": 284
+    "secondary": 284,
+    "AP1": "2",
+    "AP2": "10",
+    "AP3": "6",
+    "AP4": "5",
+    "AP5": "2"
   },
   {
     "SY": 2016,
@@ -1722,7 +2062,12 @@
     "MALE": "14",
     "SCH_NAME": "Nipmuc Regional High",
     "primary": 0,
-    "secondary": 86
+    "secondary": 86,
+    "AP1": "1",
+    "AP2": "0",
+    "AP3": "2",
+    "AP4": "5",
+    "AP5": "8"
   },
   {
     "SY": 2016,
@@ -1747,7 +2092,12 @@
     "MALE": "13",
     "SCH_NAME": "Algonquin Regional High",
     "primary": 0,
-    "secondary": 492
+    "secondary": 492,
+    "AP1": "2",
+    "AP2": "1",
+    "AP3": "4",
+    "AP4": "2",
+    "AP5": "5"
   },
   {
     "SY": 2016,
@@ -1772,7 +2122,12 @@
     "MALE": "14",
     "SCH_NAME": "Silver Lake Regional High",
     "primary": 0,
-    "secondary": 296
+    "secondary": 296,
+    "AP1": "4",
+    "AP2": "2",
+    "AP3": "3",
+    "AP4": "1",
+    "AP5": "1"
   },
   {
     "SY": 2016,
@@ -1797,7 +2152,12 @@
     "MALE": "13",
     "SCH_NAME": "Triton Regional High School",
     "primary": 0,
-    "secondary": 70
+    "secondary": 70,
+    "AP1": "2",
+    "AP2": "3",
+    "AP3": "4",
+    "AP4": "2",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -1822,7 +2182,12 @@
     "MALE": "5",
     "SCH_NAME": "Blackstone Valley",
     "primary": 0,
-    "secondary": 99
+    "secondary": 99,
+    "AP1": "***",
+    "AP2": "***",
+    "AP3": "***",
+    "AP4": "***",
+    "AP5": "***"
   },
   {
     "SY": 2016,
@@ -1847,7 +2212,12 @@
     "MALE": "10",
     "SCH_NAME": "Franklin County Technical",
     "primary": 0,
-    "secondary": 11
+    "secondary": 11,
+    "AP1": "10",
+    "AP2": "0",
+    "AP3": "0",
+    "AP4": "1",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -1872,7 +2242,12 @@
     "MALE": "9",
     "SCH_NAME": "Nashoba Valley Technical High School",
     "primary": 0,
-    "secondary": 8
+    "secondary": 8,
+    "AP1": "6",
+    "AP2": "1",
+    "AP3": "0",
+    "AP4": "0",
+    "AP5": "0"
   },
   {
     "SY": 2016,
@@ -1895,9 +2270,13 @@
     "ELL": "8",
     "FEMALE": "321",
     "MALE": "1183",
-    "SCH_NAME": "TOTAL",
     "primary": 671,
-    "secondary": 14663
+    "secondary": 14663,
+    "AP1": "251",
+    "AP2": "139",
+    "AP3": "254",
+    "AP4": "194",
+    "AP5": "261"
   },
   {
     "ORG_CODE": 9,

@@ -87,6 +87,40 @@ export const EthnicityDefaultMap = {
 };
 
 // export const YearList = [2016, 2017, 2018];
-export const YearList = [2016, 2018];
+export const YearList = [2016];
 
 export const CategoryChartPanelBackgroundColor =  "#6f7348";
+
+export const APScoreAcronymMap = {
+    AP1: {
+        id: "AP1",
+        desc: "AP1",
+        chartColor: "#f6d18a",
+        value: 0
+    },
+    AP2: {
+        id: "AP2",
+        desc: "AP2",
+        chartColor: "blue",
+        value: 0
+    },
+    AP3: {
+        id: "AP3",
+        desc: "AP3",
+        chartColor: "green",
+        value: 0
+    },
+    AP4: {
+        id: "AP4",
+        desc: "AP4",
+        chartColor: "yellow",
+        value: 0
+    },
+    AP5: {
+        id: "AP5",
+        desc: "AP5",
+        chartColor: "pink",
+        value: 0
+    },
+
+};

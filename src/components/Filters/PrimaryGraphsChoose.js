@@ -45,6 +45,18 @@ function PrimaryGraphChoose(props) {
                 <div style={styles.checkbox}>
                     <input
                         type="checkbox"
+                        id="apCourse"
+                        onChange={option =>
+                            optionChooseClicKHandler(props, option)
+                        }
+                        checked={props.selectedFilters.apScore}
+                    />
+                    <label>AP Courses</label>
+                </div>
+
+                <div style={styles.checkbox}>
+                    <input
+                        type="checkbox"
                         id="economicallyDisadvantaged"
                         onChange={option =>
                             optionChooseClicKHandler(props, option)

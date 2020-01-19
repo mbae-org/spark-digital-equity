@@ -18,20 +18,9 @@ function CourseEnrollmentChart(props) {
     let allYearPieCharts = [];
 
     dataYears.forEach(year => {
-        // const thisYearSchoolDataArray = getCourseEnrollmentData(yearToSchoolArrayDataMap[year]);
-        const thisYearSchoolDataArray = getCourseEnrollmentDataNew(yearToSchoolArrayDataMap[year]);
+        const thisYearSchoolDataArray = getCourseEnrollmentData(yearToSchoolArrayDataMap[year]);
 
-        let maxEnrolledCount = 0;
-        // thisYearSchoolDataArray.forEach(school => {
-        //     const dataArray = school.dataArray;
-        //     dataArray.forEach(element => {
-        //         if(element.value > maxEnrolledCount) {
-        //             maxEnrolledCount = element.value;
-        //         }
-        //     });
-        // });
-
-        let thisYearPieCharts = getBarCharts(thisYearSchoolDataArray, maxEnrolledCount);
+        let thisYearPieCharts = getBarCharts(thisYearSchoolDataArray);
 
         allYearPieCharts.push(
             <div key={year} style={styles.yearChartsParent}>
@@ -55,7 +44,7 @@ function CourseEnrollmentChart(props) {
 
 
 
-function getCourseEnrollmentDataNew(schoolArrayForYear) {
+function getCourseEnrollmentData(schoolArrayForYear) {
     let chartData = [];
     schoolArrayForYear.forEach(schoolObject => {
         const schoolName = schoolObject._name;
@@ -83,13 +72,11 @@ function getCourseEnrollmentDataNew(schoolArrayForYear) {
                 secondaryLabel: "Enrolled at Secondary Level"
         };
 
-        // thisSchoolData.schoolName = schoolName;
-        // thisSchoolData.dataArray = schoolDataArray;
         chartData.push(schoolDataObject);
     });
 
-    console.log("chartData");
-    console.log(chartData);
+    // console.log("chartData");
+    // console.log(chartData);
 
     return chartData;
 }
@@ -121,21 +108,15 @@ const styles = {
     }
 };
 
-function getBarCharts(schoolDataArray, maxEnrolledCount) {
-    let pieCharts = [];
-
-    // schoolDataArray.forEach((row, index) => {
-        // const schoolName = row.schoolName;
-        // const schoolData = row.dataArray;
+function getBarCharts(schoolDataArray) {
+    let barChart = [];
         const schoolData = schoolDataArray;
-        // const schoolName = row.id;
+        // console.log("bar chart data here");
+        // console.log(schoolData);
 
-        console.log("bar chart data here");
-        console.log(schoolData);
-
-        pieCharts.push(
+        barChart.push(
             <div
-                // key={schoolName}
+                key={"enrollment-bar-chart"}
                 style={styles.root}>
                 <div style={{ height: "90%", flexGrow: "1",
                     width: "100%"
@@ -145,7 +126,7 @@ function getBarCharts(schoolDataArray, maxEnrolledCount) {
                         keys={[ 'Primary', 'Secondary']}
                         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
                         padding={0.2}
-                        groupMode="grouped"
+                        groupMode="stacked"
                         colors={{ scheme: 'nivo' }}
                         minValue={0}
                         // maxValue={maxEnrolledCount}
@@ -235,18 +216,17 @@ function getBarCharts(schoolDataArray, maxEnrolledCount) {
                         motionDamping={15}
                     />
                 </div>
-                {/*<div style={{ flexGrow: "1" }}>{schoolName}</div>*/}
             </div>
         );
     // });
 
-    return pieCharts;
+    return barChart;
 }
 
 function getTooltipHTML(data) {
 
-    console.log("tooltip");
-    console.log(data);
+    // console.log("tooltip");
+    // console.log(data);
 
 
     const barData = data.data;
