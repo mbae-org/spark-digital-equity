@@ -54,7 +54,7 @@ class App extends React.Component {
                 ethnicity: true,
                 economicallyDisadvantaged: false,
                 disability: false,
-                englishLanguageLearner: false
+                englishLanguageLearner: false,
                 courseEnrollment: true
             },
             selectedYearsMap: selectedYearsMap,

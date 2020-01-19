@@ -122,7 +122,6 @@ const styles = {
 };
 
 function getBarCharts(schoolDataArray, maxEnrolledCount) {
-    const dataLength = schoolDataArray.length;
     let pieCharts = [];
 
     // schoolDataArray.forEach((row, index) => {
