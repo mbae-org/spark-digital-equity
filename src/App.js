@@ -54,7 +54,7 @@ class App extends React.Component {
                 ethnicity: true,
                 economicallyDisadvantaged: false,
                 disability: false,
-                englishLanguageLearner: false
+                englishLanguageLearner: false,
                 courseEnrollment: true
             },
             selectedYearsMap: selectedYearsMap,
@@ -239,7 +239,7 @@ class App extends React.Component {
 
                 districtObject.setEconomicallyDisadvantaged(
                     districtObject._economicallyDisadvantaged +
-                        schoolObject._economicallyDisadvantaged
+                    schoolObject._economicallyDisadvantaged
                 );
 
                 districtObject.setEnrolled(
@@ -247,7 +247,7 @@ class App extends React.Component {
                 );
                 districtObject.setStudentsWithDisability(
                     districtObject._studentsWithDisability +
-                        schoolObject._studentsWithDisability
+                    schoolObject._studentsWithDisability
                 );
 
                 let thisDistrictEthnicityArray = [];
@@ -266,7 +266,7 @@ class App extends React.Component {
 
                 districtObject.setEnglishLanguageLearner(
                     districtObject._englishLanguageLearner +
-                        schoolObject._englishLanguageLearner
+                    schoolObject._englishLanguageLearner
                 );
 
                 districtObject.setPrimaryEnrolled(districtObject._primaryEnrolled + schoolObject._primaryEnrolled);
@@ -320,7 +320,7 @@ class App extends React.Component {
 
             districtObject.setEconomicallyDisadvantaged(
                 districtObject._economicallyDisadvantaged +
-                    schoolObject._economicallyDisadvantaged
+                schoolObject._economicallyDisadvantaged
             );
 
             districtObject.setEnrolled(
@@ -328,7 +328,7 @@ class App extends React.Component {
             );
             districtObject.setStudentsWithDisability(
                 districtObject._studentsWithDisability +
-                    schoolObject._studentsWithDisability
+                schoolObject._studentsWithDisability
             );
 
             let thisDistrictEthnicityArray = [];
@@ -345,7 +345,7 @@ class App extends React.Component {
 
             districtObject.setEnglishLanguageLearner(
                 districtObject._englishLanguageLearner +
-                    schoolObject._englishLanguageLearner
+                schoolObject._englishLanguageLearner
             );
 
             schoolObjectMap[districtName] = districtObject;
@@ -519,15 +519,15 @@ class App extends React.Component {
         let filteredSchoolDataMap = {};
         let selectedYearsArray = [];
         Object.keys(selectedYearsMap).forEach((key) => {
-            if(selectedYearsMap[key]===true)
+            if (selectedYearsMap[key] === true)
                 selectedYearsArray.push(key)
         });
 
         selectedYearsArray.forEach(year => {
-            if(!filteredSchoolDataMap[year]) filteredSchoolDataMap[year] = [];
-           selectedSchoolsArray.forEach(schoolName => {
-               filteredSchoolDataMap[year].push(yearSchoolObjectMap[year][schoolName]);
-           });
+            if (!filteredSchoolDataMap[year]) filteredSchoolDataMap[year] = [];
+            selectedSchoolsArray.forEach(schoolName => {
+                filteredSchoolDataMap[year].push(yearSchoolObjectMap[year][schoolName]);
+            });
         });
 
         console.log("filteredSchoolDataMap");
