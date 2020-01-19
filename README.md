@@ -14,3 +14,13 @@ node.version >= v10.18.1
     cd spark-digital-equity
     npm install
     npm start
+    
+    
+## Generate Static Build
+
+To generate a static production website build, run the following build command:
+    
+    npm run build
+ 
+This will generate html, minified js and css in the `build` folder, the contents of this folder can then be served by any production server.
+Refrences : https://create-react-app.dev/docs/deployment/
