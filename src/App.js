@@ -69,17 +69,13 @@ class App extends React.Component {
         const charts = this.createChartsFromFilterState();
 
         return (
-            <div
-                className="App"
-                style={{ display: "flex", flexDirection: "column" }}
-            >
-                <div style={{ height: "10%" }}>
+            <div className="App">
+                <div className="Header">
                     <h3> Digital Equity </h3>
                 </div>
-                <div className="App" style={{ display: "flex" }}>
+                <div className="Body">
                     <div
                         className="filter-panel"
-                        style={{ backgroundColor: "darkgreen" }}
                     >
                         <FilterPanel
                             data={this.state.schoolData}

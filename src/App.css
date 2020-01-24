@@ -1,9 +1,32 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 .App {
     text-align: center;
     min-width: 900px;
     background-color: #4272d2;
     color: white;
     height: 90vh;
+    /* display: flex;
+    flex-direction: "column"  */
+}
+.Header{
+    text-align: center;
+    min-width: 900px;
+    background-color: #4272d2;
+    color: white;
+    height: 10%
+
+}
+.Body{
+    color: black; 
+    height: 90%;
+    display: flex;  
+}
+.filter-panel{
+    background-color: darkgreen
+}
+.chart-panel{
+
 }
 
 .App-logo {
@@ -12,11 +35,20 @@
 
 .App-header {
     background-color: #282c34;
-    min-height: 100vh;
+    min-height: 90vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
 }
@@ -44,4 +76,8 @@
     border-style: groove;
     border-width: thin;
     padding: 5px;
+}
+h3{
+    margin-top: 0;
+    margin-bottom: 0;
 }
