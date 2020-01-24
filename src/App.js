@@ -2,6 +2,7 @@
 // "use strict";
 
 import React from "react";
+import logo from "./static/logo.png";
 import "./App.css";
 import FilterPanel from "./components/FilterPanel/FilterPanel";
 import GenderChart from "./components/Charts/GenderChart";
@@ -71,12 +72,11 @@ class App extends React.Component {
         return (
             <div className="App">
                 <div className="Header">
-                    <h3> Digital Equity </h3>
+                    <img src={logo} alt="Logo" />
+                    <h3> Digital Equity Initiative </h3>
                 </div>
                 <div className="Body">
-                    <div
-                        className="filter-panel"
-                    >
+                    <div className="filter-panel">
                         <FilterPanel
                             data={this.state.schoolData}
                             selectedFilters={this.state.selectedFilters}

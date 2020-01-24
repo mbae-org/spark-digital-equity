@@ -1,0 +1,29 @@
+.SchoolDistrict{
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+}
+p{
+    display: flex;
+}
+.YearFilter{
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+}
+.checkbox{
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.PrimaryGraph{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+}

@@ -1,8 +1,9 @@
 import React from "react";
+import "./Filters.css";
 
 const styles = {
     checkbox: {
-        marginTop: "5px"
+        marginTop: "10px"
     }
 };
 
@@ -10,14 +11,8 @@ function PrimaryGraphChoose(props) {
     // console.log(props);
 
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                textAlign: "left"
-            }}
-        >
-            <div style={{ padding: "10px" }}>Select To View:</div>
+        <div className="PrimaryGraph">
+            <p>Select To View:</p>
             <div>
                 <div style={styles.checkbox}>
                     <input

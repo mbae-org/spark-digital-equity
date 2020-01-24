@@ -3,6 +3,7 @@ import React from "react";
 
 import Creatable from "react-select/creatable";
 import { components } from "react-select";
+import "./Filters.css";
 
 import { EntityType } from "../../Constants";
 
@@ -19,22 +20,9 @@ function SchoolDistrictFilter(props) {
         inputValue.length > 0 && selectValue.length < 5;
 
     return (
-        <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ padding: "10px" }}>
-                Select School / District to compare
-            </div>
-            <div style={{ color: "black" }}>
-                {/* <Select
-                    options={allOptions}
-                    defaultValue={allOptions.filter(
-                        option => option.label === "Massachussets"
-                    )}
-                    isMulti
-                    onChange={selectedOptions =>
-                        props.onOptionsChange(selectedOptions)
-                    }
-                /> */}
-
+        <div className="SchoolDistrict">
+            <p>Enter a school/district:</p>
+            <div>
                 <Creatable
                     components={{ Menu }}
                     isValidNewOption={isValidNewOption}
@@ -60,10 +48,10 @@ const Menu = props => {
             {optionSelectedLength < 3 ? (
                 props.children
             ) : (
-                <div style={{ margin: 15 }}>
-                    Cannot view more than 3 schools/districts
+                    <div style={{ margin: 15 }}>
+                        Cannot view more than 3 schools/districts
                 </div>
-            )}
+                )}
         </components.Menu>
     );
 };
