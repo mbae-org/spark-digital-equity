@@ -1,11 +1,6 @@
 import React from "react";
 import "./Filters.css";
 
-const styles = {
-    checkbox: {
-        marginTop: "10px"
-    }
-};
 
 function PrimaryGraphChoose(props) {
     // console.log(props);
@@ -14,7 +9,7 @@ function PrimaryGraphChoose(props) {
         <div className="PrimaryGraph">
             <p>Select To View:</p>
             <div>
-                <div style={styles.checkbox}>
+                <div className="checkbox">
                     <input
                         type="checkbox"
                         id="gender"
@@ -25,7 +20,7 @@ function PrimaryGraphChoose(props) {
                     />
                     <label>Gender</label>
                 </div>
-                <div style={styles.checkbox}>
+                <div className="checkbox">
                     <input
                         type="checkbox"
                         id="ethnicity"
@@ -37,7 +32,7 @@ function PrimaryGraphChoose(props) {
                     <label>Ethnicity</label>
                 </div>
 
-                <div style={styles.checkbox}>
+                <div className="checkbox">
                     <input
                         type="checkbox"
                         id="economicallyDisadvantaged"
@@ -51,7 +46,7 @@ function PrimaryGraphChoose(props) {
                     <label>Economically Disadvantaged</label>
                 </div>
 
-                <div style={styles.checkbox}>
+                <div className="checkbox">
                     <input
                         type="checkbox"
                         id="disability"
@@ -63,7 +58,7 @@ function PrimaryGraphChoose(props) {
                     <label>Students With Disability</label>
                 </div>
 
-                <div style={styles.checkbox}>
+                <div className="checkbox">
                     <input
                         type="checkbox"
                         id="englishLanguageLearner"
@@ -75,7 +70,7 @@ function PrimaryGraphChoose(props) {
                     <label>English Language Learners</label>
                 </div>
 
-                <div style={styles.checkbox}>
+                <div className="checkbox">
                     <input
                         type="checkbox"
                         id="courseEnrollment"
