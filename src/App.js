@@ -54,7 +54,7 @@ class App extends React.Component {
                 economicallyDisadvantaged: false,
                 disability: false,
                 englishLanguageLearner: false,
-                courseEnrollment: true,
+                courseEnrollment: false,
                 apScore: true
             },
             selectedYearsMap: selectedYearsMap,
@@ -123,7 +123,7 @@ class App extends React.Component {
             );
         }
 
-        if (selectedFilters.ethnicity === true) {
+        if (selectedFilters.apScore === true) {
             charts.push(
                 <APCoursesChart
                     yearToSchoolArrayDataMap={this.state.filteredSchoolData}
