@@ -126,7 +126,8 @@ function getBarCharts(schoolDataArray) {
                         keys={[ 'Primary', 'Secondary']}
                         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
                         padding={0.2}
-                        groupMode="stacked"
+                        // groupMode="stacked"
+                        groupMode="grouped"
                         colors={{ scheme: 'nivo' }}
                         minValue={0}
                         // maxValue={maxEnrolledCount}
