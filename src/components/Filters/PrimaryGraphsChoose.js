@@ -1,25 +1,15 @@
 import React from "react";
+import "./Filters.css";
 
-const styles = {
-    checkbox: {
-        marginTop: "5px"
-    }
-};
 
 function PrimaryGraphChoose(props) {
     // console.log(props);
 
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                textAlign: "left"
-            }}
-        >
-            <div style={{ padding: "10px" }}>Select To View:</div>
+        <div className="PrimaryGraph">
+            <p>Select To View:</p>
             <div>
-                <div style={styles.checkbox}>
+                <div className="checkbox">
                     <input
                         type="checkbox"
                         id="gender"
@@ -30,7 +20,7 @@ function PrimaryGraphChoose(props) {
                     />
                     <label>Gender</label>
                 </div>
-                <div style={styles.checkbox}>
+                <div className="checkbox">
                     <input
                         type="checkbox"
                         id="ethnicity"
@@ -42,7 +32,7 @@ function PrimaryGraphChoose(props) {
                     <label>Ethnicity</label>
                 </div>
 
-                <div style={styles.checkbox}>
+                <div className="checkbox">
                     <input
                         type="checkbox"
                         id="economicallyDisadvantaged"
@@ -56,7 +46,7 @@ function PrimaryGraphChoose(props) {
                     <label>Economically Disadvantaged</label>
                 </div>
 
-                <div style={styles.checkbox}>
+                <div className="checkbox">
                     <input
                         type="checkbox"
                         id="disability"
@@ -68,7 +58,7 @@ function PrimaryGraphChoose(props) {
                     <label>Students With Disability</label>
                 </div>
 
-                <div style={styles.checkbox}>
+                <div className="checkbox">
                     <input
                         type="checkbox"
                         id="englishLanguageLearner"
@@ -80,7 +70,7 @@ function PrimaryGraphChoose(props) {
                     <label>English Language Learners</label>
                 </div>
 
-                <div style={styles.checkbox}>
+                <div className="checkbox">
                     <input
                         type="checkbox"
                         id="courseEnrollment"

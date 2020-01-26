@@ -2,6 +2,7 @@
 // "use strict";
 
 import React from "react";
+import logo from "./static/logo.png";
 import "./App.css";
 import FilterPanel from "./components/FilterPanel/FilterPanel";
 import GenderChart from "./components/Charts/GenderChart";
@@ -10,7 +11,7 @@ import EconDisChart from "./components/Charts/EconDisChart";
 import DisabilityChart from "./components/Charts/DisabilityChart";
 import ELLChart from "./components/Charts/ELLChart";
 import CourseEnrollmentChart from "./components/Charts/CourseEnrollment"
-import NextStepsPanel from "./components/NextStepsPanel";
+import NextStepsPanel from "./components/NextSteps/NextStepsPanel";
 
 import schoolData from "./data/data-new";
 
@@ -69,30 +70,32 @@ class App extends React.Component {
         const charts = this.createChartsFromFilterState();
 
         return (
-            <div className="App">
-                <div className="Header">
-                    <h3> Digital Equity </h3>
-                </div>
-                <div className="Body">
-                    <div
-                        className="filter-panel"
-                    >
-                        <FilterPanel
-                            data={this.state.schoolData}
-                            selectedFilters={this.state.selectedFilters}
-                            selectedYears={this.state.selectedYearsMap}
-                            onSchoolFilterChange={(opts, actionMeta) =>
-                                this.schoolFilterChangeHandler(opts, actionMeta)
-                            }
-                            onGraphSelectionChange={
-                                this.graphSelectionChangeHandler
-                            }
-                            onYearSelectionChange={this.yearSelectionChangeHandler}
-                        />
+            <div>
+                <div className="App">
+                    <div className="Header">
+                        <img src={logo} alt="Logo" />
+                        <h3> Digital Equity Initiative </h3>
                     </div>
-                    <div className="chart-panel">{charts}</div>
+                    <div className="Body">
+                        <div className="filter-panel">
+                            <FilterPanel
+                                data={this.state.schoolData}
+                                selectedFilters={this.state.selectedFilters}
+                                selectedYears={this.state.selectedYearsMap}
+                                onSchoolFilterChange={(opts, actionMeta) =>
+                                    this.schoolFilterChangeHandler(opts, actionMeta)
+                                }
+                                onGraphSelectionChange={
+                                    this.graphSelectionChangeHandler
+                                }
+                                onYearSelectionChange={this.yearSelectionChangeHandler}
+                            />
+                        </div>
+                        <div className="chart-panel">{charts}</div>
+                    </div>
                 </div>
                 <NextStepsPanel />
+                <footer>Contact Info</footer>
             </div>
         );
     }

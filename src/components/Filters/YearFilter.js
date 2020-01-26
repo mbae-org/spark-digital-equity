@@ -1,22 +1,12 @@
 import React from "react";
 import { YearList } from "../../Constants";
+import "./Filters.css";
 
-const styles = {
-    checkbox: {
-        marginTop: "5px"
-    }
-};
 
 function YearFilter(props) {
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                textAlign: "left"
-            }}
-        >
-            <div style={{ padding: "10px" }}>Select Years to view</div>
+        <div className="YearFilter">
+            <p>Choose years to view:</p>
             <div>{getCheckBoxListForYears(YearList, props)}</div>
         </div>
     );
@@ -27,7 +17,7 @@ function getCheckBoxListForYears(yearList, props) {
 
     yearList.forEach(year => {
         checkboxDivList.push(
-            <div style={styles.checkbox} key={"year-" + year}>
+            <div key={"year-" + year} className="checkbox">
                 <input
                     type="checkbox"
                     id={year}
@@ -41,7 +31,7 @@ function getCheckBoxListForYears(yearList, props) {
         );
     });
 
-    return checkboxDivList;
+    return <div className="year_checkbox">{checkboxDivList}</div>;
 }
 
 export default YearFilter;
