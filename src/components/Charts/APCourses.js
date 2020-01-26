@@ -13,7 +13,7 @@ function APCoursesChart(props) {
 
     dataYears.forEach(year => {
         const thisYearSchoolDataArray = getGroupedAPData(yearToSchoolArrayDataMap[year]);
-        let thisYearPieCharts = getBarCharts(thisYearSchoolDataArray);
+        let thisYearPieCharts = getBarCharts(thisYearSchoolDataArray, props.options);
 
         allYearPieCharts.push(
             <div key={year} style={styles.yearChartsParent}>
@@ -27,7 +27,7 @@ function APCoursesChart(props) {
         <div id="ethnicity-pie-charts"
              style={styles.categoryChartsParent}
         >
-            <h3 key="ethnicityHeading">AP Scores</h3>
+            <h3 key="ethnicityHeading">AP Courses</h3>
             {allYearPieCharts}
         </div>
     );
@@ -49,25 +49,17 @@ function getGroupedAPData(schoolArrayForYear) {
         let schoolDataArray = [];
         schoolDataArray = schoolObj._apArray;
 
-        // get percentage calculation out of total students that we consider
-        // let totalStudents = 0;
-        // schoolDataArray.forEach(element => (totalStudents += element.value));
-        // schoolDataArray.forEach(
-        //     element =>
-        //         (element.percentage = (
-        //             (element.value / totalStudents) *
-        //             100
-        //         ).toFixed(2))
-        // );
         thisSchoolData.id = schoolName;
         schoolDataArray.forEach(apObject => {
             thisSchoolData[apObject.id] = apObject.value;
         });
+        thisSchoolData["Enrollment"] = schoolObj._enrolled;
+        thisSchoolData["year"] = schoolObj._schoolYear;
+        console.log("the school object");
+        console.log(schoolObj);
+
         chartData.push(thisSchoolData);
 
-        // thisSchoolData.schoolName = schoolName;
-        // thisSchoolData.dataArray = schoolDataArray;
-        // chartData.push(thisSchoolData);
     });
 
     console.log("AP chart data");
@@ -104,9 +96,20 @@ const styles = {
     }
 };
 
-function getBarCharts(schoolDataArray) {
+function getBarCharts(schoolDataArray, options) {
     let barChart = [];
     const schoolData = schoolDataArray;
+    let keys = [];
+    if(options.enrollment === true) {
+        keys.push('Enrollment');
+    }
+    if(options.score === true) {
+        keys = keys.concat(['AP1', 'AP2', 'AP3', 'AP4', 'AP5']);
+    }
+
+    console.log("keys");
+    console.log(keys);
+
     // console.log("bar chart data here");
     // console.log(schoolData);
 
@@ -119,11 +122,11 @@ function getBarCharts(schoolDataArray) {
             }}>
                 <ResponsiveBar
                     data={schoolData}
-                    keys={[ 'AP1', 'AP2', 'AP3', 'AP4', 'AP5']}
+                    keys={keys}
                     margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
                     padding={0.2}
-                    groupMode="stacked"
-                    // groupMode="grouped"
+                    // groupMode="stacked"
+                    groupMode="grouped"
                     colors={{ scheme: 'nivo' }}
                     minValue={0}
                     // maxValue={maxEnrolledCount}
@@ -151,40 +154,7 @@ function getBarCharts(schoolDataArray) {
                             spacing: 10
                         }
                     ]}
-                    // fill={[
-                    //     {
-                    //         match: {
-                    //             id: 'fries'
-                    //         },
-                    //         id: 'dots'
-                    //     },
-                    //     {
-                    //         match: {
-                    //             id: 'sandwich'
-                    //         },
-                    //         id: 'lines'
-                    //     }
-                    // ]}
                     borderColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
-                    // axisBottom={{
-                    //     tickSize: 5,
-                    //     tickPadding: 5,
-                    //     tickRotation: 0,
-                    //     legend: 'country',
-                    //     legendPosition: 'middle',
-                    //     legendOffset: 32
-                    // }}
-                    // axisLeft={{
-                    //     tickSize: 5,
-                    //     tickPadding: 5,
-                    //     tickRotation: 0,
-                    //     legend: 'Students Enrolled',
-                    //     legendPosition: 'middle',
-                    //     legendOffset: -40
-                    // }}
-                    // labelSkipWidth={12}
-                    // labelSkipHeight={12}
-                    // labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
                     legends={[
                         {
                             dataFrom: 'keys',

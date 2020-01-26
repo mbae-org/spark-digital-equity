@@ -55,7 +55,9 @@ class App extends React.Component {
                 disability: false,
                 englishLanguageLearner: false,
                 courseEnrollment: false,
-                apScore: true
+                apCourse: true,
+                apCourseScore: true,
+                apCourseEnrollment: true
             },
             selectedYearsMap: selectedYearsMap,
             filteredSchoolData: this.filterYearSchoolObjectMap(yearSchoolObjectMap, selectedSchools, selectedYearsMap)
@@ -123,11 +125,19 @@ class App extends React.Component {
             );
         }
 
-        if (selectedFilters.apScore === true) {
+        if (selectedFilters.apCourse === true) {
+            const options = {
+                score: selectedFilters.apCourseScore,
+                enrollment: selectedFilters.apCourseEnrollment
+            };
+
+            console.log("options passed");
+            console.log(options);
             charts.push(
                 <APCoursesChart
                     yearToSchoolArrayDataMap={this.state.filteredSchoolData}
                     key="apCoursesChart"
+                    options = {options}
                 />
             );
         }
