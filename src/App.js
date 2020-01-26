@@ -2,6 +2,7 @@
 // "use strict";
 
 import React from "react";
+import logo from "./static/logo.png";
 import "./App.css";
 import FilterPanel from "./components/FilterPanel/FilterPanel";
 import GenderChart from "./components/Charts/GenderChart";
@@ -11,7 +12,7 @@ import DisabilityChart from "./components/Charts/DisabilityChart";
 import ELLChart from "./components/Charts/ELLChart";
 import CourseEnrollmentChart from "./components/Charts/CourseEnrollment"
 import APCoursesChart from "./components/Charts/APCourses"
-import NextStepsPanel from "./components/NextStepsPanel";
+import NextStepsPanel from "./components/NextSteps/NextStepsPanel"
 
 import schoolData from "./data/data-new";
 
@@ -72,34 +73,32 @@ class App extends React.Component {
         const charts = this.createChartsFromFilterState();
 
         return (
-            <div
-                className="App"
-                style={{ display: "flex", flexDirection: "column" }}
-            >
-                <div style={{ height: "10%" }}>
-                    <h3> Digital Equity </h3>
-                </div>
-                <div className="App" style={{ display: "flex" }}>
-                    <div
-                        className="filter-panel"
-                        style={{ backgroundColor: "darkgreen" }}
-                    >
-                        <FilterPanel
-                            data={this.state.schoolData}
-                            selectedFilters={this.state.selectedFilters}
-                            selectedYears={this.state.selectedYearsMap}
-                            onSchoolFilterChange={(opts, actionMeta) =>
-                                this.schoolFilterChangeHandler(opts, actionMeta)
-                            }
-                            onGraphSelectionChange={
-                                this.graphSelectionChangeHandler
-                            }
-                            onYearSelectionChange={this.yearSelectionChangeHandler}
-                        />
+            <div>
+                <div className="App">
+                    <div className="Header">
+                        <img src={logo} alt="Logo" />
+                        <h3> Digital Equity Initiative </h3>
                     </div>
-                    <div className="chart-panel">{charts}</div>
+                    <div className="Body">
+                        <div className="filter-panel">
+                            <FilterPanel
+                                data={this.state.schoolData}
+                                selectedFilters={this.state.selectedFilters}
+                                selectedYears={this.state.selectedYearsMap}
+                                onSchoolFilterChange={(opts, actionMeta) =>
+                                    this.schoolFilterChangeHandler(opts, actionMeta)
+                                }
+                                onGraphSelectionChange={
+                                    this.graphSelectionChangeHandler
+                                }
+                                onYearSelectionChange={this.yearSelectionChangeHandler}
+                            />
+                        </div>
+                        <div className="chart-panel">{charts}</div>
+                    </div>
                 </div>
                 <NextStepsPanel />
+                <footer>Contact Info</footer>
             </div>
         );
     }
@@ -268,7 +267,7 @@ class App extends React.Component {
 
                 districtObject.setEconomicallyDisadvantaged(
                     districtObject._economicallyDisadvantaged +
-                        schoolObject._economicallyDisadvantaged
+                    schoolObject._economicallyDisadvantaged
                 );
 
                 districtObject.setEnrolled(
@@ -276,7 +275,7 @@ class App extends React.Component {
                 );
                 districtObject.setStudentsWithDisability(
                     districtObject._studentsWithDisability +
-                        schoolObject._studentsWithDisability
+                    schoolObject._studentsWithDisability
                 );
 
                 let thisDistrictEthnicityArray = [];
@@ -295,7 +294,7 @@ class App extends React.Component {
 
                 districtObject.setEnglishLanguageLearner(
                     districtObject._englishLanguageLearner +
-                        schoolObject._englishLanguageLearner
+                    schoolObject._englishLanguageLearner
                 );
 
                 districtObject.setPrimaryEnrolled(districtObject._primaryEnrolled + schoolObject._primaryEnrolled);
@@ -351,7 +350,7 @@ class App extends React.Component {
 
             districtObject.setEconomicallyDisadvantaged(
                 districtObject._economicallyDisadvantaged +
-                    schoolObject._economicallyDisadvantaged
+                schoolObject._economicallyDisadvantaged
             );
 
             districtObject.setEnrolled(
@@ -359,7 +358,7 @@ class App extends React.Component {
             );
             districtObject.setStudentsWithDisability(
                 districtObject._studentsWithDisability +
-                    schoolObject._studentsWithDisability
+                schoolObject._studentsWithDisability
             );
 
             let thisDistrictEthnicityArray = [];
@@ -390,7 +389,7 @@ class App extends React.Component {
 
             districtObject.setEnglishLanguageLearner(
                 districtObject._englishLanguageLearner +
-                    schoolObject._englishLanguageLearner
+                schoolObject._englishLanguageLearner
             );
 
             schoolObjectMap[districtName] = districtObject;
@@ -590,15 +589,15 @@ class App extends React.Component {
         let filteredSchoolDataMap = {};
         let selectedYearsArray = [];
         Object.keys(selectedYearsMap).forEach((key) => {
-            if(selectedYearsMap[key]===true)
+            if (selectedYearsMap[key] === true)
                 selectedYearsArray.push(key)
         });
 
         selectedYearsArray.forEach(year => {
-            if(!filteredSchoolDataMap[year]) filteredSchoolDataMap[year] = [];
-           selectedSchoolsArray.forEach(schoolName => {
-               filteredSchoolDataMap[year].push(yearSchoolObjectMap[year][schoolName]);
-           });
+            if (!filteredSchoolDataMap[year]) filteredSchoolDataMap[year] = [];
+            selectedSchoolsArray.forEach(schoolName => {
+                filteredSchoolDataMap[year].push(yearSchoolObjectMap[year][schoolName]);
+            });
         });
 
         console.log("filteredSchoolDataMap");
