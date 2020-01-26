@@ -1,17 +1,11 @@
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
-// import School from "../../School";
 
 /**
  * Main class component
  * @param {*} props
  */
 function GenderChart(props) {
-    // const schoolDataArray = getGenderForSchool(
-    //     props.schoolData,
-    //     props.selectedSchoolOptions
-    // );
-
     const yearToSchoolArrayDataMap = props.yearToSchoolArrayDataMap;
     const dataYears = Object.keys(yearToSchoolArrayDataMap);
 
@@ -137,8 +131,6 @@ function getPieCharts(schoolDataArray) {
     schoolDataArray.forEach((row, index) => {
         const schoolName = row.schoolName;
         const schoolData = row.dataArray;
-        const schoolYear = row.schoolYear;
-        console.log("school year: " + schoolYear);
 
         pieCharts.push(
             <div key={schoolName} style={styles.root}>
@@ -166,8 +158,6 @@ function getPieCharts(schoolDataArray) {
                                           itemHeight: 20,
                                           translateY: 20,
                                           translateX: 20
-                                          // symbolSize: 18,
-                                          // symbolShape: "circle"
                                       }
                                   ]
                                 : undefined
@@ -181,12 +171,6 @@ function getPieCharts(schoolDataArray) {
             </div>
         );
     });
-
-    // if (pieCharts && pieCharts.length > 0) {
-    //     const heading = [];
-    //     heading.push(<h3 key={"gender-heading"}>Gender</h3>);
-    //     pieCharts = heading.concat(pieCharts);
-    // }
 
     return pieCharts;
 }

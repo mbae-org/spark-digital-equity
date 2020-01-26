@@ -3,7 +3,6 @@
  */
 
 import React from "react";
-// import { ResponsivePie } from "@nivo/pie";
 import { ResponsiveBar } from "@nivo/bar";
 import {CategoryChartPanelBackgroundColor} from "../../Constants"
 
@@ -18,20 +17,9 @@ function CourseEnrollmentChart(props) {
     let allYearPieCharts = [];
 
     dataYears.forEach(year => {
-        // const thisYearSchoolDataArray = getCourseEnrollmentData(yearToSchoolArrayDataMap[year]);
-        const thisYearSchoolDataArray = getCourseEnrollmentDataNew(yearToSchoolArrayDataMap[year]);
+        const thisYearSchoolDataArray = getCourseEnrollmentData(yearToSchoolArrayDataMap[year]);
 
-        let maxEnrolledCount = 0;
-        // thisYearSchoolDataArray.forEach(school => {
-        //     const dataArray = school.dataArray;
-        //     dataArray.forEach(element => {
-        //         if(element.value > maxEnrolledCount) {
-        //             maxEnrolledCount = element.value;
-        //         }
-        //     });
-        // });
-
-        let thisYearPieCharts = getBarCharts(thisYearSchoolDataArray, maxEnrolledCount);
+        let thisYearPieCharts = getBarCharts(thisYearSchoolDataArray, props.options);
 
         allYearPieCharts.push(
             <div key={year} style={styles.yearChartsParent}>
@@ -55,7 +43,7 @@ function CourseEnrollmentChart(props) {
 
 
 
-function getCourseEnrollmentDataNew(schoolArrayForYear) {
+function getCourseEnrollmentData(schoolArrayForYear) {
     let chartData = [];
     schoolArrayForYear.forEach(schoolObject => {
         const schoolName = schoolObject._name;
@@ -73,23 +61,16 @@ function getCourseEnrollmentDataNew(schoolArrayForYear) {
         let schoolDataObject = {
                 id: schoolName,
                 "Primary": primaryEnrolledCount,
-                // value: primaryEnrolledCount,
                 primaryPercentage: primaryEnrolledPercentage,
-                // color: "orange",
                 primaryLabel: "Enrolled prior to Secondary Level",
                 "Secondary": secondaryEnrolledCount,
                 secondaryPercentage: secondaryEnrolledPercentage,
-                // color: "blue",
-                secondaryLabel: "Enrolled at Secondary Level"
+                secondaryLabel: "Enrolled at Secondary Level",
+                "Total": totalCount
         };
 
-        // thisSchoolData.schoolName = schoolName;
-        // thisSchoolData.dataArray = schoolDataArray;
         chartData.push(schoolDataObject);
     });
-
-    console.log("chartData");
-    console.log(chartData);
 
     return chartData;
 }
@@ -121,30 +102,35 @@ const styles = {
     }
 };
 
-function getBarCharts(schoolDataArray, maxEnrolledCount) {
-    let pieCharts = [];
-
-    // schoolDataArray.forEach((row, index) => {
-        // const schoolName = row.schoolName;
-        // const schoolData = row.dataArray;
+function getBarCharts(schoolDataArray, options) {
+    let barChart = [];
         const schoolData = schoolDataArray;
-        // const schoolName = row.id;
 
-        console.log("bar chart data here");
-        console.log(schoolData);
+    let keys = [];
+    if(options.primary === true) {
+        keys.push('Primary');
+    }
+    if(options.secondary === true) {
+        keys.push('Secondary');
+    }
+    if(options.total === true) {
+        keys.push('Total');
+    }
 
-        pieCharts.push(
+
+        barChart.push(
             <div
-                // key={schoolName}
+                key={"enrollment-bar-chart"}
                 style={styles.root}>
                 <div style={{ height: "90%", flexGrow: "1",
                     width: "100%"
                 }}>
                     <ResponsiveBar
                         data={schoolData}
-                        keys={[ 'Primary', 'Secondary']}
+                        keys={keys}
                         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
                         padding={0.2}
+                        // groupMode="stacked"
                         groupMode="grouped"
                         colors={{ scheme: 'nivo' }}
                         minValue={0}
@@ -172,20 +158,6 @@ function getBarCharts(schoolDataArray, maxEnrolledCount) {
                                 spacing: 10
                             }
                         ]}
-                        // fill={[
-                        //     {
-                        //         match: {
-                        //             id: 'fries'
-                        //         },
-                        //         id: 'dots'
-                        //     },
-                        //     {
-                        //         match: {
-                        //             id: 'sandwich'
-                        //         },
-                        //         id: 'lines'
-                        //     }
-                        // ]}
                         borderColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
                         // axisBottom={{
                         //     tickSize: 5,
@@ -235,19 +207,14 @@ function getBarCharts(schoolDataArray, maxEnrolledCount) {
                         motionDamping={15}
                     />
                 </div>
-                {/*<div style={{ flexGrow: "1" }}>{schoolName}</div>*/}
             </div>
         );
     // });
 
-    return pieCharts;
+    return barChart;
 }
 
 function getTooltipHTML(data) {
-
-    console.log("tooltip");
-    console.log(data);
-
 
     const barData = data.data;
     const typeOfBar = data.id;

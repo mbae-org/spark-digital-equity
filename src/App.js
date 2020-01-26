@@ -11,7 +11,8 @@ import EconDisChart from "./components/Charts/EconDisChart";
 import DisabilityChart from "./components/Charts/DisabilityChart";
 import ELLChart from "./components/Charts/ELLChart";
 import CourseEnrollmentChart from "./components/Charts/CourseEnrollment"
-import NextStepsPanel from "./components/NextSteps/NextStepsPanel";
+import APCoursesChart from "./components/Charts/APCourses"
+import NextStepsPanel from "./components/NextSteps/NextStepsPanel"
 
 import schoolData from "./data/data-new";
 
@@ -19,7 +20,8 @@ import {
     EntityType,
     EthnicityAcronymList,
     EthnicityDefaultMap,
-    YearList
+    YearList,
+    APScoreAcronymMap
 } from "./Constants";
 import School from "./School";
 
@@ -46,9 +48,6 @@ class App extends React.Component {
         this.state = {
             newSchoolData: yearSchoolObjectMap,
             schoolData: this.extractSchoolData(schoolData),
-            // filteredData: this.filterSchoolData(
-            //     this.extractSchoolData(schoolData)
-            // ),
             schoolOptions: selectedSchools,
             selectedFilters: {
                 gender: true,
@@ -56,14 +55,18 @@ class App extends React.Component {
                 economicallyDisadvantaged: false,
                 disability: false,
                 englishLanguageLearner: false,
-                courseEnrollment: true
+                courseEnrollment: true,
+                apCourse: true,
+                apCourseScore: true,
+                apCourseEnrollment: true,
+                courseEnrollmentSecondary: true,
+                courseEnrollmentPrimary: true,
+                courseEnrollmentTotal: true
             },
             selectedYearsMap: selectedYearsMap,
             filteredSchoolData: this.filterYearSchoolObjectMap(yearSchoolObjectMap, selectedSchools, selectedYearsMap)
         };
 
-        // console.log("schoolData");
-        // console.log(schoolData);
     }
 
     render() {
@@ -124,6 +127,24 @@ class App extends React.Component {
             );
         }
 
+        if (selectedFilters.apCourse === true) {
+            const options = {
+                score: selectedFilters.apCourseScore,
+                enrollment: selectedFilters.apCourseEnrollment,
+                total: selectedFilters.courseEnrollmentTotal
+            };
+
+            console.log("options passed");
+            console.log(options);
+            charts.push(
+                <APCoursesChart
+                    yearToSchoolArrayDataMap={this.state.filteredSchoolData}
+                    key="apCoursesChart"
+                    options = {options}
+                />
+            );
+        }
+
         if (selectedFilters.economicallyDisadvantaged === true) {
             charts.push(
                 <EconDisChart
@@ -158,10 +179,18 @@ class App extends React.Component {
         }
 
         if (selectedFilters.courseEnrollment === true) {
+
+            const options = {
+                primary: selectedFilters.courseEnrollmentPrimary,
+                secondary: selectedFilters.courseEnrollmentSecondary,
+                total: selectedFilters.courseEnrollmentTotal
+            };
+
             charts.push(
                 <CourseEnrollmentChart
                     yearToSchoolArrayDataMap={this.state.filteredSchoolData}
                     key="enrollmentChart"
+                    options={options}
                 />
             );
         }
@@ -274,6 +303,9 @@ class App extends React.Component {
                 thisYearSchoolObjectMap[districtName] = districtObject;
             }
             yearSchoolObjectMap[year] = thisYearSchoolObjectMap;
+
+            console.log("yearSchoolObjectMap");
+            console.log(yearSchoolObjectMap);
         }
 
         return yearSchoolObjectMap;
@@ -291,8 +323,6 @@ class App extends React.Component {
         let filteredArray = [];
         let schoolObjectMap = {};
 
-        //  TODO: do this by year
-
         filteredArray = this.filterSchoolDataWithFields(schoolDataArray);
         schoolObjectMap = this.getSchoolObjectMap(filteredArray);
 
@@ -308,6 +338,7 @@ class App extends React.Component {
                 districtObject.setName(districtName);
                 districtObject.setType(EntityType.DISTRICT);
                 districtObject.setEthnicityMap(EthnicityDefaultMap);
+                districtObject.setApMap(APScoreAcronymMap);
             } else {
                 // console.log(districtName);
                 // console.log(schoolName);
@@ -342,6 +373,20 @@ class App extends React.Component {
             districtObject.setEthnicityMap(thisDistrictEthnicityMap);
             districtObject.setEthnicity(thisDistrictEthnicityArray);
 
+
+            let thisDistrictAPArray = [];
+            let thisDistrictAPMap = {};
+
+            for (let key in schoolObject._apMap) {
+                const apObj = schoolObject._apMap[key];
+                thisDistrictAPMap[key].value += apObj.value;
+                thisDistrictAPArray.push(thisDistrictAPMap[key]);
+            }
+
+            districtObject.setApMap(thisDistrictAPMap);
+            districtObject.setApArray(thisDistrictAPArray);
+
+
             districtObject.setEnglishLanguageLearner(
                 districtObject._englishLanguageLearner +
                 schoolObject._englishLanguageLearner
@@ -370,7 +415,12 @@ class App extends React.Component {
                 Number.isInteger(parseInt(schoolRow["SY"])) &&
                 Number.isInteger(parseInt(schoolRow["ELL"])) &&
                 Number.isInteger(parseInt(schoolRow["primary"])) &&
-                Number.isInteger(parseInt(schoolRow["secondary"]))
+                Number.isInteger(parseInt(schoolRow["secondary"])) &&
+                Number.isInteger(parseInt(schoolRow["AP1"])) &&
+                Number.isInteger(parseInt(schoolRow["AP2"])) &&
+                Number.isInteger(parseInt(schoolRow["AP3"])) &&
+                Number.isInteger(parseInt(schoolRow["AP4"])) &&
+                Number.isInteger(parseInt(schoolRow["AP5"]))
             ) {
                 filteredArray.push(schoolRow);
             } else {
@@ -489,6 +539,27 @@ class App extends React.Component {
 
             thisSchool.setEthnicity(thisSchoolEthnicityArray);
             thisSchool.setEthnicityMap(thisSchoolEthnicityMap);
+
+            let thisSchoolApArray = [];
+            let thisSchoolApMap = {};
+            const APSchoolAcronymArray = Object.keys(APScoreAcronymMap);
+            APSchoolAcronymArray.forEach( apKey => {
+                let APSchoolObj = APScoreAcronymMap[apKey];
+                let APArrayMember = {
+                    id: APSchoolObj.id,
+                    value: parseInt(schoolRow[APSchoolObj.id]),
+                    label: APSchoolObj.desc,
+                    desc: APSchoolObj.desc,
+                    chartColor: APSchoolObj.chartColor
+                };
+                thisSchoolApArray.push(APArrayMember);
+                thisSchoolApMap[APSchoolObj.id] = APArrayMember;
+            });
+            // console.log("this school ap");
+            // console.log(thisSchoolApArray);
+            thisSchool.setApArray(thisSchoolApArray);
+            thisSchool.setApMap(thisSchoolApMap);
+
 
             schoolObjectMap[schoolName] = thisSchool;
             let thisYearSchoolObjectMap = yearSchoolObjectMap[schoolYear];

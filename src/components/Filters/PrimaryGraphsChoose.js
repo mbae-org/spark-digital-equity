@@ -1,7 +1,6 @@
 import React from "react";
 import "./Filters.css";
 
-
 function PrimaryGraphChoose(props) {
     // console.log(props);
 
@@ -33,6 +32,51 @@ function PrimaryGraphChoose(props) {
                 </div>
 
                 <div className="checkbox">
+                    <input
+                        type="checkbox"
+                        id="apCourse"
+                        onChange={option =>
+                            optionChooseClicKHandler(props, option)
+                        }
+                        checked={props.selectedFilters.apCourse}
+                    />
+                    <label>AP Courses</label>
+                    <br />
+                    <div
+                        style={{
+                            display: "flex",
+                            marginTop: "5px",
+                            marginLeft: "10px"
+                        }}
+                    >
+                        <div>
+                            <input
+                                type="checkbox"
+                                id="apCourseScore"
+                                onChange={option =>
+                                    optionChooseClicKHandler(props, option)
+                                }
+                                checked={props.selectedFilters.apCourseScore}
+                            />
+                            <label>Scores</label>
+                        </div>
+                        <div style={{ marginLeft: "5px" }}>
+                            <input
+                                type="checkbox"
+                                id="apCourseEnrollment"
+                                onChange={option =>
+                                    optionChooseClicKHandler(props, option)
+                                }
+                                checked={
+                                    props.selectedFilters.apCourseEnrollment
+                                }
+                            />
+                            <label>Enrollment</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={"checkbox"}>
                     <input
                         type="checkbox"
                         id="economicallyDisadvantaged"
@@ -80,8 +124,57 @@ function PrimaryGraphChoose(props) {
                         checked={props.selectedFilters.courseEnrollment}
                     />
                     <label>CS Course Enrollment</label>
+                    <br />
+                    <div
+                        style={{
+                            display: "flex",
+                            marginTop: "5px",
+                            marginLeft: "10px"
+                        }}
+                    >
+                        <div>
+                            <input
+                                type="checkbox"
+                                id="courseEnrollmentSecondary"
+                                onChange={option =>
+                                    optionChooseClicKHandler(props, option)
+                                }
+                                checked={
+                                    props.selectedFilters
+                                        .courseEnrollmentSecondary
+                                }
+                            />
+                            <label>Enrolled in High School</label>
+                        </div>
+                        <div style={{ marginLeft: "5px" }}>
+                            <input
+                                type="checkbox"
+                                id="courseEnrollmentPrimary"
+                                onChange={option =>
+                                    optionChooseClicKHandler(props, option)
+                                }
+                                checked={
+                                    props.selectedFilters
+                                        .courseEnrollmentPrimary
+                                }
+                            />
+                            <label>Enrolled in Middle School</label>
+                        </div>
+                        <div style={{ marginLeft: "5px" }}>
+                            <input
+                                type="checkbox"
+                                id="courseEnrollmentTotal"
+                                onChange={option =>
+                                    optionChooseClicKHandler(props, option)
+                                }
+                                checked={
+                                    props.selectedFilters.courseEnrollmentTotal
+                                }
+                            />
+                            <label>Total</label>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </div>
     );
@@ -96,5 +189,51 @@ function optionChooseClicKHandler(props, option) {
 
     let newState = oldState;
     newState[targetId] = newTargetVal;
+
+    // handle nested apCourse checkboxes
+    if (
+        (targetId === "apCourseEnrollment" || targetId === "apCourseScore") &&
+        newTargetVal === false
+    ) {
+        if (
+            newState["apCourseEnrollment"] === false &&
+            newState["apCourseScore"] === false
+        )
+            newState["apCourse"] = false;
+    } else if (targetId === "apCourse") {
+        if (newTargetVal === false) {
+            newState["apCourseEnrollment"] = false;
+            newState["apCourseScore"] = false;
+        } else {
+            newState["apCourseEnrollment"] = true;
+            newState["apCourseScore"] = true;
+        }
+    }
+
+    // handle nested course enrollment checkboxes
+    if (
+        (targetId === "courseEnrollmentSecondary" ||
+            targetId === "courseEnrollmentPrimary" ||
+            targetId === "courseEnrollmentTotal") &&
+        newTargetVal === false
+    ) {
+        if (
+            newState["courseEnrollmentSecondary"] === false &&
+            newState["courseEnrollmentPrimary"] === false &&
+            newState["courseEnrollmentTotal"] === false
+        )
+            newState["courseEnrollment"] = false;
+    } else if (targetId === "courseEnrollment") {
+        if (newTargetVal === false) {
+            newState["courseEnrollmentSecondary"] = false;
+            newState["courseEnrollmentPrimary"] = false;
+            newState["courseEnrollmentTotal"] = false;
+        } else {
+            newState["courseEnrollmentSecondary"] = true;
+            newState["courseEnrollmentPrimary"] = true;
+            newState["courseEnrollmentTotal"] = true;
+        }
+    }
+
     props.onSelectionChange(newState);
 }
