@@ -111,11 +111,19 @@ h1{
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 6%;
+    margin-bottom: 9%;
     text-align: center;
     font-size: 28px;
 }
 footer{
     background-color: #707070;
-    margin: 0em;
-    display: block;
+    height: 70px;
+    font-size: 26px;
+    color: white;
+    padding-right: 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+    text-align: right;
 }
