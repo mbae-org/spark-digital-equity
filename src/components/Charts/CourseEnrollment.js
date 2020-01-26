@@ -3,7 +3,6 @@
  */
 
 import React from "react";
-// import { ResponsivePie } from "@nivo/pie";
 import { ResponsiveBar } from "@nivo/bar";
 import {CategoryChartPanelBackgroundColor} from "../../Constants"
 
@@ -20,7 +19,7 @@ function CourseEnrollmentChart(props) {
     dataYears.forEach(year => {
         const thisYearSchoolDataArray = getCourseEnrollmentData(yearToSchoolArrayDataMap[year]);
 
-        let thisYearPieCharts = getBarCharts(thisYearSchoolDataArray);
+        let thisYearPieCharts = getBarCharts(thisYearSchoolDataArray, props.options);
 
         allYearPieCharts.push(
             <div key={year} style={styles.yearChartsParent}>
@@ -62,21 +61,16 @@ function getCourseEnrollmentData(schoolArrayForYear) {
         let schoolDataObject = {
                 id: schoolName,
                 "Primary": primaryEnrolledCount,
-                // value: primaryEnrolledCount,
                 primaryPercentage: primaryEnrolledPercentage,
-                // color: "orange",
                 primaryLabel: "Enrolled prior to Secondary Level",
                 "Secondary": secondaryEnrolledCount,
                 secondaryPercentage: secondaryEnrolledPercentage,
-                // color: "blue",
-                secondaryLabel: "Enrolled at Secondary Level"
+                secondaryLabel: "Enrolled at Secondary Level",
+                "Total": totalCount
         };
 
         chartData.push(schoolDataObject);
     });
-
-    // console.log("chartData");
-    // console.log(chartData);
 
     return chartData;
 }
@@ -108,11 +102,21 @@ const styles = {
     }
 };
 
-function getBarCharts(schoolDataArray) {
+function getBarCharts(schoolDataArray, options) {
     let barChart = [];
         const schoolData = schoolDataArray;
-        // console.log("bar chart data here");
-        // console.log(schoolData);
+
+    let keys = [];
+    if(options.primary === true) {
+        keys.push('Primary');
+    }
+    if(options.secondary === true) {
+        keys.push('Secondary');
+    }
+    if(options.total === true) {
+        keys.push('Total');
+    }
+
 
         barChart.push(
             <div
@@ -123,7 +127,7 @@ function getBarCharts(schoolDataArray) {
                 }}>
                     <ResponsiveBar
                         data={schoolData}
-                        keys={[ 'Primary', 'Secondary']}
+                        keys={keys}
                         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
                         padding={0.2}
                         // groupMode="stacked"
@@ -154,20 +158,6 @@ function getBarCharts(schoolDataArray) {
                                 spacing: 10
                             }
                         ]}
-                        // fill={[
-                        //     {
-                        //         match: {
-                        //             id: 'fries'
-                        //         },
-                        //         id: 'dots'
-                        //     },
-                        //     {
-                        //         match: {
-                        //             id: 'sandwich'
-                        //         },
-                        //         id: 'lines'
-                        //     }
-                        // ]}
                         borderColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
                         // axisBottom={{
                         //     tickSize: 5,
@@ -225,10 +215,6 @@ function getBarCharts(schoolDataArray) {
 }
 
 function getTooltipHTML(data) {
-
-    // console.log("tooltip");
-    // console.log(data);
-
 
     const barData = data.data;
     const typeOfBar = data.id;
