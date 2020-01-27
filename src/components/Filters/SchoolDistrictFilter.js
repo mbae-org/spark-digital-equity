@@ -7,69 +7,115 @@ import "./Filters.css";
 
 import { EntityType } from "../../Constants";
 
-function SchoolDistrictFilter(props) {
-    const filteredSchools = filterSchooldata(props.data);
+class SchoolDistrictFilter extends React.Component {
 
-    const schoolSet = getSchools(filteredSchools);
-    const districtSet = getDistricts(filteredSchools);
-    const schoolOptions = createSchoolOptions(schoolSet);
-    const districtOptions = createDistrictOptions(districtSet);
-    const allOptions = schoolOptions.concat(districtOptions);
+    constructor(props) {
+        super(props);
 
-    const isValidNewOption = (inputValue, selectValue) =>
-        inputValue.length > 0 && selectValue.length < 5;
+        const filteredSchools = filterSchooldata(this.props.data);
+        const schoolSet = getSchools(filteredSchools);
+        const districtSet = getDistricts(filteredSchools);
+        const schoolOptions = createSchoolOptions(schoolSet);
+        const districtOptions = createDistrictOptions(districtSet);
+        const allOptionsArray = schoolOptions.concat(districtOptions);
 
-    return (
-        <div className="SchoolDistrict">
-            <p>Enter a school/district:</p>
-            <div>
-                <Creatable
-                    components={{ Menu }}
-                    isValidNewOption={isValidNewOption}
-                    options={allOptions}
-                    defaultValue={allOptions.filter(
-                        option => option.label === "Massachussets"
+
+        this.state = {
+            // valueObj: this.getOptionsArray(props.selectedSchoolArray, allOptionsArray),
+            allOptionsArray: allOptionsArray
+        };
+        console.log("def school");
+        console.log(props.selectedSchoolArray);
+
+    }
+
+    // Menu(props) {
+    //     const optionSelectedLength = props.getValue().length || 0;
+    //     return (
+    //         <components.Menu {...props}>
+    //             {optionSelectedLength < 3 ? (
+    //                 props.children
+    //             ) : (
+    //                 <div style={{ margin: 15 }}>
+    //                     Cannot view more than 3 schools/districts
+    //                 </div>
+    //             )}
+    //         </components.Menu>
+    //     );
+    // }
+
+
+    render() {
+
+        const isValidNewOption = (inputValue, selectValue) =>
+            inputValue.length > 0 && selectValue.length < 5;
+
+
+        const Menu = props => {
+            const optionSelectedLength = props.getValue().length || 0;
+            return (
+                <components.Menu {...props}>
+                    {optionSelectedLength < 3 ? (
+                        props.children
+                    ) : (
+                        <div style={{ margin: 15 }}>
+                            Cannot view more than 3 schools/districts
+                        </div>
                     )}
-                    isMulti
-                    required
-                    onChange={(selectedOptions, actionMeta) =>
-                        props.onOptionsChange(selectedOptions, actionMeta)
-                    }
-                />
+                </components.Menu>
+            );
+        };
+
+        return (
+            <div className="SchoolDistrict">
+                <p>Enter a school/district:</p>
+                <div>
+                    <Creatable
+                        components={{ Menu }}
+                        isValidNewOption={isValidNewOption}
+                        options={this.state.allOptionsArray}
+                        isMulti
+                        required
+                        onChange={(selectedOptions, actionMeta) =>
+                            // this.props.onOptionsChange(selectedOptions, actionMeta)
+                            this.onOptionsChange(selectedOptions, actionMeta)
+                        }
+                        value={this.getOptionsArray(this.props.selectedSchoolArray, this.state.allOptionsArray)}
+                    />
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
+
+    onOptionsChange(selectedOptions, actionMeta) {
+
+        let valueToSet = selectedOptions;
+
+        if(actionMeta.action === "clear") {
+            valueToSet = this.getOptionsArray(this.props.selectedSchoolArray, this.state.allOptionsArray);
+        }
+
+        this.props.onOptionsChange(valueToSet, actionMeta);
+    }
+
+    getOptionsArray(schoolNameArray, allOptionsArray) {
+
+        let optionsArray = [];
+        schoolNameArray.forEach(schoolName => {
+
+            optionsArray = optionsArray.concat(
+                allOptionsArray.filter(option => option.label === schoolName )
+            )
+        });
+
+        console.log("optionsArray");
+        console.log(optionsArray);
+        return optionsArray;
+    }
+
 }
 
-const Menu = props => {
-    const optionSelectedLength = props.getValue().length || 0;
-    return (
-        <components.Menu {...props}>
-            {optionSelectedLength < 3 ? (
-                props.children
-            ) : (
-                    <div style={{ margin: 15 }}>
-                        Cannot view more than 3 schools/districts
-                </div>
-                )}
-        </components.Menu>
-    );
-};
 
-// function App() {
-//     const isValidNewOption = (inputValue, selectValue) =>
-//         inputValue.length > 0 && selectValue.length < 5;
-//     return (
-//         <div className="App">
-//             <Creatable
-//                 components={{ Menu }}
-//                 isMulti
-//                 isValidNewOption={isValidNewOption}
-//                 options={options}
-//             />
-//         </div>
-//     );
-// }
 
 function filterSchooldata(schoolData) {
     return schoolData;
