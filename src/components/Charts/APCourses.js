@@ -55,15 +55,10 @@ function getGroupedAPData(schoolArrayForYear) {
         });
         thisSchoolData["Enrollment"] = schoolObj._enrolled;
         thisSchoolData["year"] = schoolObj._schoolYear;
-        console.log("the school object");
-        console.log(schoolObj);
 
         chartData.push(thisSchoolData);
 
     });
-
-    console.log("AP chart data");
-    console.log(chartData);
 
     return chartData;
 }
@@ -106,12 +101,6 @@ function getBarCharts(schoolDataArray, options) {
     if(options.score === true) {
         keys = keys.concat(['AP1', 'AP2', 'AP3', 'AP4', 'AP5']);
     }
-
-    console.log("keys");
-    console.log(keys);
-
-    // console.log("bar chart data here");
-    // console.log(schoolData);
 
     barChart.push(
         <div
@@ -186,7 +175,6 @@ function getBarCharts(schoolDataArray, options) {
             </div>
         </div>
     );
-    // });
 
     return barChart;
 }

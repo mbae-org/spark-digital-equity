@@ -50,14 +50,15 @@ p{
     padding-bottom: 3%;
 }
 
-.downloadDataButton {
+.downloadDataButton, .resetAllButton {
     display: inline-block;
     border: none;
     padding: 0.5rem 1rem;
-    margin: 10px;
+    margin: 5px;
     text-decoration: none;
     background: #abbace;
     font-family: sans-serif;
+    width: fit-content;
     font-size: 1rem;
     cursor: pointer;
     text-align: center;
@@ -68,20 +69,30 @@ p{
 }
 
 .downloadDataButton:hover,
-.downloadDataButton:focus {
+.downloadDataButton:focus,
+.resetAllButton:hover,
+.resetAllButton:focus{
     background: #73ba81;
 }
 
-.downloadDataButton:focus {
+.downloadDataButton:focus,
+.resetAllButton:focus{
     outline: 1px solid #fff;
     outline-offset: -4px;
 }
 
-.downloadDataButton:active {
+.downloadDataButton:active,
+.resetAllButton:active{
     transform: scale(0.99);
 }
 
 .downloadDataLink {
     text-decoration: none;
     color: black;
+}
+
+.buttonPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

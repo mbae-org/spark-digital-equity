@@ -32,6 +32,7 @@ class App extends React.Component {
             this
         );
         this.yearSelectionChangeHandler = this.yearSelectionChangeHandler.bind(this);
+        this.resetDefaultState = this.resetDefaultState.bind(this);
 
         let selectedYearsMap = {};
         YearList.forEach(year => {
@@ -48,7 +49,7 @@ class App extends React.Component {
         this.state = {
             newSchoolData: yearSchoolObjectMap,
             schoolData: this.extractSchoolData(schoolData),
-            schoolOptions: selectedSchools,
+            // schoolOptions: selectedSchools,
             selectedFilters: {
                 gender: true,
                 ethnicity: true,
@@ -63,10 +64,48 @@ class App extends React.Component {
                 courseEnrollmentPrimary: true,
                 courseEnrollmentTotal: true
             },
+            selectedSchoolArray: selectedSchools,
             selectedYearsMap: selectedYearsMap,
             filteredSchoolData: this.filterYearSchoolObjectMap(yearSchoolObjectMap, selectedSchools, selectedYearsMap)
         };
 
+    }
+
+    resetDefaultState() {
+        let selectedYearsMap = {};
+        YearList.forEach(year => {
+            selectedYearsMap[year] = false;
+        });
+        selectedYearsMap[YearList[YearList.length - 1]] = true;
+        const selectedSchools = ["Massachussets"];
+        const yearSchoolObjectMap = this.transformSchoolData(
+            schoolData,
+            selectedSchools,
+            selectedYearsMap
+        );
+
+        this.setState({
+            newSchoolData: yearSchoolObjectMap,
+            schoolData: this.extractSchoolData(schoolData),
+            // schoolOptions: selectedSchools,
+            selectedFilters: {
+                gender: true,
+                ethnicity: true,
+                economicallyDisadvantaged: false,
+                disability: false,
+                englishLanguageLearner: false,
+                courseEnrollment: true,
+                apCourse: true,
+                apCourseScore: true,
+                apCourseEnrollment: true,
+                courseEnrollmentSecondary: true,
+                courseEnrollmentPrimary: true,
+                courseEnrollmentTotal: true
+            },
+            selectedSchoolArray: selectedSchools,
+            selectedYearsMap: selectedYearsMap,
+            filteredSchoolData: this.filterYearSchoolObjectMap(yearSchoolObjectMap, selectedSchools, selectedYearsMap)
+        });
     }
 
     render() {
@@ -92,6 +131,8 @@ class App extends React.Component {
                                     this.graphSelectionChangeHandler
                                 }
                                 onYearSelectionChange={this.yearSelectionChangeHandler}
+                                onResetButtonClick={this.resetDefaultState}
+                                selectedSchoolArray = {this.state.selectedSchoolArray}
                             />
                         </div>
                         <div className="chart-panel">{charts}</div>
@@ -134,8 +175,6 @@ class App extends React.Component {
                 total: selectedFilters.courseEnrollmentTotal
             };
 
-            console.log("options passed");
-            console.log(options);
             charts.push(
                 <APCoursesChart
                     yearToSchoolArrayDataMap={this.state.filteredSchoolData}
@@ -207,19 +246,23 @@ class App extends React.Component {
     yearSelectionChangeHandler(newSelection) {
         this.setState({
             selectedYears: newSelection,
-            filteredSchoolData: this.filterYearSchoolObjectMap(this.state.newSchoolData, this.state.schoolOptions, newSelection)
+            filteredSchoolData: this.filterYearSchoolObjectMap(this.state.newSchoolData, this.state.selectedSchoolArray, newSelection)
         });
     }
 
     schoolFilterChangeHandler(selectedOptions, actionMeta) {
+        console.log("actionMeta");
         console.log(actionMeta);
+        console.log("selectedOptions");
+        console.log(selectedOptions);
+
         if (!selectedOptions) {
             selectedOptions = [];
         }
 
         const selectedSchoolOptions = this.transformSelectedOptions(selectedOptions);
         this.setState({
-            schoolOptions: selectedSchoolOptions,
+            selectedSchoolArray: selectedSchoolOptions,
             filteredSchoolData: this.filterYearSchoolObjectMap(this.state.newSchoolData, selectedSchoolOptions, this.state.selectedYearsMap)
         });
     }
@@ -254,10 +297,8 @@ class App extends React.Component {
                     districtObject.setType(EntityType.DISTRICT);
                     districtObject.setEthnicityMap(EthnicityDefaultMap);
                     districtObject.setSchoolYear(schoolYear);
-                } else {
-                    // console.log(districtName);
-                    // console.log(schoolName);
                 }
+
                 districtObject.setMale(
                     districtObject._male + schoolObject._male
                 );
@@ -304,8 +345,6 @@ class App extends React.Component {
             }
             yearSchoolObjectMap[year] = thisYearSchoolObjectMap;
 
-            console.log("yearSchoolObjectMap");
-            console.log(yearSchoolObjectMap);
         }
 
         return yearSchoolObjectMap;
@@ -395,8 +434,6 @@ class App extends React.Component {
             schoolObjectMap[districtName] = districtObject;
         }
 
-        // console.log("schoolObjectMap");
-        // console.log(schoolObjectMap);
         return schoolObjectMap;
     }
 
@@ -429,7 +466,6 @@ class App extends React.Component {
         });
 
         if (schoolsWithMissingEntry.length > 0) {
-            // console.log("missing entry for schools: ");
             // console.log(schoolsWithMissingEntry);
         }
 
@@ -555,8 +591,6 @@ class App extends React.Component {
                 thisSchoolApArray.push(APArrayMember);
                 thisSchoolApMap[APSchoolObj.id] = APArrayMember;
             });
-            // console.log("this school ap");
-            // console.log(thisSchoolApArray);
             thisSchool.setApArray(thisSchoolApArray);
             thisSchool.setApMap(thisSchoolApMap);
 
@@ -569,11 +603,6 @@ class App extends React.Component {
             thisYearSchoolObjectMap[schoolName] = thisSchool;
             yearSchoolObjectMap[schoolYear] = thisYearSchoolObjectMap;
         });
-
-        // return schoolObjectMap;
-
-        // console.log("yearSchoolObjectMap");
-        // console.log(yearSchoolObjectMap);
 
         return yearSchoolObjectMap;
     }
@@ -599,9 +628,6 @@ class App extends React.Component {
                 filteredSchoolDataMap[year].push(yearSchoolObjectMap[year][schoolName]);
             });
         });
-
-        console.log("filteredSchoolDataMap");
-        console.log(filteredSchoolDataMap);
 
         return filteredSchoolDataMap;
     }

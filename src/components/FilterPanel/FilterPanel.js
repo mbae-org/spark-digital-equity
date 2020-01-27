@@ -7,7 +7,6 @@ import '../Filters/Filters.css'
 // defaultSchoolOptions =
 
 function FilterPanel(props) {
-    // console.log('panel recieved school data' + props.data);
 
     return (
         <div className="filter-container">
@@ -19,6 +18,7 @@ function FilterPanel(props) {
                         actionMeta
                     )
                 }
+                selectedSchoolArray = {props.selectedSchoolArray}
             />
             <YearFilter
                 selectedYears={props.selectedYears}
@@ -32,7 +32,10 @@ function FilterPanel(props) {
                     props.onGraphSelectionChange(newSelection)
                 }
             />
-            <div>
+            <div className={"buttonPanel"}>
+                <button className={"resetAllButton"} onClick={props.onResetButtonClick}>
+                    Reset All
+                </button>
                 <button className={"downloadDataButton"}>
                     <a href="./data/data-out.csv" download className={"downloadDataLink"}>
                         Download Data
