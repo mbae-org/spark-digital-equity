@@ -7,10 +7,26 @@ function NextStepsPanel() {
         <div>
             <h1>Next Steps</h1>
             <div className="Boxes">
-                <div className="box"> Closing the Digital Equity Gap</div>
-                <div className="box"> The Digital Equity Walk </div>
-                <div className="box">The Walk in Action</div>
-                <div className="box">Take the Virtual Walk</div>
+                <div className="box">
+                    <a href="https://www.mbae.org/initiatives/digitalequity/">
+                        Closing the Digital Equity Gap
+                </a>
+                </div>
+                <div className="box">
+                    <a href="https://www.mbae.org/initiatives/digitalequity/digitalequitywalk/">
+                        The Digital Equity Walk
+                </a>
+                </div>
+                <div className="box">
+                    <a href="https://www.mbae.org/initiatives/digitalequity/walkinaction/">
+                        The Walk in Action
+                    </a>
+                </div>
+                <div className="box">
+                    <a href="https://www.mbae.org/initiatives/digitalequity/virtualwalk/">
+                        Take the Virtual Walk
+                    </a>
+                </div>
             </div>
             <div className="learnMore">
                 Want to learn more about the Digital Equity Walk or about
