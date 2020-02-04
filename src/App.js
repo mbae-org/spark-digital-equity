@@ -132,7 +132,7 @@ class App extends React.Component {
                                 }
                                 onYearSelectionChange={this.yearSelectionChangeHandler}
                                 onResetButtonClick={this.resetDefaultState}
-                                selectedSchoolArray = {this.state.selectedSchoolArray}
+                                selectedSchoolArray={this.state.selectedSchoolArray}
                             />
                         </div>
                         <div className="chart-panel">{charts}</div>
@@ -179,7 +179,7 @@ class App extends React.Component {
                 <APCoursesChart
                     yearToSchoolArrayDataMap={this.state.filteredSchoolData}
                     key="apCoursesChart"
-                    options = {options}
+                    options={options}
                 />
             );
         }
@@ -579,7 +579,7 @@ class App extends React.Component {
             let thisSchoolApArray = [];
             let thisSchoolApMap = {};
             const APSchoolAcronymArray = Object.keys(APScoreAcronymMap);
-            APSchoolAcronymArray.forEach( apKey => {
+            APSchoolAcronymArray.forEach(apKey => {
                 let APSchoolObj = APScoreAcronymMap[apKey];
                 let APArrayMember = {
                     id: APSchoolObj.id,

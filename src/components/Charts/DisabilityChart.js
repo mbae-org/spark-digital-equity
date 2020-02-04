@@ -62,14 +62,14 @@ function getDisabilityData(schoolArrayForYear) {
                 id: "SWD",
                 value: disabilityCount,
                 percentage: disabilityPercentage,
-                color: "orange",
+                color: "#222C49",
                 label: "Students With Disability"
             },
             {
                 id: "Others",
                 value: nonDisabilityCount,
                 percentage: nonDisabilityPercentage,
-                color: "blue",
+                color: "#FE8126",
                 label: "Others"
             }
         ];
