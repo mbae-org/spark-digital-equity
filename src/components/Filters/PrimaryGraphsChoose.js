@@ -42,14 +42,8 @@ function PrimaryGraphChoose(props) {
                     />
                     <label>AP Courses</label>
                     <br />
-                    <div
-                        style={{
-                            display: "flex",
-                            marginTop: "5px",
-                            marginLeft: "10px"
-                        }}
-                    >
-                        <div>
+                    <div className="Option">
+                        <div className="subOption">
                             <input
                                 type="checkbox"
                                 id="apCourseScore"
@@ -60,7 +54,7 @@ function PrimaryGraphChoose(props) {
                             />
                             <label>Scores</label>
                         </div>
-                        <div style={{ marginLeft: "5px" }}>
+                        <div className="subOption">
                             <input
                                 type="checkbox"
                                 id="apCourseEnrollment"
@@ -125,14 +119,8 @@ function PrimaryGraphChoose(props) {
                     />
                     <label>CS Course Enrollment</label>
                     <br />
-                    <div
-                        style={{
-                            display: "flex",
-                            marginTop: "5px",
-                            marginLeft: "10px"
-                        }}
-                    >
-                        <div>
+                    <div className="Option">
+                        <div className="subOption">
                             <input
                                 type="checkbox"
                                 id="courseEnrollmentSecondary"
@@ -146,7 +134,7 @@ function PrimaryGraphChoose(props) {
                             />
                             <label>Enrolled in High School</label>
                         </div>
-                        <div style={{ marginLeft: "5px" }}>
+                        <div className="subOption">
                             <input
                                 type="checkbox"
                                 id="courseEnrollmentPrimary"
@@ -160,7 +148,7 @@ function PrimaryGraphChoose(props) {
                             />
                             <label>Enrolled in Middle School</label>
                         </div>
-                        <div style={{ marginLeft: "5px" }}>
+                        <div className="subOption">
                             <input
                                 type="checkbox"
                                 id="courseEnrollmentTotal"

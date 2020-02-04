@@ -114,6 +114,10 @@ h1{
     border-width: normal;
     border-color: 	#707070;
 }
+a{
+    text-decoration: inherit;
+    color: inherit;
+}
 .learnMore{
     margin-left: 10%;
     margin-right: 10%;
