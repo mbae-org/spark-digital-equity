@@ -105,13 +105,13 @@ h1{
     text-align: center;
 }
 .box{
-    border-style: solid;
     margin-top: 4%;
     margin-bottom: 3.5%;
-    border-width: normal;
     padding-top: 2%;
     padding-bottom: 2%;
     width: 45%;
+    border-width: 2px;
+    border-style: solid;
     border-color: 	#707070;
 }
 a{
