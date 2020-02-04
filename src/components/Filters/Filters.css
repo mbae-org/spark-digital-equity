@@ -51,14 +51,22 @@ p{
 }
 .Option{
     font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .subOption{
     margin-left: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    width: 75px;
+    width: 35%;
     padding-top: 5%;
 }
 .subOption label{
@@ -74,12 +82,23 @@ p{
     text-decoration: none;
     background: #abbace;
     font-family: sans-serif;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     font-size: 1rem;
     cursor: pointer;
     text-align: center;
+    -webkit-transition: background 250ms ease-in-out,
+    -webkit-transform 150ms ease;
+    transition: background 250ms ease-in-out,
+    -webkit-transform 150ms ease;
+    -o-transition: background 250ms ease-in-out,
+    transform 150ms ease;
     transition: background 250ms ease-in-out,
     transform 150ms ease;
+    transition: background 250ms ease-in-out,
+    transform 150ms ease,
+    -webkit-transform 150ms ease;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
@@ -99,7 +118,9 @@ p{
 
 .downloadDataButton:active,
 .resetAllButton:active{
-    transform: scale(0.99);
+    -webkit-transform: scale(0.99);
+        -ms-transform: scale(0.99);
+            transform: scale(0.99);
 }
 
 .downloadDataLink {
@@ -108,8 +129,15 @@ p{
 }
 
 .buttonPanel {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
