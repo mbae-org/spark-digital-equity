@@ -7,37 +7,37 @@ export const EthnicityAcronymList = [
     {
         id: "AA",
         desc: "African American",
-        chartColor: "#f6d18a"
+        chartColor: "#F69A1F",
     },
     {
         id: "AS",
         desc: "Asian",
-        chartColor: "blue"
+        chartColor: "#FE8126"
     },
     {
         id: "HI",
         desc: "Hispanic",
-        chartColor: "green"
+        chartColor: "#FBC184",
     },
     {
         id: "MR",
         desc: "Multiracial",
-        chartColor: "yellow"
+        chartColor: "#0B89D3",
     },
     {
         id: "NA",
         desc: "NA",
-        chartColor: "pink"
+        chartColor: "#545454",
     },
     {
         id: "NH_PI",
         desc: "Native Hawaiian and Pacific Islander",
-        chartColor: "red"
+        chartColor: "#639FAB"
     },
     {
         id: "WH",
         desc: "White",
-        chartColor: "brown"
+        chartColor: "#222C49"
     }
 ];
 
@@ -45,43 +45,43 @@ export const EthnicityDefaultMap = {
     AA: {
         id: "AA",
         desc: "African American",
-        chartColor: "#f6d18a",
+        chartColor: "#F69A1F",
         value: 0
     },
     AS: {
         id: "AS",
         desc: "Asian",
-        chartColor: "blue",
+        chartColor: "#FE8126",
         value: 0
     },
     HI: {
         id: "HI",
         desc: "Hispanic",
-        chartColor: "green",
+        chartColor: "#FBC184",
         value: 0
     },
     MR: {
         id: "MR",
         desc: "Multiracial",
-        chartColor: "yellow",
+        chartColor: "#0B89D3",
         value: 0
     },
     NA: {
         id: "NA",
         desc: "NA",
-        chartColor: "pink",
+        chartColor: "#545454",
         value: 0
     },
     NH_PI: {
         id: "NH_PI",
         desc: "Native Hawaiian and Pacific Islander",
-        chartColor: "red",
+        chartColor: "#639FAB",
         value: 0
     },
     WH: {
         id: "WH",
         desc: "White",
-        chartColor: "brown",
+        chartColor: "#222C49",
         value: 0
     }
 };
@@ -94,31 +94,31 @@ export const APScoreAcronymMap = {
     AP1: {
         id: "AP1",
         desc: "AP1",
-        chartColor: "#f6d18a",
+        chartColor: "#F69A1F",
         value: 0
     },
     AP2: {
         id: "AP2",
         desc: "AP2",
-        chartColor: "blue",
+        chartColor: "#FE8126",
         value: 0
     },
     AP3: {
         id: "AP3",
         desc: "AP3",
-        chartColor: "green",
+        chartColor: "#FBC184",
         value: 0
     },
     AP4: {
         id: "AP4",
         desc: "AP4",
-        chartColor: "yellow",
+        chartColor: "#0B89D3",
         value: 0
     },
     AP5: {
         id: "AP5",
         desc: "AP5",
-        chartColor: "pink",
+        chartColor: "#545454",
         value: 0
     },
 

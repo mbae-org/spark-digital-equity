@@ -96,6 +96,7 @@ const styles = {
 function getBarCharts(schoolDataArray, options) {
     let barChart = [];
     const schoolData = schoolDataArray;
+    console.log("Barchart school data: ", schoolDataArray)
     let keys = [];
     if (options.enrollment === true) {
         keys.push('Enrollment');
@@ -119,7 +120,7 @@ function getBarCharts(schoolDataArray, options) {
                     padding={0.2}
                     // groupMode="stacked"
                     groupMode="grouped"
-                    colors={{ scheme: 'nivo' }}
+                    colors={{ "scheme": "red_yellow_blue" }}
                     minValue={0}
                     // maxValue={maxEnrolledCount}
                     tooltip={data => {
@@ -159,21 +160,11 @@ function getBarCharts(schoolDataArray, options) {
                             itemWidth: 100,
                             itemHeight: 20,
                             itemDirection: 'left-to-right',
-                            itemOpacity: 0.85,
+                            itemOpacity: 1,
                             symbolSize: 20,
-                            effects: [
-                                {
-                                    on: 'hover',
-                                    style: {
-                                        itemOpacity: 1
-                                    }
-                                }
-                            ]
                         }
                     ]}
-                    animate={true}
-                    motionStiffness={90}
-                    motionDamping={15}
+                    labelTextColor="white"
                 />
             </div>
         </div>

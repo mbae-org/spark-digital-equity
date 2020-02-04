@@ -63,14 +63,14 @@ function getLanguageLearnerData(schoolArrayForYear) {
                 id: "ELL",
                 value: languageLearnerCount,
                 percentage: learnerPercentage,
-                color: "orange",
+                color: "#222C49",
                 label: "English Language Learner"
             },
             {
                 id: "Others",
                 value: otherCount,
                 percentage: otherPercentage,
-                color: "blue",
+                color: "#FE8126",
                 label: "Others"
             }
         ];
@@ -99,7 +99,9 @@ const styles = {
         flexDirection: "column",
         // height: "50%",
         width: "100%",
-        borderStyle: "ridge",
+        borderBottomStyle: "solid",
+        borderBottomWidth: "thin",
+        borderBottomColor: "#707070",
         padding: "10px",
         backgroundColor: "#F1F1F1"
     },

@@ -55,17 +55,17 @@ function getGenderForSchool(schoolArrayForYear) {
         let thisSchoolData = {};
         let schoolDataArray = [
             {
-                id: "male",
+                id: "Male",
                 value: maleCount,
                 percentage: malePercentage,
-                color: "orange",
+                color: "#222C49",
                 label: "Male"
             },
             {
-                id: "female",
+                id: "Female",
                 value: femaleCount,
                 percentage: femalePercentage,
-                color: "blue",
+                color: "#FE8126",
                 label: "Female"
             }
         ];
@@ -144,8 +144,9 @@ function getPieCharts(schoolDataArray) {
                         isInteractive={true}
                         data={schoolData}
                         sortByValue={true}
-                        enableSlicesLabels={false}
+                        enableSlicesLabels={true}
                         enableRadialLabels={false}
+                        slicesLabelsTextColor="white"
                         margin={{ top: 40, right: 60, bottom: 40, left: 40 }}
                         innerRadius={0.5}
                         tooltip={data => {

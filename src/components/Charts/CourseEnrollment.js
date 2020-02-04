@@ -134,12 +134,13 @@ function getBarCharts(schoolDataArray, options) {
                     padding={0.2}
                     // groupMode="stacked"
                     groupMode="grouped"
-                    colors={{ scheme: 'nivo' }}
+                    colors={{ "scheme": "red_yellow_blue" }}
                     minValue={0}
                     // maxValue={maxEnrolledCount}
                     tooltip={data => {
                         return getTooltipHTML(data);
                     }}
+                    isInteractive={false}
                     defs={[
                         {
                             id: 'dots',
@@ -161,25 +162,6 @@ function getBarCharts(schoolDataArray, options) {
                         }
                     ]}
                     borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
-                    // axisBottom={{
-                    //     tickSize: 5,
-                    //     tickPadding: 5,
-                    //     tickRotation: 0,
-                    //     legend: 'country',
-                    //     legendPosition: 'middle',
-                    //     legendOffset: 32
-                    // }}
-                    // axisLeft={{
-                    //     tickSize: 5,
-                    //     tickPadding: 5,
-                    //     tickRotation: 0,
-                    //     legend: 'Students Enrolled',
-                    //     legendPosition: 'middle',
-                    //     legendOffset: -40
-                    // }}
-                    // labelSkipWidth={12}
-                    // labelSkipHeight={12}
-                    // labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
                     legends={[
                         {
                             dataFrom: 'keys',
@@ -192,21 +174,11 @@ function getBarCharts(schoolDataArray, options) {
                             itemWidth: 100,
                             itemHeight: 20,
                             itemDirection: 'left-to-right',
-                            itemOpacity: 0.85,
+                            itemOpacity: 1,
                             symbolSize: 20,
-                            effects: [
-                                {
-                                    on: 'hover',
-                                    style: {
-                                        itemOpacity: 1
-                                    }
-                                }
-                            ]
                         }
                     ]}
-                    animate={true}
-                    motionStiffness={90}
-                    motionDamping={15}
+                    labelTextColor="white"
                 />
             </div>
         </div>

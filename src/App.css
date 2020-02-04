@@ -73,6 +73,7 @@ img{
     border-bottom-color: #707070;
 }
 .chart-panel {
+    width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
     background-color:	#F1F1F1;

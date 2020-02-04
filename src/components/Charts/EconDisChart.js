@@ -69,14 +69,14 @@ function getEconDisForSchool(schoolArrayForYear) {
                 id: "Disadvantaged",
                 value: disadvantagedCount,
                 percentage: disadvantagedPercentage,
-                color: "orange",
+                color: "#222C49",
                 label: "Economically Disadvantaged"
             },
             {
                 id: "Others",
                 value: nonDisadvantagedCount,
                 percentage: nonDisadvantagedPercentage,
-                color: "blue",
+                color: "#FE8126",
                 label: "Others"
             }
         ];
