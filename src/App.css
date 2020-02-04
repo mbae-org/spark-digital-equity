@@ -73,12 +73,11 @@ img{
     border-bottom-color: #707070;
 }
 .chart-panel {
-    width: 70%;
-    margin: 5px;
-    padding: 5px;
     overflow-y: auto;
-    background-color: white;
+    overflow-x: hidden;
+    background-color:	#F1F1F1;
     color: black;
+    margin: 5px;
 }
 h1{
     font-size: 80px;
