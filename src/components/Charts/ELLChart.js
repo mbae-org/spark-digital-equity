@@ -4,7 +4,6 @@
 
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
-import {CategoryChartPanelBackgroundColor} from "../../Constants"
 
 /**
  * Main class component
@@ -30,7 +29,7 @@ function ELLChart(props) {
 
     return (
         <div id="ell-pie-charts"
-             style={styles.categoryChartsParent}
+            style={styles.categoryChartsParent}
         >
             <h3 key="ellHeading">English Language Learners</h3>
             {allYearPieCharts}
@@ -102,7 +101,7 @@ const styles = {
         width: "100%",
         borderStyle: "ridge",
         padding: "10px",
-        backgroundColor: CategoryChartPanelBackgroundColor
+        backgroundColor: "#F1F1F1"
     },
     yearChartsParent: {
         display: "flex",
@@ -136,15 +135,15 @@ function getPieCharts(schoolDataArray) {
                         legends={
                             index + 1 === dataLength
                                 ? [
-                                      {
-                                          anchor: "bottom",
-                                          direction: "row",
-                                          itemWidth: 120,
-                                          itemHeight: 20,
-                                          translateY: 30,
-                                          translateX: 10
-                                      }
-                                  ]
+                                    {
+                                        anchor: "bottom",
+                                        direction: "row",
+                                        itemWidth: 120,
+                                        itemHeight: 20,
+                                        translateY: 30,
+                                        translateX: 10
+                                    }
+                                ]
                                 : undefined
                         }
                     />

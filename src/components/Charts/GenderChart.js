@@ -15,7 +15,7 @@ function GenderChart(props) {
         const thisYearSchoolDataArray = getGenderForSchool(yearToSchoolArrayDataMap[year]);
         let thisYearPieCharts = getPieCharts(thisYearSchoolDataArray);
 
-            allYearPieCharts.push(
+        allYearPieCharts.push(
             <div key={year} style={styles.yearChartsParent}>
                 <span>{year}</span>
                 {thisYearPieCharts}
@@ -38,42 +38,42 @@ function GenderChart(props) {
 function getGenderForSchool(schoolArrayForYear) {
     let chartData = [];
 
-        schoolArrayForYear.forEach(schoolRow => {
-            const schoolName = schoolRow._name;
-            const schoolYear = schoolRow._schoolYear;
-            const maleCount = schoolRow._male;
-            const femaleCount = schoolRow._female;
-            const malePercentage = (
-                (maleCount / (maleCount + femaleCount)) *
-                100
-            ).toFixed(2);
-            const femalePercentage = (
-                (femaleCount / (maleCount + femaleCount)) *
-                100
-            ).toFixed(2);
+    schoolArrayForYear.forEach(schoolRow => {
+        const schoolName = schoolRow._name;
+        const schoolYear = schoolRow._schoolYear;
+        const maleCount = schoolRow._male;
+        const femaleCount = schoolRow._female;
+        const malePercentage = (
+            (maleCount / (maleCount + femaleCount)) *
+            100
+        ).toFixed(2);
+        const femalePercentage = (
+            (femaleCount / (maleCount + femaleCount)) *
+            100
+        ).toFixed(2);
 
-            let thisSchoolData = {};
-            let schoolDataArray = [
-                {
-                    id: "male",
-                    value: maleCount,
-                    percentage: malePercentage,
-                    color: "orange",
-                    label: "Male"
-                },
-                {
-                    id: "female",
-                    value: femaleCount,
-                    percentage: femalePercentage,
-                    color: "blue",
-                    label: "Female"
-                }
-            ];
-            thisSchoolData.schoolName = schoolName;
-            thisSchoolData.dataArray = schoolDataArray;
-            thisSchoolData.schoolYear = schoolYear;
-            chartData.push(thisSchoolData);
-        });
+        let thisSchoolData = {};
+        let schoolDataArray = [
+            {
+                id: "male",
+                value: maleCount,
+                percentage: malePercentage,
+                color: "orange",
+                label: "Male"
+            },
+            {
+                id: "female",
+                value: femaleCount,
+                percentage: femalePercentage,
+                color: "blue",
+                label: "Female"
+            }
+        ];
+        thisSchoolData.schoolName = schoolName;
+        thisSchoolData.dataArray = schoolDataArray;
+        thisSchoolData.schoolYear = schoolYear;
+        chartData.push(thisSchoolData);
+    });
 
     return chartData;
 }
@@ -113,9 +113,12 @@ const styles = {
         display: "flex",
         flexDirection: "column",
         // height: "50%",
-        width: "100%",borderStyle: "ridge",
+        width: "100%",
+        borderBottomStyle: "solid",
+        borderBottomWidth: "thin",
+        borderBottomColor: "#707070",
         padding: "10px",
-        backgroundColor: "#4f4954"
+        backgroundColor: "#F1F1F1"
 
     },
     yearChartsParent: {
@@ -151,15 +154,15 @@ function getPieCharts(schoolDataArray) {
                         legends={
                             index + 1 === dataLength
                                 ? [
-                                      {
-                                          anchor: "top-right",
-                                          direction: "column",
-                                          itemWidth: 20,
-                                          itemHeight: 20,
-                                          translateY: 20,
-                                          translateX: 20
-                                      }
-                                  ]
+                                    {
+                                        anchor: "top-right",
+                                        direction: "column",
+                                        itemWidth: 20,
+                                        itemHeight: 20,
+                                        translateY: 20,
+                                        translateX: 20
+                                    }
+                                ]
                                 : undefined
                         }
                     />

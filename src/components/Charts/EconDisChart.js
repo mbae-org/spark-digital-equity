@@ -35,7 +35,7 @@ function EconDisChart(props) {
 
     return (
         <div id="econdis-pie-charts"
-             style={styles.categoryChartsParent}
+            style={styles.categoryChartsParent}
         >
             <h3 key="econdisHeading">Economically Disadvantaged</h3>
             {allYearPieCharts}
@@ -116,9 +116,11 @@ const styles = {
         flexDirection: "column",
         // height: "50%",
         width: "100%",
-        borderStyle: "ridge",
+        borderBottomStyle: "solid",
+        borderBottomWidth: "thin",
+        borderBottomColor: "#707070",
         padding: "10px",
-        backgroundColor: "#4f4954"
+        backgroundColor: "#F1F1F1"
     },
     yearChartsParent: {
         display: "flex",
@@ -152,15 +154,15 @@ function getPieCharts(schoolDataArray) {
                         legends={
                             index + 1 === dataLength
                                 ? [
-                                      {
-                                          anchor: "bottom",
-                                          direction: "row",
-                                          itemWidth: 120,
-                                          itemHeight: 20,
-                                          translateY: 30,
-                                          translateX: 10
-                                      }
-                                  ]
+                                    {
+                                        anchor: "bottom",
+                                        direction: "row",
+                                        itemWidth: 120,
+                                        itemHeight: 20,
+                                        translateY: 30,
+                                        translateX: 10
+                                    }
+                                ]
                                 : undefined
                         }
                     />

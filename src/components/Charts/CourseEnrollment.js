@@ -4,7 +4,6 @@
 
 import React from "react";
 import { ResponsiveBar } from "@nivo/bar";
-import {CategoryChartPanelBackgroundColor} from "../../Constants"
 
 /**
  * Main class component
@@ -31,7 +30,7 @@ function CourseEnrollmentChart(props) {
 
     return (
         <div id="courseEnrollment-pie-charts"
-             style={styles.categoryChartsParent}
+            style={styles.categoryChartsParent}
         >
             <h3 key="courseEnrollmentHeading">CS Course Enrollment</h3>
             {allYearPieCharts}
@@ -59,14 +58,14 @@ function getCourseEnrollmentData(schoolArrayForYear) {
 
         // let thisSchoolData = {};
         let schoolDataObject = {
-                id: schoolName,
-                "Primary": primaryEnrolledCount,
-                primaryPercentage: primaryEnrolledPercentage,
-                primaryLabel: "Enrolled prior to Secondary Level",
-                "Secondary": secondaryEnrolledCount,
-                secondaryPercentage: secondaryEnrolledPercentage,
-                secondaryLabel: "Enrolled at Secondary Level",
-                "Total": totalCount
+            id: schoolName,
+            "Primary": primaryEnrolledCount,
+            primaryPercentage: primaryEnrolledPercentage,
+            primaryLabel: "Enrolled prior to Secondary Level",
+            "Secondary": secondaryEnrolledCount,
+            secondaryPercentage: secondaryEnrolledPercentage,
+            secondaryLabel: "Enrolled at Secondary Level",
+            "Total": totalCount
         };
 
         chartData.push(schoolDataObject);
@@ -92,9 +91,11 @@ const styles = {
         flexDirection: "column",
         // height: "50%",
         width: "100%",
-        borderStyle: "ridge",
+        borderBottomStyle: "solid",
+        borderBottomWidth: "thin",
+        borderBottomColor: "#707070",
         padding: "10px",
-        backgroundColor: CategoryChartPanelBackgroundColor
+        backgroundColor: "#F1F1F1"
     },
     yearChartsParent: {
         display: "flex",
@@ -104,111 +105,112 @@ const styles = {
 
 function getBarCharts(schoolDataArray, options) {
     let barChart = [];
-        const schoolData = schoolDataArray;
+    const schoolData = schoolDataArray;
 
     let keys = [];
-    if(options.primary === true) {
+    if (options.primary === true) {
         keys.push('Primary');
     }
-    if(options.secondary === true) {
+    if (options.secondary === true) {
         keys.push('Secondary');
     }
-    if(options.total === true) {
+    if (options.total === true) {
         keys.push('Total');
     }
 
 
-        barChart.push(
-            <div
-                key={"enrollment-bar-chart"}
-                style={styles.root}>
-                <div style={{ height: "90%", flexGrow: "1",
-                    width: "100%"
-                }}>
-                    <ResponsiveBar
-                        data={schoolData}
-                        keys={keys}
-                        margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
-                        padding={0.2}
-                        // groupMode="stacked"
-                        groupMode="grouped"
-                        colors={{ scheme: 'nivo' }}
-                        minValue={0}
-                        // maxValue={maxEnrolledCount}
-                        tooltip={data => {
-                            return getTooltipHTML(data);
-                        }}
-                        defs={[
-                            {
-                                id: 'dots',
-                                type: 'patternDots',
-                                background: 'inherit',
-                                color: '#38bcb2',
-                                size: 4,
-                                padding: 1,
-                                stagger: true
-                            },
-                            {
-                                id: 'lines',
-                                type: 'patternLines',
-                                background: 'inherit',
-                                color: '#eed312',
-                                rotation: -45,
-                                lineWidth: 6,
-                                spacing: 10
-                            }
-                        ]}
-                        borderColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
-                        // axisBottom={{
-                        //     tickSize: 5,
-                        //     tickPadding: 5,
-                        //     tickRotation: 0,
-                        //     legend: 'country',
-                        //     legendPosition: 'middle',
-                        //     legendOffset: 32
-                        // }}
-                        // axisLeft={{
-                        //     tickSize: 5,
-                        //     tickPadding: 5,
-                        //     tickRotation: 0,
-                        //     legend: 'Students Enrolled',
-                        //     legendPosition: 'middle',
-                        //     legendOffset: -40
-                        // }}
-                        // labelSkipWidth={12}
-                        // labelSkipHeight={12}
-                        // labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
-                        legends={[
-                            {
-                                dataFrom: 'keys',
-                                anchor: 'bottom-right',
-                                direction: 'column',
-                                justify: false,
-                                translateX: 120,
-                                translateY: 0,
-                                itemsSpacing: 2,
-                                itemWidth: 100,
-                                itemHeight: 20,
-                                itemDirection: 'left-to-right',
-                                itemOpacity: 0.85,
-                                symbolSize: 20,
-                                effects: [
-                                    {
-                                        on: 'hover',
-                                        style: {
-                                            itemOpacity: 1
-                                        }
+    barChart.push(
+        <div
+            key={"enrollment-bar-chart"}
+            style={styles.root}>
+            <div style={{
+                height: "90%", flexGrow: "1",
+                width: "100%"
+            }}>
+                <ResponsiveBar
+                    data={schoolData}
+                    keys={keys}
+                    margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+                    padding={0.2}
+                    // groupMode="stacked"
+                    groupMode="grouped"
+                    colors={{ scheme: 'nivo' }}
+                    minValue={0}
+                    // maxValue={maxEnrolledCount}
+                    tooltip={data => {
+                        return getTooltipHTML(data);
+                    }}
+                    defs={[
+                        {
+                            id: 'dots',
+                            type: 'patternDots',
+                            background: 'inherit',
+                            color: '#38bcb2',
+                            size: 4,
+                            padding: 1,
+                            stagger: true
+                        },
+                        {
+                            id: 'lines',
+                            type: 'patternLines',
+                            background: 'inherit',
+                            color: '#eed312',
+                            rotation: -45,
+                            lineWidth: 6,
+                            spacing: 10
+                        }
+                    ]}
+                    borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+                    // axisBottom={{
+                    //     tickSize: 5,
+                    //     tickPadding: 5,
+                    //     tickRotation: 0,
+                    //     legend: 'country',
+                    //     legendPosition: 'middle',
+                    //     legendOffset: 32
+                    // }}
+                    // axisLeft={{
+                    //     tickSize: 5,
+                    //     tickPadding: 5,
+                    //     tickRotation: 0,
+                    //     legend: 'Students Enrolled',
+                    //     legendPosition: 'middle',
+                    //     legendOffset: -40
+                    // }}
+                    // labelSkipWidth={12}
+                    // labelSkipHeight={12}
+                    // labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
+                    legends={[
+                        {
+                            dataFrom: 'keys',
+                            anchor: 'bottom-right',
+                            direction: 'column',
+                            justify: false,
+                            translateX: 120,
+                            translateY: 0,
+                            itemsSpacing: 2,
+                            itemWidth: 100,
+                            itemHeight: 20,
+                            itemDirection: 'left-to-right',
+                            itemOpacity: 0.85,
+                            symbolSize: 20,
+                            effects: [
+                                {
+                                    on: 'hover',
+                                    style: {
+                                        itemOpacity: 1
                                     }
-                                ]
-                            }
-                        ]}
-                        animate={true}
-                        motionStiffness={90}
-                        motionDamping={15}
-                    />
-                </div>
+                                }
+                            ]
+                        }
+                    ]}
+                    animate={true}
+                    motionStiffness={90}
+                    motionDamping={15}
+                />
             </div>
-        );
+        </div>
+    );
     // });
 
     return barChart;
@@ -221,7 +223,7 @@ function getTooltipHTML(data) {
     let label = "";
     let percentage = "";
 
-    if(typeOfBar === "Primary") {
+    if (typeOfBar === "Primary") {
         label = barData.primaryLabel;
         percentage = barData.primaryPercentage;
     }

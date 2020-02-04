@@ -25,7 +25,7 @@ function APCoursesChart(props) {
 
     return (
         <div id="ethnicity-pie-charts"
-             style={styles.categoryChartsParent}
+            style={styles.categoryChartsParent}
         >
             <h3 key="ethnicityHeading">AP Courses</h3>
             {allYearPieCharts}
@@ -81,9 +81,11 @@ const styles = {
         flexDirection: "column",
         // height: "50%",
         width: "100%",
-        borderStyle: "ridge",
+        borderBottomStyle: "solid",
+        borderBottomWidth: "thin",
+        borderBottomColor: "#707070",
         padding: "10px",
-        backgroundColor: "#6f7348"
+        backgroundColor: "#F1F1F1"
     },
     yearChartsParent: {
         display: "flex",
@@ -95,10 +97,10 @@ function getBarCharts(schoolDataArray, options) {
     let barChart = [];
     const schoolData = schoolDataArray;
     let keys = [];
-    if(options.enrollment === true) {
+    if (options.enrollment === true) {
         keys.push('Enrollment');
     }
-    if(options.score === true) {
+    if (options.score === true) {
         keys = keys.concat(['AP1', 'AP2', 'AP3', 'AP4', 'AP5']);
     }
 
@@ -106,7 +108,8 @@ function getBarCharts(schoolDataArray, options) {
         <div
             key={"ap-course-bar-chart"}
             style={styles.root}>
-            <div style={{ height: "90%", flexGrow: "1",
+            <div style={{
+                height: "90%", flexGrow: "1",
                 width: "100%"
             }}>
                 <ResponsiveBar
@@ -143,7 +146,7 @@ function getBarCharts(schoolDataArray, options) {
                             spacing: 10
                         }
                     ]}
-                    borderColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
+                    borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
                     legends={[
                         {
                             dataFrom: 'keys',

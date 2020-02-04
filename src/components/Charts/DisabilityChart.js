@@ -26,7 +26,7 @@ function DisabilityChart(props) {
 
     return (
         <div id="disability-pie-charts"
-             style={styles.categoryChartsParent}
+            style={styles.categoryChartsParent}
         >
             <h3 key="disabilityHeading">Students With Disability</h3>
             {allYearPieCharts}
@@ -101,9 +101,11 @@ const styles = {
         flexDirection: "column",
         // height: "50%",
         width: "100%",
-        borderStyle: "ridge",
+        borderBottomStyle: "solid",
+        borderBottomWidth: "thin",
+        borderBottomColor: "#707070",
         padding: "10px",
-        backgroundColor: "#6f7348"
+        backgroundColor: "#F1F1F1"
     },
     yearChartsParent: {
         display: "flex",
@@ -137,17 +139,17 @@ function getPieCharts(schoolDataArray) {
                         legends={
                             index + 1 === dataLength
                                 ? [
-                                      {
-                                          anchor: "top-right",
-                                          direction: "column",
-                                          itemWidth: 20,
-                                          itemHeight: 20,
-                                          translateY: 20,
-                                          translateX: 20
-                                          // symbolSize: 18,
-                                          // symbolShape: "circle"
-                                      }
-                                  ]
+                                    {
+                                        anchor: "top-right",
+                                        direction: "column",
+                                        itemWidth: 20,
+                                        itemHeight: 20,
+                                        translateY: 20,
+                                        translateX: 20
+                                        // symbolSize: 18,
+                                        // symbolShape: "circle"
+                                    }
+                                ]
                                 : undefined
                         }
                     />

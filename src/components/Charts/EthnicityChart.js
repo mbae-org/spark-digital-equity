@@ -89,9 +89,11 @@ const styles = {
         flexDirection: "column",
         // height: "50%",
         width: "100%",
-        borderStyle: "ridge",
+        borderBottomStyle: "solid",
+        borderBottomWidth: "thin",
+        borderBottomColor: "#707070",
         padding: "10px",
-        backgroundColor: "#6f7348"
+        backgroundColor: "#F1F1F1"
     },
     yearChartsParent: {
         display: "flex",
@@ -121,17 +123,17 @@ function createPieCharts(chartData) {
                         legends={
                             index + 1 === dataLength
                                 ? [
-                                      {
-                                          anchor: "top-right",
-                                          direction: "column",
-                                          itemWidth: 20,
-                                          itemHeight: 20,
-                                          translateY: 20,
-                                          translateX: 30
-                                          // symbolSize: 18,
-                                          // symbolShape: "circle"
-                                      }
-                                  ]
+                                    {
+                                        anchor: "top-right",
+                                        direction: "column",
+                                        itemWidth: 20,
+                                        itemHeight: 20,
+                                        translateY: 20,
+                                        translateX: 30
+                                        // symbolSize: 18,
+                                        // symbolShape: "circle"
+                                    }
+                                ]
                                 : undefined
                         }
                     />
