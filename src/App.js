@@ -59,10 +59,9 @@ class App extends React.Component {
                 courseEnrollment: true,
                 apCourse: true,
                 apCourseScore: true,
-                apCourseEnrollment: true,
+                apCourseEnrollment: false,
                 courseEnrollmentSecondary: true,
-                courseEnrollmentPrimary: true,
-                courseEnrollmentTotal: true
+                courseEnrollmentPrimary: true
             },
             selectedSchoolArray: selectedSchools,
             selectedYearsMap: selectedYearsMap,
