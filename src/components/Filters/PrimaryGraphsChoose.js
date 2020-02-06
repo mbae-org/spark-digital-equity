@@ -148,7 +148,7 @@ function PrimaryGraphChoose(props) {
                             />
                             <label>Enrolled in Middle School</label>
                         </div>
-                        <div className="subOption">
+                        {/* <div className="subOption">
                             <input
                                 type="checkbox"
                                 id="courseEnrollmentTotal"
@@ -160,7 +160,7 @@ function PrimaryGraphChoose(props) {
                                 }
                             />
                             <label>Total</label>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -200,26 +200,21 @@ function optionChooseClicKHandler(props, option) {
 
     // handle nested course enrollment checkboxes
     if (
-        (targetId === "courseEnrollmentSecondary" ||
-            targetId === "courseEnrollmentPrimary" ||
-            targetId === "courseEnrollmentTotal") &&
+        (targetId === "courseEnrollmentSecondary" || targetId === "courseEnrollmentPrimary") &&
         newTargetVal === false
     ) {
         if (
             newState["courseEnrollmentSecondary"] === false &&
-            newState["courseEnrollmentPrimary"] === false &&
-            newState["courseEnrollmentTotal"] === false
+            newState["courseEnrollmentPrimary"] === false
         )
             newState["courseEnrollment"] = false;
     } else if (targetId === "courseEnrollment") {
         if (newTargetVal === false) {
             newState["courseEnrollmentSecondary"] = false;
             newState["courseEnrollmentPrimary"] = false;
-            newState["courseEnrollmentTotal"] = false;
         } else {
             newState["courseEnrollmentSecondary"] = true;
             newState["courseEnrollmentPrimary"] = true;
-            newState["courseEnrollmentTotal"] = true;
         }
     }
 

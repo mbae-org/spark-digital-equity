@@ -59,13 +59,12 @@ function getCourseEnrollmentData(schoolArrayForYear) {
         // let thisSchoolData = {};
         let schoolDataObject = {
             id: schoolName,
-            "Primary": primaryEnrolledCount,
+            "Primary": primaryEnrolledPercentage,
             primaryPercentage: primaryEnrolledPercentage,
             primaryLabel: "Enrolled prior to Secondary Level",
-            "Secondary": secondaryEnrolledCount,
+            "Secondary": secondaryEnrolledPercentage,
             secondaryPercentage: secondaryEnrolledPercentage,
-            secondaryLabel: "Enrolled at Secondary Level",
-            "Total": totalCount
+            secondaryLabel: "Enrolled at Secondary Level"
         };
 
         chartData.push(schoolDataObject);
@@ -161,6 +160,21 @@ function getBarCharts(schoolDataArray, options) {
                             spacing: 10
                         }
                     ]}
+                    axisBottom={{
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: 0,
+                        legendPosition: 'middle',
+                        legendOffset: 32,
+                    }}
+                    axisLeft={{
+                        tickSize: 5,
+                        tickPadding: 5,
+                        tickRotation: 0,
+                        legend: 'Percentage of Students',
+                        legendPosition: 'middle',
+                        legendOffset: -50
+                    }}
                     borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
                     legends={[
                         {
