@@ -86,7 +86,7 @@ export const EthnicityDefaultMap = {
     }
 };
 
-export const YearList = [2016, 2017, 2018];
+export const YearList = [2017];
 // export const YearList = [2016];
 
 

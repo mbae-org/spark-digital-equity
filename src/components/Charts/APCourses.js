@@ -51,13 +51,13 @@ function getGroupedAPData(schoolArrayForYear) {
         let schoolDataArray = [];
         let totalCount = 0;
         schoolDataArray = schoolObj._apArray;
-
+        
         thisSchoolData.id = schoolName;
         schoolDataArray.forEach(apObject => {
             totalCount += apObject.value;
         });
         schoolDataArray.forEach(apObject => {
-            thisSchoolData[apObject.id] = (apObject.value / totalCount) * 100;
+            thisSchoolData[apObject.id] = ((apObject.value / totalCount) * 100).toFixed(2);
         });
         thisSchoolData["Enrollment"] = schoolObj._enrolled;
         thisSchoolData["year"] = schoolObj._schoolYear;
@@ -68,37 +68,6 @@ function getGroupedAPData(schoolArrayForYear) {
 
     return chartData;
 }
-
-
-const styles = {
-    root: {
-        fontFamily: "consolas, sans-serif",
-        textAlign: "center",
-        position: "relative",
-        width: "100%",
-        height: 300
-    },
-
-    totalLabel: {
-        fontSize: 24
-    },
-    categoryChartsParent: {
-        display: "flex",
-        flexDirection: "column",
-        // height: "50%",
-        width: "100%",
-        borderBottomStyle: "solid",
-        borderBottomWidth: "thin",
-        borderBottomColor: "#707070",
-        padding: "10px",
-        backgroundColor: "#F1F1F1"
-    },
-    yearChartsParent: {
-        display: "flex",
-        flexDirection: "row"
-    }
-};
-
 function getBarCharts(thisYearSchoolDataArrayScore, thisYearSchoolDataArrayEnrollement, options) {
     let Charts = [];
     if (options.enrollment === true) {
@@ -171,7 +140,7 @@ function getBarCharts(thisYearSchoolDataArrayScore, thisYearSchoolDataArrayEnrol
                             }
                         ]}
                         borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
-                        enableLabel={false}
+                        enableLabel={true}
                         legends={[
                             {
                                 dataFrom: 'keys',
@@ -188,6 +157,7 @@ function getBarCharts(thisYearSchoolDataArrayScore, thisYearSchoolDataArrayEnrol
                                 symbolSize: 20,
                             }
                         ]}
+                        labelTextColor="white"
                     />
                 </div>
             </div>
@@ -290,6 +260,37 @@ function getPieCharts(schoolDataArray) {
     });
     return pieCharts;
 }
+
+
+
+const styles = {
+    root: {
+        fontFamily: "consolas, sans-serif",
+        textAlign: "center",
+        position: "relative",
+        width: "100%",
+        height: 300
+    },
+
+    totalLabel: {
+        fontSize: 24
+    },
+    categoryChartsParent: {
+        display: "flex",
+        flexDirection: "column",
+        // height: "50%",
+        width: "100%",
+        borderBottomStyle: "solid",
+        borderBottomWidth: "thin",
+        borderBottomColor: "#707070",
+        padding: "10px",
+        backgroundColor: "#F1F1F1"
+    },
+    yearChartsParent: {
+        display: "flex",
+        flexDirection: "row"
+    }
+};
 
 export default APCoursesChart;
 
