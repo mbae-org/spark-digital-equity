@@ -15,8 +15,8 @@ class School {
         this._studentsWithDisability = 0;
         this._schoolYear = 2016;
         this._englishLanguageLearner = 0;
-        this._primaryEnrolled = 0;
-        this._secondaryEnrolled = 0;
+        // this._primaryEnrolled = 0;
+        // this._secondaryEnrolled = 0;
 
         this._apArray = [];
         this._apMap = {};
@@ -86,13 +86,13 @@ class School {
     }
 
 
-    setPrimaryEnrolled(value) {
-        this._primaryEnrolled = value;
-    }
+    // setPrimaryEnrolled(value) {
+    //     this._primaryEnrolled = value;
+    // }
 
-    setSecondaryEnrolled(value) {
-        this._secondaryEnrolled = value;
-    }
+    // setSecondaryEnrolled(value) {
+    //     this._secondaryEnrolled = value;
+    // }
 
 
     setApArray(value) {

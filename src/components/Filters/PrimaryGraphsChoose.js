@@ -108,7 +108,7 @@ function PrimaryGraphChoose(props) {
                     <label>English Language Learners</label>
                 </div>
 
-                <div className="checkbox">
+                {/* <div className="checkbox">
                     <input
                         type="checkbox"
                         id="courseEnrollment"
@@ -116,8 +116,8 @@ function PrimaryGraphChoose(props) {
                             optionChooseClicKHandler(props, option)
                         }
                         checked={props.selectedFilters.courseEnrollment}
-                    />
-                    <label>CS Course Enrollment</label>
+                    /> */}
+                {/* <label>CS Course Enrollment</label>
                     <br />
                     <div className="Option">
                         <div className="subOption">
@@ -148,7 +148,7 @@ function PrimaryGraphChoose(props) {
                             />
                             <label>Enrolled in Middle School</label>
                         </div>
-                        {/* <div className="subOption">
+                        { <div className="subOption">
                             <input
                                 type="checkbox"
                                 id="courseEnrollmentTotal"
@@ -160,9 +160,9 @@ function PrimaryGraphChoose(props) {
                                 }
                             />
                             <label>Total</label>
-                        </div> */}
-                    </div>
-                </div>
+                        </div>
+                    </div> 
+                            </div>*/}
             </div>
         </div>
     );

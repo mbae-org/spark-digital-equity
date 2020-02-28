@@ -14,7 +14,7 @@ import CourseEnrollmentChart from "./components/Charts/CourseEnrollment"
 import APCoursesChart from "./components/Charts/APCourses"
 import NextStepsPanel from "./components/NextSteps/NextStepsPanel"
 
-import schoolData from "./data/data-new";
+import schoolData from "./data/new data/2017";
 
 import {
     EntityType,
@@ -39,7 +39,7 @@ class App extends React.Component {
             selectedYearsMap[year] = false;
         });
         selectedYearsMap[YearList[YearList.length - 1]] = true;
-        const selectedSchools = ["Massachussets"];
+        const selectedSchools = ["Arlington"];
         const yearSchoolObjectMap = this.transformSchoolData(
             schoolData,
             selectedSchools,
@@ -147,6 +147,7 @@ class App extends React.Component {
         const selectedFilters = this.state.selectedFilters;
 
         let charts = [];
+        console.log("school data", this.state.filteredSchoolData)
         if (selectedFilters.gender === true) {
             charts.push(
                 <GenderChart
@@ -216,22 +217,22 @@ class App extends React.Component {
             );
         }
 
-        if (selectedFilters.courseEnrollment === true) {
+        // if (selectedFilters.courseEnrollment === true) {
 
-            const options = {
-                primary: selectedFilters.courseEnrollmentPrimary,
-                secondary: selectedFilters.courseEnrollmentSecondary,
-                total: selectedFilters.courseEnrollmentTotal
-            };
+        //     const options = {
+        //         primary: selectedFilters.courseEnrollmentPrimary,
+        //         secondary: selectedFilters.courseEnrollmentSecondary,
+        //         total: selectedFilters.courseEnrollmentTotal
+        //     };
 
-            charts.push(
-                <CourseEnrollmentChart
-                    yearToSchoolArrayDataMap={this.state.filteredSchoolData}
-                    key="enrollmentChart"
-                    options={options}
-                />
-            );
-        }
+        //     charts.push(
+        //         <CourseEnrollmentChart
+        //             yearToSchoolArrayDataMap={this.state.filteredSchoolData}
+        //             key="enrollmentChart"
+        //             options={options}
+        //         />
+        //     );
+        // }
 
         return charts;
     }
@@ -274,9 +275,8 @@ class App extends React.Component {
      * @returns {[]}
      */
     transformSchoolData(schoolDataArray, selectedSchools, selectedYears) {
-        let validDataArray = this.filterSchoolDataWithFields(schoolDataArray);
-        let yearSchoolObjectMap = this.getYearSchoolObjectMapNew(validDataArray);
-
+        //let validDataArray = this.filterSchoolDataWithFields(schoolDataArray);
+        let yearSchoolObjectMap = this.getYearSchoolObjectMapNew(schoolDataArray);
 
         // add info for all districts
         const allYears = Object.keys(yearSchoolObjectMap);
@@ -337,15 +337,14 @@ class App extends React.Component {
                     schoolObject._englishLanguageLearner
                 );
 
-                districtObject.setPrimaryEnrolled(districtObject._primaryEnrolled + schoolObject._primaryEnrolled);
-                districtObject.setSecondaryEnrolled(districtObject._secondaryEnrolled + schoolObject._secondaryEnrolled);
+                // districtObject.setPrimaryEnrolled(districtObject._primaryEnrolled + schoolObject._primaryEnrolled);
+                // districtObject.setSecondaryEnrolled(districtObject._secondaryEnrolled + schoolObject._secondaryEnrolled);
 
                 thisYearSchoolObjectMap[districtName] = districtObject;
             }
             yearSchoolObjectMap[year] = thisYearSchoolObjectMap;
 
         }
-
         return yearSchoolObjectMap;
     }
 
@@ -361,8 +360,8 @@ class App extends React.Component {
         let filteredArray = [];
         let schoolObjectMap = {};
 
-        filteredArray = this.filterSchoolDataWithFields(schoolDataArray);
-        schoolObjectMap = this.getSchoolObjectMap(filteredArray);
+        //filteredArray = this.filterSchoolDataWithFields(schoolDataArray);
+        schoolObjectMap = this.getSchoolObjectMap(schoolDataArray);
 
         // add info for all districts
         const allSchoolNames = Object.keys(schoolObjectMap);
@@ -477,8 +476,8 @@ class App extends React.Component {
 
         // add all school data
         filteredArray.forEach(schoolRow => {
-            const schoolName = schoolRow["SCH_NAME"];
-            const districtName = schoolRow["DIST_NAME"];
+            const schoolName = schoolRow["School Name"];
+            const districtName = schoolRow["District"];
 
             let thisSchool = new School();
             thisSchool.setName(schoolName);
@@ -488,7 +487,7 @@ class App extends React.Component {
             thisSchool.setDistrictName(districtName);
             thisSchool.setEthnicity([]);
             thisSchool.setEconomicallyDisadvantaged(
-                parseInt(schoolRow["ECODIS"])
+                parseInt(schoolRow["EcoDis"])
             );
             thisSchool.setEnrolled(parseInt(schoolRow["STUDENTS_ENROLLED"]));
             thisSchool.setStudentsWithDisability(parseInt(schoolRow["SWD"]));
@@ -533,8 +532,8 @@ class App extends React.Component {
 
         // add all school data
         filteredArray.forEach(schoolRow => {
-            const schoolName = schoolRow["SCH_NAME"];
-            const districtName = schoolRow["DIST_NAME"];
+            const schoolName = schoolRow["School Name"];
+            const districtName = schoolRow["District"];
             const schoolYear = parseInt(schoolRow["SY"]);
 
             let thisSchool = new School();
@@ -545,14 +544,14 @@ class App extends React.Component {
             thisSchool.setDistrictName(districtName);
             thisSchool.setEthnicity([]);
             thisSchool.setEconomicallyDisadvantaged(
-                parseInt(schoolRow["ECODIS"])
+                parseInt(schoolRow["EcoDis"])
             );
             thisSchool.setEnrolled(parseInt(schoolRow["STUDENTS_ENROLLED"]));
             thisSchool.setStudentsWithDisability(parseInt(schoolRow["SWD"]));
             thisSchool.setSchoolYear(schoolYear);
             thisSchool.setEnglishLanguageLearner(parseInt(schoolRow["ELL"]));
-            thisSchool.setPrimaryEnrolled(parseInt(schoolRow["primary"]));
-            thisSchool.setSecondaryEnrolled(parseInt(schoolRow["secondary"]));
+            // thisSchool.setPrimaryEnrolled(parseInt(schoolRow["primary"]));
+            // thisSchool.setSecondaryEnrolled(parseInt(schoolRow["secondary"]));
 
             let thisSchoolEthnicityArray = [];
             let thisSchoolEthnicityMap = {};
@@ -602,7 +601,6 @@ class App extends React.Component {
             thisYearSchoolObjectMap[schoolName] = thisSchool;
             yearSchoolObjectMap[schoolYear] = thisYearSchoolObjectMap;
         });
-
         return yearSchoolObjectMap;
     }
 
@@ -614,20 +612,26 @@ class App extends React.Component {
      * @returns {Map} filteredSchoolDataMap of type Map[year] -> Array{SchoolObject}
      */
     filterYearSchoolObjectMap(yearSchoolObjectMap, selectedSchoolsArray, selectedYearsMap) {
+        console.log("yearschoolMap", yearSchoolObjectMap)
+        console.log("selctedschool: ", selectedSchoolsArray)
+        console.log("selectedyear: ", selectedYearsMap)
         let filteredSchoolDataMap = {};
         let selectedYearsArray = [];
         Object.keys(selectedYearsMap).forEach((key) => {
             if (selectedYearsMap[key] === true)
                 selectedYearsArray.push(key)
         });
-
+        console.log("after year chekc", selectedYearsArray)
         selectedYearsArray.forEach(year => {
-            if (!filteredSchoolDataMap[year]) filteredSchoolDataMap[year] = [];
+            if (!filteredSchoolDataMap[year]) {
+                filteredSchoolDataMap[year] = [];
+                console.log(filteredSchoolDataMap[year])
+            }
             selectedSchoolsArray.forEach(schoolName => {
                 filteredSchoolDataMap[year].push(yearSchoolObjectMap[year][schoolName]);
             });
         });
-
+        console.log("before return filter: ", filteredSchoolDataMap)
         return filteredSchoolDataMap;
     }
 
