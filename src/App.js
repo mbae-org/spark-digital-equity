@@ -322,7 +322,7 @@ class App extends React.Component {
                     console.log(schoolObject);
                     console.log(thisDistrictEthnicityMap)
                 }
-                if (schoolObject._ethnicityMap) {
+                if (!isNaN(schoolObject._ethnicityMap["AA"].value)) {
                     for (let key in schoolObject._ethnicityMap) {
                         const ethnicityObj = schoolObject._ethnicityMap[key];
                         if (thisDistrictEthnicityMap[key].value.isInteger) {
@@ -424,7 +424,7 @@ class App extends React.Component {
             let thisDistrictEthnicityArray = [];
             let thisDistrictEthnicityMap = districtObject._ethnicityMap;
 
-            if (schoolObject._ethnicityMap) {
+            if (!isNaN(schoolObject._ethnicityMap["AA"].value)) {
                 for (let key in schoolObject._ethnicityMap) {
                     const ethnicityObj = schoolObject._ethnicityMap[key];
                     thisDistrictEthnicityMap[key].value += ethnicityObj.value;

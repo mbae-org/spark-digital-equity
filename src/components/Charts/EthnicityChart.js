@@ -10,6 +10,7 @@ function EthnicityChart(props) {
 
 
     const yearToSchoolArrayDataMap = props.yearToSchoolArrayDataMap;
+    console.log("in ethnicity: ", yearToSchoolArrayDataMap);
     const dataYears = Object.keys(yearToSchoolArrayDataMap);
     let allYearPieCharts = [];
 
