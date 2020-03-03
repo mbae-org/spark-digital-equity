@@ -1,0 +1,22 @@
+.NoDataWrapper{
+    height: 300px
+}
+.NoDataMessage{
+    width: 250px;
+    height: 270px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-grow: "1"
+}
+.NoDataMessage p{
+    color: #707070;
+    font-size: 36px;
+    margin: 0px;
+    height: 150px;
+    width: 150px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

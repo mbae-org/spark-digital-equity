@@ -1,5 +1,6 @@
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
+import "./Charts.css"
 
 /**
  * Main class component
@@ -133,46 +134,58 @@ function getPieCharts(schoolDataArray) {
     schoolDataArray.forEach((row, index) => {
         const schoolName = row.schoolName;
         const schoolData = row.dataArray;
-
-        pieCharts.push(
-            <div key={schoolName} style={styles.root}>
-                <div style={{ height: "90%", flexGrow: "1" }}>
-                    <ResponsivePie
-                        key={schoolName}
-                        colors={d => d.color}
-                        isInteractive={true}
-                        data={schoolData}
-                        sortByValue={true}
-                        enableSlicesLabels={true}
-                        enableRadialLabels={false}
-                        slicesLabelsTextColor="white"
-                        margin={{ top: 40, right: 60, bottom: 40, left: 40 }}
-                        innerRadius={0.5}
-                        tooltip={data => {
-                            return getTooltipHTML(data);
-                        }}
-                        legends={
-                            index + 1 === dataLength
-                                ? [
-                                    {
-                                        anchor: "top-right",
-                                        direction: "column",
-                                        itemWidth: 20,
-                                        itemHeight: 20,
-                                        translateY: 20,
-                                        translateX: 20
-                                    }
-                                ]
-                                : undefined
-                        }
-                    />
-                    {/* <div style={styles.overlay}>
+        console.log("school Data: ", schoolData[0].value)
+        if (isNaN(schoolData[0].value)) {
+            pieCharts.push(
+                <div className="NoDataWrapper">
+                    <div className="NoDataMessage">
+                        <p>No Data Available</p>
+                    </div>
+                    <div style={{ flexGrow: "1" }}>{schoolName}</div>
+                </div>
+            )
+        }
+        else {
+            pieCharts.push(
+                <div key={schoolName} style={styles.root}>
+                    <div style={{ height: "90%", flexGrow: "1" }}>
+                        <ResponsivePie
+                            key={schoolName}
+                            colors={d => d.color}
+                            isInteractive={true}
+                            data={schoolData}
+                            sortByValue={true}
+                            enableSlicesLabels={true}
+                            enableRadialLabels={false}
+                            slicesLabelsTextColor="white"
+                            margin={{ top: 40, right: 60, bottom: 40, left: 40 }}
+                            innerRadius={0.5}
+                            tooltip={data => {
+                                return getTooltipHTML(data);
+                            }}
+                            legends={
+                                index + 1 === dataLength
+                                    ? [
+                                        {
+                                            anchor: "top-right",
+                                            direction: "column",
+                                            itemWidth: 20,
+                                            itemHeight: 20,
+                                            translateY: 20,
+                                            translateX: 20
+                                        }
+                                    ]
+                                    : undefined
+                            }
+                        />
+                        {/* <div style={styles.overlay}>
                         <span>{schoolYear}</span>
                     </div> */}
+                    </div>
+                    <div style={{ flexGrow: "1" }}>{schoolName}</div>
                 </div>
-                <div style={{ flexGrow: "1" }}>{schoolName}</div>
-            </div>
-        );
+            );
+        }
     });
 
     return pieCharts;

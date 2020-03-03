@@ -114,47 +114,58 @@ const styles = {
 function getPieCharts(schoolDataArray) {
     const dataLength = schoolDataArray.length;
     let pieCharts = [];
-
     schoolDataArray.forEach((row, index) => {
         const schoolName = row.schoolName;
         const schoolData = row.dataArray;
-        pieCharts.push(
-            <div key={schoolName} style={styles.root}>
-                <div style={{ height: "90%", flexGrow: "1" }}>
-                    <ResponsivePie
-                        key={schoolName}
-                        colors={d => d.color}
-                        isInteractive={true}
-                        data={schoolData}
-                        sortByValue={true}
-                        enableSlicesLabels={false}
-                        enableRadialLabels={false}
-                        innerRadius={0.5}
-                        margin={{ top: 40, right: 60, bottom: 40, left: 40 }}
-                        tooltip={data => {
-                            return getTooltipHTML(data);
-                        }}
-                        legends={
-                            index + 1 === dataLength
-                                ? [
-                                    {
-                                        anchor: "top-right",
-                                        direction: "column",
-                                        itemWidth: 20,
-                                        itemHeight: 20,
-                                        translateY: 20,
-                                        translateX: 20
-                                        // symbolSize: 18,
-                                        // symbolShape: "circle"
-                                    }
-                                ]
-                                : undefined
-                        }
-                    />
+        if (isNaN(schoolData[0].value)) {
+            pieCharts.push(
+                <div className="NoDataWrapper">
+                    <div className="NoDataMessage">
+                        <p>No Data Available</p>
+                    </div>
+                    <div style={{ flexGrow: "1" }}>{schoolName}</div>
                 </div>
-                <div style={{ flexGrow: "1" }}>{schoolName}</div>
-            </div>
-        );
+            )
+        }
+        else {
+            pieCharts.push(
+                <div key={schoolName} style={styles.root}>
+                    <div style={{ height: "90%", flexGrow: "1" }}>
+                        <ResponsivePie
+                            key={schoolName}
+                            colors={d => d.color}
+                            isInteractive={true}
+                            data={schoolData}
+                            sortByValue={true}
+                            enableSlicesLabels={false}
+                            enableRadialLabels={false}
+                            innerRadius={0.5}
+                            margin={{ top: 40, right: 60, bottom: 40, left: 40 }}
+                            tooltip={data => {
+                                return getTooltipHTML(data);
+                            }}
+                            legends={
+                                index + 1 === dataLength
+                                    ? [
+                                        {
+                                            anchor: "top-right",
+                                            direction: "column",
+                                            itemWidth: 20,
+                                            itemHeight: 20,
+                                            translateY: 20,
+                                            translateX: 20
+                                            // symbolSize: 18,
+                                            // symbolShape: "circle"
+                                        }
+                                    ]
+                                    : undefined
+                            }
+                        />
+                    </div>
+                    <div style={{ flexGrow: "1" }}>{schoolName}</div>
+                </div>
+            );
+        }
     });
 
     // if (pieCharts && pieCharts.length > 0) {
