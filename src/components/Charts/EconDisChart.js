@@ -85,8 +85,6 @@ function getEconDisForSchool(schoolArrayForYear) {
         chartData.push(thisSchoolData);
     });
 
-    // console.log("econ dis chart");
-    // console.log(chartData);
     return chartData;
 }
 

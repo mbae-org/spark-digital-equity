@@ -2,7 +2,6 @@ import React from "react";
 import "./Filters.css";
 
 function PrimaryGraphChoose(props) {
-    // console.log(props);
 
     return (
         <div className="PrimaryGraph">

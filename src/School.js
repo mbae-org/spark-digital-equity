@@ -28,7 +28,6 @@ class School {
             this._type = entityType;
         } else {
             this._type = EntityType.SCHOOL;
-            console.log("error setting entity");
         }
     }
 

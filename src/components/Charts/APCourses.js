@@ -51,7 +51,7 @@ function getGroupedAPData(schoolArrayForYear) {
         let schoolDataArray = [];
         let totalCount = 0;
         schoolDataArray = schoolObj._apArray;
-        
+
         thisSchoolData.id = schoolName;
         schoolDataArray.forEach(apObject => {
             totalCount += apObject.value;
@@ -209,8 +209,6 @@ function getEnrollementForSchool(schoolArrayForYear) {
         chartData.push(thisSchoolData);
     });
 
-    // console.log("econ dis chart");
-    // console.log(chartData);
     return chartData;
 }
 

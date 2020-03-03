@@ -24,8 +24,6 @@ class SchoolDistrictFilter extends React.Component {
             // valueObj: this.getOptionsArray(props.selectedSchoolArray, allOptionsArray),
             allOptionsArray: allOptionsArray
         };
-        console.log("def school");
-        console.log(props.selectedSchoolArray);
 
     }
 
@@ -58,10 +56,10 @@ class SchoolDistrictFilter extends React.Component {
                     {optionSelectedLength < 3 ? (
                         props.children
                     ) : (
-                        <div style={{ margin: 15 }}>
-                            Cannot view more than 3 schools/districts
+                            <div style={{ margin: 15 }}>
+                                Cannot view more than 3 schools/districts
                         </div>
-                    )}
+                        )}
                 </components.Menu>
             );
         };
@@ -91,7 +89,7 @@ class SchoolDistrictFilter extends React.Component {
 
         let valueToSet = selectedOptions;
 
-        if(actionMeta.action === "clear") {
+        if (actionMeta.action === "clear") {
             valueToSet = this.getOptionsArray(this.props.selectedSchoolArray, this.state.allOptionsArray);
         }
 
@@ -104,12 +102,10 @@ class SchoolDistrictFilter extends React.Component {
         schoolNameArray.forEach(schoolName => {
 
             optionsArray = optionsArray.concat(
-                allOptionsArray.filter(option => option.label === schoolName )
+                allOptionsArray.filter(option => option.label === schoolName)
             )
         });
 
-        console.log("optionsArray");
-        console.log(optionsArray);
         return optionsArray;
     }
 

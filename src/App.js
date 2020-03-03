@@ -40,6 +40,7 @@ class App extends React.Component {
         });
         selectedYearsMap[YearList[YearList.length - 1]] = true;
         const selectedSchools = ["Arlington High"];
+
         const yearSchoolObjectMap = this.transformSchoolData(
             schoolData,
             selectedSchools,
@@ -147,7 +148,6 @@ class App extends React.Component {
         const selectedFilters = this.state.selectedFilters;
 
         let charts = [];
-        console.log("school data", this.state.filteredSchoolData)
         if (selectedFilters.gender === true) {
             charts.push(
                 <GenderChart
@@ -251,10 +251,6 @@ class App extends React.Component {
     }
 
     schoolFilterChangeHandler(selectedOptions, actionMeta) {
-        console.log("actionMeta");
-        console.log(actionMeta);
-        console.log("selectedOptions");
-        console.log(selectedOptions);
 
         if (!selectedOptions) {
             selectedOptions = [];
@@ -297,46 +293,71 @@ class App extends React.Component {
                     districtObject.setEthnicityMap(EthnicityDefaultMap);
                     districtObject.setSchoolYear(schoolYear);
                 }
+                if (schoolObject._male && schoolObject._female) {
+                    districtObject.setMale(districtObject._male + schoolObject._male);
+                    districtObject.setFemale(districtObject._female + schoolObject._female);
+                }
+                if (schoolObject._economicallyDisadvantaged) {
+                    districtObject.setEconomicallyDisadvantaged(
+                        districtObject._economicallyDisadvantaged +
+                        schoolObject._economicallyDisadvantaged
+                    );
+                }
+                if (schoolObject._enrolled) {
+                    districtObject.setEnrolled(
+                        districtObject._enrolled + schoolObject._enrolled
+                    );
+                }
+                if (schoolObject._studentsWithDisability) {
+                    districtObject.setStudentsWithDisability(
+                        districtObject._studentsWithDisability +
+                        schoolObject._studentsWithDisability
+                    );
+                }
 
-                districtObject.setMale(
-                    districtObject._male + schoolObject._male
-                );
-                districtObject.setFemale(
-                    districtObject._female + schoolObject._female
-                );
-
-                districtObject.setEconomicallyDisadvantaged(
-                    districtObject._economicallyDisadvantaged +
-                    schoolObject._economicallyDisadvantaged
-                );
-
-                districtObject.setEnrolled(
-                    districtObject._enrolled + schoolObject._enrolled
-                );
-                districtObject.setStudentsWithDisability(
-                    districtObject._studentsWithDisability +
-                    schoolObject._studentsWithDisability
-                );
 
                 let thisDistrictEthnicityArray = [];
                 let thisDistrictEthnicityMap = districtObject._ethnicityMap;
-
-                for (let key in schoolObject._ethnicityMap) {
-                    const ethnicityObj = schoolObject._ethnicityMap[key];
-                    thisDistrictEthnicityMap[key].value += ethnicityObj.value;
-                    thisDistrictEthnicityArray.push(
-                        thisDistrictEthnicityMap[key]
-                    );
+                if (schoolObject._districtName == "Arlington") {
+                    console.log(schoolObject);
+                    console.log(thisDistrictEthnicityMap)
+                }
+                if (schoolObject._ethnicityMap) {
+                    for (let key in schoolObject._ethnicityMap) {
+                        const ethnicityObj = schoolObject._ethnicityMap[key];
+                        if (thisDistrictEthnicityMap[key].value.isInteger) {
+                            thisDistrictEthnicityMap[key].value += ethnicityObj.value;
+                        }
+                        else {
+                            thisDistrictEthnicityMap[key].value = ethnicityObj.value;
+                            if (schoolObject._districtName == "Arlington") {
+                                console.log("Ethnicity value: ", ethnicityObj.value)
+                                console.log("New District Value", thisDistrictEthnicityMap[key].value);
+                                console.log("updated district obj", thisDistrictEthnicityMap[key])
+                            }
+                        }
+                        thisDistrictEthnicityArray.push(
+                            thisDistrictEthnicityMap[key]
+                        );
+                        if (schoolObject._districtName == "Arlington") {
+                            console.log("array: ", thisDistrictEthnicityArray);
+                        }
+                    }
                 }
 
                 districtObject.setEthnicityMap(thisDistrictEthnicityMap);
                 districtObject.setEthnicity(thisDistrictEthnicityArray);
+                if (schoolObject._districtName == "Arlington") {
+                    console.log("after set", districtObject._ethnicityMap)
+                }
+                if (schoolObject._englishLanguageLearner) {
 
-                districtObject.setEnglishLanguageLearner(
-                    districtObject._englishLanguageLearner +
-                    schoolObject._englishLanguageLearner
-                );
+                    districtObject.setEnglishLanguageLearner(
+                        districtObject._englishLanguageLearner +
+                        schoolObject._englishLanguageLearner
+                    );
 
+                }
                 // districtObject.setPrimaryEnrolled(districtObject._primaryEnrolled + schoolObject._primaryEnrolled);
                 // districtObject.setSecondaryEnrolled(districtObject._secondaryEnrolled + schoolObject._secondaryEnrolled);
 
@@ -376,35 +397,39 @@ class App extends React.Component {
                 districtObject.setType(EntityType.DISTRICT);
                 districtObject.setEthnicityMap(EthnicityDefaultMap);
                 districtObject.setApMap(APScoreAcronymMap);
-            } else {
-                // console.log(districtName);
-                // console.log(schoolName);
             }
-            districtObject.setMale(districtObject._male + schoolObject._male);
-            districtObject.setFemale(
-                districtObject._female + schoolObject._female
-            );
+            if (schoolObject._male && schoolObject._female) {
+                districtObject.setMale(districtObject._male + schoolObject._male);
+                districtObject.setFemale(districtObject._female + schoolObject._female);
+            }
+            if (schoolObject._economicallyDisadvantaged) {
+                districtObject.setEconomicallyDisadvantaged(
+                    districtObject._economicallyDisadvantaged +
+                    schoolObject._economicallyDisadvantaged
+                );
+            }
+            if (schoolObject._enrolled) {
+                districtObject.setEnrolled(
+                    districtObject._enrolled + schoolObject._enrolled
+                );
+            }
+            if (schoolObject._studentsWithDisability) {
+                districtObject.setStudentsWithDisability(
+                    districtObject._studentsWithDisability +
+                    schoolObject._studentsWithDisability
+                );
+            }
 
-            districtObject.setEconomicallyDisadvantaged(
-                districtObject._economicallyDisadvantaged +
-                schoolObject._economicallyDisadvantaged
-            );
-
-            districtObject.setEnrolled(
-                districtObject._enrolled + schoolObject._enrolled
-            );
-            districtObject.setStudentsWithDisability(
-                districtObject._studentsWithDisability +
-                schoolObject._studentsWithDisability
-            );
 
             let thisDistrictEthnicityArray = [];
             let thisDistrictEthnicityMap = districtObject._ethnicityMap;
 
-            for (let key in schoolObject._ethnicityMap) {
-                const ethnicityObj = schoolObject._ethnicityMap[key];
-                thisDistrictEthnicityMap[key].value += ethnicityObj.value;
-                thisDistrictEthnicityArray.push(thisDistrictEthnicityMap[key]);
+            if (schoolObject._ethnicityMap) {
+                for (let key in schoolObject._ethnicityMap) {
+                    const ethnicityObj = schoolObject._ethnicityMap[key];
+                    thisDistrictEthnicityMap[key].value += ethnicityObj.value;
+                    thisDistrictEthnicityArray.push(thisDistrictEthnicityMap[key]);
+                }
             }
 
             districtObject.setEthnicityMap(thisDistrictEthnicityMap);
@@ -412,22 +437,25 @@ class App extends React.Component {
 
 
             let thisDistrictAPArray = [];
-            let thisDistrictAPMap = {};
+            let thisDistrictAPMap = districtObject._apMap;
 
-            for (let key in schoolObject._apMap) {
-                const apObj = schoolObject._apMap[key];
-                thisDistrictAPMap[key].value += apObj.value;
-                thisDistrictAPArray.push(thisDistrictAPMap[key]);
+            if (schoolObject._apMap) {
+                for (let key in schoolObject._apMap) {
+                    const apObj = schoolObject._apMap[key];
+                    thisDistrictAPMap[key].value += apObj.value;
+                    thisDistrictAPArray.push(thisDistrictAPMap[key]);
+                }
             }
 
             districtObject.setApMap(thisDistrictAPMap);
             districtObject.setApArray(thisDistrictAPArray);
 
-
-            districtObject.setEnglishLanguageLearner(
-                districtObject._englishLanguageLearner +
-                schoolObject._englishLanguageLearner
-            );
+            if (schoolObject._englishLanguageLearner) {
+                districtObject.setEnglishLanguageLearner(
+                    districtObject._englishLanguageLearner +
+                    schoolObject._englishLanguageLearner
+                );
+            }
 
             schoolObjectMap[districtName] = districtObject;
         }
@@ -462,10 +490,6 @@ class App extends React.Component {
                 schoolsWithMissingEntry.push(schoolRow);
             }
         });
-
-        if (schoolsWithMissingEntry.length > 0) {
-            // console.log(schoolsWithMissingEntry);
-        }
 
         return filteredArray;
     }
@@ -612,26 +636,24 @@ class App extends React.Component {
      * @returns {Map} filteredSchoolDataMap of type Map[year] -> Array{SchoolObject}
      */
     filterYearSchoolObjectMap(yearSchoolObjectMap, selectedSchoolsArray, selectedYearsMap) {
-        console.log("yearschoolMap", yearSchoolObjectMap)
-        console.log("selctedschool: ", selectedSchoolsArray)
-        console.log("selectedyear: ", selectedYearsMap)
+
         let filteredSchoolDataMap = {};
         let selectedYearsArray = [];
         Object.keys(selectedYearsMap).forEach((key) => {
             if (selectedYearsMap[key] === true)
                 selectedYearsArray.push(key)
         });
-        console.log("after year chekc", selectedYearsArray)
+
         selectedYearsArray.forEach(year => {
             if (!filteredSchoolDataMap[year]) {
                 filteredSchoolDataMap[year] = [];
-                console.log(filteredSchoolDataMap[year])
+
             }
             selectedSchoolsArray.forEach(schoolName => {
                 filteredSchoolDataMap[year].push(yearSchoolObjectMap[year][schoolName]);
             });
         });
-        console.log("before return filter: ", filteredSchoolDataMap)
+
         return filteredSchoolDataMap;
     }
 
