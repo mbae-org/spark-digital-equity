@@ -1,0 +1,961 @@
+School Code,District,School Name,# STUDENTS ENROLLED,# STUDENTS ENROLLED PRIOR TO SECONDARY LEVEL,# STUDENTS ENROLLED AT SECONDARY LEVEL
+00010405,Abington,Frolio Middle School,322,322,0
+00010505,Abington,Abington High,20,1,19
+00030025,Acushnet,Acushnet Elementary School,2,2,0
+00030305,Acushnet,Albert F Ford Middle School,416,416,0
+00050303,Agawam,Roberta G. Doering School,498,498,0
+00050405,Agawam,Agawam Junior High,296,296,0
+00050505,Agawam,Agawam High,131,0,131
+00070005,Amesbury,Amesbury Elementary,304,304,0
+00070010,Amesbury,Charles C Cashman Elementary,362,362,0
+00070013,Amesbury,Amesbury Middle,401,400,1
+00070505,Amesbury,Amesbury High,188,0,188
+00080009,Amherst,Crocker Farm Elementary,333,333,0
+00080020,Amherst,Fort River Elementary,327,327,0
+00080050,Amherst,Wildwood Elementary,400,400,0
+00090505,Andover,Andover High,181,0,181
+00100410,Arlington,Ottoson Middle,1196,1196,0
+00100505,Arlington,Arlington High,116,0,116
+00140010,Ashland,Henry E Warren Elementary,612,612,0
+00140015,Ashland,David Mindess,623,623,0
+00140505,Ashland,Ashland High,119,0,119
+00160001,Attleboro,A. Irvin Studley Elementary School,447,447,0
+00160035,Attleboro,Thomas Willett Elementary School,459,459,0
+00160040,Attleboro,Hyman Fine Elementary School,459,459,0
+00160045,Attleboro,Hill-Roberts Elementary School,472,472,0
+00160050,Attleboro,Peter Thacher Elementary School,389,389,0
+00160505,Attleboro,Attleboro High,46,0,46
+00170305,Auburn,Auburn Middle,247,247,0
+00170505,Auburn,Auburn Senior High,220,0,220
+00180010,Avon,Ralph D Butler,232,232,0
+00180510,Avon,Avon Middle High School,117,56,61
+00200025,Barnstable,Hyannis West Elementary,1,1,0
+00200045,Barnstable,West Villages Elementary School,1,1,0
+00200315,Barnstable,Barnstable Intermediate School,648,648,0
+00200505,Barnstable,Barnstable High,21,0,21
+00230505,Bedford,Bedford High,143,0,143
+00240025,Belchertown,Jabish Middle School,339,339,0
+00240505,Belchertown,Belchertown High,193,0,193
+00250020,Bellingham,South Elementary,1,1,0
+00250315,Bellingham,Bellingham Memorial School,346,346,0
+00250505,Bellingham,Bellingham High School,184,184,0
+00250510,Bellingham,Keough Memorial Academy,1,1,0
+00260505,Belmont,Belmont High,47,0,47
+00270010,Berkley,Berkley Community School,467,467,0
+00270305,Berkley,Berkley Middle School,388,388,0
+00280005,Berlin,Berlin Memorial,92,92,0
+00300305,Beverly,Briscoe Middle,948,948,0
+00300505,Beverly,Beverly High,103,0,103
+00310005,Billerica,Thomas Ditson,538,538,0
+00310007,Billerica,Frederick J Dutile,290,290,0
+00310012,Billerica,John F Kennedy,319,319,0
+00310015,Billerica,Parker,486,486,0
+00310026,Billerica,Hajjar Elementary,473,473,0
+00310030,Billerica,Eugene C Vining,192,192,0
+00310305,Billerica,Marshall Middle School,411,411,0
+00310310,Billerica,Locke Middle,344,344,0
+00310505,Billerica,Billerica Memorial High School,202,0,202
+00350004,Boston,Lyon K-8,102,102,0
+00350008,Boston,Dr. Catherine Ellison-Rosa Parks Early Ed School,1,1,0
+00350013,Boston,Jackson Mann,521,521,0
+00350021,Boston,Beethoven,299,299,0
+00350052,Boston,Charles Sumner,503,503,0
+00350072,Boston,David A Ellis,383,383,0
+00350074,Boston,Dearborn,255,255,0
+00350080,Boston,Donald Mckay,698,698,0
+00350096,Boston,Eliot Elementary,431,431,0
+00350116,Boston,Franklin D Roosevelt,133,133,0
+00350122,Boston,George H Conley,96,96,0
+00350135,Boston,Henry Grew,236,236,0
+00350138,Boston,O W Holmes,2,2,0
+00350141,Boston,Hugh Roe O'Donnell,250,250,0
+00350146,Boston,James Condon Elementary,699,699,0
+00350153,Boston,James W Hennigan,284,284,0
+00350154,Boston,James J Chittick,1,1,0
+00350156,Boston,James Otis,351,351,0
+00350166,Boston,John F Kennedy,351,351,0
+00350167,Boston,UP Academy Holland,2,2,0
+00350181,Boston,Joseph P Tynan,1,1,0
+00350182,Boston,Joseph J Hurley,36,36,0
+00350183,Boston,Joseph Lee,126,126,0
+00350200,Boston,Harvard-Kent,472,472,0
+00350215,Boston,Manassah E Bradley,245,245,0
+00350226,Boston,Mattahunt,506,506,0
+00350227,Boston,Mather,550,550,0
+00350229,Boston,Maurice J Tobin,436,436,0
+00350231,Boston,Michael J Perkins,213,213,0
+00350237,Boston,Mozart,22,22,0
+00350240,Boston,Richard J Murphy,475,475,0
+00350243,Boston,Nathan Hale,159,159,0
+00350255,Boston,Oliver Hazard Perry,170,170,0
+00350258,Boston,William H Ohrenberger,610,610,0
+00350262,Boston,Lyndon,203,203,0
+00350268,Boston,Paul A Dever,268,268,0
+00350286,Boston,Josiah Quincy,629,629,0
+00350302,Boston,Samuel Adams,239,239,0
+00350304,Boston,Samuel W Mason,76,76,0
+00350308,Boston,Sarah Greenwood,436,436,0
+00350326,Boston,Gardner Pilot Academy,1,1,0
+00350328,Boston,Thomas J Kenny,2,2,0
+00350346,Boston,Warren-Prescott,53,53,0
+00350360,Boston,William Ellery Channing,207,207,0
+00350363,Boston,William McKinley,78,71,7
+00350366,Boston,William E Russell,1,1,0
+00350370,Boston,William Monroe Trotter,455,455,0
+00350374,Boston,Winship Elementary,179,179,0
+00350376,Boston,King K-8,1,1,0
+00350377,Boston,Higginson/Lewis K-8,1,1,0
+00350378,Boston,Mildred Avenue K-8,1,1,0
+00350380,Boston,Young Achievers,180,180,0
+00350390,Boston,Blackstone,410,410,0
+00350426,Boston,Dr. William Henderson Upper,289,289,0
+00350430,Boston,Clarence R Edwards Middle,173,173,0
+00350445,Boston,Washington Irving Middle,250,250,0
+00350505,Boston,Brighton High,93,76,26
+00350507,Boston,Boston International High School,218,181,39
+00350515,Boston,Charlestown High,65,65,0
+00350518,Boston,Community Academy,2,2,0
+00350522,Boston,Excel High School,122,62,60
+00350525,Boston,Jeremiah E Burke High,70,70,0
+00350530,Boston,East Boston High,232,232,0
+00350537,Boston,Madison Park High,64,6,58
+00350540,Boston,Fenway High School,17,17,0
+00350541,Boston,Another Course To College,1,1,0
+00350542,Boston,New Mission High School,81,73,9
+00350543,Boston,Greater Egleston Community High School,2,0,2
+00350545,Boston,,133,85,54
+00350546,Boston,Boston Arts Academy,16,16,0
+00350548,Boston,Boston Adult Academy,7,0,7
+00350549,Boston,Margarita Muniz Academy,67,0,67
+00350558,Boston,Boston Community Leadership Academy,101,0,101
+00350560,Boston,Boston Latin,108,108,0
+00350565,Boston,Quincy Upper School,47,0,47
+00350575,Boston,O'Bryant School Math/Science,285,134,179
+00350579,Boston,Urban Science Academy,115,87,40
+00350581,Boston,Community Academy of Science and Health,33,22,11
+00350651,Boston,Dorchester Academy,43,43,0
+00350655,Boston,Lyon Upper 9-12,39,29,10
+00350656,Boston,Mario Umana Academy,67,67,0
+00350657,Boston,TechBoston Academy,361,307,78
+00350658,Boston,West Roxbury Academy,49,49,0
+00350750,Boston,Horace Mann School for the Deaf,59,59,0
+00350755,Boston,Boston Collaborative High School,33,32,1
+00360005,Bourne,Bournedale Elementary School,355,355,0
+00360010,Bourne,Peebles Elementary School,343,343,0
+00360325,Bourne,Bourne Middle School,517,517,0
+00360505,Bourne,Bourne High School,1,0,1
+00390005,Boylston,Boylston Elementary,265,265,0
+00400305,Braintree,East Middle School,229,229,0
+00400310,Braintree,South Middle School,226,226,0
+00400505,Braintree,Braintree High,60,0,60
+00410005,Brewster,Stony Brook Elementary,227,227,0
+00410010,Brewster,Eddy Elementary,235,235,0
+00440023,Brockton,Edgar B Davis,1,1,0
+00440080,Brockton,Frederick Douglass Academy,1,0,1
+00440415,Brockton,South Middle School,163,163,0
+00440420,Brockton,West Middle School,2,2,0
+00440421,Brockton,Ashfield Middle School,1,1,0
+00440422,Brockton,Joseph F. Plouffe Academy,687,687,0
+00440505,Brockton,Brockton High,462,0,462
+00440520,Brockton,Edison Academy,2,0,2
+00450005,Brookfield,Brookfield Elementary,1,1,0
+00460020,Brookline,Michael Driscoll,66,66,0
+00460035,Brookline,William H Lincoln,53,53,0
+00460040,Brookline,Pierce,86,86,0
+00460045,Brookline,John D Runkle,58,58,0
+00460505,Brookline,Brookline High,129,0,129
+00480303,Burlington,Marshall Simonds Middle,767,767,0
+00480505,Burlington,Burlington High,116,0,116
+00490305,Cambridge,Cambridge Street Upper School,2,2,0
+00490506,Cambridge,Cambridge Rindge and Latin,103,0,103
+00500305,Canton,Wm H Galvin Middle,723,723,0
+00500505,Canton,Canton High,48,0,48
+00520015,Carver,Carver Elementary School,1,1,0
+00520405,Carver,Carver Middle/High School,116,82,34
+00560305,Chelmsford,Col Moses Parker School,350,350,0
+00560310,Chelmsford,McCarthy Middle School,409,409,0
+00560505,Chelmsford,Chelmsford High,125,0,125
+00570030,Chelsea,Edgar A Hooks Elementary,1,1,0
+00570035,Chelsea,George F. Kelly Elementary,1,1,0
+00570045,Chelsea,Eugene Wright Science and Technology Academy,488,488,0
+00570050,Chelsea,Clark Avenue School,534,534,0
+00570055,Chelsea,Joseph A. Browne School,453,453,0
+00570505,Chelsea,Chelsea High,443,0,443
+00610003,Chicopee,Barry,419,419,0
+00610010,Chicopee,Belcher,258,258,0
+00610015,Chicopee,Bowe,415,415,0
+00610022,Chicopee,Litwin,389,389,0
+00610065,Chicopee,Streiber Memorial School,283,283,0
+00610090,Chicopee,Gen John J Stefanik,373,373,0
+00610305,Chicopee,Bellamy Middle,278,278,0
+00610310,Chicopee,Dupont Middle,366,366,0
+00610505,Chicopee,Chicopee High,80,0,80
+00610510,Chicopee,Chicopee Comprehensive High School,183,0,183
+00630010,Clarksburg,Clarksburg Elementary,121,121,0
+00640050,Clinton,Clinton Elementary,476,476,0
+00640305,Clinton,Clinton Middle School,248,248,0
+00640505,Clinton,Clinton Senior High,90,4,86
+00650010,Cohasset,Joseph Osgood,342,342,0
+00650505,Cohasset,Cohasset Middle/High School,116,0,116
+00670305,Concord,Concord Middle,390,390,0
+00680005,Conway,Conway Grammar,121,121,0
+00710030,Danvers,Riverside,1,1,0
+00710305,Danvers,Holten Richmond Middle School,543,543,0
+00710505,Danvers,Danvers High,268,0,268
+00720050,Dartmouth,Dartmouth Middle,821,821,0
+00720505,Dartmouth,Dartmouth High,18,0,18
+00730305,Dedham,Dedham Middle School,596,596,0
+00730505,Dedham,Dedham High,52,0,52
+00740015,Deerfield,Deerfield Elementary,362,362,0
+00770505,Douglas,Douglas High School,77,0,77
+00780005,Dover,Chickering,477,477,0
+00790030,Dracut,Greenmont Avenue,1,1,0
+00790045,Dracut,George H. Englesby Elementary School,1,1,0
+00790410,Dracut,Justus C. Richardson Middle School,304,304,0
+00790505,Dracut,Dracut Senior High,208,0,208
+00820004,Duxbury,Alden School,1,1,0
+00820505,Duxbury,Duxbury High,37,0,37
+00830005,East Bridgewater,Central,396,396,0
+00830010,East Bridgewater,Gordon W Mitchell,686,686,0
+00830505,East Bridgewater,East Bridgewater JR./SR. High School,177,0,177
+00850005,Eastham,Eastham Elementary,170,170,0
+00860010,Easthampton,Maple,1,1,0
+00860505,Easthampton,Easthampton High,124,0,124
+00870305,East Longmeadow,Birchland Park,118,118,0
+00870505,East Longmeadow,East Longmeadow High,139,0,139
+00880003,Easton,Center School,241,241,0
+00880015,Easton,Parkview Elementary,293,293,0
+00880020,Easton,Moreau Hall,223,223,0
+00880025,Easton,Richardson Olmsted School,829,829,0
+00880405,Easton,Easton Middle School,646,646,0
+00880505,Easton,Oliver Ames High,25,0,25
+00890005,Edgartown,Edgartown Elementary,342,342,0
+00910030,Erving,Erving Elementary,139,139,0
+00930010,Everett,Sumner G. Whittier School,620,620,0
+00930018,Everett,Madeline English School,838,838,0
+00930028,Everett,George Keverian School,919,919,0
+00930030,Everett,Devens School,2,2,0
+00930038,Everett,Lafayette School,938,938,0
+00930058,Everett,Parlin School,920,920,0
+00930505,Everett,Everett High,72,0,72
+00940030,Fairhaven,Leroy Wood,352,352,0
+00940305,Fairhaven,Hastings Middle,417,417,0
+00940505,Fairhaven,Fairhaven High,32,0,32
+00950011,Fall River,Mary Fonseca Elementary School,1,1,0
+00950065,Fall River,William S Greene,1,1,0
+00950315,Fall River,Morton Middle,2,2,0
+00950325,Fall River,Resiliency Preparatory School,1,0,1
+00950505,Fall River,B M C Durfee High,156,0,156
+00960005,Falmouth,East Falmouth Elementary,268,268,0
+00960015,Falmouth,Teaticket,280,280,0
+00960020,Falmouth,Mullen-Hall,446,446,0
+00960030,Falmouth,North Falmouth Elementary,317,317,0
+00960305,Falmouth,Morse Pond School,590,590,0
+00960405,Falmouth,Lawrence,279,279,0
+00960505,Falmouth,Falmouth High,140,0,140
+00970048,Fitchburg,Memorial Intermediate,516,516,0
+00970315,Fitchburg,Arthur M Longsjo Middle School,249,249,0
+00970505,Fitchburg,Fitchburg High,187,0,187
+00970510,Fitchburg,Goodrich Academy,1,0,1
+00980005,Florida,Abbott Memorial,70,70,0
+00990405,Foxborough,John J Ahern,469,466,7
+00990505,Foxborough,Foxborough High,99,0,99
+01000515,Framingham,Framingham High School,188,0,188
+01010040,Franklin,Annie Sullivan Middle School,457,457,0
+01010310,Franklin,Remington Middle,456,456,0
+01010405,Franklin,Horace Mann,463,463,0
+01010505,Franklin,Franklin High,173,10,163
+01030405,Gardner,Gardner Middle School,526,526,0
+01030505,Gardner,Gardner High,1,0,1
+01050010,Georgetown,Penn Brook,690,690,0
+01050305,Georgetown,Georgetown Middle School,192,192,0
+01050505,Georgetown,Georgetown High School,137,0,137
+01070505,Gloucester,Gloucester High,195,0,195
+01090005,Gosnold,Cuttyhunk Elementary,2,2,0
+01100030,Grafton,North Street Elementary School,593,593,0
+01100200,Grafton,Millbury Street Elementary School,674,674,0
+01100305,Grafton,Grafton Middle,478,478,0
+01100505,Grafton,Grafton High School,70,0,70
+01110004,Granby,East Meadow,169,169,0
+01110010,Granby,West Street,174,174,0
+01110505,Granby,Granby Jr Sr High School,182,130,52
+01140010,Greenfield,Federal Street School,242,242,0
+01140025,Greenfield,Discovery School at Four Corners,239,239,0
+01140030,Greenfield,Green River,6,6,0
+01140305,Greenfield,Greenfield Middle,296,296,0
+01170505,Hadley,Hopkins Academy,58,49,9
+01180005,Halifax,Halifax Elementary,253,253,0
+01210005,Hancock,Hancock Elementary,33,33,0
+01220004,Hanover,Cedar Elementary,362,362,0
+01220005,Hanover,Center Elementary,352,352,0
+01220015,Hanover,Sylvester,227,227,0
+01220305,Hanover,Hanover Middle,834,834,0
+01220505,Hanover,Hanover High,21,0,21
+01250005,Harvard,Hildreth Elementary School,425,425,0
+01250505,Harvard,Bromfield,31,22,9
+01270005,Hatfield,Hatfield Elementary,222,222,0
+01270505,Hatfield,Smith Academy,38,38,0
+01280033,Haverhill,Haverhill Alternative School,7,0,7
+01280073,Haverhill,TEACH,6,0,6
+01280505,Haverhill,Haverhill High,518,0,518
+01310410,Hingham,Hingham Middle School,352,352,0
+01310505,Hingham,Hingham High,226,0,226
+01330018,Holbrook,John F Kennedy,1,1,0
+01330505,Holbrook,Holbrook Jr Sr High,186,186,0
+01360007,Holliston,Miller School,679,679,0
+01360505,Holliston,Holliston High,10,0,10
+01370015,Holyoke,Lt Elmer J McMahon Elementary,378,378,0
+01370040,Holyoke,Kelly Elementary,137,137,0
+01370045,Holyoke,E N White Elementary,432,432,0
+01370055,Holyoke,Lt Clayre Sullivan Elementary,303,303,0
+01370060,Holyoke,Maurice A Donahue Elementary,412,412,0
+01370505,Holyoke,Holyoke High,441,0,441
+01380505,Hopedale,Hopedale Jr Sr High,98,84,14
+01390015,Hopkinton,Hopkins Elementary School,499,499,0
+01390305,Hopkinton,Hopkinton Middle School,572,572,0
+01390505,Hopkinton,Hopkinton High,55,0,55
+01410007,Hudson,Mulready Elementary,236,236,0
+01410015,Hudson,Forest Avenue Elementary,333,333,0
+01410030,Hudson,C A Farley,471,471,0
+01410505,Hudson,Hudson High,281,208,92
+01420015,Hull,Lillian M Jacobs,359,359,0
+01420305,Hull,Memorial Middle,1,1,0
+01420505,Hull,Hull High,10,0,10
+01440505,Ipswich,Ipswich High,20,0,20
+01450020,Kingston,Kingston Intermediate,580,580,0
+01480005,Lanesborough,Lanesborough Elementary,202,202,0
+01490002,Lawrence,Lawlor Early Childhood Center,1,1,0
+01490004,Lawrence,South Lawrence East Elementary School,1,1,0
+01490018,Lawrence,Robert Frost,590,590,0
+01490048,Lawrence,Oliver Partnership School,1,1,0
+01490053,Lawrence,Edward F. Parthum,627,627,0
+01490085,Lawrence,Spark Academy,1,1,0
+01490515,Lawrence,Lawrence High School,101,0,101
+01490537,Lawrence,School for Exceptional Studies,8,0,8
+01500505,Lee,Lee Middle/High School,139,96,43
+01510505,Leicester,Leicester High,141,0,141
+01520015,Lenox,Morris,254,254,0
+01520505,Lenox,Lenox Memorial High,146,130,16
+01530045,Leominster,Samoset School,1,1,0
+01530505,Leominster,Leominster High School,15,0,15
+01530605,Leominster,Center For Technical Education Innovation,38,0,38
+01540005,Leverett,Leverett Elementary,112,112,0
+01550305,Lexington,Jonas Clarke Middle,307,307,0
+01550310,Lexington,Wm Diamond Middle,356,356,0
+01550505,Lexington,Lexington High,348,0,348
+01570025,Lincoln,Lincoln School,401,401,0
+01570305,Lincoln,Hanscom Middle,237,237,0
+01580305,Littleton,Littleton Middle School,350,350,0
+01580505,Littleton,Littleton High School,111,0,111
+01590005,Longmeadow,Blueberry Hill,424,424,0
+01590010,Longmeadow,Center,402,402,0
+01590017,Longmeadow,Glenbrook Middle,314,314,0
+01590025,Longmeadow,Wolf Swamp Road,343,343,0
+01590305,Longmeadow,Williams Middle,341,341,0
+01590505,Longmeadow,Longmeadow High,58,0,58
+01600018,Lowell,Pyne Arts,469,469,0
+01600030,Lowell,Charles W Morey,2,2,0
+01600090,Lowell,Bartlett Community Partnership,454,454,0
+01600310,Lowell,B.F. Butler Middle School,5,5,0
+01600315,Lowell,James S Daley Middle School,608,608,0
+01600320,Lowell,Leblanc Therapeutic Day School,1,1,0
+01600330,Lowell,Henry J Robinson Middle,555,555,0
+01600340,Lowell,James Sullivan Middle School,465,465,0
+01600345,Lowell,Dr An Wang School,682,682,0
+01600360,Lowell,Kathryn P. Stoklosa Middle School,2,2,0
+01600505,Lowell,Lowell High,192,0,192
+01600515,Lowell,The Career Academy,13,0,13
+01610023,Ludlow,Veterans Park Elementary,358,358,0
+01610305,Ludlow,Paul R Baird Middle,162,162,0
+01610505,Ludlow,Ludlow Senior High,60,0,60
+01620305,Lunenburg,Lunenburg Middle School,118,118,0
+01620505,Lunenburg,Lunenburg High,1,0,1
+01630005,Lynn,Washington Elementary School,1,1,0
+01630035,Lynn,Cobbet Elementary,1,1,0
+01630085,Lynn,Sewell-Anderson,1,1,0
+01630100,Lynn,Tracy,1,1,0
+01630305,Lynn,Thurgood Marshall Mid,2,2,0
+01630505,Lynn,Classical High,384,0,384
+01630510,Lynn,Lynn English High,360,0,360
+01630525,Lynn,Fecteau-Leary Junior/Senior High School,2,0,2
+01630605,Lynn,Lynn Vocational Technical Institute,3,0,3
+01640405,Lynnfield,Lynnfield Middle School,525,525,0
+01640505,Lynnfield,Lynnfield High,15,0,15
+01650003,Malden,Beebe,348,348,0
+01650013,Malden,Ferryway,378,378,0
+01650027,Malden,Forestdale,217,217,0
+01650047,Malden,Linden,382,382,0
+01650057,Malden,Salemwood,342,342,0
+01650505,Malden,Malden High,63,0,63
+01670007,Mansfield,Everett W Robinson,1,1,0
+01670014,Mansfield,Jordan/Jackson Elementary,1,1,0
+01670035,Mansfield,Harold L Qualters Middle,293,293,0
+01670505,Mansfield,Mansfield High,214,0,214
+01680300,Marblehead,Marblehead Veterans Middle School,454,454,0
+01680505,Marblehead,Marblehead High,23,0,23
+01700045,Marlborough,1 LT Charles W. Whitcomb School,1274,1274,0
+01700505,Marlborough,Marlborough High,429,0,429
+01710310,Marshfield,Furnace Brook Middle,564,564,0
+01710505,Marshfield,Marshfield High,380,0,380
+01720005,Mashpee,Kenneth Coombs School,335,335,0
+01720035,Mashpee,Quashnet School,478,478,0
+01720505,Mashpee,Mashpee High,43,0,43
+01730005,Mattapoisett,Center,212,212,0
+01730010,Mattapoisett,Old Hammondtown,210,210,0
+01740010,Maynard,Green Meadow,443,443,0
+01740305,Maynard,Fowler School,224,224,0
+01740505,Maynard,Maynard High,125,105,20
+01750305,Medfield,Thomas Blake Middle,393,393,0
+01750505,Medfield,Medfield Senior High,65,0,65
+01760068,Medford,John J McGlynn Elementary School,497,497,0
+01760130,Medford,Brooks School,454,454,0
+01760140,Medford,Christopher Columbus,401,401,0
+01760150,Medford,Milton Fuller Roberts,547,547,0
+01760315,Medford,Madeleine Dugger Andrews,493,493,0
+01760320,Medford,John J. McGlynn Middle School,467,467,0
+01760505,Medford,Medford High,106,0,106
+01760510,Medford,Curtis-Tufts,1,0,1
+01760605,Medford,Medford Vocational Technical High,12,0,12
+01770015,Medway,Burke/Memorial Elementary School,156,156,0
+01770305,Medway,Medway Middle,660,660,0
+01770505,Medway,Medway High,86,0,86
+01780305,Melrose,Melrose Middle,352,352,0
+01780505,Melrose,Melrose High,47,0,47
+01810050,Methuen,Comprehensive Grammar School,1,1,0
+01810055,Methuen,Tenney Grammar School,1,1,0
+01810505,Methuen,Methuen High,114,0,114
+01820008,Middleborough,Henry B. Burkland Elementary School,570,570,0
+01820010,Middleborough,Mary K. Goode Elementary School,587,587,0
+01820011,Middleborough,Memorial Early Childhood Center,209,209,0
+01820305,Middleborough,John T. Nichols Middle,783,783,0
+01820505,Middleborough,Middleborough High,320,0,320
+01840003,Middleton,Fuller Meadow,146,146,0
+01840005,Middleton,Howe-Manning,400,400,0
+01850090,Milford,Woodland,639,639,0
+01850305,Milford,Stacy Middle,785,785,0
+01850505,Milford,Milford High,130,0,130
+01860017,Millbury,Elmwood Street,512,512,0
+01860025,Millbury,Raymond E. Shaw Elementary,434,434,0
+01860505,Millbury,Millbury Junior/Senior High,394,251,143
+01870020,Millis,Millis Middle,62,62,0
+01870505,Millis,Millis High School,95,0,95
+01890410,Milton,Charles S Pierce Middle,458,458,0
+01890505,Milton,Milton High,268,0,268
+01910025,Monson,Quarry Hill Community School,325,325,0
+01910310,Monson,Granite Valley Middle,253,253,0
+01910505,Monson,Monson High School,27,0,27
+01970005,Nantucket,Nantucket Elementary,684,684,0
+01970505,Nantucket,Nantucket High,10,0,10
+01980305,Natick,J F Kennedy Middle School,56,56,0
+01980505,Natick,Natick High,107,0,107
+01990405,Needham,Pollard Middle,402,402,0
+01990410,Needham,High Rock School,372,372,0
+01990505,Needham,Needham High,98,0,98
+02010405,New Bedford,Keith Middle School,1,1,0
+02010410,New Bedford,Normandin Middle School,2,2,0
+02010505,New Bedford,New Bedford High,410,0,410
+02010515,New Bedford,Whaling City Junior/Senior High School,12,0,12
+02040505,Newburyport,Newburyport High,56,0,56
+02070505,Newton,Newton North High,326,0,326
+02070510,Newton,Newton South High,217,0,217
+02080015,Norfolk,H Olive Day,1,1,0
+02090505,North Adams,Drury High,49,0,49
+02100410,Northampton,John F Kennedy Middle School,396,396,0
+02100505,Northampton,Northampton High,66,0,66
+02110305,North Andover,North Andover Middle,1098,1098,0
+02110505,North Andover,North Andover High,325,0,325
+02120007,North Attleborough,Amvet Boulevard,2,2,0
+02120010,North Attleborough,Falls,1,1,0
+02120030,North Attleborough,Community,2,2,0
+02120505,North Attleborough,North Attleboro High,238,0,238
+02130015,Northborough,Fannie E Proctor,1,1,0
+02140001,Northbridge,W Edward Balmer,517,517,0
+02140005,Northbridge,Northbridge Elementary,1,1,0
+02140505,Northbridge,Northbridge High,174,0,174
+02150505,North Brookfield,North Brookfield High,1,1,0
+02170305,North Reading,North Reading Middle,425,425,0
+02170505,North Reading,North Reading High,105,0,105
+02180010,Norton,L G Nourse Elementary,272,272,0
+02180015,Norton,J C Solmonese,390,390,0
+02180060,Norton,Henri A. Yelle,373,373,0
+02180305,Norton,Norton Middle,587,587,0
+02180505,Norton,Norton High,105,0,105
+02190005,Norwell,Grace Farrar Cole,244,244,0
+02190020,Norwell,William G Vinal,249,249,0
+02190405,Norwell,Norwell Middle School,226,226,0
+02190505,Norwell,Norwell High,46,0,46
+02200305,Norwood,Dr. Philip O. Coakley Middle School,460,460,0
+02200505,Norwood,Norwood High,25,0,25
+02210005,Oak Bluffs,Oak Bluffs Elementary,278,278,0
+02230010,Orange,Dexter Park,242,242,0
+02230015,Orange,Fisher Hill,195,195,0
+02240005,Orleans,Orleans Elementary,220,220,0
+02260405,Oxford,Oxford Middle,1,1,0
+02260505,Oxford,Oxford High,105,53,52
+02270008,Palmer,Old Mill Pond,631,631,0
+02270505,Palmer,Palmer High,121,121,0
+02290305,Peabody,J Henry Higgins Middle,908,908,0
+02290510,Peabody,Peabody Veterans Memorial High,203,0,203
+02300005,Pelham,Pelham Elementary,124,124,0
+02310305,Pembroke,Pembroke Community Middle School,169,169,0
+02310505,Pembroke,Pembroke High School,154,0,154
+02340005,Petersham,Petersham Center,112,112,0
+02360505,Pittsfield,Pittsfield High,23,0,23
+02360510,Pittsfield,Taconic High,69,0,69
+02390005,Plymouth,Cold Spring,250,250,0
+02390010,Plymouth,Hedge,216,216,0
+02390011,Plymouth,Federal Furnace School,408,408,0
+02390012,Plymouth,Indian Brook,562,562,0
+02390015,Plymouth,Manomet Elementary,299,299,0
+02390030,Plymouth,Nathaniel Morton Elementary,582,582,0
+02390046,Plymouth,South Elementary,540,540,0
+02390047,Plymouth,West Elementary,387,387,0
+02390305,Plymouth,Plymouth South Middle,250,250,0
+02390405,Plymouth,Plymouth Commun Intermediate,161,161,0
+02390505,Plymouth,Plymouth North High,153,0,153
+02390515,Plymouth,Plymouth South High,43,0,43
+02400010,Plympton,Dennett Elementary,92,92,0
+02430305,Quincy,Atlantic Middle,152,152,0
+02430310,Quincy,Broad Meadows Middle,373,373,0
+02430315,Quincy,Central Middle,648,648,0
+02430320,Quincy,Reay E Sterling Middle,156,156,0
+02430325,Quincy,Point Webster Middle,176,176,0
+02430505,Quincy,Quincy High,92,0,92
+02430510,Quincy,North Quincy High,232,0,232
+02460305,Reading,Arthur W Coolidge Middle,104,104,0
+02460310,Reading,Walter S Parker Middle,56,56,0
+02460505,Reading,Reading Memorial High,194,0,194
+02480003,Revere,A. C. Whelan Elementary School,732,732,0
+02480013,Revere,Beachmont Veterans Memorial School,330,330,0
+02480014,Revere,Rumney Marsh Academy,194,194,0
+02480025,Revere,Abraham Lincoln,573,573,0
+02480035,Revere,Staff Sargent James J. Hill Elementary School,693,693,0
+02480050,Revere,Paul Revere,478,478,0
+02480056,Revere,Garfield Elementary School,724,724,0
+02480057,Revere,Garfield Middle School,236,236,0
+02480305,Revere,Susan B. Anthony Middle School,566,566,0
+02480505,Revere,Revere High,456,0,456
+02480520,Revere,Seacoast School,35,0,35
+02490005,Richmond,Richmond Consolidated,158,158,0
+02510305,Rockland,John W Rogers Middle,155,155,0
+02510505,Rockland,Rockland Senior High,10,0,10
+02520005,Rockport,Rockport Elementary,385,385,0
+02520305,Rockport,Rockport Middle,166,166,0
+02520510,Rockport,Rockport High,40,0,40
+02580030,Salem,Horace Mann Laboratory,46,46,0
+02580505,Salem,Salem High,4,0,4
+02580515,Salem,Salem Prep High School,7,0,7
+02610002,Sandwich,Forestdale School,1,1,0
+02610025,Sandwich,Oak Ridge,891,891,0
+02610305,Sandwich,Sandwich STEM Academy,33,33,0
+02610505,Sandwich,Sandwich High,249,0,249
+02620305,Saugus,Belmonte Saugus Middle,492,492,0
+02620505,Saugus,Saugus High,77,0,77
+02630010,Savoy,Emma L Miller Elementary School,51,51,0
+02640305,Scituate,Gates Intermediate School,472,472,0
+02640505,Scituate,Scituate High School,31,0,31
+02650015,Seekonk,Mildred Aitken School,1,1,0
+02650405,Seekonk,Dr. Kevin M. Hurley Middle School,250,250,0
+02650505,Seekonk,Seekonk High,74,0,74
+02660305,Sharon,Sharon Middle,565,565,0
+02660505,Sharon,Sharon High,174,0,174
+02690010,Sherborn,Pine Hill,408,408,0
+02710005,Shrewsbury,Beal School,320,320,0
+02710025,Shrewsbury,Walter J Paton,20,20,0
+02710305,Shrewsbury,Sherwood Middle School,411,411,0
+02710505,Shrewsbury,Shrewsbury Sr High,213,0,213
+02720005,Shutesbury,Shutesbury Elementary,105,105,0
+02730305,Somerset,Somerset Middle School,607,607,0
+02740505,Somerville,Somerville High,82,0,82
+02760008,Southborough,Mary E Finn School,1,1,0
+02760305,Southborough,P Brent Trottier,14,14,0
+02770005,Southbridge,Charlton Street,71,71,0
+02770315,Southbridge,Southbridge Middle School,320,320,0
+02770515,Southbridge,Southbridge High School,167,0,167
+02780305,South Hadley,Michael E. Smith Middle School,430,430,0
+02780505,South Hadley,South Hadley High,28,0,28
+02810005,Springfield,Springfield Public Day Elementary School,80,80,0
+02810010,Springfield,Edward P. Boland School,490,490,0
+02810015,Springfield,Thomas M Balliet,233,233,0
+02810020,Springfield,Samuel Bowles,280,280,0
+02810023,Springfield,Milton Bradley School,424,424,0
+02810025,Springfield,Brightwood,282,282,0
+02810030,Springfield,Elias Brookings,263,263,0
+02810035,Springfield,Daniel B Brunton,394,394,0
+02810045,Springfield,William N. DeBerry,243,243,0
+02810050,Springfield,Hiram L Dorman,278,278,0
+02810055,Springfield,Rebecca M Johnson,555,555,0
+02810060,Springfield,Margaret C Ells,48,48,0
+02810065,Springfield,Glenwood,274,274,0
+02810068,Springfield,Glickman Elementary,298,298,0
+02810075,Springfield,Frank H Freedman,271,271,0
+02810080,Springfield,Frederick Harris,456,456,0
+02810085,Springfield,Homer Street,361,361,0
+02810095,Springfield,Alfred G. Zanetti Montessori Magnet School,276,276,0
+02810100,Springfield,Indian Orchard Elementary,493,493,0
+02810110,Springfield,Kensington International School,255,255,0
+02810115,Springfield,Liberty,233,233,0
+02810120,Springfield,Lincoln,321,321,0
+02810125,Springfield,Mary A. Dryden Veterans Memorial School,248,248,0
+02810140,Springfield,Mary M Lynch,219,219,0
+02810145,Springfield,Mary O Pottenger,376,376,0
+02810155,Springfield,Mary M Walsh,260,260,0
+02810160,Springfield,Sumner Avenue,445,445,0
+02810165,Springfield,Arthur T Talmadge,231,231,0
+02810175,Springfield,Alice B Beal Elementary,231,231,0
+02810180,Springfield,Warner,219,219,0
+02810185,Springfield,Washington,329,329,0
+02810190,Springfield,White Street,363,363,0
+02810195,Springfield,German Gerena Community School,500,500,0
+02810320,Springfield,John J Duggan Middle,11,0,11
+02810325,Springfield,Forest Park Middle,253,253,0
+02810328,Springfield,John F Kennedy Middle,1,1,0
+02810330,Springfield,M Marcus Kiley Middle,284,284,0
+02810350,Springfield,STEM Middle Academy,1,1,0
+02810355,Springfield,South End Middle School,124,124,0
+02810360,Springfield,Balliet Middle School,2,2,0
+02810365,Springfield,Chestnut Accelerated Middle School (North),111,111,0
+02810366,Springfield,Chestnut Accelerated Middle School (South),1,1,0
+02810367,Springfield,Chestnut Accelerated Middle School (Talented and Gifted),119,119,0
+02810480,Springfield,Van Sickle Academy,2,2,0
+02810500,Springfield,Springfield Central High,355,0,355
+02810510,Springfield,High School Of Commerce,71,0,71
+02810530,Springfield,Springfield High School of Science and Technology,102,61,42
+02810550,Springfield,Springfield Public Day High School,27,0,27
+02810620,Springfield,Roger L. Putnam Vocational Technical Academy,23,0,23
+02840005,Stoneham,Colonial Park,227,227,0
+02840025,Stoneham,Robin Hood,326,326,0
+02840030,Stoneham,South,331,331,0
+02840405,Stoneham,Stoneham Central Middle School,470,470,0
+02840505,Stoneham,Stoneham High,148,0,148
+02850010,Stoughton,Helen Hansen Elementary,238,238,0
+02850014,Stoughton,Joseph R Dawe Jr Elementary,370,370,0
+02850015,Stoughton,South Elementary,256,256,0
+02850020,Stoughton,West Elementary,368,368,0
+02850025,Stoughton,Joseph H Gibbons,368,368,0
+02850405,Stoughton,O'Donnell Middle School,768,768,0
+02850505,Stoughton,Stoughton High,326,0,326
+02880305,Sudbury,Ephraim Curtis Middle,602,602,0
+02890005,Sunderland,Sunderland Elementary,223,223,0
+02900003,Sutton,Sutton Early Learning,203,203,0
+02900005,Sutton,Sutton Elementary,328,328,0
+02900305,Sutton,Sutton Middle School,362,362,0
+02900510,Sutton,Sutton High School,7,0,7
+02910005,Swampscott,Clarke,199,199,0
+02910010,Swampscott,Hadley,292,292,0
+02910020,Swampscott,Stanley,293,293,0
+02910305,Swampscott,Swampscott Middle,711,711,0
+02910505,Swampscott,Swampscott High,182,0,182
+02920305,Swansea,Joseph Case Jr High,1,1,0
+02920505,Swansea,Joseph Case High,189,2,187
+02930042,Taunton,Joseph H Martin,705,705,0
+02930305,Taunton,John F Parker Middle,443,443,0
+02930315,Taunton,Benjamin Friedman Middle,775,775,0
+02930505,Taunton,Taunton High,300,94,206
+02930525,Taunton,Taunton Alternative High School,1,0,1
+02950023,Tewksbury,John F. Ryan,527,527,0
+02950305,Tewksbury,John W. Wynn Middle,301,301,0
+02950505,Tewksbury,Tewksbury Memorial High,252,3,252
+02960005,Tisbury,Tisbury Elementary,318,318,0
+03000005,Truro,Truro Central,96,96,0
+03010305,Tyngsborough,Tyngsborough Middle,126,126,0
+03010505,Tyngsborough,Tyngsborough High School,97,0,97
+03040005,Uxbridge,Taft Early Learning Center,385,385,0
+03040015,Uxbridge,McCloskey Middle School,384,384,0
+03040020,Uxbridge,Whitin Elementary School,408,408,0
+03040515,Uxbridge,Gateway to College,2,0,2
+03050005,Wakefield,Dolbeare,443,443,0
+03050015,Wakefield,Woodville School,441,441,0
+03050020,Wakefield,Greenwood,221,221,0
+03050040,Wakefield,Walton,198,198,0
+03050310,Wakefield,Galvin Middle School,988,988,0
+03050505,Wakefield,Wakefield Memorial High,57,1,56
+03070010,Walpole,Boyden,1,1,0
+03070015,Walpole,Fisher,1,1,0
+03070505,Walpole,Walpole High,43,0,43
+03080404,Waltham,John F Kennedy Middle,160,160,0
+03080415,Waltham,John W. McDevitt Middle School,184,184,0
+03080505,Waltham,Waltham Sr High,32,0,32
+03090505,Ware,Ware Junior/Senior High School,238,185,53
+03100003,Wareham,John William Decas,587,587,0
+03100305,Wareham,Wareham Middle,2,2,0
+03100315,Wareham,Wareham Cooperative Alternative School,3,0,3
+03100505,Wareham,Wareham Senior High,141,0,141
+03140305,Watertown,Watertown Middle,540,540,0
+03140505,Watertown,Watertown High,91,0,91
+03150005,Wayland,Claypit Hill School,430,430,0
+03150015,Wayland,Happy Hollow School,332,332,0
+03150020,Wayland,Loker School,208,208,0
+03150505,Wayland,Wayland High School,130,0,130
+03160015,Webster,Park Avenue Elementary,781,781,0
+03160315,Webster,Webster Middle School,552,550,2
+03160505,Webster,Bartlett High School,117,0,117
+03170048,Wellesley,Sprague Elementary School,1,0,1
+03170505,Wellesley,Wellesley Sr High,160,0,160
+03180005,Wellfleet,Wellfleet Elementary,97,97,0
+03210045,Westborough,Mill Pond School,886,886,0
+03210505,Westborough,Westborough High,181,10,178
+03220005,West Boylston,Major Edwards Elementary,374,374,0
+03220505,West Boylston,West Boylston Junior/Senior High,188,166,22
+03230003,West Bridgewater,Rose L Macdonald,260,260,0
+03230005,West Bridgewater,Spring Street School,79,79,0
+03230305,West Bridgewater,Howard School,273,273,0
+03230505,West Bridgewater,West Bridgewater Junior/Senior,64,0,64
+03250015,Westfield,Franklin Ave,241,241,0
+03250020,Westfield,Abner Gibbs,220,220,0
+03250025,Westfield,Highland,409,409,0
+03250033,Westfield,Munger Hill,404,404,0
+03250036,Westfield,Paper Mill,417,417,0
+03250040,Westfield,Southampton Road,445,445,0
+03250055,Westfield,Russell Elementary School,182,182,0
+03250305,Westfield,North Middle School,154,154,0
+03250505,Westfield,Westfield High,80,0,80
+03250605,Westfield,Westfield Technical Academy,85,0,85
+03260330,Westford,Stony Brook School,1,1,0
+03260505,Westford,Westford Academy,532,0,532
+03300505,Weston,Weston High,229,0,229
+03310030,Westport,Westport Elementary,362,362,0
+03310515,Westport,Westport Junior/Senior High School,162,0,162
+03320007,West Springfield,Philip G Coburn,226,226,0
+03320010,West Springfield,John R Fausey,461,461,0
+03320025,West Springfield,Memorial,229,229,0
+03320030,West Springfield,Mittineague,161,161,0
+03320040,West Springfield,Tatham,225,225,0
+03320305,West Springfield,West Springfield Middle,814,814,0
+03320505,West Springfield,West Springfield High,169,0,169
+03350505,Westwood,Westwood High,98,0,98
+03360310,Weymouth,Abigail Adams Middle School,2,2,0
+03360505,Weymouth,Weymouth High School,258,0,258
+03370005,Whately,Whately Elementary,120,120,0
+03400020,Williamsburg,Anne T. Dunphy School,146,146,0
+03410010,Williamstown,Williamstown Elementary,414,414,0
+03420005,Wilmington,Boutwell,117,117,0
+03420015,Wilmington,Wildwood,134,134,0
+03420020,Wilmington,Woburn Street,407,407,0
+03420025,Wilmington,Shawsheen Elementary,359,359,0
+03420060,Wilmington,North Intermediate,268,268,0
+03420080,Wilmington,West Intermediate,254,254,0
+03420330,Wilmington,Wilmington Middle School,786,786,0
+03420505,Wilmington,Wilmington High,78,0,78
+03430040,Winchendon,Memorial,271,271,0
+03430050,Winchendon,Toy Town Elementary,282,282,0
+03430315,Winchendon,Murdock Middle School,290,290,0
+03430405,Winchendon,Murdock Academy for Success,3,0,3
+03430515,Winchendon,Murdock High School,44,0,44
+03440305,Winchester,McCall Middle,1005,1005,0
+03440505,Winchester,Winchester High School,186,0,186
+03460015,Winthrop,William P. Gorman/Fort Banks Elementary,432,432,0
+03460020,Winthrop,Arthur T. Cummings Elementary School,461,461,0
+03460505,Winthrop,Winthrop High School,49,0,49
+03470065,Woburn,Mary D Altavesta,1,1,0
+03470405,Woburn,John F Kennedy Middle School,497,497,0
+03470410,Woburn,Daniel L Joyce Middle School,494,494,0
+03470505,Woburn,Woburn High,380,0,380
+03480052,Worcester,Chandler Magnet,1,0,1
+03480136,Worcester,Heard Street,1,1,0
+03480215,Worcester,Rice Square,1,0,1
+03480350,Worcester,Claremont Academy,109,0,109
+03480503,Worcester,Burncoat Senior High,15,0,15
+03480512,Worcester,Doherty Memorial High,190,0,190
+03480515,Worcester,North High,177,0,177
+03480520,Worcester,South High Community,11,0,11
+03480605,Worcester,Worcester Technical High,53,0,53
+03500003,Wrentham,Delaney,501,501,0
+03500010,Wrentham,Charles E Roderick,444,444,0
+04100205,Excel Academy Charter (District),Excel Academy Charter School,707,656,51
+04130505,Four Rivers Charter Public (District),Four Rivers Charter Public School,90,50,40
+04140305,Berkshire Arts and Technology Charter Public (District),Berkshire Arts and Technology Charter Public School,89,74,15
+04160305,Boston Preparatory Charter Public (District),Boston Preparatory Charter Public School,2,0,2
+04180305,Christa McAuliffe Charter Public (District),Christa McAuliffe Charter Public School,386,386,0
+04280305,Brooke Charter School (District),Brooke Charter School,467,404,63
+04290010,KIPP Academy Lynn Charter (District),KIPP Academy Lynn Charter School,40,0,40
+04300305,Advanced Math and Science Academy Charter (District),Advanced Math and Science Academy Charter School,611,448,163
+04320530,Cape Cod Lighthouse Charter (District),Cape Cod Lighthouse Charter School,77,77,0
+04350305,Innovation Academy Charter (District),Innovation Academy Charter School,14,0,14
+04360305,Community Charter School of Cambridge (District),Community Charter School of Cambridge,83,0,83
+04370505,City on a Hill Charter Public School Circuit Street (District),City on a Hill Charter Public School Circuit Street,64,0,64
+04410505,Sabis International Charter (District),Sabis International Charter School,1315,1095,220
+04440205,Neighborhood House Charter (District),Neighborhood House Charter School,334,334,0
+04450105,Abby Kelley Foster Charter Public (District),Abby Kelley Foster Charter Public School,759,725,34
+04460550,Foxborough Regional Charter (District),Foxborough Regional Charter School,1073,966,107
+04470205,Benjamin Franklin Classical Charter Public (District),Benjamin Franklin Classical Charter Public School,441,441,0
+04490305,Boston Collegiate Charter (District),Boston Collegiate Charter School,216,179,37
+04500105,Hilltown Cooperative Charter Public (District),Hilltown Cooperative Charter Public School,92,92,0
+04530005,Holyoke Community Charter (District),Holyoke Community Charter School,601,601,0
+04540205,Lawrence Family Development Charter (District),Lawrence Family Development Charter School,105,105,0
+04560050,Lowell Community Charter Public (District),Lowell Community Charter Public School,626,626,0
+04660550,Martha's Vineyard Charter (District),Martha's Vineyard Charter School,29,29,0
+04680505,Ma Academy for Math and Science,Ma Academy for Math and Science School,16,0,16
+04690505,MATCH Charter Public School (District),MATCH Charter Public School,274,274,0
+04740505,Sizer School: A North Central Charter Essential (District),A North Central Charter Essential (District): Sizer School: A North Central Charter Essential School,108,0,108
+04810550,Boston Renaissance Charter Public (District),Boston Renaissance Charter Public School,75,75,0
+04820050,River Valley Charter (District),River Valley Charter School,104,104,0
+04830305,Rising Tide Charter Public (District),Rising Tide Charter Public School,47,2,45
+04840505,Roxbury Preparatory Charter (District),Roxbury Preparatory Charter School,282,0,282
+04850485,Salem Academy Charter (District),Salem Academy Charter School,179,72,107
+04860105,Seven Hills Charter Public (District),Seven Hills Charter School,478,478,0
+04870550,Prospect Hill Academy Charter (District),Prospect Hill Academy Charter School,144,1,143
+04880550,South Shore Charter Public (District),South Shore Charter Public School,30,18,12
+04890505,Sturgis Charter Public (District),Sturgis Charter Public School,24,0,24
+04910550,Atlantis Charter (District),Atlantis Charter School,807,806,1
+04920005,Martin Luther King Jr. Charter School of Excellence (District),Martin Luther King Jr. Charter School of Excellence,351,351,0
+04940205,Pioneer Charter School of Science (District),Pioneer Charter School of Science,222,131,91
+04960305,Global Learning Charter Public (District),Global Learning Charter Public School,346,230,116
+04990305,Hampden Charter School of Science (District),Hampden Charter School of Science,43,0,43
+06000405,Acton-Boxborough,Raymond J Grey Junior High,782,782,0
+06000505,Acton-Boxborough,Acton-Boxborough Regional High,118,0,118
+06030004,Adams-Cheshire,Cheshire Elementary,2,2,0
+06030505,Adams-Cheshire,Hoosac Valley Middle & High School,275,211,64
+06050505,Amherst-Pelham,Amherst Regional High,141,0,141
+06100005,Ashburnham-Westminster,Westminster Elementary,374,374,0
+06100010,Ashburnham-Westminster,Meetinghouse School,160,160,0
+06100025,Ashburnham-Westminster,Briggs Elementary,469,469,0
+06100305,Ashburnham-Westminster,Overlook Middle School,118,118,0
+06100505,Ashburnham-Westminster,Oakmont Regional High School,149,0,149
+06150505,Athol-Royalston,Athol High,44,0,44
+06160001,Ayer Shirley School District,Lura A. White Elementary School,355,355,0
+06160002,Ayer Shirley School District,Page Hilltop Elementary School,481,481,0
+06160305,Ayer Shirley School District,Ayer Shirley Regional Middle School,384,384,0
+06160505,Ayer Shirley School District,Ayer Shirley Regional High School,117,0,117
+06180035,Berkshire Hills,Muddy Brook Regional Elementary School,263,263,0
+06180310,Berkshire Hills,Monument Valley Regional Middle School,281,281,0
+06180505,Berkshire Hills,Monument Mt Regional High,54,0,54
+06200505,Berlin-Boylston,Tahanto Regional High,12,0,12
+06220008,Blackstone-Millville,John F Kennedy Elementary,294,294,0
+06220010,Blackstone-Millville,Millville Elementary,212,212,0
+06220015,Blackstone-Millville,A F Maloney,292,292,0
+06220405,Blackstone-Millville,Frederick W. Hartnett Middle School,2,2,0
+06220505,Blackstone-Millville,Blackstone Millville RHS,53,0,53
+06250300,Bridgewater-Raynham,Williams Intermediate School,72,72,0
+06250315,Bridgewater-Raynham,Raynham Middle School,87,87,0
+06250320,Bridgewater-Raynham,Bridgewater Middle School,124,124,0
+06250505,Bridgewater-Raynham,Bridgewater-Raynham Regional,449,0,449
+06350305,Central Berkshire,Nessacus Regional Middle School,389,389,0
+06350505,Central Berkshire,Wahconah Regional High,41,0,41
+06400505,Concord-Carlisle,Concord Carlisle High,109,0,109
+06450005,Dennis-Yarmouth,Ezra H Baker Innovation School,1,1,0
+06450050,Dennis-Yarmouth,N H Wixon Innovation School,270,270,0
+06450505,Dennis-Yarmouth,Dennis-Yarmouth Regional High,194,0,194
+06500005,Dighton-Rehoboth,Dighton Elementary,451,451,0
+06500010,Dighton-Rehoboth,Palmer River,560,560,0
+06500305,Dighton-Rehoboth,Dighton Middle School,366,366,0
+06500505,Dighton-Rehoboth,Dighton-Rehoboth Regional High School,3,0,3
+06550405,Dover-Sherborn,Dover-Sherborn Regional Middle School,346,346,0
+06550505,Dover-Sherborn,Dover-Sherborn Regional High,48,0,48
+06580005,Dudley-Charlton Reg,Dudley Elementary,366,366,0
+06580010,Dudley-Charlton Reg,Mason Road School,212,212,0
+06580020,Dudley-Charlton Reg,Charlton Elementary,288,288,0
+06580030,Dudley-Charlton Reg,Heritage School,495,495,0
+06580305,Dudley-Charlton Reg,Dudley Middle School,596,596,0
+06580310,Dudley-Charlton Reg,Charlton Middle School,705,705,0
+06580505,Dudley-Charlton Reg,Shepherd Hill Regional High,77,0,77
+06600305,Nauset,Nauset Regional Middle,442,442,0
+06600505,Nauset,Nauset Regional High,43,0,43
+06620020,Farmington River Reg,Farmington River Elementary,92,92,0
+06650505,Freetown-Lakeville,Apponequet Regional High,106,0,106
+06700505,Frontier,Frontier Regional,230,168,62
+06720505,Gateway,Gateway Regional High,12,0,12
+06730505,Groton-Dunstable,Groton Dunstable Regional,225,0,225
+06740005,Gill-Montague,Gill Elementary,120,120,0
+06740015,Gill-Montague,Hillcrest Elementary School,147,147,0
+06740050,Gill-Montague,Sheffield Elementary School,207,207,0
+06740310,Gill-Montague,Great Falls Middle,1,1,0
+06750310,Hamilton-Wenham,Miles River Middle,1,1,0
+06750505,Hamilton-Wenham,Hamilton-Wenham Regional High,21,0,21
+06800305,Hampden-Wilbraham,Thornton Burgess,206,206,0
+06800310,Hampden-Wilbraham,Wilbraham Middle,344,344,0
+06800505,Hampden-Wilbraham,Minnechaug Regional High,102,0,102
+06830505,Hampshire,Hampshire Regional High,19,0,19
+06900505,King Philip,King Philip Regional High,31,0,31
+06950505,Lincoln-Sudbury,Lincoln-Sudbury Regional High,500,0,500
+06980010,Manchester Essex Regional,Manchester Memorial Elementary,357,357,0
+06980020,Manchester Essex Regional,Essex Elementary,226,226,0
+06980510,Manchester Essex Regional,Manchester Essex Regional High School,42,0,42
+07000505,Martha's Vineyard,Martha's Vineyard Regional High,50,0,50
+07050505,Masconomet,Masconomet Regional High School,230,0,230
+07100001,Mendon-Upton,Memorial School,408,408,0
+07100015,Mendon-Upton,Miscoe Hill School,503,503,0
+07100179,Mendon-Upton,Henry P Clough,397,397,0
+07100510,Mendon-Upton,Nipmuc Regional High,58,0,58
+07120001,Monomoy Regional School District,Chatham Elementary School,253,253,0
+07120002,Monomoy Regional School District,Harwich Elementary School,517,517,0
+07120315,Monomoy Regional School District,Monomoy Regional Middle School,1,1,0
+07120515,Monomoy Regional School District,Monomoy Regional High School,62,0,62
+07150505,Mount Greylock,Mt Greylock Regional High,6,0,6
+07170505,Mohawk Trail,Mohawk Trail Regional High,139,120,19
+07200305,Narragansett,Narragansett Middle,268,268,0
+07200505,Narragansett,Narragansett Regional High,85,0,85
+07250010,Nashoba,Mary Rowlandson Elementary,445,445,0
+07250020,Nashoba,Center School,564,564,0
+07250025,Nashoba,Florence Sawyer School,624,624,0
+07250305,Nashoba,Luther Burbank Middle School,144,144,0
+07250310,Nashoba,Hale,37,37,0
+07250505,Nashoba,Nashoba Regional,169,0,169
+07300505,Northboro-Southboro,Algonquin Regional High,426,1,425
+07350005,North Middlesex,Spaulding Memorial,422,422,0
+07350010,North Middlesex,Ashby Elementary,207,207,0
+07350030,North Middlesex,Hawthorne Brook,241,241,0
+07350035,North Middlesex,Varnum Brook,571,571,0
+07350310,North Middlesex,Nissitissit Middle School,253,253,0
+07350505,North Middlesex,North Middlesex Regional,96,0,96
+07400505,Old Rochester,Old Rochester Regional High,66,0,66
+07450405,Pentucket,Pentucket Regional Middle,184,184,0
+07450505,Pentucket,Pentucket Regional Sr High,1,0,1
+07500006,Pioneer Valley,Bernardston Elementary,137,137,0
+07500007,Pioneer Valley,Pearl E Rhodes Elementary,24,24,0
+07500008,Pioneer Valley,Northfield Elementary,172,172,0
+07500009,Pioneer Valley,Warwick Community School,52,52,0
+07500505,Pioneer Valley,Pioneer Valley Regional,92,89,3
+07530005,Quabbin,Hardwick Elementary,192,192,0
+07530010,Quabbin,Hubbardston Center,316,316,0
+07530020,Quabbin,New Braintree Grade,42,42,0
+07530025,Quabbin,Oakham Center,135,135,0
+07530030,Quabbin,Ruggles Lane,382,382,0
+07530505,Quabbin,Quabbin Regional High School,110,0,110
+07550505,Ralph C Mahar,Ralph C Mahar Regional,119,113,6
+07600405,Silver Lake,Silver Lake Regional Middle School,1,1,0
+07600505,Silver Lake,Silver Lake Regional High,199,0,199
+07630505,Somerset Berkley Regional School District,Somerset Berkley Regional High School,71,0,71
+07660505,Southwick-Tolland-Granville Regional School District,Southwick Regional School,42,0,42
+07670040,Spencer-E Brookfield,Wire Village School,1,1,0
+07670505,Spencer-E Brookfield,David Prouty High,103,0,103
+07700405,Tantasqua,Tantasqua Regional Jr High,265,265,0
+07700505,Tantasqua,Tantasqua Regional Sr High,73,0,73
+07700605,Tantasqua,Tantasqua Regional Vocational,27,0,27
+07730015,Triton,Salisbury Elementary,455,455,0
+07730020,Triton,Newbury Elementary,424,424,0
+07730025,Triton,Pine Grove,449,449,0
+07730505,Triton,Triton Regional High School,70,0,70
+07740020,Up-Island Regional,West Tisbury Elementary,329,329,0
+07750505,Wachusett,Wachusett Regional High,171,0,171
+07780005,Quaboag Regional,Warren Elementary,432,432,0
+07780010,Quaboag Regional,West Brookfield Elementary,298,298,0
+07780305,Quaboag Regional,Quaboag Regional Middle Innovation School,3,3,0
+07780505,Quaboag Regional,Quaboag Regional High,89,0,89
+07800310,Whitman-Hanson,Whitman Middle,443,443,0
+07800315,Whitman-Hanson,Hanson Middle School,354,354,0
+07800505,Whitman-Hanson,Whitman Hanson Regional,202,0,202
+08010605,Assabet Valley Regional Vocational Technical,Assabet Valley Vocational High School,25,0,25
+08050605,Blackstone Valley Regional Vocational Technical,Blackstone Valley,58,0,58
+08060605,Blue Hills Regional Vocational Technical,Blue Hills Regional Vocational Technical,36,0,36
+08150605,Cape Cod Regional Vocational Technical,Cape Cod Region Vocational Technical,3,0,3
+08180605,Franklin County Regional Vocational Technical,Franklin County Technical,14,0,14
+08210605,Greater Fall River Regional Vocational Technical,Diman Regional Vocational Technical High,664,0,664
+08290605,South Middlesex Regional Vocational Technical,Joseph P Keefe Technical High School,32,0,32
+08300605,Minuteman Regional Vocational Technical,Minuteman Regional High,99,0,99
+08320605,Montachusett Regional Vocational Technical,Montachusett Regional Vocational Technical,246,0,246
+08510605,Northern Berkshire Regional Vocational Technical,Charles McCann Vocational Technical,151,0,151
+08520605,Nashoba Valley Regional Vocational Technical,Nashoba Valley Technical High School,9,0,9
+08530605,Northeast Metropolitan Regional Vocational Technical,Northeast Metro Regional Vocational,7,0,7
+08550605,Old Colony Regional Vocational Technical,Old Colony Regional Vocational Technical,283,0,283
+08600605,Pathfinder Regional Vocational Technical,Pathfinder Vocational Technical,17,0,17
+08720605,Southeastern Regional Vocational Technical,Southeastern Regional Vocational Technical,330,0,330
+08780605,Tri-County Regional Vocational Technical,Tri-County Regional Vocational Technical,275,0,275
+08850605,Whittier Regional Vocational Technical,Whittier Regional Vocational,59,0,59
+09150705,Norfolk County Agricultural,Norfolk County Agricultural,268,0,268
+35010505,Paulo Freire Social Justice Charter School (District),Paulo Freire Social Justice Charter School,1,0,1
+35030205,Collegiate Charter School of Lowell (District),Collegiate Charter School of Lowell,609,609,0
+35040505,City on a Hill Charter Public School Dudley Square (District),City on a Hill Charter Public School Dudley Square,53,0,53
+35060505,Pioneer Charter School of Science II (PCSS-II) (District),Pioneer Charter School of Science II (PCSS-II),200,140,60
+35070505,City on a Hill Charter Public School New Bedford (District),City on a Hill Charter Public School New Bedford,76,0,76
+39020900,TEC Connections Academy Commonwealth Virtual School District,TEC Connections Academy Commonwealth Virtual School,553,451,102

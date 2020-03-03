@@ -8,7 +8,6 @@ import { ResponsivePie } from "@nivo/pie";
 function GenderChart(props) {
     const yearToSchoolArrayDataMap = props.yearToSchoolArrayDataMap;
     const dataYears = Object.keys(yearToSchoolArrayDataMap);
-
     let allYearPieCharts = [];
 
     dataYears.forEach(year => {

@@ -78,8 +78,6 @@ function getDisabilityData(schoolArrayForYear) {
         chartData.push(thisSchoolData);
     });
 
-    // console.log("disability chart");
-    // console.log(chartData);
     return chartData;
 }
 
