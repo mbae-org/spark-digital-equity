@@ -319,26 +319,20 @@ class App extends React.Component {
                 let thisDistrictEthnicityArray = [];
                 let thisDistrictEthnicityMap = districtObject._ethnicityMap;
                 if (schoolObject._districtName == "Arlington") {
-                    console.log(schoolObject);
-                    console.log(thisDistrictEthnicityMap)
+                    console.log("School Object: ", schoolObject);
+                    console.log("District Eth Map: ", thisDistrictEthnicityMap)
                 }
                 if (!isNaN(schoolObject._ethnicityMap["AA"].value)) {
                     for (let key in schoolObject._ethnicityMap) {
                         const ethnicityObj = schoolObject._ethnicityMap[key];
-                        if (thisDistrictEthnicityMap[key].value.isInteger) {
-                            thisDistrictEthnicityMap[key].value += ethnicityObj.value;
+                        if (thisDistrictEthnicityMap[key].isInteger) {
+                            thisDistrictEthnicityMap[key].value = JSON.parse(JSON.stringify(ethnicityObj.value))
+                                + JSON.parse(JSON.stringify(thisDistrictEthnicityMap[key].value))
                         }
                         else {
-                            thisDistrictEthnicityMap[key].value = ethnicityObj.value;
-                            if (schoolObject._districtName == "Arlington") {
-                                console.log("Ethnicity value: ", ethnicityObj.value)
-                                console.log("New District Value", thisDistrictEthnicityMap[key].value);
-                                console.log("updated district obj", thisDistrictEthnicityMap[key])
-                            }
+                            thisDistrictEthnicityMap[key].value = JSON.parse(JSON.stringify(ethnicityObj.value))
                         }
-                        thisDistrictEthnicityArray.push(
-                            thisDistrictEthnicityMap[key]
-                        );
+                        thisDistrictEthnicityArray.push(JSON.parse(JSON.stringify(thisDistrictEthnicityMap[key])));
                         if (schoolObject._districtName == "Arlington") {
                             console.log("array: ", thisDistrictEthnicityArray);
                         }
@@ -347,6 +341,7 @@ class App extends React.Component {
 
                 districtObject.setEthnicityMap(thisDistrictEthnicityMap);
                 districtObject.setEthnicity(thisDistrictEthnicityArray);
+
                 if (schoolObject._districtName == "Arlington") {
                     console.log("after set", districtObject._ethnicityMap)
                 }
@@ -362,9 +357,9 @@ class App extends React.Component {
                 // districtObject.setSecondaryEnrolled(districtObject._secondaryEnrolled + schoolObject._secondaryEnrolled);
 
                 thisYearSchoolObjectMap[districtName] = districtObject;
+
             }
             yearSchoolObjectMap[year] = thisYearSchoolObjectMap;
-
         }
         return yearSchoolObjectMap;
     }
@@ -398,22 +393,22 @@ class App extends React.Component {
                 districtObject.setEthnicityMap(EthnicityDefaultMap);
                 districtObject.setApMap(APScoreAcronymMap);
             }
-            if (schoolObject._male && schoolObject._female) {
+            if (!isNaN(schoolObject._male) && !isNaN(schoolObject._female)) {
                 districtObject.setMale(districtObject._male + schoolObject._male);
                 districtObject.setFemale(districtObject._female + schoolObject._female);
             }
-            if (schoolObject._economicallyDisadvantaged) {
+            if (!isNaN(schoolObject._economicallyDisadvantaged)) {
                 districtObject.setEconomicallyDisadvantaged(
                     districtObject._economicallyDisadvantaged +
                     schoolObject._economicallyDisadvantaged
                 );
             }
-            if (schoolObject._enrolled) {
+            if (!isNaN(schoolObject._enrolled)) {
                 districtObject.setEnrolled(
                     districtObject._enrolled + schoolObject._enrolled
                 );
             }
-            if (schoolObject._studentsWithDisability) {
+            if (!isNaN(schoolObject._studentsWithDisability)) {
                 districtObject.setStudentsWithDisability(
                     districtObject._studentsWithDisability +
                     schoolObject._studentsWithDisability
@@ -427,8 +422,14 @@ class App extends React.Component {
             if (!isNaN(schoolObject._ethnicityMap["AA"].value)) {
                 for (let key in schoolObject._ethnicityMap) {
                     const ethnicityObj = schoolObject._ethnicityMap[key];
-                    thisDistrictEthnicityMap[key].value += ethnicityObj.value;
-                    thisDistrictEthnicityArray.push(thisDistrictEthnicityMap[key]);
+                    if (thisDistrictEthnicityMap[key].isInteger) {
+                        thisDistrictEthnicityMap[key].value = JSON.parse(JSON.stringify(ethnicityObj.value))
+                            + JSON.parse(JSON.stringify(thisDistrictEthnicityMap[key].value))
+                    }
+                    else {
+                        thisDistrictEthnicityMap[key].value = JSON.parse(JSON.stringify(ethnicityObj.value))
+                    }
+                    thisDistrictEthnicityArray.push(JSON.parse(JSON.stringify(thisDistrictEthnicityMap[key])));
                 }
             }
 
@@ -450,7 +451,7 @@ class App extends React.Component {
             districtObject.setApMap(thisDistrictAPMap);
             districtObject.setApArray(thisDistrictAPArray);
 
-            if (schoolObject._englishLanguageLearner) {
+            if (!isNaN(schoolObject._englishLanguageLearner)) {
                 districtObject.setEnglishLanguageLearner(
                     districtObject._englishLanguageLearner +
                     schoolObject._englishLanguageLearner
@@ -458,6 +459,7 @@ class App extends React.Component {
             }
 
             schoolObjectMap[districtName] = districtObject;
+            debugger
         }
 
         return schoolObjectMap;
