@@ -39,7 +39,7 @@ class App extends React.Component {
             selectedYearsMap[year] = false;
         });
         selectedYearsMap[YearList[YearList.length - 1]] = true;
-        const selectedSchools = ["Arlington"];
+        const selectedSchools = ["Arlington High"];
         const yearSchoolObjectMap = this.transformSchoolData(
             schoolData,
             selectedSchools,
