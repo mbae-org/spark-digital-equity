@@ -39,7 +39,7 @@ class App extends React.Component {
             selectedYearsMap[year] = false;
         });
         selectedYearsMap[YearList[YearList.length - 1]] = true;
-        const selectedSchools = ["Arlington High"];
+        const selectedSchools = ["Arlington High", "Boston Latin"];
 
         const yearSchoolObjectMap = this.transformSchoolData(
             schoolData,
@@ -282,7 +282,7 @@ class App extends React.Component {
 
             for (let schoolName of allSchoolNames) {
                 const schoolObject = thisYearSchoolObjectMap[schoolName];
-                const districtName = schoolObject._districtName;
+                const districtName = schoolObject._districtName + " District";
                 const schoolYear = schoolObject._schoolYear;
 
                 let districtObject = thisYearSchoolObjectMap[districtName];
@@ -318,10 +318,6 @@ class App extends React.Component {
 
                 let thisDistrictEthnicityArray = [];
                 let thisDistrictEthnicityMap = districtObject._ethnicityMap;
-                if (schoolObject._districtName == "Arlington") {
-                    console.log("School Object: ", schoolObject);
-                    console.log("District Eth Map: ", thisDistrictEthnicityMap)
-                }
                 if (!isNaN(schoolObject._ethnicityMap["AA"].value)) {
                     for (let key in schoolObject._ethnicityMap) {
                         const ethnicityObj = schoolObject._ethnicityMap[key];
@@ -333,18 +329,13 @@ class App extends React.Component {
                             thisDistrictEthnicityMap[key].value = JSON.parse(JSON.stringify(ethnicityObj.value))
                         }
                         thisDistrictEthnicityArray.push(JSON.parse(JSON.stringify(thisDistrictEthnicityMap[key])));
-                        if (schoolObject._districtName == "Arlington") {
-                            console.log("array: ", thisDistrictEthnicityArray);
-                        }
+
                     }
                 }
 
                 districtObject.setEthnicityMap(thisDistrictEthnicityMap);
                 districtObject.setEthnicity(thisDistrictEthnicityArray);
 
-                if (schoolObject._districtName == "Arlington") {
-                    console.log("after set", districtObject._ethnicityMap)
-                }
                 if (schoolObject._englishLanguageLearner) {
 
                     districtObject.setEnglishLanguageLearner(
@@ -383,7 +374,7 @@ class App extends React.Component {
         const allSchoolNames = Object.keys(schoolObjectMap);
         for (let schoolName of allSchoolNames) {
             const schoolObject = schoolObjectMap[schoolName];
-            const districtName = schoolObject._districtName;
+            const districtName = schoolObject._districtName + " District";
 
             let districtObject = schoolObjectMap[districtName];
             if (!districtObject) {
@@ -459,7 +450,6 @@ class App extends React.Component {
             }
 
             schoolObjectMap[districtName] = districtObject;
-            debugger
         }
 
         return schoolObjectMap;

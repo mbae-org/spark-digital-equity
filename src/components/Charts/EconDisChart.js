@@ -133,41 +133,53 @@ function getPieCharts(schoolDataArray) {
     schoolDataArray.forEach((row, index) => {
         const schoolName = row.schoolName;
         const schoolData = row.dataArray;
-        pieCharts.push(
-            <div key={schoolName} style={styles.root}>
-                <div style={{ height: "90%", flexGrow: "1" }}>
-                    <ResponsivePie
-                        key={schoolName}
-                        colors={d => d.color}
-                        isInteractive={true}
-                        data={schoolData}
-                        sortByValue={true}
-                        enableSlicesLabels={false}
-                        enableRadialLabels={false}
-                        margin={{ top: 40, right: 40, bottom: 60, left: 40 }}
-                        innerRadius={0.5}
-                        tooltip={data => {
-                            return getTooltipHTML(data);
-                        }}
-                        legends={
-                            index + 1 === dataLength
-                                ? [
-                                    {
-                                        anchor: "bottom",
-                                        direction: "row",
-                                        itemWidth: 120,
-                                        itemHeight: 20,
-                                        translateY: 30,
-                                        translateX: 10
-                                    }
-                                ]
-                                : undefined
-                        }
-                    />
+        if (isNaN(schoolData[0].value)) {
+            pieCharts.push(
+                <div className="NoDataWrapper">
+                    <div className="NoDataMessage">
+                        <p>No Data Available</p>
+                    </div>
+                    <div style={{ flexGrow: "1" }}>{schoolName}</div>
                 </div>
-                <div style={{ flexGrow: "1" }}>{schoolName}</div>
-            </div>
-        );
+            )
+        }
+        else {
+            pieCharts.push(
+                <div key={schoolName} style={styles.root}>
+                    <div style={{ height: "90%", flexGrow: "1" }}>
+                        <ResponsivePie
+                            key={schoolName}
+                            colors={d => d.color}
+                            isInteractive={true}
+                            data={schoolData}
+                            sortByValue={true}
+                            enableSlicesLabels={false}
+                            enableRadialLabels={false}
+                            margin={{ top: 40, right: 40, bottom: 60, left: 40 }}
+                            innerRadius={0.5}
+                            tooltip={data => {
+                                return getTooltipHTML(data);
+                            }}
+                            legends={
+                                index + 1 === dataLength
+                                    ? [
+                                        {
+                                            anchor: "bottom",
+                                            direction: "row",
+                                            itemWidth: 120,
+                                            itemHeight: 20,
+                                            translateY: 30,
+                                            translateX: 10
+                                        }
+                                    ]
+                                    : undefined
+                            }
+                        />
+                    </div>
+                    <div style={{ flexGrow: "1" }}>{schoolName}</div>
+                </div>
+            );
+        }
     });
 
     // if (pieCharts && pieCharts.length > 0) {
