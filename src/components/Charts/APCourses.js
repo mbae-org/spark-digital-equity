@@ -1,5 +1,4 @@
 import React from "react";
-import { ResponsiveBar } from "@nivo/bar";
 import { ResponsivePie } from "@nivo/pie";
 
 /**
@@ -9,13 +8,15 @@ import { ResponsivePie } from "@nivo/pie";
 function APCoursesChart(props) {
 
     const yearToSchoolArrayDataMap = props.yearToSchoolArrayDataMap;
+
+    console.log("in AP", yearToSchoolArrayDataMap)
     const dataYears = Object.keys(yearToSchoolArrayDataMap);
     let allYearPieCharts = [];
 
     dataYears.forEach(year => {
         const thisYearSchoolDataArrayScore = getGroupedAPData(yearToSchoolArrayDataMap[year]);
         const thisYearSchoolDataArrayEnrollement = getEnrollementForSchool(yearToSchoolArrayDataMap[year]);
-        let thisYearPieCharts = getBarCharts(thisYearSchoolDataArrayScore, thisYearSchoolDataArrayEnrollement, props.options);
+        let thisYearPieCharts = getPieCharts(thisYearSchoolDataArrayScore, thisYearSchoolDataArrayEnrollement, props.options);
 
         allYearPieCharts.push(
             <div key={year} style={styles.yearChartsParent}>
@@ -45,6 +46,7 @@ function APCoursesChart(props) {
  */
 function getGroupedAPData(schoolArrayForYear) {
     let chartData = [];
+
     schoolArrayForYear.forEach(schoolObj => {
         const schoolName = schoolObj._name;
         let thisSchoolData = {};
@@ -59,113 +61,57 @@ function getGroupedAPData(schoolArrayForYear) {
         schoolDataArray.forEach(apObject => {
             thisSchoolData[apObject.id] = ((apObject.value / totalCount) * 100).toFixed(2);
         });
-        thisSchoolData["Enrollment"] = schoolObj._enrolled;
-        thisSchoolData["year"] = schoolObj._schoolYear;
 
+        schoolDataArray = [
+            {
+                id: "Score=1",
+                desc: "Score=1",
+                value: schoolDataArray[0].value,
+                percentage: thisSchoolData["Score=1"],
+                color: "#545454",
+                label: "Score=1"
+            },
+            {
+                id: "Score=2",
+                desc: "Score=2",
+                value: schoolDataArray[1].value,
+                percentage: thisSchoolData["Score=2"],
+                color: "#0B89D3",
+                label: "Score=2"
+            },
+            {
+                id: "Score=3",
+                desc: "Score=3",
+                value: schoolDataArray[2].value,
+                percentage: thisSchoolData["Score=3"],
+                color: "#FBC184",
+                label: "Score=3"
+            },
+            {
+                id: "Score=4",
+                desc: "Score=4",
+                value: schoolDataArray[3].value,
+                percentage: thisSchoolData["Score=4"],
+                color: "#FE8126",
+                label: "Score=4"
+            },
+            {
+                id: "Score=5",
+                desc: "Score=5",
+                value: schoolDataArray[4].value,
+                percentage: thisSchoolData["Score=5"],
+                color: "#222C49",
+                label: "Score=5"
+            }
+        ];
+        thisSchoolData.schoolName = schoolName;
+        thisSchoolData.dataArray = schoolDataArray;
         chartData.push(thisSchoolData);
-
     });
 
     return chartData;
 }
-function getBarCharts(thisYearSchoolDataArrayScore, thisYearSchoolDataArrayEnrollement, options) {
-    let Charts = [];
-    if (options.enrollment === true) {
-        const schoolData = thisYearSchoolDataArrayEnrollement;
-        let keys = [];
-        keys.push('Enrollment');
-        Charts.push(getPieCharts(schoolData));
 
-    }
-    if (options.score === true) {
-        const schoolData = thisYearSchoolDataArrayScore;
-        let keys = [];
-        keys = keys.concat(['AP1', 'AP2', 'AP3', 'AP4', 'AP5']);
-        Charts.push(
-            <div
-                key={"ap-course-bar-chart"}
-                style={styles.root}>
-                <div style={{
-                    height: "90%", flexGrow: "1",
-                    width: "100%"
-                }}>
-                    <ResponsiveBar
-                        data={schoolData}
-                        keys={keys}
-                        margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
-                        padding={0.2}
-                        // groupMode="stacked"
-                        groupMode="grouped"
-                        colors={{ "scheme": "red_yellow_blue" }}
-                        minValue={0}
-                        // maxValue={maxEnrolledCount}
-                        tooltip={data => {
-                            return getTooltipHTML(data);
-                        }}
-                        axisBottom={{
-                            tickSize: 5,
-                            tickPadding: 5,
-                            tickRotation: 0,
-                            legend: 'Score',
-                            legendPosition: 'middle',
-                            legendOffset: 32,
-                        }}
-                        axisLeft={{
-                            tickSize: 5,
-                            tickPadding: 5,
-                            tickRotation: 0,
-                            legend: 'Percentage of Students',
-                            legendPosition: 'middle',
-                            legendOffset: -50
-                        }}
-                        isInteractive={false}
-                        defs={[
-                            {
-                                id: 'dots',
-                                type: 'patternDots',
-                                background: 'inherit',
-                                color: '#38bcb2',
-                                size: 4,
-                                padding: 1,
-                                stagger: true
-                            },
-                            {
-                                id: 'lines',
-                                type: 'patternLines',
-                                background: 'inherit',
-                                color: '#eed312',
-                                rotation: -45,
-                                lineWidth: 6,
-                                spacing: 10
-                            }
-                        ]}
-                        borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
-                        enableLabel={true}
-                        legends={[
-                            {
-                                dataFrom: 'keys',
-                                anchor: 'bottom-right',
-                                direction: 'column',
-                                justify: false,
-                                translateX: 120,
-                                translateY: 0,
-                                itemsSpacing: 2,
-                                itemWidth: 100,
-                                itemHeight: 20,
-                                itemDirection: 'left-to-right',
-                                itemOpacity: 1,
-                                symbolSize: 20,
-                            }
-                        ]}
-                        labelTextColor="white"
-                    />
-                </div>
-            </div>
-        );
-    }
-
-    return Charts;
-}
 
 function getEnrollementForSchool(schoolArrayForYear) {
     let chartData = [];
@@ -240,27 +186,15 @@ function getPieCharts(schoolDataArray) {
                             isInteractive={true}
                             data={schoolData}
                             sortByValue={true}
-                            enableSlicesLabels={false}
+                            enableSlicesLabels={true}
                             enableRadialLabels={false}
-                            margin={{ top: 40, right: 40, bottom: 60, left: 40 }}
+                            slicesLabelsTextColor="white"
+                            margin={{ top: 40, right: 60, bottom: 40, left: 40 }}
                             innerRadius={0.5}
                             tooltip={data => {
                                 return getTooltipHTML(data);
                             }}
-                            legends={
-                                index + 1 === dataLength
-                                    ? [
-                                        {
-                                            anchor: "bottom",
-                                            direction: "row",
-                                            itemWidth: 120,
-                                            itemHeight: 20,
-                                            translateY: 30,
-                                            translateX: 10
-                                        }
-                                    ]
-                                    : undefined
-                            }
+
                         />
                     </div>
                     <div style={{ flexGrow: "1" }}>{schoolName}</div>
@@ -278,7 +212,7 @@ const styles = {
         fontFamily: "consolas, sans-serif",
         textAlign: "center",
         position: "relative",
-        width: "100%",
+        width: 250,
         height: 300
     },
 

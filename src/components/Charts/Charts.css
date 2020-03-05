@@ -1,9 +1,13 @@
 .NoDataWrapper{
-    height: 300px
+    height: 300px;
+    width: 250;
+    max-width: 250;
+    
 }
 .NoDataMessage{
     width: 250px;
     height: 270px;
+    max-height: 270px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -12,11 +16,12 @@
 }
 .NoDataMessage p{
     color: #707070;
-    font-size: 36px;
+    font-size: 30px;
     margin: 0px;
-    height: 150px;
+    height: 250px;
     width: 150px;
-    flex-direction: row;
+    position: relative;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

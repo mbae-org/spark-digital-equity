@@ -163,24 +163,8 @@ function getPieCharts(schoolDataArray) {
                             tooltip={data => {
                                 return getTooltipHTML(data);
                             }}
-                            legends={
-                                index + 1 === dataLength
-                                    ? [
-                                        {
-                                            anchor: "top-right",
-                                            direction: "column",
-                                            itemWidth: 20,
-                                            itemHeight: 20,
-                                            translateY: 20,
-                                            translateX: 20
-                                        }
-                                    ]
-                                    : undefined
-                            }
+
                         />
-                        {/* <div style={styles.overlay}>
-                        <span>{schoolYear}</span>
-                    </div> */}
                     </div>
                     <div style={{ flexGrow: "1" }}>{schoolName}</div>
                 </div>
