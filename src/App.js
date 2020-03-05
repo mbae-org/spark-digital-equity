@@ -13,16 +13,17 @@ import ELLChart from "./components/Charts/ELLChart";
 import APCoursesChart from "./components/Charts/APCourses"
 import NextStepsPanel from "./components/NextSteps/NextStepsPanel"
 import schoolData from "./data/TotalData"
+import { YearList } from "./data/TotalData"
+import School from "./School";
 
 import {
     EntityType,
     EthnicityAcronymList,
     EthnicityDefaultMap,
-    YearList,
     APAcronymList,
     APScoreAcronymMap
 } from "./Constants";
-import School from "./School";
+
 
 class App extends React.Component {
     constructor(props) {

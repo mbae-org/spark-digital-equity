@@ -1,4 +1,4 @@
-export const YearList = [2017, 2018];
+
 
 export const EntityType = {
     SCHOOL: 0,

@@ -1,0 +1,77 @@
+﻿SY,ORG_CODE,SCHOOL,DIST_NAME,SCH_NAME,STUDENTS_ENROLLED,# OF TEST_TAKERS,PCT,AA,AS,HI,MR,NA,NH_PI,WH,ECODIS,SWD,ELL,FEMALE,MALE
+2016,9,90505,Andover,Andover High,39,38,97,1,11,1,2,0,0,24,0,0,0,9,30
+2016,10,100505,Arlington,Arlington High,14,13,93,0,2,1,0,0,0,11,1,0,0,1,13
+2016,16,160505,Attleboro,Attleboro High,13,13,100,1,1,1,0,0,0,10,2,1,0,0,13
+2016,17,170505,Auburn,Auburn Senior High,17,16,94,0,1,2,0,0,0,14,2,0,0,1,16
+2016,20,200505,Barnstable,Barnstable High,23,23,100,0,7,0,0,0,0,16,2,0,0,2,21
+2016,23,230505,Bedford,Bedford High,5,4,,,,,,,,,,,,,
+2016,31,310505,Billerica,Billerica Memorial High School,12,12,100,0,3,0,0,0,0,9,1,0,0,0,12
+2016,40,400505,Braintree,Braintree High,11,9,82,0,8,0,0,0,0,3,3,0,1,5,6
+2016,48,480505,Burlington,Burlington High,11,10,91,0,3,3,0,0,0,5,2,0,1,0,11
+2016,49,490506,Cambridge,Cambridge Rindge and Latin,103,37,36,15,19,6,4,0,0,59,15,1,1,37,66
+2016,56,560505,Chelmsford,Chelmsford High,43,12,28,0,9,1,1,0,0,32,0,1,0,10,33
+2016,61,610510,Chicopee,Chicopee Comprehensive High School,5,5,,,,,,,,,,,,,
+2016,72,720505,Dartmouth,Dartmouth High,12,12,100,0,0,0,2,0,0,10,1,0,0,1,11
+2016,73,730505,Dedham,Dedham High,10,9,90,1,1,0,0,0,0,8,0,0,0,1,9
+2016,82,820505,Duxbury,Duxbury High,13,12,92,0,0,0,1,0,0,12,0,0,0,0,13
+2016,87,870505,East Longmeadow,East Longmeadow High,21,12,57,0,2,1,0,0,0,18,2,0,0,2,19
+2016,95,950505,Fall River,B M C Durfee High,24,14,58,3,2,1,1,0,0,17,10,0,2,8,16
+2016,100,1000515,Framingham,Framingham High School,19,13,68,0,4,0,0,0,0,15,0,0,0,1,18
+2016,101,1010505,Franklin,Franklin High,24,22,92,0,8,1,1,0,0,14,0,0,0,10,14
+2016,107,1070505,Gloucester,Gloucester High,24,16,67,1,1,1,0,0,0,21,4,0,0,2,22
+2016,110,1100505,Grafton,Grafton High School,21,17,81,0,2,1,1,0,0,17,0,0,0,2,19
+2016,128,1280505,Haverhill,Haverhill High,16,11,69,0,0,1,0,0,0,15,3,1,0,2,14
+2016,139,1390505,Hopkinton,Hopkinton High,17,11,65,0,7,0,0,0,0,10,0,0,0,4,13
+2016,144,1440505,Ipswich,Ipswich High,5,5,,,,,,,,,,,,,
+2016,150,1500505,Lee,Lee Middle/High School,4,4,,,,,,,,,,,,,
+2016,155,1550505,Lexington,Lexington High,71,59,83,0,37,2,2,0,0,30,2,1,1,10,61
+2016,159,1590505,Longmeadow,Longmeadow High,23,15,65,0,4,1,1,0,0,17,2,2,0,5,18
+2016,171,1710505,Marshfield,Marshfield High,17,16,94,0,0,0,1,0,0,16,0,1,0,1,16
+2016,189,1890505,Milton,Milton High,31,14,45,9,3,1,0,0,1,17,0,0,0,6,25
+2016,198,1980505,Natick,Natick High,26,25,96,1,9,1,0,0,0,15,1,0,0,9,17
+2016,199,1990505,Needham,Needham High,47,33,70,0,4,2,1,0,0,40,1,0,0,10,37
+2016,201,2010505,New Bedford,New Bedford High,14,13,93,1,2,2,0,0,0,9,5,0,0,7,7
+2016,214,2140505,Northbridge,Northbridge High,4,4,,,,,,,,,,,,,
+2016,217,2170505,North Reading,North Reading High,6,6,100,0,1,0,0,0,0,5,0,0,0,0,6
+2016,229,2290510,Peabody,Peabody Veterans Memorial High,9,9,100,0,0,0,0,0,0,9,0,1,0,0,9
+2016,236,2360505,Pittsfield,Pittsfield High,10,4,40,1,0,0,1,0,0,8,4,1,0,2,8
+2016,236,2360510,Pittsfield,Taconic High,10,10,100,0,0,0,1,0,0,9,0,0,0,2,8
+2016,243,2430505,Quincy,Quincy High,21,21,100,0,12,0,0,0,0,9,3,0,0,11,10
+2016,243,2430510,Quincy,North Quincy High,18,16,89,0,16,0,0,0,0,2,5,0,0,5,13
+2016,246,2460505,Reading,Reading Memorial High,25,22,88,0,2,0,0,0,0,23,1,0,0,5,20
+2016,248,2480505,Revere,Revere High,15,15,100,0,1,8,1,0,0,5,0,0,0,3,12
+2016,262,2620505,Saugus,Saugus High,19,18,95,0,1,3,0,0,0,15,3,0,0,7,12
+2016,264,2640505,Scituate,Scituate High School,27,0,0,0,0,0,0,0,0,27,0,1,0,6,21
+2016,266,2660505,Sharon,Sharon High,24,15,63,0,12,0,0,0,0,12,1,0,0,3,21
+2016,274,2740505,Somerville,Somerville High,38,35,92,1,13,5,1,0,0,18,10,0,0,8,30
+2016,278,2780505,South Hadley,South Hadley High,7,5,71,0,0,0,1,0,0,6,0,0,0,2,5
+2016,281,2810500,Springfield,Springfield Central High,30,28,93,7,7,8,0,0,0,8,11,0,1,11,19
+2016,281,2810620,Springfield,Roger L. Putnam Vocational Technical Academy,7,5,71,1,0,3,0,0,0,3,3,0,0,1,6
+2016,285,2850505,Stoughton,Stoughton High,17,15,88,3,4,1,0,0,1,8,3,0,0,2,15
+2016,292,2920505,Swansea,Joseph Case High,9,9,100,0,0,0,0,0,0,9,1,0,0,1,8
+2016,305,3050505,Wakefield,Wakefield Memorial High,16,4,25,0,1,0,0,0,0,15,1,0,0,7,9
+2016,314,3140505,Watertown,Watertown High,10,7,70,0,0,0,1,0,0,9,2,1,0,0,10
+2016,317,3170505,Wellesley,Wellesley Sr High,50,41,82,0,10,5,4,0,0,31,1,1,0,12,38
+2016,325,3250505,Westfield,Westfield High,6,3,50,0,0,0,0,0,0,6,1,0,0,0,6
+2016,326,3260505,Westford,Westford Academy,15,15,100,0,7,0,0,0,0,8,1,0,0,2,13
+2016,330,3300505,Weston,Weston High,25,23,92,1,7,0,1,0,0,16,2,0,1,10,15
+2016,335,3350505,Westwood,Westwood High,24,20,83,0,1,1,0,0,0,22,2,1,0,4,20
+2016,336,3360505,Weymouth,Weymouth High School,19,13,68,1,3,1,1,0,0,13,3,0,0,2,17
+2016,344,3440505,Winchester,Winchester High School,52,27,52,2,21,1,1,0,0,27,1,1,0,15,37
+2016,430,4300305,Advanced Math and Science Academy Charter (District),Advanced Math and Science Academy Charter School,55,54,98,0,24,2,2,0,0,27,2,1,0,27,28
+2016,487,4870550,Prospect Hill Academy Charter (District),Prospect Hill Academy Charter School,24,18,75,8,5,6,1,0,0,4,7,2,0,6,18
+2016,494,4940205,Pioneer Charter School of Science (District),Pioneer Charter School of Science,12,12,100,5,0,2,0,0,0,5,5,0,0,5,7
+2016,625,6250505,Bridgewater-Raynham,Bridgewater-Raynham Regional,12,12,100,1,0,1,0,0,0,10,1,0,0,0,12
+2016,645,6450505,Dennis-Yarmouth,Dennis-Yarmouth Regional High,20,13,65,0,2,1,0,0,0,17,5,0,0,1,19
+2016,658,6580505,Dudley-Charlton Reg,Shepherd Hill Regional High,13,12,92,0,0,0,0,0,0,13,3,0,0,2,11
+2016,675,6750505,Hamilton-Wenham,Hamilton-Wenham Regional High,16,11,69,1,2,0,0,0,0,13,0,1,0,4,12
+2016,680,6800505,Hampden-Wilbraham,Minnechaug Regional High,9,4,44,0,1,0,0,0,0,8,1,0,0,1,8
+2016,705,7050505,Masconomet,Masconomet Regional High School,33,25,76,0,1,2,0,0,0,30,0,0,0,1,32
+2016,710,7100510,Mendon-Upton,Nipmuc Regional High,16,16,100,0,0,0,0,0,0,16,1,0,0,2,14
+2016,730,7300505,Northboro-Southboro,Algonquin Regional High,15,14,93,0,5,0,0,0,0,10,1,0,0,2,13
+2016,760,7600505,Silver Lake,Silver Lake Regional High,15,11,73,0,0,0,0,0,0,15,1,0,0,1,14
+2016,773,7730505,Triton,Triton Regional High School,13,11,85,0,0,0,0,0,0,13,1,0,0,0,13
+2016,805,8050605,Blackstone Valley Regional Vocational Technical,Blackstone Valley,6,5,83,0,0,0,0,0,0,6,1,0,0,1,5
+2016,818,8180605,Franklin County Regional Vocational Technical,Franklin County Technical,11,11,100,0,0,0,0,0,0,11,0,0,0,1,10
+2016,852,8520605,Nashoba Valley Regional Vocational Technical,Nashoba Valley Technical High School,9,7,78,0,0,0,0,0,0,9,3,0,0,0,9
+2016,0,0,Massachusetts,Massachusetts,1527,1151,5552,65,309,80,34,0,2,1014,150,19,8,321,1183
