@@ -26,8 +26,10 @@ There is examples of what the final CSV file should look like in the repository.
 1. Go back to where the project is saved on the computer
 2. In the folder spark-digital-equity/src/data/new data, add the <Year>.json file
 3. In the folder spark-digital-equity/src, open the Constants.js file
-4. The first line should look like: export const YearList = [2017];
-5. Change the line by adding the new year: export const YearList = [2017, 2019];
+4. The first line should look like: 
+    ```export const YearList = [2017];```
+5. Change the line by adding the new year: 
+    ```export const YearList = [2017, 2019];```
 6. Save file
     
 ### 4. Pushing changes to the live site
