@@ -134,7 +134,6 @@ function getPieCharts(schoolDataArray) {
     schoolDataArray.forEach((row, index) => {
         const schoolName = row.schoolName;
         const schoolData = row.dataArray;
-        console.log("school Data: ", schoolData[0].value)
         if (isNaN(schoolData[0].value)) {
             pieCharts.push(
                 <div className="NoDataWrapper">

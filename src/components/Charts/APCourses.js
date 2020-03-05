@@ -8,16 +8,19 @@ import { ResponsivePie } from "@nivo/pie";
 function APCoursesChart(props) {
 
     const yearToSchoolArrayDataMap = props.yearToSchoolArrayDataMap;
-
-    console.log("in AP", yearToSchoolArrayDataMap)
     const dataYears = Object.keys(yearToSchoolArrayDataMap);
     let allYearPieCharts = [];
 
     dataYears.forEach(year => {
         const thisYearSchoolDataArrayScore = getGroupedAPData(yearToSchoolArrayDataMap[year]);
         const thisYearSchoolDataArrayEnrollement = getEnrollementForSchool(yearToSchoolArrayDataMap[year]);
-        let thisYearPieCharts = getPieCharts(thisYearSchoolDataArrayScore, thisYearSchoolDataArrayEnrollement, props.options);
-
+        let thisYearPieCharts;
+        if (props.options.score == true) {
+            thisYearPieCharts = getPieChartsScores(thisYearSchoolDataArrayScore);
+        }
+        else {
+            thisYearPieCharts = getPieChartsEnrollment(thisYearSchoolDataArrayEnrollement);
+        }
         allYearPieCharts.push(
             <div key={year} style={styles.yearChartsParent}>
                 <span>{year}</span>
@@ -129,7 +132,7 @@ function getEnrollementForSchool(schoolArrayForYear) {
             100
         ).toFixed(2);
         const TestedPercentage = (
-            (totalCountTested / (totalCountEnrolled + totalCountTested)) *
+            (totalCountTested / (totalCountEnrolled)) *
             100
         ).toFixed(2);
 
@@ -137,17 +140,19 @@ function getEnrollementForSchool(schoolArrayForYear) {
         let schoolDataArray = [
             {
                 id: "Only Enrolled",
-                value: EnrolledPercentage,
-                percentage: EnrolledPercentage,
+                value: totalCountEnrolled - totalCountTested,
+                percentage: 100 - TestedPercentage,
                 color: "#222C49",
-                label: "Enrolled but did not take AP test"
+                label: "Enrolled but did not take AP test",
+                desc: "Enrolled but did not take AP test"
             },
             {
                 id: "Tested",
-                value: TestedPercentage,
+                value: totalCountTested,
                 percentage: TestedPercentage,
                 color: "#FE8126",
-                label: "Took AP test"
+                label: "Took AP test",
+                desc: "Took AP test"
             }
         ];
         thisSchoolData.schoolName = schoolName;
@@ -159,7 +164,7 @@ function getEnrollementForSchool(schoolArrayForYear) {
 }
 
 
-function getPieCharts(schoolDataArray) {
+function getPieChartsScores(schoolDataArray) {
     const dataLength = schoolDataArray.length;
     let pieCharts = [];
 
@@ -206,6 +211,51 @@ function getPieCharts(schoolDataArray) {
 }
 
 
+function getPieChartsEnrollment(schoolDataArray) {
+    const dataLength = schoolDataArray.length;
+    let pieCharts = [];
+
+    schoolDataArray.forEach((row, index) => {
+        const schoolName = row.schoolName;
+        const schoolData = row.dataArray;
+        if (isNaN(schoolData[0].value)) {
+            pieCharts.push(
+                <div className="NoDataWrapper">
+                    <div className="NoDataMessage">
+                        <p>No Data Available</p>
+                    </div>
+                    <div style={{ flexGrow: "1" }}>{schoolName}</div>
+                </div>
+            )
+        }
+        else {
+            pieCharts.push(
+                <div key={schoolName} style={styles.root}>
+                    <div style={{ height: "90%", flexGrow: "1" }}>
+                        <ResponsivePie
+                            key={schoolName}
+                            colors={d => d.color}
+                            isInteractive={true}
+                            data={schoolData}
+                            sortByValue={true}
+                            enableSlicesLabels={true}
+                            enableRadialLabels={false}
+                            slicesLabelsTextColor="white"
+                            margin={{ top: 40, right: 60, bottom: 40, left: 40 }}
+                            innerRadius={0.5}
+                            tooltip={data => {
+                                return getTooltipHTML(data);
+                            }}
+
+                        />
+                    </div>
+                    <div style={{ flexGrow: "1" }}>{schoolName}</div>
+                </div>
+            );
+        }
+    });
+    return pieCharts;
+}
 
 const styles = {
     root: {
