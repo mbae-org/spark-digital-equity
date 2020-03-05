@@ -3,7 +3,7 @@ ORG_CODE,School Code,DIST_NAME,SCH_NAME,STUDENTS_ENROLLED,AA,AS,HI,MR,NA,NH_PI,W
 10,100505,Arlington,Arlington High,17,0,1,1,1,0,1,13,1,1,0,2,15,0
 14,140505,Ashland,Ashland High,23,0,1,1,0,0,0,21,0,1,0,4,19,0
 20,200505,Barnstable,Barnstable High,20,0,4,3,0,0,0,13,4,0,0,3,17,0
-23,230505,Bedford,Bedford High,4, , , , , , , , , , , , , 
+23,230505,Bedford,Bedford High,4,, , , , , , , , , , , , 
 24,240505,Belchertown,Belchertown High,15,0,2,0,0,0,0,13,0,0,0,1,14,0
 30,300505,Beverly,Beverly High,5, , , , , , , , , , , , , 
 31,310505,Billerica,Billerica Memorial High School,9,1,2,0,0,0,0,6,0,0,0,2,7,0
@@ -118,3 +118,4 @@ ORG_CODE,School Code,DIST_NAME,SCH_NAME,STUDENTS_ENROLLED,AA,AS,HI,MR,NA,NH_PI,W
 852,8520605,Nashoba Valley Regional Vocational Technical,Nashoba Valley Technical High School,9,0,0,0,1,0,0,8,0,1,0,1,8,0
 860,8600605,Pathfinder Regional Vocational Technical,Pathfinder Vocational Technical,17,0,0,2,1,1,0,13,5,0,0,5,12,0
 3902,39020900,TEC Connections Academy Commonwealth Virtual School District,TEC Connections Academy Commonwealth Virtual School,1, , , , , , , , , , , , , 
+0,0,Massachusetts,Massachusetts,1976,93,334,113,55,2,3,1317,186,52,10,417,1499,1

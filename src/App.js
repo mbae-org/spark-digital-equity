@@ -39,7 +39,7 @@ class App extends React.Component {
             selectedYearsMap[year] = false;
         });
         selectedYearsMap[YearList[YearList.length - 1]] = true;
-        const selectedSchools = ["Arlington High", "Boston Latin"];
+        const selectedSchools = ["Massachusetts"];
 
         const yearSchoolObjectMap = this.transformSchoolData(
             schoolData,
@@ -370,7 +370,9 @@ class App extends React.Component {
                 // districtObject.setPrimaryEnrolled(districtObject._primaryEnrolled + schoolObject._primaryEnrolled);
                 // districtObject.setSecondaryEnrolled(districtObject._secondaryEnrolled + schoolObject._secondaryEnrolled);
 
-                thisYearSchoolObjectMap[districtName] = districtObject;
+                if (!schoolName == "Massachusetts") {
+                    thisYearSchoolObjectMap[districtName] = districtObject;
+                }
 
             }
             yearSchoolObjectMap[year] = thisYearSchoolObjectMap;
@@ -480,7 +482,10 @@ class App extends React.Component {
                 );
             }
 
-            schoolObjectMap[districtName] = districtObject;
+            if (!schoolName == "Massachusetts") {
+                schoolObjectMap[districtName] = districtObject;
+            }
+
         }
 
         return schoolObjectMap;
