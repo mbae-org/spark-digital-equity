@@ -1,16 +1,12 @@
 ## spark-digital-equity
 
-## Before installations
+## Adding new year of data
 
-1. Ensure you have node and npm installed
-npm.version >= 6.13.4
-node.version >= v10.18.1
+### Push your code to live website
 
-2. Ensure you have git installed
-
-## installation
-
-    git clone https://github.com/arorashu/spark-digital-equity.git    
-    cd spark-digital-equity
-    npm install
-    npm start
+1. Download Github Desktop
+    https://desktop.github.com 
+2. Open Github Desktop and select Clone repository from internet
+3. Sign In using Github.com account
+4. Repositories should be shown now, including jpjosephh/spark-digital-equity. Click that link and clone.
+5.
