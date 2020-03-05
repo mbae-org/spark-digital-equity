@@ -18,7 +18,7 @@ function FilterPanel(props) {
                         actionMeta
                     )
                 }
-                selectedSchoolArray = {props.selectedSchoolArray}
+                selectedSchoolArray={props.selectedSchoolArray}
             />
             <YearFilter
                 selectedYears={props.selectedYears}
@@ -32,7 +32,7 @@ function FilterPanel(props) {
                     props.onGraphSelectionChange(newSelection)
                 }
             />
-            <div className={"buttonPanel"}>
+            {/* <div className={"buttonPanel"}>
                 <button className={"resetAllButton"} onClick={props.onResetButtonClick}>
                     Reset All
                 </button>
@@ -41,7 +41,7 @@ function FilterPanel(props) {
                         Download Data
                     </a>
                 </button>
-            </div>
+            </div> */}
         </div>
     );
 }
