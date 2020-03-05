@@ -16,7 +16,8 @@ There is examples of what the final CSV file should look like in the repository.
 1. In Github Desktop, have the spark-digital-equity repository open
 2. Click on view files in respository in Finder (may be different option for non macOS users)
 3. Click into the src folder, then the data folder, and finally the Excel folder
-4. 2017.csv is the format that all CSV files should be in. You can create this csv file manually from all of the excel sheets given. If there is someone expereienced with python and pandas, there is a juypter notebook in the data-processing folder that can be used to take the different CSV files and turn it into one. 
+4. 2017.csv is the format that all CSV files should be in. You can create this csv file manually from all of the excel sheets given. If there is someone expereienced with python and pandas, there is a juypter notebook in the data-processing folder that can be used to take the different CSV files and turn it into one.
+5. Manually add in the Massachusettes row but summing all the colums. Refer to the 2017.json file to see the format
 5. Go to http://convertcsv.com/csv-to-json.htm and in input, select the CSV file you are adding
 6. Select the option CSV to JSON Array
 7. Download the Results and save as <Year>.json, so like 2019.json
