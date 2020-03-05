@@ -1,3 +1,5 @@
+export const YearList = [2017];
+
 export const EntityType = {
     SCHOOL: 0,
     DISTRICT: 1
@@ -86,8 +88,7 @@ export const EthnicityDefaultMap = {
     }
 };
 
-export const YearList = [2017];
-// export const YearList = [2016];
+
 
 export const APAcronymList = [
     {
