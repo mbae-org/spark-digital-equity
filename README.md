@@ -38,5 +38,6 @@ There is examples of what the final CSV file should look like in the repository.
 1. Go back to the Github Desktop application
 2. The changes you have made to the repository should show up under changes
 3. Click on "commit to master"
+4. Click on "Push remote"
 
 Finished!
