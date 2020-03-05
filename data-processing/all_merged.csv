@@ -1,962 +1,1230 @@
-School Code,District,School Name,# STUDENTS ENROLLED,ORG_CODE,STUDENTS_ENROLLED,AA,AS,HI,MR,NA,NH_PI,WH,EcoDis,SWD,ELL,FEMALE,MALE,NONBINARY,Tests Taken,Score=1,Score=2,Score=3,Score=4,Score=5,SY
-10405,Abington,Frolio Middle School,322,,,,,,,,,,,,,,,,,,,,,,2017
-10505,Abington,Abington High,20,,,,,,,,,,,,,,,,,,,,,,2017
-30025,Acushnet,Acushnet Elementary School,2,,,,,,,,,,,,,,,,,,,,,,2017
-30305,Acushnet,Albert F Ford Middle School,416,,,,,,,,,,,,,,,,,,,,,,2017
-50303,Agawam,Roberta G. Doering School,498,,,,,,,,,,,,,,,,,,,,,,2017
-50405,Agawam,Agawam Junior High,296,,,,,,,,,,,,,,,,,,,,,,2017
-50505,Agawam,Agawam High,131,,,,,,,,,,,,,,,,,,,,,,2017
-70005,Amesbury,Amesbury Elementary,304,,,,,,,,,,,,,,,,,,,,,,2017
-70010,Amesbury,Charles C Cashman Elementary,362,,,,,,,,,,,,,,,,,,,,,,2017
-70013,Amesbury,Amesbury Middle,401,,,,,,,,,,,,,,,,,,,,,,2017
-70505,Amesbury,Amesbury High,188,,,,,,,,,,,,,,,,,,,,,,2017
-80009,Amherst,Crocker Farm Elementary,333,,,,,,,,,,,,,,,,,,,,,,2017
-80020,Amherst,Fort River Elementary,327,,,,,,,,,,,,,,,,,,,,,,2017
-80050,Amherst,Wildwood Elementary,400,,,,,,,,,,,,,,,,,,,,,,2017
-90505,Andover,Andover High,181,9,41,1,14,1,2,0,0,23,1,0,0,4,37,0,30,1,1,2,10,16,2017
-100410,Arlington,Ottoson Middle,1196,,,,,,,,,,,,,,,,,,,,,,2017
-100505,Arlington,Arlington High,116,10,17,0,1,1,1,0,1,13,1,1,0,2,15,0,18,1,1,3,6,7,2017
-140010,Ashland,Henry E Warren Elementary,612,,,,,,,,,,,,,,,,,,,,,,2017
-140015,Ashland,David Mindess,623,,,,,,,,,,,,,,,,,,,,,,2017
-140505,Ashland,Ashland High,119,14,23,0,1,1,0,0,0,21,0,1,0,4,19,0,1,,,,,,2017
-160001,Attleboro,A. Irvin Studley Elementary School,447,,,,,,,,,,,,,,,,,,,,,,2017
-160035,Attleboro,Thomas Willett Elementary School,459,,,,,,,,,,,,,,,,,,,,,,2017
-160040,Attleboro,Hyman Fine Elementary School,459,,,,,,,,,,,,,,,,,,,,,,2017
-160045,Attleboro,Hill-Roberts Elementary School,472,,,,,,,,,,,,,,,,,,,,,,2017
-160050,Attleboro,Peter Thacher Elementary School,389,,,,,,,,,,,,,,,,,,,,,,2017
-160505,Attleboro,Attleboro High,46,,,,,,,,,,,,,,,,,,,,,,2017
-170305,Auburn,Auburn Middle,247,,,,,,,,,,,,,,,,,,,,,,2017
-170505,Auburn,Auburn Senior High,220,,,,,,,,,,,,,,,,,,,,,,2017
-180010,Avon,Ralph D Butler,232,,,,,,,,,,,,,,,,,,,,,,2017
-180510,Avon,Avon Middle High School,117,,,,,,,,,,,,,,,,,,,,,,2017
-200025,Barnstable,Hyannis West Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
-200045,Barnstable,West Villages Elementary School,1,,,,,,,,,,,,,,,,,,,,,,2017
-200315,Barnstable,Barnstable Intermediate School,648,,,,,,,,,,,,,,,,,,,,,,2017
-200505,Barnstable,Barnstable High,21,20,20,0,4,3,0,0,0,13,4,0,0,3,17,0,21,16,1,3,0,1,2017
-230505,Bedford,Bedford High,143,23,4,,,,,,,,,,,,,,3,,,,,,2017
-240025,Belchertown,Jabish Middle School,339,,,,,,,,,,,,,,,,,,,,,,2017
-240505,Belchertown,Belchertown High,193,24,15,0,2,0,0,0,0,13,0,0,0,1,14,0,4,,,,,,2017
-250020,Bellingham,South Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
-250315,Bellingham,Bellingham Memorial School,346,,,,,,,,,,,,,,,,,,,,,,2017
-250505,Bellingham,Bellingham High School,184,,,,,,,,,,,,,,,,,,,,,,2017
-250510,Bellingham,Keough Memorial Academy,1,,,,,,,,,,,,,,,,,,,,,,2017
-260505,Belmont,Belmont High,47,,,,,,,,,,,,,,,,4,,,,,,2017
-270010,Berkley,Berkley Community School,467,,,,,,,,,,,,,,,,,,,,,,2017
-270305,Berkley,Berkley Middle School,388,,,,,,,,,,,,,,,,,,,,,,2017
-280005,Berlin,Berlin Memorial,92,,,,,,,,,,,,,,,,,,,,,,2017
-300305,Beverly,Briscoe Middle,948,,,,,,,,,,,,,,,,,,,,,,2017
-300505,Beverly,Beverly High,103,30,5,,,,,,,,,,,,,,3,,,,,,2017
-310005,Billerica,Thomas Ditson,538,,,,,,,,,,,,,,,,,,,,,,2017
-310007,Billerica,Frederick J Dutile,290,,,,,,,,,,,,,,,,,,,,,,2017
-310012,Billerica,John F Kennedy,319,,,,,,,,,,,,,,,,,,,,,,2017
+School Code,District,School Name,# STUDENTS ENROLLED ,ORG_CODE,STUDENTS_ENROLLED,AA,AS,HI,MR,NA,NH_PI,WH,EcoDis,SWD,ELL,FEMALE,MALE,NONBINARY,Tests Taken,Score=1,Score=2,Score=3,Score=4,Score=5,SY
+10015,Abington,Woodsdale Elementary School,2,,,,,,,,,,,,,,,,,,,,,,2017
+10020,Abington,Beaver Brook Elementary,3,,,,,,,,,,,,,,,,,,,,,,2017
+10405,Abington,Abington Middle School,348,,,,,,,,,,,,,,,,,,,,,,2017
+10505,Abington,Abington High,25,,,,,,,,,,,,,,,,1,,,,,,2017
+30025,Acushnet,Acushnet Elementary School,105,,,,,,,,,,,,,,,,,,,,,,2017
+30305,Acushnet,Albert F Ford Middle School,407,,,,,,,,,,,,,,,,,,,,,,2017
+50010,Agawam,Clifford M Granger,1,,,,,,,,,,,,,,,,,,,,,,2017
+50020,Agawam,Benjamin J Phelps,3,,,,,,,,,,,,,,,,,,,,,,2017
+50025,Agawam,Robinson Park,2,,,,,,,,,,,,,,,,,,,,,,2017
+50030,Agawam,James Clark School,2,,,,,,,,,,,,,,,,,,,,,,2017
+50303,Agawam,Roberta G. Doering School,555,,,,,,,,,,,,,,,,,,,,,,2017
+50405,Agawam,Agawam Junior High,230,,,,,,,,,,,,,,,,,,,,,,2017
+50505,Agawam,Agawam High,73,,,,,,,,,,,,,,,,,,,,,,2017
+70005,Amesbury,Amesbury Elementary,289,,,,,,,,,,,,,,,,,,,,,,2017
+70010,Amesbury,Charles C Cashman Elementary,339,,,,,,,,,,,,,,,,,,,,,,2017
+70013,Amesbury,Amesbury Middle,381,,,,,,,,,,,,,,,,,,,,,,2017
+70505,Amesbury,Amesbury High,125,,,,,,,,,,,,,,,,,,,,,,2017
+70515,Amesbury,Amesbury Innovation High School,1,,,,,,,,,,,,,,,,,,,,,,2017
+80009,Amherst,Crocker Farm Elementary,352,,,,,,,,,,,,,,,,,,,,,,2017
+80020,Amherst,Fort River Elementary,332,,,,,,,,,,,,,,,,,,,,,,2017
+80050,Amherst,Wildwood Elementary,398,,,,,,,,,,,,,,,,,,,,,,2017
+90505,Andover,Andover High,341,9,41,1,14,1,2,0,0,23,1,0,0,4,37,0,21,0,1,2,2,16,2017
+100410,Arlington,Ottoson Middle,1242,,,,,,,,,,,,,,,,,,,,,,2017
+100505,Arlington,Arlington High,99,10,17,0,1,1,1,0,1,13,1,1,0,2,15,0,18,0,0,2,3,13,2017
+140010,Ashland,Henry E Warren Elementary,615,,,,,,,,,,,,,,,,,,,,,,2017
+140015,Ashland,David Mindess,642,,,,,,,,,,,,,,,,,,,,,,2017
+140405,Ashland,Ashland Middle,3,,,,,,,,,,,,,,,,,,,,,,2017
+140505,Ashland,Ashland High,168,14,23,0,1,1,0,0,0,21,0,1,0,4,19,0,3,,,,,,2017
+160001,Attleboro,A. Irvin Studley Elementary School,384,,,,,,,,,,,,,,,,,,,,,,2017
+160035,Attleboro,Thomas Willett Elementary School,409,,,,,,,,,,,,,,,,,,,,,,2017
+160040,Attleboro,Hyman Fine Elementary School,475,,,,,,,,,,,,,,,,,,,,,,2017
+160045,Attleboro,Hill-Roberts Elementary School,460,,,,,,,,,,,,,,,,,,,,,,2017
+160050,Attleboro,Peter Thacher Elementary School,429,,,,,,,,,,,,,,,,,,,,,,2017
+160505,Attleboro,Attleboro High,80,,,,,,,,,,,,,,,,17,2,4,3,5,3,2017
+160515,Attleboro,Attleboro Community Academy,11,,,,,,,,,,,,,,,,,,,,,,2017
+170030,Auburn,Swanson Road Intermediate School,2,,,,,,,,,,,,,,,,,,,,,,2017
+170305,Auburn,Auburn Middle,216,,,,,,,,,,,,,,,,,,,,,,2017
+170505,Auburn,Auburn Senior High,192,,,,,,,,,,,,,,,,10,3,2,2,3,0,2017
+180010,Avon,Ralph D Butler,230,,,,,,,,,,,,,,,,,,,,,,2017
+180510,Avon,Avon Middle High School,109,,,,,,,,,,,,,,,,,,,,,,2017
+200005,Barnstable,West Barnstable Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+200010,Barnstable,Centerville Elementary,3,,,,,,,,,,,,,,,,,,,,,,2017
+200025,Barnstable,Hyannis West Elementary,5,,,,,,,,,,,,,,,,,,,,,,2017
+200045,Barnstable,West Villages Elementary School,5,,,,,,,,,,,,,,,,,,,,,,2017
+200050,Barnstable,Barnstable United Elementary School,1,,,,,,,,,,,,,,,,,,,,,,2017
+200315,Barnstable,Barnstable Intermediate School,637,,,,,,,,,,,,,,,,,,,,,,2017
+200505,Barnstable,Barnstable High,36,20,20,0,4,3,0,0,0,13,4,0,0,3,17,0,20,16,1,1,1,1,2017
+230010,Bedford,Lt Elezer Davis,1,,,,,,,,,,,,,,,,,,,,,,2017
+230305,Bedford,John Glenn Middle,2,,,,,,,,,,,,,,,,,,,,,,2017
+230505,Bedford,Bedford High,118,23,4,,,,,,,,,,,,,,2,,,,,,2017
+240025,Belchertown,Jabish Middle School,365,,,,,,,,,,,,,,,,,,,,,,2017
+240505,Belchertown,Belchertown High,185,24,15,0,2,0,0,0,0,13,0,0,0,1,14,0,3,,,,,,2017
+250020,Bellingham,Joseph F DiPietro Elementary School,2,,,,,,,,,,,,,,,,,,,,,,2017
+250025,Bellingham,Stall Brook,1,,,,,,,,,,,,,,,,,,,,,,2017
+250315,Bellingham,Bellingham Memorial School,355,,,,,,,,,,,,,,,,,,,,,,2017
+250505,Bellingham,Bellingham High School,320,,,,,,,,,,,,,,,,,,,,,,2017
+260005,Belmont,Winn Brook,1,,,,,,,,,,,,,,,,,,,,,,2017
+260305,Belmont,Winthrop L Chenery Middle,2,,,,,,,,,,,,,,,,,,,,,,2017
+260505,Belmont,Belmont High,139,,,,,,,,,,,,,,,,67,4,3,18,12,30,2017
+270010,Berkley,Berkley Community School,217,,,,,,,,,,,,,,,,,,,,,,2017
+270305,Berkley,Berkley Middle School,381,,,,,,,,,,,,,,,,,,,,,,2017
+280005,Berlin,Berlin Memorial,82,,,,,,,,,,,,,,,,,,,,,,2017
+300015,Beverly,Cove Elementary,3,,,,,,,,,,,,,,,,,,,,,,2017
+300033,Beverly,Hannah Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+300040,Beverly,North Beverly Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+300305,Beverly,Beverly Middle School,964,,,,,,,,,,,,,,,,,,,,,,2017
+300505,Beverly,Beverly High,109,30,5,,,,,,,,,,,,,,,,,,,,2017
+310005,Billerica,Thomas Ditson,522,,,,,,,,,,,,,,,,,,,,,,2017
+310007,Billerica,Frederick J Dutile,273,,,,,,,,,,,,,,,,,,,,,,2017
+310012,Billerica,John F Kennedy,311,,,,,,,,,,,,,,,,,,,,,,2017
 310015,Billerica,Parker,486,,,,,,,,,,,,,,,,,,,,,,2017
-310026,Billerica,Hajjar Elementary,473,,,,,,,,,,,,,,,,,,,,,,2017
-310030,Billerica,Eugene C Vining,192,,,,,,,,,,,,,,,,,,,,,,2017
-310305,Billerica,Marshall Middle School,411,,,,,,,,,,,,,,,,,,,,,,2017
-310310,Billerica,Locke Middle,344,,,,,,,,,,,,,,,,,,,,,,2017
-310505,Billerica,Billerica Memorial High School,202,31,9,1,2,0,0,0,0,6,0,0,0,2,7,0,10,1,1,2,1,5,2017
-350004,Boston,Lyon K-8,102,,,,,,,,,,,,,,,,,,,,,,2017
-350008,Boston,Dr. Catherine Ellison-Rosa Parks Early Ed School,1,,,,,,,,,,,,,,,,,,,,,,2017
-350013,Boston,Jackson Mann,521,,,,,,,,,,,,,,,,,,,,,,2017
-350021,Boston,Beethoven,299,,,,,,,,,,,,,,,,,,,,,,2017
+310026,Billerica,Hajjar Elementary,455,,,,,,,,,,,,,,,,,,,,,,2017
+310030,Billerica,Eugene C Vining,191,,,,,,,,,,,,,,,,,,,,,,2017
+310305,Billerica,Marshall Middle School,427,,,,,,,,,,,,,,,,,,,,,,2017
+310310,Billerica,Locke Middle,332,,,,,,,,,,,,,,,,,,,,,,2017
+310505,Billerica,Billerica Memorial High School,172,31,9,1,2,0,0,0,0,6,0,0,0,2,7,0,6,,,,,,2017
+350004,Boston,Lyon K-8,115,,,,,,,,,,,,,,,,,,,,,,2017
+350009,Boston,East Boston Early Childhood Center,1,,,,,,,,,,,,,,,,,,,,,,2017
+350013,Boston,Jackson Mann,418,,,,,,,,,,,,,,,,,,,,,,2017
+350021,Boston,Beethoven,283,,,,,,,,,,,,,,,,,,,,,,2017
 350052,Boston,Charles Sumner,503,,,,,,,,,,,,,,,,,,,,,,2017
-350072,Boston,David A Ellis,383,,,,,,,,,,,,,,,,,,,,,,2017
-350074,Boston,Dearborn,255,,,,,,,,,,,,,,,,,,,,,,2017
-350080,Boston,Donald Mckay,698,,,,,,,,,,,,,,,,,,,,,,2017
-350096,Boston,Eliot Elementary,431,,,,,,,,,,,,,,,,,,,,,,2017
-350116,Boston,Franklin D Roosevelt,133,,,,,,,,,,,,,,,,,,,,,,2017
-350122,Boston,George H Conley,96,,,,,,,,,,,,,,,,,,,,,,2017
-350135,Boston,Henry Grew,236,,,,,,,,,,,,,,,,,,,,,,2017
-350138,Boston,O W Holmes,2,,,,,,,,,,,,,,,,,,,,,,2017
-350141,Boston,Hugh Roe O'Donnell,250,,,,,,,,,,,,,,,,,,,,,,2017
-350146,Boston,James Condon Elementary,699,,,,,,,,,,,,,,,,,,,,,,2017
-350153,Boston,James W Hennigan,284,,,,,,,,,,,,,,,,,,,,,,2017
-350154,Boston,James J Chittick,1,,,,,,,,,,,,,,,,,,,,,,2017
-350156,Boston,James Otis,351,,,,,,,,,,,,,,,,,,,,,,2017
-350166,Boston,John F Kennedy,351,,,,,,,,,,,,,,,,,,,,,,2017
-350167,Boston,UP Academy Holland,2,,,,,,,,,,,,,,,,,,,,,,2017
-350181,Boston,Joseph P Tynan,1,,,,,,,,,,,,,,,,,,,,,,2017
-350182,Boston,Joseph J Hurley,36,,,,,,,,,,,,,,,,,,,,,,2017
-350183,Boston,Joseph Lee,126,,,,,,,,,,,,,,,,,,,,,,2017
-350200,Boston,Harvard-Kent,472,,,,,,,,,,,,,,,,,,,,,,2017
-350215,Boston,Manassah E Bradley,245,,,,,,,,,,,,,,,,,,,,,,2017
-350226,Boston,Mattahunt,506,,,,,,,,,,,,,,,,,,,,,,2017
-350227,Boston,Mather,550,,,,,,,,,,,,,,,,,,,,,,2017
-350229,Boston,Maurice J Tobin,436,,,,,,,,,,,,,,,,,,,,,,2017
-350231,Boston,Michael J Perkins,213,,,,,,,,,,,,,,,,,,,,,,2017
-350237,Boston,Mozart,22,,,,,,,,,,,,,,,,,,,,,,2017
-350240,Boston,Richard J Murphy,475,,,,,,,,,,,,,,,,,,,,,,2017
-350243,Boston,Nathan Hale,159,,,,,,,,,,,,,,,,,,,,,,2017
-350255,Boston,Oliver Hazard Perry,170,,,,,,,,,,,,,,,,,,,,,,2017
-350258,Boston,William H Ohrenberger,610,,,,,,,,,,,,,,,,,,,,,,2017
-350262,Boston,Lyndon,203,,,,,,,,,,,,,,,,,,,,,,2017
-350268,Boston,Paul A Dever,268,,,,,,,,,,,,,,,,,,,,,,2017
-350286,Boston,Josiah Quincy,629,,,,,,,,,,,,,,,,,,,,,,2017
-350302,Boston,Samuel Adams,239,,,,,,,,,,,,,,,,,,,,,,2017
-350304,Boston,Samuel W Mason,76,,,,,,,,,,,,,,,,,,,,,,2017
-350308,Boston,Sarah Greenwood,436,,,,,,,,,,,,,,,,,,,,,,2017
-350326,Boston,Gardner Pilot Academy,1,,,,,,,,,,,,,,,,,,,,,,2017
-350328,Boston,Thomas J Kenny,2,,,,,,,,,,,,,,,,,,,,,,2017
-350346,Boston,Warren-Prescott,53,,,,,,,,,,,,,,,,,,,,,,2017
-350360,Boston,William Ellery Channing,207,,,,,,,,,,,,,,,,,,,,,,2017
-350363,Boston,William McKinley,78,,,,,,,,,,,,,,,,,,,,,,2017
-350366,Boston,William E Russell,1,,,,,,,,,,,,,,,,,,,,,,2017
-350370,Boston,William Monroe Trotter,455,,,,,,,,,,,,,,,,,,,,,,2017
-350374,Boston,Winship Elementary,179,,,,,,,,,,,,,,,,,,,,,,2017
-350376,Boston,King K-8,1,,,,,,,,,,,,,,,,,,,,,,2017
+350062,Boston,Curtis Guild,1,,,,,,,,,,,,,,,,,,,,,,2017
+350072,Boston,David A Ellis,378,,,,,,,,,,,,,,,,,,,,,,2017
+350074,Boston,Dearborn,155,,,,,,,,,,,,,,,,,,,,,,2017
+350077,Boston,Dennis C Haley,1,,,,,,,,,,,,,,,,,,,,,,2017
+350080,Boston,Donald Mckay,388,,,,,,,,,,,,,,,,,,,,,,2017
+350096,Boston,Eliot Elementary,493,,,,,,,,,,,,,,,,,,,,,,2017
+350116,Boston,Franklin D Roosevelt,43,,,,,,,,,,,,,,,,,,,,,,2017
+350122,Boston,George H Conley,89,,,,,,,,,,,,,,,,,,,,,,2017
+350135,Boston,Henry Grew,238,,,,,,,,,,,,,,,,,,,,,,2017
+350141,Boston,Hugh Roe O'Donnell,243,,,,,,,,,,,,,,,,,,,,,,2017
+350146,Boston,Condon K-8,5,,,,,,,,,,,,,,,,,,,,,,2017
+350153,Boston,James W Hennigan,326,,,,,,,,,,,,,,,,,,,,,,2017
+350156,Boston,James Otis,338,,,,,,,,,,,,,,,,,,,,,,2017
+350167,Boston,UP Academy Holland,4,,,,,,,,,,,,,,,,,,,,,,2017
+350172,Boston,John D Philbrick,129,,,,,,,,,,,,,,,,,,,,,,2017
+350179,Boston,John W McCormack,17,,,,,,,,,,,,,,,,,,,,,,2017
+350183,Boston,Joseph Lee,41,,,,,,,,,,,,,,,,,,,,,,2017
+350190,Boston,Joyce Kilmer,1,,,,,,,,,,,,,,,,,,,,,,2017
+350200,Boston,Harvard-Kent,419,,,,,,,,,,,,,,,,,,,,,,2017
+350215,Boston,Manassah E Bradley,252,,,,,,,,,,,,,,,,,,,,,,2017
+350227,Boston,Mather,541,,,,,,,,,,,,,,,,,,,,,,2017
+350229,Boston,Maurice J Tobin,257,,,,,,,,,,,,,,,,,,,,,,2017
+350231,Boston,Michael J Perkins,210,,,,,,,,,,,,,,,,,,,,,,2017
+350237,Boston,Mozart,24,,,,,,,,,,,,,,,,,,,,,,2017
+350240,Boston,Richard J Murphy,508,,,,,,,,,,,,,,,,,,,,,,2017
+350243,Boston,Nathan Hale,136,,,,,,,,,,,,,,,,,,,,,,2017
+350255,Boston,Oliver Hazard Perry,172,,,,,,,,,,,,,,,,,,,,,,2017
+350258,Boston,William H Ohrenberger,658,,,,,,,,,,,,,,,,,,,,,,2017
+350262,Boston,Lyndon,215,,,,,,,,,,,,,,,,,,,,,,2017
+350268,Boston,Paul A Dever,291,,,,,,,,,,,,,,,,,,,,,,2017
+350278,Boston,Phineas Bates,37,,,,,,,,,,,,,,,,,,,,,,2017
+350286,Boston,Josiah Quincy,677,,,,,,,,,,,,,,,,,,,,,,2017
+350302,Boston,Samuel Adams,242,,,,,,,,,,,,,,,,,,,,,,2017
+350304,Boston,Samuel W Mason,40,,,,,,,,,,,,,,,,,,,,,,2017
+350308,Boston,Sarah Greenwood,420,,,,,,,,,,,,,,,,,,,,,,2017
+350346,Boston,Warren-Prescott,112,,,,,,,,,,,,,,,,,,,,,,2017
+350360,Boston,William Ellery Channing,183,,,,,,,,,,,,,,,,,,,,,,2017
+350363,Boston,William McKinley,58,,,,,,,,,,,,,,,,,,,,,,2017
+350370,Boston,William Monroe Trotter,462,,,,,,,,,,,,,,,,,,,,,,2017
+350374,Boston,Winship Elementary,160,,,,,,,,,,,,,,,,,,,,,,2017
+350376,Boston,King K-8,261,,,,,,,,,,,,,,,,,,,,,,2017
 350377,Boston,Higginson/Lewis K-8,1,,,,,,,,,,,,,,,,,,,,,,2017
-350378,Boston,Mildred Avenue K-8,1,,,,,,,,,,,,,,,,,,,,,,2017
-350380,Boston,Young Achievers,180,,,,,,,,,,,,,,,,,,,,,,2017
-350390,Boston,Blackstone,410,,,,,,,,,,,,,,,,,,,,,,2017
-350426,Boston,Dr. William Henderson Upper,289,,,,,,,,,,,,,,,,,,,,,,2017
-350430,Boston,Clarence R Edwards Middle,173,,,,,,,,,,,,,,,,,,,,,,2017
-350445,Boston,Washington Irving Middle,250,,,,,,,,,,,,,,,,,,,,,,2017
-350505,Boston,Brighton High,93,,,,,,,,,,,,,,,,,,,,,,2017
-350507,Boston,Boston International High School,218,,,,,,,,,,,,,,,,,,,,,,2017
-350515,Boston,Charlestown High,65,,,,,,,,,,,,,,,,,,,,,,2017
-350518,Boston,Community Academy,2,,,,,,,,,,,,,,,,,,,,,,2017
-350522,Boston,Excel High School,122,,,,,,,,,,,,,,,,,,,,,,2017
-350525,Boston,Jeremiah E Burke High,70,,,,,,,,,,,,,,,,,,,,,,2017
-350530,Boston,East Boston High,232,,,,,,,,,,,,,,,,18,17,1,0,0,0,2017
-350537,Boston,Madison Park High,64,,,,,,,,,,,,,,,,,,,,,,2017
-350540,Boston,Fenway High School,17,,,,,,,,,,,,,,,,,,,,,,2017
-350541,Boston,Another Course To College,1,,,,,,,,,,,,,,,,,,,,,,2017
-350542,Boston,New Mission High School,81,,,,,,,,,,,,,,,,,,,,,,2017
+350378,Boston,Mildred Avenue K-8,2,,,,,,,,,,,,,,,,,,,,,,2017
+350380,Boston,Young Achievers,192,,,,,,,,,,,,,,,,,,,,,,2017
+350382,Boston,Mission Hill School,2,,,,,,,,,,,,,,,,,,,,,,2017
+350383,Boston,Lilla G. Frederick Middle School,2,,,,,,,,,,,,,,,,,,,,,,2017
+350390,Boston,Blackstone,418,,,,,,,,,,,,,,,,,,,,,,2017
+350426,Boston,Dr. William Henderson Upper,469,,,,,,,,,,,,,,,,,,,,,,2017
+350430,Boston,Clarence R Edwards Middle,126,,,,,,,,,,,,,,,,,,,,,,2017
+350445,Boston,Washington Irving Middle,333,,,,,,,,,,,,,,,,,,,,,,2017
+350485,Boston,James P Timilty Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
+350505,Boston,Brighton High,116,,,,,,,,,,,,,,,,,,,,,,2017
+350507,Boston,Boston International High School,215,,,,,,,,,,,,,,,,,,,,,,2017
+350515,Boston,Charlestown High,25,,,,,,,,,,,,,,,,,,,,,,2017
+350518,Boston,Community Academy,14,,,,,,,,,,,,,,,,,,,,,,2017
+350522,Boston,Excel High School,117,,,,,,,,,,,,,,,,,,,,,,2017
+350525,Boston,Jeremiah E Burke High,33,,,,,,,,,,,,,,,,,,,,,,2017
+350530,Boston,East Boston High,317,,,,,,,,,,,,,,,,17,17,0,0,0,0,2017
+350535,Boston,The English High,54,,,,,,,,,,,,,,,,,,,,,,2017
+350537,Boston,Madison Park High,13,,,,,,,,,,,,,,,,,,,,,,2017
+350540,Boston,Fenway High School,62,,,,,,,,,,,,,,,,,,,,,,2017
+350541,Boston,Another Course To College,27,,,,,,,,,,,,,,,,,,,,,,2017
+350542,Boston,New Mission High School,87,,,,,,,,,,,,,,,,,,,,,,2017
 350543,Boston,Greater Egleston Community High School,2,,,,,,,,,,,,,,,,,,,,,,2017
-350545,Boston,,133,,,,,,,,,,,,,,,,,,,,,,2017
-350546,Boston,Boston Arts Academy,16,,,,,,,,,,,,,,,,,,,,,,2017
-350548,Boston,Boston Adult Academy,7,,,,,,,,,,,,,,,,,,,,,,2017
-350549,Boston,Margarita Muniz Academy,67,,,,,,,,,,,,,,,,,,,,,,2017
-350558,Boston,Boston Community Leadership Academy,101,,,,,,,,,,,,,,,,,,,,,,2017
-350560,Boston,Boston Latin,108,,,,,,,,,,,,,,,,109,7,6,29,35,32,2017
-350565,Boston,Quincy Upper School,47,,,,,,,,,,,,,,,,,,,,,,2017
-350575,Boston,O'Bryant School Math/Science,285,,,,,,,,,,,,,,,,,,,,,,2017
-350579,Boston,Urban Science Academy,115,,,,,,,,,,,,,,,,,,,,,,2017
-350581,Boston,Community Academy of Science and Health,33,,,,,,,,,,,,,,,,,,,,,,2017
-350651,Boston,Dorchester Academy,43,,,,,,,,,,,,,,,,,,,,,,2017
-350655,Boston,Lyon Upper 9-12,39,,,,,,,,,,,,,,,,1,,,,,,2017
-350656,Boston,Mario Umana Academy,67,,,,,,,,,,,,,,,,,,,,,,2017
-350657,Boston,TechBoston Academy,361,,,,,,,,,,,,,,,,,,,,,,2017
-350658,Boston,West Roxbury Academy,49,,,,,,,,,,,,,,,,,,,,,,2017
-350750,Boston,Horace Mann School for the Deaf,59,,,,,,,,,,,,,,,,,,,,,,2017
-350755,Boston,Boston Collaborative High School,33,,,,,,,,,,,,,,,,,,,,,,2017
-360005,Bourne,Bournedale Elementary School,355,,,,,,,,,,,,,,,,,,,,,,2017
-360010,Bourne,Peebles Elementary School,343,,,,,,,,,,,,,,,,,,,,,,2017
-360325,Bourne,Bourne Middle School,517,,,,,,,,,,,,,,,,,,,,,,2017
+350545,Boston,Boston Latin Academy,135,,,,,,,,,,,,,,,,,,,,,,2017
+350548,Boston,Boston Adult Academy,58,,,,,,,,,,,,,,,,,,,,,,2017
+350549,Boston,Margarita Muniz Academy,71,,,,,,,,,,,,,,,,,,,,,,2017
+350558,Boston,Boston Community Leadership Academy,48,,,,,,,,,,,,,,,,,,,,,,2017
+350560,Boston,Boston Latin,122,,,,,,,,,,,,,,,,61,7,6,19,15,14,2017
+350565,Boston,Quincy Upper School,1,,,,,,,,,,,,,,,,,,,,,,2017
+350575,Boston,O'Bryant School Math/Science,262,,,,,,,,,,,,,,,,,,,,,,2017
+350579,Boston,Urban Science Academy,91,,,,,,,,,,,,,,,,,,,,,,2017
+350581,Boston,Community Academy of Science and Health,41,,,,,,,,,,,,,,,,,,,,,,2017
+350655,Boston,Lyon Upper 9-12,20,,,,,,,,,,,,,,,,1,,,,,,2017
+350656,Boston,Mario Umana Academy,2,,,,,,,,,,,,,,,,,,,,,,2017
+350657,Boston,TechBoston Academy,308,,,,,,,,,,,,,,,,,,,,,,2017
+350658,Boston,West Roxbury Academy,106,,,,,,,,,,,,,,,,,,,,,,2017
+350750,Boston,Horace Mann School for the Deaf,27,,,,,,,,,,,,,,,,,,,,,,2017
+350755,Boston,Boston Collaborative High School,19,,,,,,,,,,,,,,,,,,,,,,2017
+360005,Bourne,Bournedale Elementary School,308,,,,,,,,,,,,,,,,,,,,,,2017
+360010,Bourne,Peebles Elementary School,341,,,,,,,,,,,,,,,,,,,,,,2017
+360325,Bourne,Bourne Middle School,490,,,,,,,,,,,,,,,,,,,,,,2017
 360505,Bourne,Bourne High School,1,,,,,,,,,,,,,,,,,,,,,,2017
-390005,Boylston,Boylston Elementary,265,,,,,,,,,,,,,,,,,,,,,,2017
-400305,Braintree,East Middle School,229,,,,,,,,,,,,,,,,,,,,,,2017
-400310,Braintree,South Middle School,226,,,,,,,,,,,,,,,,,,,,,,2017
-400505,Braintree,Braintree High,60,40,14,0,9,1,0,0,0,4,2,0,0,9,5,0,,,,,,,2017
-410005,Brewster,Stony Brook Elementary,227,,,,,,,,,,,,,,,,,,,,,,2017
-410010,Brewster,Eddy Elementary,235,,,,,,,,,,,,,,,,,,,,,,2017
-440023,Brockton,Edgar B Davis,1,,,,,,,,,,,,,,,,,,,,,,2017
-440080,Brockton,Frederick Douglass Academy,1,,,,,,,,,,,,,,,,,,,,,,2017
-440415,Brockton,South Middle School,163,,,,,,,,,,,,,,,,,,,,,,2017
-440420,Brockton,West Middle School,2,,,,,,,,,,,,,,,,,,,,,,2017
-440421,Brockton,Ashfield Middle School,1,,,,,,,,,,,,,,,,,,,,,,2017
-440422,Brockton,Joseph F. Plouffe Academy,687,,,,,,,,,,,,,,,,,,,,,,2017
-440505,Brockton,Brockton High,462,44,19,11,0,3,0,0,0,5,7,0,0,7,12,0,,,,,,,2017
-440520,Brockton,Edison Academy,2,,,,,,,,,,,,,,,,,,,,,,2017
-450005,Brookfield,Brookfield Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
-460020,Brookline,Michael Driscoll,66,,,,,,,,,,,,,,,,,,,,,,2017
-460035,Brookline,William H Lincoln,53,,,,,,,,,,,,,,,,,,,,,,2017
-460040,Brookline,Pierce,86,,,,,,,,,,,,,,,,,,,,,,2017
-460045,Brookline,John D Runkle,58,,,,,,,,,,,,,,,,,,,,,,2017
-460505,Brookline,Brookline High,129,46,8,0,2,0,0,0,0,6,0,0,0,1,7,0,2,,,,,,2017
-480303,Burlington,Marshall Simonds Middle,767,,,,,,,,,,,,,,,,,,,,,,2017
-480505,Burlington,Burlington High,116,48,24,0,9,2,1,0,0,12,1,0,1,2,22,0,12,0,1,4,3,4,2017
-490305,Cambridge,Cambridge Street Upper School,2,,,,,,,,,,,,,,,,,,,,,,2017
-490506,Cambridge,Cambridge Rindge and Latin,103,49,20,3,6,2,2,0,0,7,4,1,0,5,15,0,62,4,9,12,18,19,2017
-500305,Canton,Wm H Galvin Middle,723,,,,,,,,,,,,,,,,,,,,,,2017
-500505,Canton,Canton High,48,,,,,,,,,,,,,,,,,,,,,,2017
-520015,Carver,Carver Elementary School,1,,,,,,,,,,,,,,,,,,,,,,2017
-520405,Carver,Carver Middle/High School,116,,,,,,,,,,,,,,,,,,,,,,2017
-560305,Chelmsford,Col Moses Parker School,350,,,,,,,,,,,,,,,,,,,,,,2017
-560310,Chelmsford,McCarthy Middle School,409,,,,,,,,,,,,,,,,,,,,,,2017
-560505,Chelmsford,Chelmsford High,125,56,48,1,11,2,1,0,0,33,5,1,1,12,36,0,19,3,5,5,4,2,2017
-570030,Chelsea,Edgar A Hooks Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
-570035,Chelsea,George F. Kelly Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
-570045,Chelsea,Eugene Wright Science and Technology Academy,488,,,,,,,,,,,,,,,,,,,,,,2017
-570050,Chelsea,Clark Avenue School,534,,,,,,,,,,,,,,,,,,,,,,2017
-570055,Chelsea,Joseph A. Browne School,453,,,,,,,,,,,,,,,,,,,,,,2017
-570505,Chelsea,Chelsea High,443,,,,,,,,,,,,,,,,,,,,,,2017
-610003,Chicopee,Barry,419,,,,,,,,,,,,,,,,,,,,,,2017
-610010,Chicopee,Belcher,258,,,,,,,,,,,,,,,,,,,,,,2017
-610015,Chicopee,Bowe,415,,,,,,,,,,,,,,,,,,,,,,2017
-610022,Chicopee,Litwin,389,,,,,,,,,,,,,,,,,,,,,,2017
-610065,Chicopee,Streiber Memorial School,283,,,,,,,,,,,,,,,,,,,,,,2017
-610090,Chicopee,Gen John J Stefanik,373,,,,,,,,,,,,,,,,,,,,,,2017
-610305,Chicopee,Bellamy Middle,278,,,,,,,,,,,,,,,,,,,,,,2017
-610310,Chicopee,Dupont Middle,366,,,,,,,,,,,,,,,,,,,,,,2017
-610505,Chicopee,Chicopee High,80,,,,,,,,,,,,,,,,1,,,,,,2017
-610510,Chicopee,Chicopee Comprehensive High School,183,61,2,,,,,,,,,,,,,,,,,,,,2017
-630010,Clarksburg,Clarksburg Elementary,121,,,,,,,,,,,,,,,,,,,,,,2017
-640050,Clinton,Clinton Elementary,476,,,,,,,,,,,,,,,,,,,,,,2017
-640305,Clinton,Clinton Middle School,248,,,,,,,,,,,,,,,,,,,,,,2017
-640505,Clinton,Clinton Senior High,90,,,,,,,,,,,,,,,,,,,,,,2017
-650010,Cohasset,Joseph Osgood,342,,,,,,,,,,,,,,,,,,,,,,2017
-650505,Cohasset,Cohasset Middle/High School,116,,,,,,,,,,,,,,,,,,,,,,2017
-670305,Concord,Concord Middle,390,,,,,,,,,,,,,,,,,,,,,,2017
-680005,Conway,Conway Grammar,121,,,,,,,,,,,,,,,,,,,,,,2017
-710030,Danvers,Riverside,1,,,,,,,,,,,,,,,,,,,,,,2017
-710305,Danvers,Holten Richmond Middle School,543,,,,,,,,,,,,,,,,,,,,,,2017
-710505,Danvers,Danvers High,268,71,2,,,,,,,,,,,,,,2,,,,,,2017
-720050,Dartmouth,Dartmouth Middle,821,,,,,,,,,,,,,,,,,,,,,,2017
-720505,Dartmouth,Dartmouth High,18,72,4,,,,,,,,,,,,,,8,,,,,,2017
-730305,Dedham,Dedham Middle School,596,,,,,,,,,,,,,,,,,,,,,,2017
-730505,Dedham,Dedham High,52,73,6,0,1,0,0,0,0,5,0,0,0,1,5,0,6,,,,,,2017
-740015,Deerfield,Deerfield Elementary,362,,,,,,,,,,,,,,,,,,,,,,2017
-770505,Douglas,Douglas High School,77,,,,,,,,,,,,,,,,,,,,,,2017
-780005,Dover,Chickering,477,,,,,,,,,,,,,,,,,,,,,,2017
-790030,Dracut,Greenmont Avenue,1,,,,,,,,,,,,,,,,,,,,,,2017
-790045,Dracut,George H. Englesby Elementary School,1,,,,,,,,,,,,,,,,,,,,,,2017
-790410,Dracut,Justus C. Richardson Middle School,304,,,,,,,,,,,,,,,,,,,,,,2017
-790505,Dracut,Dracut Senior High,208,,,,,,,,,,,,,,,,,,,,,,2017
-820004,Duxbury,Alden School,1,,,,,,,,,,,,,,,,,,,,,,2017
-820505,Duxbury,Duxbury High,37,82,9,0,1,0,0,0,0,8,0,0,0,1,8,0,8,,,,,,2017
-830005,East Bridgewater,Central,396,,,,,,,,,,,,,,,,,,,,,,2017
-830010,East Bridgewater,Gordon W Mitchell,686,,,,,,,,,,,,,,,,,,,,,,2017
-830505,East Bridgewater,East Bridgewater JR./SR. High School,177,,,,,,,,,,,,,,,,,,,,,,2017
-850005,Eastham,Eastham Elementary,170,,,,,,,,,,,,,,,,,,,,,,2017
-860010,Easthampton,Maple,1,,,,,,,,,,,,,,,,,,,,,,2017
-860505,Easthampton,Easthampton High,124,,,,,,,,,,,,,,,,,,,,,,2017
-870305,East Longmeadow,Birchland Park,118,,,,,,,,,,,,,,,,,,,,,,2017
-870505,East Longmeadow,East Longmeadow High,139,87,9,1,4,0,0,0,0,4,0,1,0,3,6,0,6,,,,,,2017
-880003,Easton,Center School,241,,,,,,,,,,,,,,,,,,,,,,2017
-880015,Easton,Parkview Elementary,293,,,,,,,,,,,,,,,,,,,,,,2017
-880020,Easton,Moreau Hall,223,,,,,,,,,,,,,,,,,,,,,,2017
-880025,Easton,Richardson Olmsted School,829,,,,,,,,,,,,,,,,,,,,,,2017
-880405,Easton,Easton Middle School,646,,,,,,,,,,,,,,,,,,,,,,2017
-880505,Easton,Oliver Ames High,25,,,,,,,,,,,,,,,,,,,,,,2017
-890005,Edgartown,Edgartown Elementary,342,,,,,,,,,,,,,,,,,,,,,,2017
-910030,Erving,Erving Elementary,139,,,,,,,,,,,,,,,,,,,,,,2017
-930010,Everett,Sumner G. Whittier School,620,,,,,,,,,,,,,,,,,,,,,,2017
-930018,Everett,Madeline English School,838,,,,,,,,,,,,,,,,,,,,,,2017
-930028,Everett,George Keverian School,919,,,,,,,,,,,,,,,,,,,,,,2017
+390005,Boylston,Boylston Elementary,263,,,,,,,,,,,,,,,,,,,,,,2017
+400020,Braintree,Mary E Flaherty School,1,,,,,,,,,,,,,,,,,,,,,,2017
+400050,Braintree,Donald Ross,1,,,,,,,,,,,,,,,,,,,,,,2017
+400305,Braintree,East Middle School,210,,,,,,,,,,,,,,,,,,,,,,2017
+400310,Braintree,South Middle School,205,,,,,,,,,,,,,,,,,,,,,,2017
+400505,Braintree,Braintree High,49,40,14,0,9,1,0,0,0,4,2,0,0,9,5,0,25,0,6,2,6,11,2017
+410005,Brewster,Stony Brook Elementary,202,,,,,,,,,,,,,,,,,,,,,,2017
+410010,Brewster,Eddy Elementary,241,,,,,,,,,,,,,,,,,,,,,,2017
+430005,Brimfield,Brimfield Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+440001,Brockton,Dr W Arnone Community School,1,,,,,,,,,,,,,,,,,,,,,,2017
+440023,Brockton,Edgar B Davis,4,,,,,,,,,,,,,,,,,,,,,,2017
+440080,Brockton,Frederick Douglass Academy,5,,,,,,,,,,,,,,,,,,,,,,2017
+440110,Brockton,Downey,1,,,,,,,,,,,,,,,,,,,,,,2017
+440400,Brockton,Huntington Therapeutic Day School,24,,,,,,,,,,,,,,,,,,,,,,2017
+440405,Brockton,East Middle School,6,,,,,,,,,,,,,,,,,,,,,,2017
+440410,Brockton,North Middle School,8,,,,,,,,,,,,,,,,,,,,,,2017
+440420,Brockton,West Middle School,12,,,,,,,,,,,,,,,,,,,,,,2017
+440421,Brockton,Ashfield Middle School,8,,,,,,,,,,,,,,,,,,,,,,2017
+440422,Brockton,Joseph F. Plouffe Academy,225,,,,,,,,,,,,,,,,,,,,,,2017
+440505,Brockton,Brockton High,1411,44,19,11,0,3,0,0,0,5,7,0,0,7,12,0,,,,,,,2017
+440515,Brockton,Brockton Champion High School,5,,,,,,,,,,,,,,,,,,,,,,2017
+440520,Brockton,Edison Academy,16,,,,,,,,,,,,,,,,,,,,,,2017
+460020,Brookline,Michael Driscoll,71,,,,,,,,,,,,,,,,,,,,,,2017
+460035,Brookline,William H Lincoln,58,,,,,,,,,,,,,,,,,,,,,,2017
+460045,Brookline,John D Runkle,64,,,,,,,,,,,,,,,,,,,,,,2017
+460505,Brookline,Brookline High,158,46,8,0,2,0,0,0,0,6,0,0,0,1,7,0,7,,,,,,2017
+480303,Burlington,Marshall Simonds Middle,719,,,,,,,,,,,,,,,,,,,,,,2017
+480505,Burlington,Burlington High,135,48,24,0,9,2,1,0,0,12,1,0,1,2,22,0,12,5,3,1,1,2,2017
+490506,Cambridge,Cambridge Rindge and Latin,153,49,20,3,6,2,2,0,0,7,4,1,0,5,15,0,50,5,5,15,15,10,2017
+500012,Canton,Lt Peter M Hansen,1,,,,,,,,,,,,,,,,,,,,,,2017
+500020,Canton,Dean S Luce,2,,,,,,,,,,,,,,,,,,,,,,2017
+500305,Canton,Wm H Galvin Middle,444,,,,,,,,,,,,,,,,,,,,,,2017
+500505,Canton,Canton High,29,,,,,,,,,,,,,,,,3,,,,,,2017
+510025,Carlisle,Carlisle School,1,,,,,,,,,,,,,,,,,,,,,,2017
+520015,Carver,Carver Elementary School,6,,,,,,,,,,,,,,,,,,,,,,2017
+520405,Carver,Carver Middle/High School,2,,,,,,,,,,,,,,,,,,,,,,2017
+560025,Chelmsford,Charles D Harrington,2,,,,,,,,,,,,,,,,,,,,,,2017
+560030,Chelmsford,Byam School,1,,,,,,,,,,,,,,,,,,,,,,2017
+560305,Chelmsford,Col Moses Parker School,343,,,,,,,,,,,,,,,,,,,,,,2017
+560310,Chelmsford,McCarthy Middle School,370,,,,,,,,,,,,,,,,,,,,,,2017
+560505,Chelmsford,Chelmsford High,116,56,48,1,11,2,1,0,0,33,5,1,1,12,36,0,16,4,2,3,3,4,2017
+570003,Chelsea,Shurtleff Early Childhood,11,,,,,,,,,,,,,,,,,,,,,,2017
+570025,Chelsea,William A Berkowitz Elementary,11,,,,,,,,,,,,,,,,,,,,,,2017
+570030,Chelsea,Edgar A Hooks Elementary,9,,,,,,,,,,,,,,,,,,,,,,2017
+570035,Chelsea,George F. Kelly Elementary,6,,,,,,,,,,,,,,,,,,,,,,2017
+570040,Chelsea,Frank M Sokolowski Elementary,5,,,,,,,,,,,,,,,,,,,,,,2017
+570045,Chelsea,Eugene Wright Science and Technology Academy,468,,,,,,,,,,,,,,,,,,,,,,2017
+570050,Chelsea,Clark Avenue School,495,,,,,,,,,,,,,,,,,,,,,,2017
+570055,Chelsea,Joseph A. Browne School,541,,,,,,,,,,,,,,,,,,,,,,2017
+570505,Chelsea,Chelsea High,309,,,,,,,,,,,,,,,,,,,,,,2017
+610003,Chicopee,Barry,411,,,,,,,,,,,,,,,,,,,,,,2017
+610010,Chicopee,Belcher,262,,,,,,,,,,,,,,,,,,,,,,2017
+610015,Chicopee,Bowe,453,,,,,,,,,,,,,,,,,,,,,,2017
+610020,Chicopee,Bowie,4,,,,,,,,,,,,,,,,,,,,,,2017
+610021,Chicopee,Chicopee Academy,3,,,,,,,,,,,,,,,,,,,,,,2017
+610022,Chicopee,Litwin,416,,,,,,,,,,,,,,,,,,,,,,2017
+610040,Chicopee,Lambert-Lavoie,2,,,,,,,,,,,,,,,,,,,,,,2017
+610050,Chicopee,Fairview Elementary,2,,,,,,,,,,,,,,,,,,,,,,2017
+610065,Chicopee,Streiber Memorial School,276,,,,,,,,,,,,,,,,,,,,,,2017
+610090,Chicopee,Gen John J Stefanik,405,,,,,,,,,,,,,,,,,,,,,,2017
+610305,Chicopee,Bellamy Middle,303,,,,,,,,,,,,,,,,,,,,,,2017
+610310,Chicopee,Dupont Middle,370,,,,,,,,,,,,,,,,,,,,,,2017
+610505,Chicopee,Chicopee High,96,,,,,,,,,,,,,,,,,,,,,,2017
+610510,Chicopee,Chicopee Comprehensive High School,156,61,2,,,,,,,,,,,,,,,,,,,,2017
+640050,Clinton,Clinton Elementary,438,,,,,,,,,,,,,,,,,,,,,,2017
+640305,Clinton,Clinton Middle School,257,,,,,,,,,,,,,,,,,,,,,,2017
+640505,Clinton,Clinton Senior High,62,,,,,,,,,,,,,,,,,,,,,,2017
+650005,Cohasset,Deer Hill,1,,,,,,,,,,,,,,,,,,,,,,2017
+650010,Cohasset,Joseph Osgood,323,,,,,,,,,,,,,,,,,,,,,,2017
+650505,Cohasset,Cohasset Middle/High School,113,,,,,,,,,,,,,,,,1,,,,,,2017
+670305,Concord,Concord Middle,351,,,,,,,,,,,,,,,,,,,,,,2017
+680005,Conway,Conway Grammar,123,,,,,,,,,,,,,,,,,,,,,,2017
+710010,Danvers,Highlands,2,,,,,,,,,,,,,,,,,,,,,,2017
+710032,Danvers,Ivan G Smith,2,,,,,,,,,,,,,,,,,,,,,,2017
+710305,Danvers,Holten Richmond Middle School,555,,,,,,,,,,,,,,,,,,,,,,2017
+710505,Danvers,Danvers High,299,71,2,,,,,,,,,,,,,,,,,,,,2017
+720015,Dartmouth,Joseph Demello,1,,,,,,,,,,,,,,,,,,,,,,2017
+720030,Dartmouth,George H Potter,4,,,,,,,,,,,,,,,,,,,,,,2017
+720040,Dartmouth,James M. Quinn School,2,,,,,,,,,,,,,,,,,,,,,,2017
+720050,Dartmouth,Dartmouth Middle,867,,,,,,,,,,,,,,,,,,,,,,2017
+720505,Dartmouth,Dartmouth High,69,72,4,,,,,,,,,,,,,,1,,,,,,2017
+730005,Dedham,Early Childhood Center,1,,,,,,,,,,,,,,,,,,,,,,2017
+730010,Dedham,Avery,3,,,,,,,,,,,,,,,,,,,,,,2017
+730025,Dedham,Greenlodge,1,,,,,,,,,,,,,,,,,,,,,,2017
+730030,Dedham,Oakdale,2,,,,,,,,,,,,,,,,,,,,,,2017
+730305,Dedham,Dedham Middle School,232,,,,,,,,,,,,,,,,,,,,,,2017
+730505,Dedham,Dedham High,70,73,6,0,1,0,0,0,0,5,0,0,0,1,5,0,6,,,,,,2017
+740015,Deerfield,Deerfield Elementary,341,,,,,,,,,,,,,,,,,,,,,,2017
+770305,Douglas,Douglas Middle School,1,,,,,,,,,,,,,,,,,,,,,,2017
+770505,Douglas,Douglas High School,58,,,,,,,,,,,,,,,,,,,,,,2017
+780005,Dover,Chickering,473,,,,,,,,,,,,,,,,,,,,,,2017
+790020,Dracut,Joseph A Campbell Elementary,2,,,,,,,,,,,,,,,,,,,,,,2017
+790035,Dracut,Brookside Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+790045,Dracut,George H. Englesby Elementary School,2,,,,,,,,,,,,,,,,,,,,,,2017
+790410,Dracut,Justus C. Richardson Middle School,299,,,,,,,,,,,,,,,,,,,,,,2017
+790505,Dracut,Dracut Senior High,256,,,,,,,,,,,,,,,,,,,,,,2017
+820006,Duxbury,Chandler Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+820505,Duxbury,Duxbury High,30,82,9,0,1,0,0,0,0,8,0,0,0,1,8,0,7,,,,,,2017
+830005,East Bridgewater,Central,472,,,,,,,,,,,,,,,,,,,,,,2017
+830010,East Bridgewater,Gordon W. Mitchell School,662,,,,,,,,,,,,,,,,,,,,,,2017
+830505,East Bridgewater,East Bridgewater JR./SR. High School,96,,,,,,,,,,,,,,,,,,,,,,2017
+850005,Eastham,Eastham Elementary,166,,,,,,,,,,,,,,,,,,,,,,2017
+860005,Easthampton,Center School,2,,,,,,,,,,,,,,,,,,,,,,2017
+860020,Easthampton,Neil A Pepin,3,,,,,,,,,,,,,,,,,,,,,,2017
+860505,Easthampton,Easthampton High,110,,,,,,,,,,,,,,,,,,,,,,2017
+870305,East Longmeadow,Birchland Park,50,,,,,,,,,,,,,,,,,,,,,,2017
+870505,East Longmeadow,East Longmeadow High,119,87,9,1,4,0,0,0,0,4,0,1,0,3,6,0,7,,,,,,2017
+880405,Easton,Easton Middle School,670,,,,,,,,,,,,,,,,,,,,,,2017
+880505,Easton,Oliver Ames High,37,,,,,,,,,,,,,,,,13,1,3,1,7,1,2017
+890005,Edgartown,Edgartown Elementary,350,,,,,,,,,,,,,,,,,,,,,,2017
+910030,Erving,Erving Elementary,143,,,,,,,,,,,,,,,,,,,,,,2017
+930010,Everett,Sumner G. Whittier School,648,,,,,,,,,,,,,,,,,,,,,,2017
+930015,Everett,Webster School,4,,,,,,,,,,,,,,,,,,,,,,2017
+930018,Everett,Madeline English School,830,,,,,,,,,,,,,,,,,,,,,,2017
+930028,Everett,George Keverian School,874,,,,,,,,,,,,,,,,,,,,,,2017
 930030,Everett,Devens School,2,,,,,,,,,,,,,,,,,,,,,,2017
-930038,Everett,Lafayette School,938,,,,,,,,,,,,,,,,,,,,,,2017
-930058,Everett,Parlin School,920,,,,,,,,,,,,,,,,,,,,,,2017
-930505,Everett,Everett High,72,,,,,,,,,,,,,,,,,,,,,,2017
-940030,Fairhaven,Leroy Wood,352,,,,,,,,,,,,,,,,,,,,,,2017
-940305,Fairhaven,Hastings Middle,417,,,,,,,,,,,,,,,,,,,,,,2017
-940505,Fairhaven,Fairhaven High,32,,,,,,,,,,,,,,,,,,,,,,2017
+930038,Everett,Lafayette School,933,,,,,,,,,,,,,,,,,,,,,,2017
+930058,Everett,Parlin School,837,,,,,,,,,,,,,,,,,,,,,,2017
+930505,Everett,Everett High,58,,,,,,,,,,,,,,,,1,,,,,,2017
+940010,Fairhaven,East Fairhaven,2,,,,,,,,,,,,,,,,,,,,,,2017
+940030,Fairhaven,Leroy Wood,476,,,,,,,,,,,,,,,,,,,,,,2017
+940305,Fairhaven,Hastings Middle,306,,,,,,,,,,,,,,,,,,,,,,2017
+940505,Fairhaven,Fairhaven High,40,,,,,,,,,,,,,,,,,,,,,,2017
+950005,Fall River,North End Elementary,5,,,,,,,,,,,,,,,,,,,,,,2017
+950009,Fall River,Carlton M. Viveiros Elementary School,4,,,,,,,,,,,,,,,,,,,,,,2017
 950011,Fall River,Mary Fonseca Elementary School,1,,,,,,,,,,,,,,,,,,,,,,2017
-950065,Fall River,William S Greene,1,,,,,,,,,,,,,,,,,,,,,,2017
-950315,Fall River,Morton Middle,2,,,,,,,,,,,,,,,,,,,,,,2017
-950325,Fall River,Resiliency Preparatory School,1,,,,,,,,,,,,,,,,,,,,,,2017
-950505,Fall River,B M C Durfee High,156,95,25,4,5,1,3,0,0,12,11,0,0,10,15,0,25,5,4,8,6,2,2017
-960005,Falmouth,East Falmouth Elementary,268,,,,,,,,,,,,,,,,,,,,,,2017
-960015,Falmouth,Teaticket,280,,,,,,,,,,,,,,,,,,,,,,2017
-960020,Falmouth,Mullen-Hall,446,,,,,,,,,,,,,,,,,,,,,,2017
-960030,Falmouth,North Falmouth Elementary,317,,,,,,,,,,,,,,,,,,,,,,2017
-960305,Falmouth,Morse Pond School,590,,,,,,,,,,,,,,,,,,,,,,2017
-960405,Falmouth,Lawrence,279,,,,,,,,,,,,,,,,,,,,,,2017
-960505,Falmouth,Falmouth High,140,,,,,,,,,,,,,,,,1,,,,,,2017
-970048,Fitchburg,Memorial Intermediate,516,,,,,,,,,,,,,,,,,,,,,,2017
-970315,Fitchburg,Arthur M Longsjo Middle School,249,,,,,,,,,,,,,,,,,,,,,,2017
-970505,Fitchburg,Fitchburg High,187,,,,,,,,,,,,,,,,,,,,,,2017
-970510,Fitchburg,Goodrich Academy,1,,,,,,,,,,,,,,,,,,,,,,2017
-980005,Florida,Abbott Memorial,70,,,,,,,,,,,,,,,,,,,,,,2017
-990405,Foxborough,John J Ahern,469,,,,,,,,,,,,,,,,,,,,,,2017
-990505,Foxborough,Foxborough High,99,,,,,,,,,,,,,,,,3,,,,,,2017
-1000515,Framingham,Framingham High School,188,100,12,0,4,0,1,0,0,7,0,0,0,1,11,0,12,0,0,3,3,6,2017
-1010040,Franklin,Annie Sullivan Middle School,457,,,,,,,,,,,,,,,,,,,,,,2017
-1010310,Franklin,Remington Middle,456,,,,,,,,,,,,,,,,,,,,,,2017
+950013,Fall River,Letourneau Elementary School,4,,,,,,,,,,,,,,,,,,,,,,2017
+950017,Fall River,Henry Lord Community School,1,,,,,,,,,,,,,,,,,,,,,,2017
+950045,Fall River,John J Doran,4,,,,,,,,,,,,,,,,,,,,,,2017
+950065,Fall River,William S Greene,4,,,,,,,,,,,,,,,,,,,,,,2017
+950130,Fall River,Spencer Borden,3,,,,,,,,,,,,,,,,,,,,,,2017
+950140,Fall River,James Tansey,1,,,,,,,,,,,,,,,,,,,,,,2017
+950145,Fall River,Samuel Watson,2,,,,,,,,,,,,,,,,,,,,,,2017
+950305,Fall River,Talbot Innovation School,4,,,,,,,,,,,,,,,,,,,,,,2017
+950315,Fall River,Morton Middle,8,,,,,,,,,,,,,,,,,,,,,,2017
+950320,Fall River,Matthew J Kuss Middle,499,,,,,,,,,,,,,,,,,,,,,,2017
+950505,Fall River,B M C Durfee High,60,95,25,4,5,1,3,0,0,12,11,0,0,10,15,0,29,9,6,9,4,1,2017
+960005,Falmouth,East Falmouth Elementary,258,,,,,,,,,,,,,,,,,,,,,,2017
+960015,Falmouth,Teaticket,261,,,,,,,,,,,,,,,,,,,,,,2017
+960020,Falmouth,Mullen-Hall,436,,,,,,,,,,,,,,,,,,,,,,2017
+960030,Falmouth,North Falmouth Elementary,323,,,,,,,,,,,,,,,,,,,,,,2017
+960305,Falmouth,Morse Pond School,550,,,,,,,,,,,,,,,,,,,,,,2017
+960405,Falmouth,Lawrence,308,,,,,,,,,,,,,,,,,,,,,,2017
+960505,Falmouth,Falmouth High,126,,,,,,,,,,,,,,,,2,,,,,,2017
+970048,Fitchburg,Memorial Middle School,531,,,,,,,,,,,,,,,,,,,,,,2017
+970315,Fitchburg,Arthur M Longsjo Middle School,481,,,,,,,,,,,,,,,,,,,,,,2017
+970505,Fitchburg,Fitchburg High,201,,,,,,,,,,,,,,,,,,,,,,2017
+990020,Foxborough,Vincent M Igo Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+990050,Foxborough,Charles Taylor Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+990405,Foxborough,John J Ahern,473,,,,,,,,,,,,,,,,,,,,,,2017
+990505,Foxborough,Foxborough High,60,,,,,,,,,,,,,,,,3,,,,,,2017
+1000005,Framingham,King Elementary School,15,,,,,,,,,,,,,,,,,,,,,,2017
+1000015,Framingham,Hemenway,15,,,,,,,,,,,,,,,,,,,,,,2017
+1000039,Framingham,Potter Road,1,,,,,,,,,,,,,,,,,,,,,,2017
+1000302,Framingham,Cameron Middle School,7,,,,,,,,,,,,,,,,,,,,,,2017
+1000305,Framingham,Fuller Middle,3,,,,,,,,,,,,,,,,,,,,,,2017
+1000310,Framingham,Walsh Middle,3,,,,,,,,,,,,,,,,,,,,,,2017
+1000515,Framingham,Framingham High School,241,100,12,0,4,0,1,0,0,7,0,0,0,1,11,0,23,0,0,2,6,15,2017
+1010040,Franklin,Annie Sullivan Middle School,438,,,,,,,,,,,,,,,,,,,,,,2017
+1010310,Franklin,Remington Middle,445,,,,,,,,,,,,,,,,,,,,,,2017
 1010405,Franklin,Horace Mann,463,,,,,,,,,,,,,,,,,,,,,,2017
-1010505,Franklin,Franklin High,173,101,64,1,10,2,4,0,0,47,3,0,0,12,52,0,37,14,6,2,8,7,2017
-1030405,Gardner,Gardner Middle School,526,,,,,,,,,,,,,,,,,,,,,,2017
-1030505,Gardner,Gardner High,1,,,,,,,,,,,,,,,,,,,,,,2017
-1050010,Georgetown,Penn Brook,690,,,,,,,,,,,,,,,,,,,,,,2017
-1050305,Georgetown,Georgetown Middle School,192,,,,,,,,,,,,,,,,,,,,,,2017
-1050505,Georgetown,Georgetown High School,137,,,,,,,,,,,,,,,,,,,,,,2017
-1070505,Gloucester,Gloucester High,195,107,9,1,0,0,0,0,0,8,2,0,0,1,8,0,7,,,,,,2017
+1010505,Franklin,Franklin High,147,101,64,1,10,2,4,0,0,47,3,0,0,12,52,0,28,8,5,2,7,6,2017
+1030001,Gardner,Elm Street School,6,,,,,,,,,,,,,,,,,,,,,,2017
+1030020,Gardner,Waterford Street,3,,,,,,,,,,,,,,,,,,,,,,2017
+1030405,Gardner,Gardner Middle School,517,,,,,,,,,,,,,,,,,,,,,,2017
+1030505,Gardner,Gardner High,3,,,,,,,,,,,,,,,,1,,,,,,2017
+1050010,Georgetown,Penn Brook,472,,,,,,,,,,,,,,,,,,,,,,2017
+1050305,Georgetown,Georgetown Middle School,187,,,,,,,,,,,,,,,,,,,,,,2017
+1050505,Georgetown,Georgetown High School,103,,,,,,,,,,,,,,,,,,,,,,2017
+1070045,Gloucester,Veterans Memorial,3,,,,,,,,,,,,,,,,,,,,,,2017
+1070050,Gloucester,West Parish,2,,,,,,,,,,,,,,,,,,,,,,2017
+1070305,Gloucester,Ralph B O'Maley Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
+1070505,Gloucester,Gloucester High,206,107,9,1,0,0,0,0,0,8,2,0,0,1,8,0,9,,,,,,2017
 1090005,Gosnold,Cuttyhunk Elementary,2,,,,,,,,,,,,,,,,,,,,,,2017
-1100030,Grafton,North Street Elementary School,593,,,,,,,,,,,,,,,,,,,,,,2017
-1100200,Grafton,Millbury Street Elementary School,674,,,,,,,,,,,,,,,,,,,,,,2017
-1100305,Grafton,Grafton Middle,478,,,,,,,,,,,,,,,,,,,,,,2017
-1100505,Grafton,Grafton High School,70,110,5,,,,,,,,,,,,,,5,,,,,,2017
-1110004,Granby,East Meadow,169,,,,,,,,,,,,,,,,,,,,,,2017
-1110010,Granby,West Street,174,,,,,,,,,,,,,,,,,,,,,,2017
-1110505,Granby,Granby Jr Sr High School,182,111,11,0,2,0,1,0,0,8,2,0,0,2,9,0,,,,,,,2017
-1140010,Greenfield,Federal Street School,242,,,,,,,,,,,,,,,,,,,,,,2017
-1140025,Greenfield,Discovery School at Four Corners,239,,,,,,,,,,,,,,,,,,,,,,2017
-1140030,Greenfield,Green River,6,,,,,,,,,,,,,,,,,,,,,,2017
-1140305,Greenfield,Greenfield Middle,296,,,,,,,,,,,,,,,,,,,,,,2017
-1170505,Hadley,Hopkins Academy,58,,,,,,,,,,,,,,,,,,,,,,2017
-1180005,Halifax,Halifax Elementary,253,,,,,,,,,,,,,,,,,,,,,,2017
-1210005,Hancock,Hancock Elementary,33,,,,,,,,,,,,,,,,,,,,,,2017
-1220004,Hanover,Cedar Elementary,362,,,,,,,,,,,,,,,,,,,,,,2017
-1220005,Hanover,Center Elementary,352,,,,,,,,,,,,,,,,,,,,,,2017
-1220015,Hanover,Sylvester,227,,,,,,,,,,,,,,,,,,,,,,2017
-1220305,Hanover,Hanover Middle,834,,,,,,,,,,,,,,,,,,,,,,2017
-1220505,Hanover,Hanover High,21,,,,,,,,,,,,,,,,5,,,,,,2017
-1250005,Harvard,Hildreth Elementary School,425,,,,,,,,,,,,,,,,,,,,,,2017
-1250505,Harvard,Bromfield,31,,,,,,,,,,,,,,,,2,,,,,,2017
-1270005,Hatfield,Hatfield Elementary,222,,,,,,,,,,,,,,,,,,,,,,2017
-1270505,Hatfield,Smith Academy,38,,,,,,,,,,,,,,,,,,,,,,2017
-1280033,Haverhill,Haverhill Alternative School,7,,,,,,,,,,,,,,,,,,,,,,2017
-1280073,Haverhill,TEACH,6,,,,,,,,,,,,,,,,,,,,,,2017
-1280505,Haverhill,Haverhill High,518,128,14,0,0,1,0,0,0,13,2,3,0,2,12,0,11,5,2,3,1,0,2017
-1310410,Hingham,Hingham Middle School,352,,,,,,,,,,,,,,,,,,,,,,2017
-1310505,Hingham,Hingham High,226,,,,,,,,,,,,,,,,2,,,,,,2017
-1330018,Holbrook,John F Kennedy,1,,,,,,,,,,,,,,,,,,,,,,2017
-1330505,Holbrook,Holbrook Jr Sr High,186,,,,,,,,,,,,,,,,,,,,,,2017
-1360007,Holliston,Miller School,679,,,,,,,,,,,,,,,,,,,,,,2017
-1360505,Holliston,Holliston High,10,136,2,,,,,,,,,,,,,,,,,,,,2017
-1370015,Holyoke,Lt Elmer J McMahon Elementary,378,,,,,,,,,,,,,,,,,,,,,,2017
-1370040,Holyoke,Kelly Elementary,137,,,,,,,,,,,,,,,,,,,,,,2017
-1370045,Holyoke,E N White Elementary,432,,,,,,,,,,,,,,,,,,,,,,2017
-1370055,Holyoke,Lt Clayre Sullivan Elementary,303,,,,,,,,,,,,,,,,,,,,,,2017
-1370060,Holyoke,Maurice A Donahue Elementary,412,,,,,,,,,,,,,,,,,,,,,,2017
-1370505,Holyoke,Holyoke High,441,,,,,,,,,,,,,,,,,,,,,,2017
-1380505,Hopedale,Hopedale Jr Sr High,98,138,1,,,,,,,,,,,,,,1,,,,,,2017
-1390015,Hopkinton,Hopkins Elementary School,499,,,,,,,,,,,,,,,,,,,,,,2017
-1390305,Hopkinton,Hopkinton Middle School,572,,,,,,,,,,,,,,,,,,,,,,2017
-1390505,Hopkinton,Hopkinton High,55,139,40,0,10,0,0,0,0,30,0,1,0,10,30,0,37,15,8,8,2,4,2017
-1410007,Hudson,Mulready Elementary,236,,,,,,,,,,,,,,,,,,,,,,2017
-1410015,Hudson,Forest Avenue Elementary,333,,,,,,,,,,,,,,,,,,,,,,2017
-1410030,Hudson,C A Farley,471,,,,,,,,,,,,,,,,,,,,,,2017
-1410505,Hudson,Hudson High,281,,,,,,,,,,,,,,,,,,,,,,2017
-1420015,Hull,Lillian M Jacobs,359,,,,,,,,,,,,,,,,,,,,,,2017
-1420305,Hull,Memorial Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
-1420505,Hull,Hull High,10,,,,,,,,,,,,,,,,,,,,,,2017
-1440505,Ipswich,Ipswich High,20,144,15,0,2,0,3,0,0,10,1,0,0,8,7,0,1,,,,,,2017
-1450020,Kingston,Kingston Intermediate,580,,,,,,,,,,,,,,,,,,,,,,2017
-1480005,Lanesborough,Lanesborough Elementary,202,,,,,,,,,,,,,,,,,,,,,,2017
-1490002,Lawrence,Lawlor Early Childhood Center,1,,,,,,,,,,,,,,,,,,,,,,2017
-1490004,Lawrence,South Lawrence East Elementary School,1,,,,,,,,,,,,,,,,,,,,,,2017
-1490018,Lawrence,Robert Frost,590,,,,,,,,,,,,,,,,,,,,,,2017
-1490048,Lawrence,Oliver Partnership School,1,,,,,,,,,,,,,,,,,,,,,,2017
-1490053,Lawrence,Edward F. Parthum,627,,,,,,,,,,,,,,,,,,,,,,2017
-1490085,Lawrence,Spark Academy,1,,,,,,,,,,,,,,,,,,,,,,2017
-1490515,Lawrence,Lawrence High School,101,,,,,,,,,,,,,,,,,,,,,,2017
-1490537,Lawrence,School for Exceptional Studies,8,,,,,,,,,,,,,,,,,,,,,,2017
-1500505,Lee,Lee Middle/High School,139,150,4,,,,,,,,,,,,,,4,,,,,,2017
-1510505,Leicester,Leicester High,141,,,,,,,,,,,,,,,,,,,,,,2017
-1520015,Lenox,Morris,254,,,,,,,,,,,,,,,,,,,,,,2017
-1520505,Lenox,Lenox Memorial High,146,,,,,,,,,,,,,,,,,,,,,,2017
-1530045,Leominster,Samoset School,1,,,,,,,,,,,,,,,,,,,,,,2017
-1530505,Leominster,Leominster High School,15,153,7,0,1,1,0,0,0,5,0,0,0,2,5,0,7,,,,,,2017
-1530605,Leominster,Center For Technical Education Innovation,38,,,,,,,,,,,,,,,,,,,,,,2017
+1100030,Grafton,North Street Elementary School,580,,,,,,,,,,,,,,,,,,,,,,2017
+1100200,Grafton,Millbury Street Elementary School,659,,,,,,,,,,,,,,,,,,,,,,2017
+1100305,Grafton,Grafton Middle,516,,,,,,,,,,,,,,,,,,,,,,2017
+1100505,Grafton,Grafton High School,91,110,5,,,,,,,,,,,,,,10,3,2,3,1,1,2017
+1110004,Granby,East Meadow,149,,,,,,,,,,,,,,,,,,,,,,2017
+1110010,Granby,West Street,181,,,,,,,,,,,,,,,,,,,,,,2017
+1110505,Granby,Granby Jr Sr High School,151,111,11,0,2,0,1,0,0,8,2,0,0,2,9,0,,,,,,,2017
+1140010,Greenfield,Federal Street School,248,,,,,,,,,,,,,,,,,,,,,,2017
+1140025,Greenfield,Discovery School at Four Corners,247,,,,,,,,,,,,,,,,,,,,,,2017
+1140035,Greenfield,Newton School,4,,,,,,,,,,,,,,,,,,,,,,2017
+1140305,Greenfield,Greenfield Middle,373,,,,,,,,,,,,,,,,,,,,,,2017
+1170015,Hadley,Hadley Elementary,4,,,,,,,,,,,,,,,,,,,,,,2017
+1170505,Hadley,Hopkins Academy,60,,,,,,,,,,,,,,,,1,,,,,,2017
+1180005,Halifax,Halifax Elementary,260,,,,,,,,,,,,,,,,,,,,,,2017
+1210005,Hancock,Hancock Elementary,30,,,,,,,,,,,,,,,,,,,,,,2017
+1220004,Hanover,Cedar Elementary,348,,,,,,,,,,,,,,,,,,,,,,2017
+1220005,Hanover,Center Elementary,335,,,,,,,,,,,,,,,,,,,,,,2017
+1220015,Hanover,Sylvester,228,,,,,,,,,,,,,,,,,,,,,,2017
+1220305,Hanover,Hanover Middle,831,,,,,,,,,,,,,,,,,,,,,,2017
+1220505,Hanover,Hanover High,61,,,,,,,,,,,,,,,,1,,,,,,2017
+1250005,Harvard,Hildreth Elementary School,429,,,,,,,,,,,,,,,,,,,,,,2017
+1250505,Harvard,Bromfield,29,,,,,,,,,,,,,,,,3,,,,,,2017
+1270005,Hatfield,Hatfield Elementary,217,,,,,,,,,,,,,,,,,,,,,,2017
+1270505,Hatfield,Smith Academy,26,,,,,,,,,,,,,,,,,,,,,,2017
+1280008,Haverhill,Bradford Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+1280020,Haverhill,Crowell,1,,,,,,,,,,,,,,,,,,,,,,2017
+1280026,Haverhill,Golden Hill,5,,,,,,,,,,,,,,,,,,,,,,2017
+1280033,Haverhill,Haverhill Alternative School,10,,,,,,,,,,,,,,,,,,,,,,2017
+1280054,Haverhill,Pentucket Lake Elementary,2,,,,,,,,,,,,,,,,,,,,,,2017
+1280073,Haverhill,TEACH,13,,,,,,,,,,,,,,,,,,,,,,2017
+1280075,Haverhill,Tilton,3,,,,,,,,,,,,,,,,,,,,,,2017
+1280100,Haverhill,Consentino Middle School,3,,,,,,,,,,,,,,,,,,,,,,2017
+1280505,Haverhill,Haverhill High,563,128,14,0,0,1,0,0,0,13,2,3,0,2,12,0,15,9,2,2,0,2,2017
+1310410,Hingham,Hingham Middle School,338,,,,,,,,,,,,,,,,,,,,,,2017
+1310505,Hingham,Hingham High,77,,,,,,,,,,,,,,,,4,,,,,,2017
+1330018,Holbrook,John F Kennedy,579,,,,,,,,,,,,,,,,,,,,,,2017
+1330505,Holbrook,Holbrook Middle High School,261,,,,,,,,,,,,,,,,,,,,,,2017
+1360007,Holliston,Miller School,678,,,,,,,,,,,,,,,,,,,,,,2017
+1360305,Holliston,Robert H. Adams Middle School,1,,,,,,,,,,,,,,,,,,,,,,2017
+1360505,Holliston,Holliston High,53,136,2,,,,,,,,,,,,,,3,,,,,,2017
+1370015,Holyoke,Lt Elmer J McMahon Elementary,390,,,,,,,,,,,,,,,,,,,,,,2017
+1370030,Holyoke,William R. Peck School,3,,,,,,,,,,,,,,,,,,,,,,2017
+1370040,Holyoke,Kelly Elementary,82,,,,,,,,,,,,,,,,,,,,,,2017
+1370045,Holyoke,E N White Elementary,5,,,,,,,,,,,,,,,,,,,,,,2017
+1370055,Holyoke,Lt Clayre Sullivan Elementary,377,,,,,,,,,,,,,,,,,,,,,,2017
+1370060,Holyoke,Maurice A Donahue Elementary,383,,,,,,,,,,,,,,,,,,,,,,2017
+1370505,Holyoke,Holyoke High,459,,,,,,,,,,,,,,,,,,,,,,2017
+1370605,Holyoke,Wm J Dean Vocational Technical High,1,,,,,,,,,,,,,,,,,,,,,,2017
+1380505,Hopedale,Hopedale Jr Sr High,102,138,1,,,,,,,,,,,,,,,,,,,,2017
+1390015,Hopkinton,Hopkins Elementary School,549,,,,,,,,,,,,,,,,,,,,,,2017
+1390305,Hopkinton,Hopkinton Middle School,488,,,,,,,,,,,,,,,,,,,,,,2017
+1390505,Hopkinton,Hopkinton High,102,139,40,0,10,0,0,0,0,30,0,1,0,10,30,0,3,,,,,,2017
+1410007,Hudson,Mulready Elementary,228,,,,,,,,,,,,,,,,,,,,,,2017
+1410015,Hudson,Forest Avenue Elementary,357,,,,,,,,,,,,,,,,,,,,,,2017
+1410030,Hudson,C A Farley,440,,,,,,,,,,,,,,,,,,,,,,2017
+1410410,Hudson,David J. Quinn Middle School,2,,,,,,,,,,,,,,,,,,,,,,2017
+1410505,Hudson,Hudson High,288,,,,,,,,,,,,,,,,,,,,,,2017
+1420015,Hull,Lillian M Jacobs,362,,,,,,,,,,,,,,,,,,,,,,2017
+1420305,Hull,Memorial Middle,2,,,,,,,,,,,,,,,,,,,,,,2017
+1420505,Hull,Hull High,2,,,,,,,,,,,,,,,,,,,,,,2017
+1440305,Ipswich,Ipswich Middle School,1,,,,,,,,,,,,,,,,,,,,,,2017
+1440505,Ipswich,Ipswich High,37,144,15,0,2,0,3,0,0,10,1,0,0,8,7,0,1,,,,,,2017
+1450005,Kingston,Kingston Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+1450020,Kingston,Kingston Intermediate,570,,,,,,,,,,,,,,,,,,,,,,2017
+1480005,Lanesborough,Lanesborough Elementary,211,,,,,,,,,,,,,,,,,,,,,,2017
+1490003,Lawrence,John Breen School,1,,,,,,,,,,,,,,,,,,,,,,2017
+1490004,Lawrence,South Lawrence East Elementary School,4,,,,,,,,,,,,,,,,,,,,,,2017
+1490009,Lawrence,Community Day Arlington,2,,,,,,,,,,,,,,,,,,,,,,2017
+1490017,Lawrence,Arlington Middle School,1,,,,,,,,,,,,,,,,,,,,,,2017
+1490018,Lawrence,Robert Frost,489,,,,,,,,,,,,,,,,,,,,,,2017
+1490020,Lawrence,James F Hennessey,1,,,,,,,,,,,,,,,,,,,,,,2017
+1490022,Lawrence,Gerard A. Guilmette,1,,,,,,,,,,,,,,,,,,,,,,2017
+1490025,Lawrence,Guilmette Middle School,3,,,,,,,,,,,,,,,,,,,,,,2017
+1490027,Lawrence,Parthum Middle School,3,,,,,,,,,,,,,,,,,,,,,,2017
+1490040,Lawrence,Francis M Leahy,1,,,,,,,,,,,,,,,,,,,,,,2017
+1490048,Lawrence,Oliver Partnership School,4,,,,,,,,,,,,,,,,,,,,,,2017
+1490075,Lawrence,John K Tarbox,1,,,,,,,,,,,,,,,,,,,,,,2017
+1490080,Lawrence,Emily G Wetherbee,3,,,,,,,,,,,,,,,,,,,,,,2017
+1490085,Lawrence,Spark Academy,3,,,,,,,,,,,,,,,,,,,,,,2017
+1490515,Lawrence,Lawrence High School,165,,,,,,,,,,,,,,,,,,,,,,2017
+1490525,Lawrence,Frost Middle School,3,,,,,,,,,,,,,,,,,,,,,,2017
+1490537,Lawrence,School for Exceptional Studies,31,,,,,,,,,,,,,,,,,,,,,,2017
+1500505,Lee,Lee Middle/High School,110,150,4,,,,,,,,,,,,,,3,,,,,,2017
+1510505,Leicester,Leicester High,135,,,,,,,,,,,,,,,,1,,,,,,2017
+1520015,Lenox,Morris,252,,,,,,,,,,,,,,,,,,,,,,2017
+1520505,Lenox,Lenox Memorial High,154,,,,,,,,,,,,,,,,,,,,,,2017
+1530007,Leominster,Fall Brook,1,,,,,,,,,,,,,,,,,,,,,,2017
+1530030,Leominster,Northwest,4,,,,,,,,,,,,,,,,,,,,,,2017
+1530045,Leominster,Samoset School,3,,,,,,,,,,,,,,,,,,,,,,2017
+1530320,Leominster,Sky View Middle School,5,,,,,,,,,,,,,,,,,,,,,,2017
+1530505,Leominster,Leominster High School,113,153,7,0,1,1,0,0,0,5,0,0,0,2,5,0,,,,,,,2017
+1530605,Leominster,Center For Technical Education Innovation,76,,,,,,,,,,,,,,,,,,,,,,2017
 1540005,Leverett,Leverett Elementary,112,,,,,,,,,,,,,,,,,,,,,,2017
-1550305,Lexington,Jonas Clarke Middle,307,,,,,,,,,,,,,,,,,,,,,,2017
-1550310,Lexington,Wm Diamond Middle,356,,,,,,,,,,,,,,,,,,,,,,2017
-1550505,Lexington,Lexington High,348,155,43,0,24,1,3,0,0,15,3,1,1,4,39,0,39,1,0,3,10,25,2017
-1570025,Lincoln,Lincoln School,401,,,,,,,,,,,,,,,,,,,,,,2017
-1570305,Lincoln,Hanscom Middle,237,,,,,,,,,,,,,,,,,,,,,,2017
-1580305,Littleton,Littleton Middle School,350,,,,,,,,,,,,,,,,,,,,,,2017
-1580505,Littleton,Littleton High School,111,158,18,0,1,0,0,0,0,17,1,4,0,1,17,0,16,8,1,5,1,1,2017
-1590005,Longmeadow,Blueberry Hill,424,,,,,,,,,,,,,,,,,,,,,,2017
-1590010,Longmeadow,Center,402,,,,,,,,,,,,,,,,,,,,,,2017
-1590017,Longmeadow,Glenbrook Middle,314,,,,,,,,,,,,,,,,,,,,,,2017
-1590025,Longmeadow,Wolf Swamp Road,343,,,,,,,,,,,,,,,,,,,,,,2017
-1590305,Longmeadow,Williams Middle,341,,,,,,,,,,,,,,,,,,,,,,2017
-1590505,Longmeadow,Longmeadow High,58,159,19,0,1,0,0,0,0,18,0,0,0,2,17,0,20,0,0,4,8,8,2017
-1600018,Lowell,Pyne Arts,469,,,,,,,,,,,,,,,,,,,,,,2017
-1600030,Lowell,Charles W Morey,2,,,,,,,,,,,,,,,,,,,,,,2017
-1600090,Lowell,Bartlett Community Partnership,454,,,,,,,,,,,,,,,,,,,,,,2017
-1600310,Lowell,B.F. Butler Middle School,5,,,,,,,,,,,,,,,,,,,,,,2017
-1600315,Lowell,James S Daley Middle School,608,,,,,,,,,,,,,,,,,,,,,,2017
+1550305,Lexington,Jonas Clarke Middle,338,,,,,,,,,,,,,,,,,,,,,,2017
+1550310,Lexington,Wm Diamond Middle,286,,,,,,,,,,,,,,,,,,,,,,2017
+1550505,Lexington,Lexington High,393,155,43,0,24,1,3,0,0,15,3,1,1,4,39,0,72,0,2,8,30,32,2017
+1570025,Lincoln,Lincoln School,385,,,,,,,,,,,,,,,,,,,,,,2017
+1570305,Lincoln,Hanscom Middle,244,,,,,,,,,,,,,,,,,,,,,,2017
+1580305,Littleton,Littleton Middle School,358,,,,,,,,,,,,,,,,,,,,,,2017
+1580505,Littleton,Littleton High School,62,158,18,0,1,0,0,0,0,17,1,4,0,1,17,0,4,,,,,,2017
+1590005,Longmeadow,Blueberry Hill,433,,,,,,,,,,,,,,,,,,,,,,2017
+1590010,Longmeadow,Center,410,,,,,,,,,,,,,,,,,,,,,,2017
+1590017,Longmeadow,Glenbrook Middle,327,,,,,,,,,,,,,,,,,,,,,,2017
+1590025,Longmeadow,Wolf Swamp Road,348,,,,,,,,,,,,,,,,,,,,,,2017
+1590305,Longmeadow,Williams Middle,329,,,,,,,,,,,,,,,,,,,,,,2017
+1590505,Longmeadow,Longmeadow High,51,159,19,0,1,0,0,0,0,18,0,0,0,2,17,0,26,0,1,9,5,11,2017
+1600018,Lowell,Pyne Arts,471,,,,,,,,,,,,,,,,,,,,,,2017
+1600085,Lowell,Laura Lee Therapeutic Day School,4,,,,,,,,,,,,,,,,,,,,,,2017
+1600090,Lowell,Bartlett Community Partnership,455,,,,,,,,,,,,,,,,,,,,,,2017
+1600310,Lowell,B.F. Butler Middle School,1,,,,,,,,,,,,,,,,,,,,,,2017
+1600315,Lowell,James S Daley Middle School,630,,,,,,,,,,,,,,,,,,,,,,2017
 1600320,Lowell,Leblanc Therapeutic Day School,1,,,,,,,,,,,,,,,,,,,,,,2017
-1600330,Lowell,Henry J Robinson Middle,555,,,,,,,,,,,,,,,,,,,,,,2017
-1600340,Lowell,James Sullivan Middle School,465,,,,,,,,,,,,,,,,,,,,,,2017
-1600345,Lowell,Dr An Wang School,682,,,,,,,,,,,,,,,,,,,,,,2017
-1600360,Lowell,Kathryn P. Stoklosa Middle School,2,,,,,,,,,,,,,,,,,,,,,,2017
-1600505,Lowell,Lowell High,192,,,,,,,,,,,,,,,,10,2,4,1,1,2,2017
-1600515,Lowell,The Career Academy,13,,,,,,,,,,,,,,,,,,,,,,2017
-1610023,Ludlow,Veterans Park Elementary,358,,,,,,,,,,,,,,,,,,,,,,2017
-1610305,Ludlow,Paul R Baird Middle,162,,,,,,,,,,,,,,,,,,,,,,2017
-1610505,Ludlow,Ludlow Senior High,60,161,13,1,0,0,0,0,0,12,4,0,0,4,9,0,,,,,,,2017
-1620305,Lunenburg,Lunenburg Middle School,118,,,,,,,,,,,,,,,,,,,,,,2017
-1620505,Lunenburg,Lunenburg High,1,,,,,,,,,,,,,,,,,,,,,,2017
+1600330,Lowell,Henry J Robinson Middle,612,,,,,,,,,,,,,,,,,,,,,,2017
+1600340,Lowell,James Sullivan Middle School,631,,,,,,,,,,,,,,,,,,,,,,2017
+1600345,Lowell,Dr An Wang School,3,,,,,,,,,,,,,,,,,,,,,,2017
+1600360,Lowell,Kathryn P. Stoklosa Middle School,5,,,,,,,,,,,,,,,,,,,,,,2017
+1600505,Lowell,Lowell High,223,,,,,,,,,,,,,,,,16,2,4,6,3,1,2017
+1600515,Lowell,The Career Academy,10,,,,,,,,,,,,,,,,,,,,,,2017
+1610020,Ludlow,Chapin Street Elementary School,1,,,,,,,,,,,,,,,,,,,,,,2017
+1610023,Ludlow,Veterans Park Elementary,225,,,,,,,,,,,,,,,,,,,,,,2017
+1610305,Ludlow,Paul R Baird Middle,267,,,,,,,,,,,,,,,,,,,,,,2017
+1610505,Ludlow,Ludlow Senior High,76,161,13,1,0,0,0,0,0,12,4,0,0,4,9,0,1,,,,,,2017
+1620025,Lunenburg,Turkey Hill Elementary School,3,,,,,,,,,,,,,,,,,,,,,,2017
+1620305,Lunenburg,Lunenburg Middle School,148,,,,,,,,,,,,,,,,,,,,,,2017
+1630004,Lynn,Early Childhood Center,1,,,,,,,,,,,,,,,,,,,,,,2017
 1630005,Lynn,Washington Elementary School,1,,,,,,,,,,,,,,,,,,,,,,2017
-1630035,Lynn,Cobbet Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+1630016,Lynn,A Drewicz Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+1630020,Lynn,Brickett Elementary,3,,,,,,,,,,,,,,,,,,,,,,2017
+1630030,Lynn,Julia F Callahan,2,,,,,,,,,,,,,,,,,,,,,,2017
+1630035,Lynn,Cobbet Elementary,6,,,,,,,,,,,,,,,,,,,,,,2017
+1630040,Lynn,Wm P Connery,5,,,,,,,,,,,,,,,,,,,,,,2017
+1630045,Lynn,E J Harrington,1,,,,,,,,,,,,,,,,,,,,,,2017
+1630050,Lynn,Robert L Ford,6,,,,,,,,,,,,,,,,,,,,,,2017
+1630055,Lynn,Hood,1,,,,,,,,,,,,,,,,,,,,,,2017
+1630060,Lynn,Ingalls,6,,,,,,,,,,,,,,,,,,,,,,2017
+1630070,Lynn,Lincoln-Thomson,3,,,,,,,,,,,,,,,,,,,,,,2017
+1630075,Lynn,Lynn Woods,1,,,,,,,,,,,,,,,,,,,,,,2017
 1630085,Lynn,Sewell-Anderson,1,,,,,,,,,,,,,,,,,,,,,,2017
-1630100,Lynn,Tracy,1,,,,,,,,,,,,,,,,,,,,,,2017
-1630305,Lynn,Thurgood Marshall Mid,2,,,,,,,,,,,,,,,,,,,,,,2017
-1630505,Lynn,Classical High,384,,,,,,,,,,,,,,,,,,,,,,2017
-1630510,Lynn,Lynn English High,360,,,,,,,,,,,,,,,,,,,,,,2017
-1630525,Lynn,Fecteau-Leary Junior/Senior High School,2,,,,,,,,,,,,,,,,,,,,,,2017
-1630605,Lynn,Lynn Vocational Technical Institute,3,,,,,,,,,,,,,,,,,,,,,,2017
-1640405,Lynnfield,Lynnfield Middle School,525,,,,,,,,,,,,,,,,,,,,,,2017
-1640505,Lynnfield,Lynnfield High,15,,,,,,,,,,,,,,,,,,,,,,2017
-1650003,Malden,Beebe,348,,,,,,,,,,,,,,,,,,,,,,2017
-1650013,Malden,Ferryway,378,,,,,,,,,,,,,,,,,,,,,,2017
-1650027,Malden,Forestdale,217,,,,,,,,,,,,,,,,,,,,,,2017
-1650047,Malden,Linden,382,,,,,,,,,,,,,,,,,,,,,,2017
-1650057,Malden,Salemwood,342,,,,,,,,,,,,,,,,,,,,,,2017
-1650505,Malden,Malden High,63,,,,,,,,,,,,,,,,31,6,4,11,9,1,2017
-1670007,Mansfield,Everett W Robinson,1,,,,,,,,,,,,,,,,,,,,,,2017
-1670014,Mansfield,Jordan/Jackson Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
-1670035,Mansfield,Harold L Qualters Middle,293,,,,,,,,,,,,,,,,,,,,,,2017
-1670505,Mansfield,Mansfield High,214,,,,,,,,,,,,,,,,2,,,,,,2017
-1680300,Marblehead,Marblehead Veterans Middle School,454,,,,,,,,,,,,,,,,,,,,,,2017
-1680505,Marblehead,Marblehead High,23,,,,,,,,,,,,,,,,4,,,,,,2017
-1700045,Marlborough,1 LT Charles W. Whitcomb School,1274,,,,,,,,,,,,,,,,,,,,,,2017
-1700505,Marlborough,Marlborough High,429,,,,,,,,,,,,,,,,16,9,5,0,2,0,2017
-1710310,Marshfield,Furnace Brook Middle,564,,,,,,,,,,,,,,,,,,,,,,2017
-1710505,Marshfield,Marshfield High,380,171,21,0,0,0,0,0,0,21,3,1,0,1,20,0,20,7,4,6,2,1,2017
-1720005,Mashpee,Kenneth Coombs School,335,,,,,,,,,,,,,,,,,,,,,,2017
-1720035,Mashpee,Quashnet School,478,,,,,,,,,,,,,,,,,,,,,,2017
-1720505,Mashpee,Mashpee High,43,,,,,,,,,,,,,,,,,,,,,,2017
-1730005,Mattapoisett,Center,212,,,,,,,,,,,,,,,,,,,,,,2017
-1730010,Mattapoisett,Old Hammondtown,210,,,,,,,,,,,,,,,,,,,,,,2017
-1740010,Maynard,Green Meadow,443,,,,,,,,,,,,,,,,,,,,,,2017
-1740305,Maynard,Fowler School,224,,,,,,,,,,,,,,,,,,,,,,2017
-1740505,Maynard,Maynard High,125,,,,,,,,,,,,,,,,,,,,,,2017
-1750305,Medfield,Thomas Blake Middle,393,,,,,,,,,,,,,,,,,,,,,,2017
-1750505,Medfield,Medfield Senior High,65,175,3,,,,,,,,,,,,,,2,,,,,,2017
-1760068,Medford,John J McGlynn Elementary School,497,,,,,,,,,,,,,,,,,,,,,,2017
-1760130,Medford,Brooks School,454,,,,,,,,,,,,,,,,,,,,,,2017
-1760140,Medford,Christopher Columbus,401,,,,,,,,,,,,,,,,,,,,,,2017
-1760150,Medford,Milton Fuller Roberts,547,,,,,,,,,,,,,,,,,,,,,,2017
-1760315,Medford,Madeleine Dugger Andrews,493,,,,,,,,,,,,,,,,,,,,,,2017
-1760320,Medford,John J. McGlynn Middle School,467,,,,,,,,,,,,,,,,,,,,,,2017
-1760505,Medford,Medford High,106,,,,,,,,,,,,,,,,2,,,,,,2017
-1760510,Medford,Curtis-Tufts,1,,,,,,,,,,,,,,,,,,,,,,2017
-1760605,Medford,Medford Vocational Technical High,12,,,,,,,,,,,,,,,,,,,,,,2017
-1770015,Medway,Burke/Memorial Elementary School,156,,,,,,,,,,,,,,,,,,,,,,2017
-1770305,Medway,Medway Middle,660,,,,,,,,,,,,,,,,,,,,,,2017
-1770505,Medway,Medway High,86,177,10,0,0,0,0,0,0,10,0,0,0,1,9,0,2,,,,,,2017
-1780305,Melrose,Melrose Middle,352,,,,,,,,,,,,,,,,,,,,,,2017
-1780505,Melrose,Melrose High,47,178,18,4,2,1,1,0,0,10,3,0,3,3,15,0,20,12,2,0,4,2,2017
-1810050,Methuen,Comprehensive Grammar School,1,,,,,,,,,,,,,,,,,,,,,,2017
-1810055,Methuen,Tenney Grammar School,1,,,,,,,,,,,,,,,,,,,,,,2017
-1810505,Methuen,Methuen High,114,,,,,,,,,,,,,,,,,,,,,,2017
-1820008,Middleborough,Henry B. Burkland Elementary School,570,,,,,,,,,,,,,,,,,,,,,,2017
-1820010,Middleborough,Mary K. Goode Elementary School,587,,,,,,,,,,,,,,,,,,,,,,2017
-1820011,Middleborough,Memorial Early Childhood Center,209,,,,,,,,,,,,,,,,,,,,,,2017
-1820305,Middleborough,John T. Nichols Middle,783,,,,,,,,,,,,,,,,,,,,,,2017
-1820505,Middleborough,Middleborough High,320,,,,,,,,,,,,,,,,,,,,,,2017
-1840003,Middleton,Fuller Meadow,146,,,,,,,,,,,,,,,,,,,,,,2017
-1840005,Middleton,Howe-Manning,400,,,,,,,,,,,,,,,,,,,,,,2017
-1850090,Milford,Woodland,639,,,,,,,,,,,,,,,,,,,,,,2017
-1850305,Milford,Stacy Middle,785,,,,,,,,,,,,,,,,,,,,,,2017
-1850505,Milford,Milford High,130,,,,,,,,,,,,,,,,4,,,,,,2017
-1860017,Millbury,Elmwood Street,512,,,,,,,,,,,,,,,,,,,,,,2017
-1860025,Millbury,Raymond E. Shaw Elementary,434,,,,,,,,,,,,,,,,,,,,,,2017
-1860505,Millbury,Millbury Junior/Senior High,394,,,,,,,,,,,,,,,,,,,,,,2017
-1870020,Millis,Millis Middle,62,,,,,,,,,,,,,,,,,,,,,,2017
-1870505,Millis,Millis High School,95,,,,,,,,,,,,,,,,,,,,,,2017
-1890410,Milton,Charles S Pierce Middle,458,,,,,,,,,,,,,,,,,,,,,,2017
-1890505,Milton,Milton High,268,189,25,1,2,2,0,0,0,20,3,0,0,11,14,0,8,,,,,,2017
-1910025,Monson,Quarry Hill Community School,325,,,,,,,,,,,,,,,,,,,,,,2017
-1910310,Monson,Granite Valley Middle,253,,,,,,,,,,,,,,,,,,,,,,2017
-1910505,Monson,Monson High School,27,,,,,,,,,,,,,,,,,,,,,,2017
-1970005,Nantucket,Nantucket Elementary,684,,,,,,,,,,,,,,,,,,,,,,2017
-1970505,Nantucket,Nantucket High,10,,,,,,,,,,,,,,,,,,,,,,2017
-1980305,Natick,J F Kennedy Middle School,56,,,,,,,,,,,,,,,,,,,,,,2017
-1980505,Natick,Natick High,107,198,43,2,8,0,2,0,0,31,2,1,1,15,28,0,37,6,6,6,9,10,2017
-1990405,Needham,Pollard Middle,402,,,,,,,,,,,,,,,,,,,,,,2017
-1990410,Needham,High Rock School,372,,,,,,,,,,,,,,,,,,,,,,2017
-1990505,Needham,Needham High,98,199,25,1,6,3,0,0,0,15,1,1,0,4,21,0,20,1,3,1,5,10,2017
-2010405,New Bedford,Keith Middle School,1,,,,,,,,,,,,,,,,,,,,,,2017
-2010410,New Bedford,Normandin Middle School,2,,,,,,,,,,,,,,,,,,,,,,2017
-2010505,New Bedford,New Bedford High,410,201,15,1,1,3,2,0,0,8,3,0,0,6,9,0,14,6,2,1,3,2,2017
-2010515,New Bedford,Whaling City Junior/Senior High School,12,,,,,,,,,,,,,,,,,,,,,,2017
-2040505,Newburyport,Newburyport High,56,204,1,,,,,,,,,,,,,,1,,,,,,2017
-2070505,Newton,Newton North High,326,,,,,,,,,,,,,,,,2,,,,,,2017
-2070510,Newton,Newton South High,217,,,,,,,,,,,,,,,,7,,,,,,2017
-2080015,Norfolk,H Olive Day,1,,,,,,,,,,,,,,,,,,,,,,2017
-2090505,North Adams,Drury High,49,,,,,,,,,,,,,,,,,,,,,,2017
-2100410,Northampton,John F Kennedy Middle School,396,,,,,,,,,,,,,,,,,,,,,,2017
-2100505,Northampton,Northampton High,66,,,,,,,,,,,,,,,,,,,,,,2017
-2110305,North Andover,North Andover Middle,1098,,,,,,,,,,,,,,,,,,,,,,2017
-2110505,North Andover,North Andover High,325,,,,,,,,,,,,,,,,,,,,,,2017
-2120007,North Attleborough,Amvet Boulevard,2,,,,,,,,,,,,,,,,,,,,,,2017
-2120010,North Attleborough,Falls,1,,,,,,,,,,,,,,,,,,,,,,2017
-2120030,North Attleborough,Community,2,,,,,,,,,,,,,,,,,,,,,,2017
-2120505,North Attleborough,North Attleboro High,238,212,21,0,4,0,1,0,0,16,2,0,0,4,17,0,1,,,,,,2017
-2130015,Northborough,Fannie E Proctor,1,,,,,,,,,,,,,,,,,,,,,,2017
-2140001,Northbridge,W Edward Balmer,517,,,,,,,,,,,,,,,,,,,,,,2017
-2140005,Northbridge,Northbridge Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
-2140505,Northbridge,Northbridge High,174,,,,,,,,,,,,,,,,,,,,,,2017
-2150505,North Brookfield,North Brookfield High,1,,,,,,,,,,,,,,,,1,,,,,,2017
-2170305,North Reading,North Reading Middle,425,,,,,,,,,,,,,,,,,,,,,,2017
-2170505,North Reading,North Reading High,105,217,7,0,1,0,0,0,0,6,0,0,0,0,7,0,7,,,,,,2017
-2180010,Norton,L G Nourse Elementary,272,,,,,,,,,,,,,,,,,,,,,,2017
-2180015,Norton,J C Solmonese,390,,,,,,,,,,,,,,,,,,,,,,2017
-2180060,Norton,Henri A. Yelle,373,,,,,,,,,,,,,,,,,,,,,,2017
-2180305,Norton,Norton Middle,587,,,,,,,,,,,,,,,,,,,,,,2017
-2180505,Norton,Norton High,105,,,,,,,,,,,,,,,,,,,,,,2017
-2190005,Norwell,Grace Farrar Cole,244,,,,,,,,,,,,,,,,,,,,,,2017
-2190020,Norwell,William G Vinal,249,,,,,,,,,,,,,,,,,,,,,,2017
-2190405,Norwell,Norwell Middle School,226,,,,,,,,,,,,,,,,,,,,,,2017
-2190505,Norwell,Norwell High,46,,,,,,,,,,,,,,,,,,,,,,2017
-2200305,Norwood,Dr. Philip O. Coakley Middle School,460,,,,,,,,,,,,,,,,,,,,,,2017
-2200505,Norwood,Norwood High,25,,,,,,,,,,,,,,,,,,,,,,2017
-2210005,Oak Bluffs,Oak Bluffs Elementary,278,,,,,,,,,,,,,,,,,,,,,,2017
-2230010,Orange,Dexter Park,242,,,,,,,,,,,,,,,,,,,,,,2017
-2230015,Orange,Fisher Hill,195,,,,,,,,,,,,,,,,,,,,,,2017
-2240005,Orleans,Orleans Elementary,220,,,,,,,,,,,,,,,,,,,,,,2017
-2260405,Oxford,Oxford Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
-2260505,Oxford,Oxford High,105,,,,,,,,,,,,,,,,,,,,,,2017
-2270008,Palmer,Old Mill Pond,631,,,,,,,,,,,,,,,,,,,,,,2017
-2270505,Palmer,Palmer High,121,,,,,,,,,,,,,,,,,,,,,,2017
-2290305,Peabody,J Henry Higgins Middle,908,,,,,,,,,,,,,,,,,,,,,,2017
-2290510,Peabody,Peabody Veterans Memorial High,203,229,19,1,3,1,0,0,0,14,0,0,0,2,17,0,17,0,3,5,7,2,2017
-2300005,Pelham,Pelham Elementary,124,,,,,,,,,,,,,,,,,,,,,,2017
-2310305,Pembroke,Pembroke Community Middle School,169,,,,,,,,,,,,,,,,,,,,,,2017
-2310505,Pembroke,Pembroke High School,154,231,48,0,0,0,0,0,1,47,4,1,0,7,41,0,13,8,2,1,1,1,2017
-2340005,Petersham,Petersham Center,112,,,,,,,,,,,,,,,,,,,,,,2017
-2360505,Pittsfield,Pittsfield High,23,236,13,0,1,0,0,0,0,12,1,2,0,2,11,0,8,,,,,,2017
-2360510,Pittsfield,Taconic High,69,236,18,2,0,0,1,0,0,15,5,1,0,4,14,0,,,,,,,2017
-2390005,Plymouth,Cold Spring,250,,,,,,,,,,,,,,,,,,,,,,2017
-2390010,Plymouth,Hedge,216,,,,,,,,,,,,,,,,,,,,,,2017
-2390011,Plymouth,Federal Furnace School,408,,,,,,,,,,,,,,,,,,,,,,2017
-2390012,Plymouth,Indian Brook,562,,,,,,,,,,,,,,,,,,,,,,2017
-2390015,Plymouth,Manomet Elementary,299,,,,,,,,,,,,,,,,,,,,,,2017
-2390030,Plymouth,Nathaniel Morton Elementary,582,,,,,,,,,,,,,,,,,,,,,,2017
-2390046,Plymouth,South Elementary,540,,,,,,,,,,,,,,,,,,,,,,2017
-2390047,Plymouth,West Elementary,387,,,,,,,,,,,,,,,,,,,,,,2017
-2390305,Plymouth,Plymouth South Middle,250,,,,,,,,,,,,,,,,,,,,,,2017
-2390405,Plymouth,Plymouth Commun Intermediate,161,,,,,,,,,,,,,,,,,,,,,,2017
-2390505,Plymouth,Plymouth North High,153,239,16,0,0,0,0,0,0,16,0,0,0,3,13,0,,,,,,,2017
-2390515,Plymouth,Plymouth South High,43,239,7,0,1,0,1,0,0,5,0,0,0,1,6,0,2,,,,,,2017
-2400010,Plympton,Dennett Elementary,92,,,,,,,,,,,,,,,,,,,,,,2017
-2430305,Quincy,Atlantic Middle,152,,,,,,,,,,,,,,,,,,,,,,2017
-2430310,Quincy,Broad Meadows Middle,373,,,,,,,,,,,,,,,,,,,,,,2017
-2430315,Quincy,Central Middle,648,,,,,,,,,,,,,,,,,,,,,,2017
-2430320,Quincy,Reay E Sterling Middle,156,,,,,,,,,,,,,,,,,,,,,,2017
-2430325,Quincy,Point Webster Middle,176,,,,,,,,,,,,,,,,,,,,,,2017
-2430505,Quincy,Quincy High,92,243,22,1,12,2,0,0,0,7,5,0,0,9,13,0,21,0,3,8,5,5,2017
-2430510,Quincy,North Quincy High,232,243,12,0,9,0,0,0,0,3,3,0,0,2,10,0,12,0,4,5,2,1,2017
-2460305,Reading,Arthur W Coolidge Middle,104,,,,,,,,,,,,,,,,,,,,,,2017
-2460310,Reading,Walter S Parker Middle,56,,,,,,,,,,,,,,,,,,,,,,2017
-2460505,Reading,Reading Memorial High,194,246,36,0,3,0,1,0,0,32,2,1,0,6,30,0,31,9,7,7,5,3,2017
-2480003,Revere,A. C. Whelan Elementary School,732,,,,,,,,,,,,,,,,,,,,,,2017
-2480013,Revere,Beachmont Veterans Memorial School,330,,,,,,,,,,,,,,,,,,,,,,2017
-2480014,Revere,Rumney Marsh Academy,194,,,,,,,,,,,,,,,,,,,,,,2017
-2480025,Revere,Abraham Lincoln,573,,,,,,,,,,,,,,,,,,,,,,2017
-2480035,Revere,Staff Sargent James J. Hill Elementary School,693,,,,,,,,,,,,,,,,,,,,,,2017
-2480050,Revere,Paul Revere,478,,,,,,,,,,,,,,,,,,,,,,2017
-2480056,Revere,Garfield Elementary School,724,,,,,,,,,,,,,,,,,,,,,,2017
-2480057,Revere,Garfield Middle School,236,,,,,,,,,,,,,,,,,,,,,,2017
-2480305,Revere,Susan B. Anthony Middle School,566,,,,,,,,,,,,,,,,,,,,,,2017
-2480505,Revere,Revere High,456,248,13,0,4,6,0,0,0,3,5,0,0,2,11,0,13,6,1,2,3,1,2017
-2480520,Revere,Seacoast School,35,,,,,,,,,,,,,,,,,,,,,,2017
-2490005,Richmond,Richmond Consolidated,158,,,,,,,,,,,,,,,,,,,,,,2017
-2510305,Rockland,John W Rogers Middle,155,,,,,,,,,,,,,,,,,,,,,,2017
-2510505,Rockland,Rockland Senior High,10,,,,,,,,,,,,,,,,,,,,,,2017
-2520005,Rockport,Rockport Elementary,385,,,,,,,,,,,,,,,,,,,,,,2017
-2520305,Rockport,Rockport Middle,166,,,,,,,,,,,,,,,,,,,,,,2017
-2520510,Rockport,Rockport High,40,,,,,,,,,,,,,,,,,,,,,,2017
-2580030,Salem,Horace Mann Laboratory,46,,,,,,,,,,,,,,,,,,,,,,2017
-2580505,Salem,Salem High,4,,,,,,,,,,,,,,,,,,,,,,2017
-2580515,Salem,Salem Prep High School,7,,,,,,,,,,,,,,,,,,,,,,2017
-2610002,Sandwich,Forestdale School,1,,,,,,,,,,,,,,,,,,,,,,2017
-2610025,Sandwich,Oak Ridge,891,,,,,,,,,,,,,,,,,,,,,,2017
-2610305,Sandwich,Sandwich STEM Academy,33,,,,,,,,,,,,,,,,,,,,,,2017
-2610505,Sandwich,Sandwich High,249,261,8,0,1,0,0,0,0,7,0,0,0,1,7,0,2,,,,,,2017
-2620305,Saugus,Belmonte Saugus Middle,492,,,,,,,,,,,,,,,,,,,,,,2017
-2620505,Saugus,Saugus High,77,262,19,0,1,4,0,0,0,14,2,1,0,2,17,0,,,,,,,2017
-2630010,Savoy,Emma L Miller Elementary School,51,,,,,,,,,,,,,,,,,,,,,,2017
-2640305,Scituate,Gates Intermediate School,472,,,,,,,,,,,,,,,,,,,,,,2017
-2640505,Scituate,Scituate High School,31,264,22,0,0,0,0,0,0,22,1,2,0,5,17,0,7,,,,,,2017
-2650015,Seekonk,Mildred Aitken School,1,,,,,,,,,,,,,,,,,,,,,,2017
-2650405,Seekonk,Dr. Kevin M. Hurley Middle School,250,,,,,,,,,,,,,,,,,,,,,,2017
-2650505,Seekonk,Seekonk High,74,,,,,,,,,,,,,,,,,,,,,,2017
-2660305,Sharon,Sharon Middle,565,,,,,,,,,,,,,,,,,,,,,,2017
-2660505,Sharon,Sharon High,174,266,48,1,22,2,1,0,0,22,0,2,0,12,36,0,39,1,1,9,13,15,2017
-2690010,Sherborn,Pine Hill,408,,,,,,,,,,,,,,,,,,,,,,2017
-2710005,Shrewsbury,Beal School,320,,,,,,,,,,,,,,,,,,,,,,2017
+1630090,Lynn,Capt William G Shoemaker,4,,,,,,,,,,,,,,,,,,,,,,2017
+1630095,Lynn,Edward A Sisson,2,,,,,,,,,,,,,,,,,,,,,,2017
+1630100,Lynn,Tracy,2,,,,,,,,,,,,,,,,,,,,,,2017
+1630305,Lynn,Thurgood Marshall Mid,6,,,,,,,,,,,,,,,,,,,,,,2017
+1630405,Lynn,Breed Middle School,9,,,,,,,,,,,,,,,,,,,,,,2017
+1630420,Lynn,Pickering Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
+1630505,Lynn,Classical High,533,,,,,,,,,,,,,,,,,,,,,,2017
+1630510,Lynn,Lynn English High,340,,,,,,,,,,,,,,,,,,,,,,2017
+1630525,Lynn,Fecteau-Leary Junior/Senior High School,3,,,,,,,,,,,,,,,,,,,,,,2017
+1630605,Lynn,Lynn Vocational Technical Institute,275,,,,,,,,,,,,,,,,,,,,,,2017
+1640010,Lynnfield,Huckleberry Hill,1,,,,,,,,,,,,,,,,,,,,,,2017
+1640405,Lynnfield,Lynnfield Middle School,504,,,,,,,,,,,,,,,,,,,,,,2017
+1640505,Lynnfield,Lynnfield High,18,,,,,,,,,,,,,,,,,,,,,,2017
+1650003,Malden,Beebe,383,,,,,,,,,,,,,,,,,,,,,,2017
+1650013,Malden,Ferryway,412,,,,,,,,,,,,,,,,,,,,,,2017
+1650027,Malden,Forestdale,242,,,,,,,,,,,,,,,,,,,,,,2017
+1650047,Malden,Linden,391,,,,,,,,,,,,,,,,,,,,,,2017
+1650057,Malden,Salemwood,424,,,,,,,,,,,,,,,,,,,,,,2017
+1650505,Malden,Malden High,25,,,,,,,,,,,,,,,,35,4,3,6,13,9,2017
+1670007,Mansfield,Everett W Robinson,3,,,,,,,,,,,,,,,,,,,,,,2017
+1670014,Mansfield,Jordan/Jackson Elementary,2,,,,,,,,,,,,,,,,,,,,,,2017
+1670035,Mansfield,Harold L Qualters Middle,580,,,,,,,,,,,,,,,,,,,,,,2017
+1670505,Mansfield,Mansfield High,228,,,,,,,,,,,,,,,,,,,,,,2017
+1680005,Marblehead,Malcolm L Bell,1,,,,,,,,,,,,,,,,,,,,,,2017
+1680015,Marblehead,Elbridge Gerry,1,,,,,,,,,,,,,,,,,,,,,,2017
+1680300,Marblehead,Marblehead Veterans Middle School,448,,,,,,,,,,,,,,,,,,,,,,2017
+1680505,Marblehead,Marblehead High,15,,,,,,,,,,,,,,,,,,,,,,2017
+1700045,Marlborough,1 LT Charles W. Whitcomb School,1347,,,,,,,,,,,,,,,,,,,,,,2017
+1700505,Marlborough,Marlborough High,381,,,,,,,,,,,,,,,,20,11,2,3,3,1,2017
+1710005,Marshfield,Eames Way School,1,,,,,,,,,,,,,,,,,,,,,,2017
+1710015,Marshfield,Daniel Webster,2,,,,,,,,,,,,,,,,,,,,,,2017
+1710020,Marshfield,Gov Edward Winslow,1,,,,,,,,,,,,,,,,,,,,,,2017
+1710025,Marshfield,Martinson Elementary,2,,,,,,,,,,,,,,,,,,,,,,2017
+1710310,Marshfield,Furnace Brook Middle,558,,,,,,,,,,,,,,,,,,,,,,2017
+1710505,Marshfield,Marshfield High,444,171,21,0,0,0,0,0,0,21,3,1,0,1,20,0,12,3,1,3,4,1,2017
+1720005,Mashpee,Kenneth Coombs School,342,,,,,,,,,,,,,,,,,,,,,,2017
+1720035,Mashpee,Quashnet School,488,,,,,,,,,,,,,,,,,,,,,,2017
+1720505,Mashpee,Mashpee High,41,,,,,,,,,,,,,,,,,,,,,,2017
+1730005,Mattapoisett,Center,209,,,,,,,,,,,,,,,,,,,,,,2017
+1730010,Mattapoisett,Old Hammondtown,202,,,,,,,,,,,,,,,,,,,,,,2017
+1740305,Maynard,Fowler School,429,,,,,,,,,,,,,,,,,,,,,,2017
+1740505,Maynard,Maynard High,17,,,,,,,,,,,,,,,,,,,,,,2017
+1750305,Medfield,Thomas Blake Middle,380,,,,,,,,,,,,,,,,,,,,,,2017
+1750505,Medfield,Medfield Senior High,55,175,3,,,,,,,,,,,,,,4,,,,,,2017
+1760068,Medford,John J McGlynn Elementary School,494,,,,,,,,,,,,,,,,,,,,,,2017
+1760130,Medford,Brooks School,483,,,,,,,,,,,,,,,,,,,,,,2017
+1760140,Medford,Christopher Columbus,381,,,,,,,,,,,,,,,,,,,,,,2017
+1760150,Medford,Milton Fuller Roberts,539,,,,,,,,,,,,,,,,,,,,,,2017
+1760315,Medford,Madeleine Dugger Andrews,494,,,,,,,,,,,,,,,,,,,,,,2017
+1760320,Medford,John J. McGlynn Middle School,466,,,,,,,,,,,,,,,,,,,,,,2017
+1760505,Medford,Medford High,35,,,,,,,,,,,,,,,,2,,,,,,2017
+1770015,Medway,Burke/Memorial Elementary School,169,,,,,,,,,,,,,,,,,,,,,,2017
+1770305,Medway,Medway Middle,646,,,,,,,,,,,,,,,,,,,,,,2017
+1770505,Medway,Medway High,78,177,10,0,0,0,0,0,0,10,0,0,0,1,9,0,2,,,,,,2017
+1780305,Melrose,Melrose Middle,282,,,,,,,,,,,,,,,,,,,,,,2017
+1780505,Melrose,Melrose High,61,178,18,4,2,1,1,0,0,10,3,0,3,3,15,0,21,15,2,2,1,1,2017
+1810030,Methuen,Marsh Grammar School,3,,,,,,,,,,,,,,,,,,,,,,2017
+1810050,Methuen,Comprehensive Grammar School,3,,,,,,,,,,,,,,,,,,,,,,2017
+1810055,Methuen,Tenney Grammar School,6,,,,,,,,,,,,,,,,,,,,,,2017
+1810060,Methuen,Donald P Timony Grammar,6,,,,,,,,,,,,,,,,,,,,,,2017
+1810505,Methuen,Methuen High,258,,,,,,,,,,,,,,,,,,,,,,2017
+1820008,Middleborough,Henry B. Burkland Elementary School,564,,,,,,,,,,,,,,,,,,,,,,2017
+1820010,Middleborough,Mary K. Goode Elementary School,576,,,,,,,,,,,,,,,,,,,,,,2017
+1820011,Middleborough,Memorial Early Childhood Center,231,,,,,,,,,,,,,,,,,,,,,,2017
+1820305,Middleborough,John T. Nichols Middle,788,,,,,,,,,,,,,,,,,,,,,,2017
+1820505,Middleborough,Middleborough High,303,,,,,,,,,,,,,,,,,,,,,,2017
+1840003,Middleton,Fuller Meadow,155,,,,,,,,,,,,,,,,,,,,,,2017
+1840005,Middleton,Howe-Manning,379,,,,,,,,,,,,,,,,,,,,,,2017
+1850090,Milford,Woodland,960,,,,,,,,,,,,,,,,,,,,,,2017
+1850305,Milford,Stacy Middle,768,,,,,,,,,,,,,,,,,,,,,,2017
+1850505,Milford,Milford High,94,,,,,,,,,,,,,,,,,,,,,,2017
+1860017,Millbury,Elmwood Street,508,,,,,,,,,,,,,,,,,,,,,,2017
+1860025,Millbury,Raymond E. Shaw Elementary,433,,,,,,,,,,,,,,,,,,,,,,2017
+1860505,Millbury,Millbury Junior/Senior High,407,,,,,,,,,,,,,,,,,,,,,,2017
+1870020,Millis,Millis Middle,82,,,,,,,,,,,,,,,,,,,,,,2017
+1870505,Millis,Millis High School,110,,,,,,,,,,,,,,,,,,,,,,2017
+1890020,Milton,Tucker,2,,,,,,,,,,,,,,,,,,,,,,2017
+1890410,Milton,Charles S Pierce Middle,367,,,,,,,,,,,,,,,,,,,,,,2017
+1890505,Milton,Milton High,233,189,25,1,2,2,0,0,0,20,3,0,0,11,14,0,16,1,1,7,5,2,2017
+1910025,Monson,Quarry Hill Community School,323,,,,,,,,,,,,,,,,,,,,,,2017
+1910310,Monson,Granite Valley Middle,243,,,,,,,,,,,,,,,,,,,,,,2017
+1910505,Monson,Monson High School,39,,,,,,,,,,,,,,,,,,,,,,2017
+1970005,Nantucket,Nantucket Elementary,326,,,,,,,,,,,,,,,,,,,,,,2017
+1970010,Nantucket,Cyrus Peirce,239,,,,,,,,,,,,,,,,,,,,,,2017
+1970505,Nantucket,Nantucket High,17,,,,,,,,,,,,,,,,,,,,,,2017
+1980005,Natick,Bennett-Hemenway,5,,,,,,,,,,,,,,,,,,,,,,2017
+1980010,Natick,Brown,4,,,,,,,,,,,,,,,,,,,,,,2017
+1980305,Natick,J F Kennedy Middle School,57,,,,,,,,,,,,,,,,,,,,,,2017
+1980310,Natick,Wilson Middle,3,,,,,,,,,,,,,,,,,,,,,,2017
+1980505,Natick,Natick High,192,198,43,2,8,0,2,0,0,31,2,1,1,15,28,0,45,3,9,9,7,17,2017
+1990035,Needham,Hillside Elementary,2,,,,,,,,,,,,,,,,,,,,,,2017
+1990050,Needham,Newman Elementary,3,,,,,,,,,,,,,,,,,,,,,,2017
+1990405,Needham,Pollard Middle,357,,,,,,,,,,,,,,,,,,,,,,2017
+1990410,Needham,High Rock School,411,,,,,,,,,,,,,,,,,,,,,,2017
+1990505,Needham,Needham High,134,199,25,1,6,3,0,0,0,15,1,1,0,4,21,0,13,0,1,2,1,9,2017
+2010078,New Bedford,Hayden/McFadden,2,,,,,,,,,,,,,,,,,,,,,,2017
+2010095,New Bedford,Abraham Lincoln,1,,,,,,,,,,,,,,,,,,,,,,2017
+2010405,New Bedford,Keith Middle School,10,,,,,,,,,,,,,,,,,,,,,,2017
+2010410,New Bedford,Normandin Middle School,19,,,,,,,,,,,,,,,,,,,,,,2017
+2010415,New Bedford,Roosevelt Middle School,415,,,,,,,,,,,,,,,,,,,,,,2017
+2010505,New Bedford,New Bedford High,391,201,15,1,1,3,2,0,0,8,3,0,0,6,9,0,,,,,,,2017
+2010515,New Bedford,Whaling City Junior/Senior High School,3,,,,,,,,,,,,,,,,,,,,,,2017
+2040005,Newburyport,Francis T Bresnahan Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+2040305,Newburyport,Rupert A Nock Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
+2040505,Newburyport,Newburyport High,46,204,1,,,,,,,,,,,,,,3,,,,,,2017
+2070315,Newton,F A Day Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
+2070320,Newton,Oak Hill Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
+2070505,Newton,Newton North High,289,,,,,,,,,,,,,,,,2,,,,,,2017
+2070510,Newton,Newton South High,207,,,,,,,,,,,,,,,,22,0,0,4,7,11,2017
+2080005,Norfolk,Freeman-Kennedy School,1,,,,,,,,,,,,,,,,,,,,,,2017
+2090008,North Adams,Colegrove Park Elementary,2,,,,,,,,,,,,,,,,,,,,,,2017
+2090035,North Adams,Brayton,3,,,,,,,,,,,,,,,,,,,,,,2017
+2090505,North Adams,Drury High,28,,,,,,,,,,,,,,,,,,,,,,2017
+2100020,Northampton,Jackson Street,1,,,,,,,,,,,,,,,,,,,,,,2017
+2100410,Northampton,John F Kennedy Middle School,419,,,,,,,,,,,,,,,,,,,,,,2017
+2100505,Northampton,Northampton High,87,,,,,,,,,,,,,,,,,,,,,,2017
+2110305,North Andover,North Andover Middle,1060,,,,,,,,,,,,,,,,,,,,,,2017
+2110505,North Andover,North Andover High,327,,,,,,,,,,,,,,,,1,,,,,,2017
+2120007,North Attleborough,Amvet Boulevard,1,,,,,,,,,,,,,,,,,,,,,,2017
+2120010,North Attleborough,Falls,2,,,,,,,,,,,,,,,,,,,,,,2017
+2120013,North Attleborough,Joseph W Martin Jr Elementary,3,,,,,,,,,,,,,,,,,,,,,,2017
+2120015,North Attleborough,Roosevelt Avenue,1,,,,,,,,,,,,,,,,,,,,,,2017
+2120030,North Attleborough,Community,5,,,,,,,,,,,,,,,,,,,,,,2017
+2120505,North Attleborough,North Attleboro High,273,212,21,0,4,0,1,0,0,16,2,0,0,4,17,0,,,,,,,2017
+2130015,Northborough,Fannie E Proctor,2,,,,,,,,,,,,,,,,,,,,,,2017
+2130020,Northborough,Marion E Zeh,1,,,,,,,,,,,,,,,,,,,,,,2017
+2140001,Northbridge,W Edward Balmer,506,,,,,,,,,,,,,,,,,,,,,,2017
+2140005,Northbridge,Northbridge Elementary,3,,,,,,,,,,,,,,,,,,,,,,2017
+2140305,Northbridge,Northbridge Middle,3,,,,,,,,,,,,,,,,,,,,,,2017
+2140505,Northbridge,Northbridge High,184,,,,,,,,,,,,,,,,,,,,,,2017
+2150015,North Brookfield,North Brookfield Elementary,5,,,,,,,,,,,,,,,,,,,,,,2017
+2170010,North Reading,J Turner Hood,3,,,,,,,,,,,,,,,,,,,,,,2017
+2170305,North Reading,North Reading Middle,400,,,,,,,,,,,,,,,,,,,,,,2017
+2170505,North Reading,North Reading High,76,217,7,0,1,0,0,0,0,6,0,0,0,0,7,0,4,,,,,,2017
+2180010,Norton,L G Nourse Elementary,284,,,,,,,,,,,,,,,,,,,,,,2017
+2180015,Norton,J C Solmonese,394,,,,,,,,,,,,,,,,,,,,,,2017
+2180060,Norton,Henri A. Yelle,398,,,,,,,,,,,,,,,,,,,,,,2017
+2180305,Norton,Norton Middle,291,,,,,,,,,,,,,,,,,,,,,,2017
+2180505,Norton,Norton High,96,,,,,,,,,,,,,,,,1,,,,,,2017
+2190005,Norwell,Grace Farrar Cole,234,,,,,,,,,,,,,,,,,,,,,,2017
+2190020,Norwell,William G Vinal,268,,,,,,,,,,,,,,,,,,,,,,2017
+2190405,Norwell,Norwell Middle School,198,,,,,,,,,,,,,,,,,,,,,,2017
+2190505,Norwell,Norwell High,72,,,,,,,,,,,,,,,,,,,,,,2017
+2200010,Norwood,Cornelius M Callahan,3,,,,,,,,,,,,,,,,,,,,,,2017
+2200015,Norwood,F A Cleveland,2,,,,,,,,,,,,,,,,,,,,,,2017
+2200025,Norwood,Charles J Prescott,4,,,,,,,,,,,,,,,,,,,,,,2017
+2200075,Norwood,George F. Willett,1,,,,,,,,,,,,,,,,,,,,,,2017
+2200305,Norwood,Dr. Philip O. Coakley Middle School,454,,,,,,,,,,,,,,,,,,,,,,2017
+2200505,Norwood,Norwood High,38,,,,,,,,,,,,,,,,2,,,,,,2017
+2210005,Oak Bluffs,Oak Bluffs Elementary,402,,,,,,,,,,,,,,,,,,,,,,2017
+2230010,Orange,Dexter Park,146,,,,,,,,,,,,,,,,,,,,,,2017
+2230015,Orange,Fisher Hill,215,,,,,,,,,,,,,,,,,,,,,,2017
+2240005,Orleans,Orleans Elementary,226,,,,,,,,,,,,,,,,,,,,,,2017
+2260005,Oxford,Clara Barton,1,,,,,,,,,,,,,,,,,,,,,,2017
+2260305,Oxford,Project C.O.F.F.E.E.,1,,,,,,,,,,,,,,,,,,,,,,2017
+2260405,Oxford,Oxford Middle,2,,,,,,,,,,,,,,,,,,,,,,2017
+2260505,Oxford,Oxford High,171,,,,,,,,,,,,,,,,,,,,,,2017
+2270008,Palmer,Old Mill Pond,629,,,,,,,,,,,,,,,,,,,,,,2017
+2270505,Palmer,Palmer High,96,,,,,,,,,,,,,,,,,,,,,,2017
+2290015,Peabody,Center,1,,,,,,,,,,,,,,,,,,,,,,2017
+2290035,Peabody,South Memorial,1,,,,,,,,,,,,,,,,,,,,,,2017
+2290045,Peabody,West Memorial,1,,,,,,,,,,,,,,,,,,,,,,2017
+2290305,Peabody,J Henry Higgins Middle,913,,,,,,,,,,,,,,,,,,,,,,2017
+2290510,Peabody,Peabody Veterans Memorial High,157,229,19,1,3,1,0,0,0,14,0,0,0,2,17,0,7,,,,,,2017
+2300005,Pelham,Pelham Elementary,125,,,,,,,,,,,,,,,,,,,,,,2017
+2310305,Pembroke,Pembroke Community Middle School,132,,,,,,,,,,,,,,,,,,,,,,2017
+2310505,Pembroke,Pembroke High School,133,231,48,0,0,0,0,0,1,47,4,1,0,7,41,0,24,11,2,8,3,0,2017
+2340005,Petersham,Petersham Center,1,,,,,,,,,,,,,,,,,,,,,,2017
+2360010,Pittsfield,Allendale,1,,,,,,,,,,,,,,,,,,,,,,2017
+2360045,Pittsfield,Robert T. Capeless Elementary School,2,,,,,,,,,,,,,,,,,,,,,,2017
+2360055,Pittsfield,Morningside Community School,1,,,,,,,,,,,,,,,,,,,,,,2017
+2360065,Pittsfield,Crosby,4,,,,,,,,,,,,,,,,,,,,,,2017
+2360305,Pittsfield,John T Reid Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
+2360310,Pittsfield,Theodore Herberg Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
+2360505,Pittsfield,Pittsfield High,1,236,13,0,1,0,0,0,0,12,1,2,0,2,11,0,,,,,,,2017
+2360510,Pittsfield,Taconic High,47,236,18,2,0,0,1,0,0,15,5,1,0,4,14,0,,,,,,,2017
+2380005,Plainville,Beatrice H Wood Elementary,2,,,,,,,,,,,,,,,,,,,,,,2017
+2380010,Plainville,Anna Ware Jackson,1,,,,,,,,,,,,,,,,,,,,,,2017
+2390005,Plymouth,Cold Spring,249,,,,,,,,,,,,,,,,,,,,,,2017
+2390010,Plymouth,Hedge,148,,,,,,,,,,,,,,,,,,,,,,2017
+2390011,Plymouth,Federal Furnace School,392,,,,,,,,,,,,,,,,,,,,,,2017
+2390012,Plymouth,Indian Brook,567,,,,,,,,,,,,,,,,,,,,,,2017
+2390015,Plymouth,Manomet Elementary,284,,,,,,,,,,,,,,,,,,,,,,2017
+2390030,Plymouth,Nathaniel Morton Elementary,557,,,,,,,,,,,,,,,,,,,,,,2017
+2390046,Plymouth,South Elementary,631,,,,,,,,,,,,,,,,,,,,,,2017
+2390047,Plymouth,West Elementary,392,,,,,,,,,,,,,,,,,,,,,,2017
+2390305,Plymouth,Plymouth South Middle,240,,,,,,,,,,,,,,,,,,,,,,2017
+2390405,Plymouth,Plymouth Commun Intermediate,162,,,,,,,,,,,,,,,,,,,,,,2017
+2390505,Plymouth,Plymouth North High,138,239,16,0,0,0,0,0,0,16,0,0,0,3,13,0,4,,,,,,2017
+2390515,Plymouth,Plymouth South High,67,239,7,0,1,0,1,0,0,5,0,0,0,1,6,0,1,,,,,,2017
+2400010,Plympton,Dennett Elementary,76,,,,,,,,,,,,,,,,,,,,,,2017
+2420020,Provincetown,Provincetown Schools,2,,,,,,,,,,,,,,,,,,,,,,2017
+2430305,Quincy,Atlantic Middle,507,,,,,,,,,,,,,,,,,,,,,,2017
+2430310,Quincy,Broad Meadows Middle,386,,,,,,,,,,,,,,,,,,,,,,2017
+2430315,Quincy,Central Middle,633,,,,,,,,,,,,,,,,,,,,,,2017
+2430320,Quincy,Reay E Sterling Middle,369,,,,,,,,,,,,,,,,,,,,,,2017
+2430325,Quincy,Point Webster Middle,361,,,,,,,,,,,,,,,,,,,,,,2017
+2430505,Quincy,Quincy High,82,243,22,1,12,2,0,0,0,7,5,0,0,9,13,0,21,1,2,5,8,5,2017
+2430510,Quincy,North Quincy High,234,243,12,0,9,0,0,0,0,3,3,0,0,2,10,0,11,0,1,3,4,3,2017
+2440410,Randolph,Randolph Community Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
+2440505,Randolph,Randolph High,16,,,,,,,,,,,,,,,,,,,,,,2017
+2460010,Reading,Joshua Eaton,1,,,,,,,,,,,,,,,,,,,,,,2017
+2460305,Reading,Arthur W Coolidge Middle,134,,,,,,,,,,,,,,,,,,,,,,2017
+2460310,Reading,Walter S Parker Middle,21,,,,,,,,,,,,,,,,,,,,,,2017
+2460505,Reading,Reading Memorial High,130,246,36,0,3,0,1,0,0,32,2,1,0,6,30,0,15,5,3,6,0,1,2017
+2480003,Revere,A. C. Whelan Elementary School,759,,,,,,,,,,,,,,,,,,,,,,2017
+2480013,Revere,Beachmont Veterans Memorial School,325,,,,,,,,,,,,,,,,,,,,,,2017
+2480014,Revere,Rumney Marsh Academy,241,,,,,,,,,,,,,,,,,,,,,,2017
+2480025,Revere,Abraham Lincoln,603,,,,,,,,,,,,,,,,,,,,,,2017
+2480035,Revere,Staff Sargent James J. Hill Elementary School,717,,,,,,,,,,,,,,,,,,,,,,2017
+2480050,Revere,Paul Revere,477,,,,,,,,,,,,,,,,,,,,,,2017
+2480056,Revere,Garfield Elementary School,688,,,,,,,,,,,,,,,,,,,,,,2017
+2480057,Revere,Garfield Middle School,262,,,,,,,,,,,,,,,,,,,,,,2017
+2480305,Revere,Susan B. Anthony Middle School,573,,,,,,,,,,,,,,,,,,,,,,2017
+2480505,Revere,Revere High,454,248,13,0,4,6,0,0,0,3,5,0,0,2,11,0,8,,,,,,2017
+2480520,Revere,Seacoast School,37,,,,,,,,,,,,,,,,,,,,,,2017
+2490005,Richmond,Richmond Consolidated,165,,,,,,,,,,,,,,,,,,,,,,2017
+2510020,Rockland,Memorial Park,1,,,,,,,,,,,,,,,,,,,,,,2017
+2510025,Rockland,R Stewart Esten,2,,,,,,,,,,,,,,,,,,,,,,2017
+2510305,Rockland,John W Rogers Middle,164,,,,,,,,,,,,,,,,,,,,,,2017
+2510505,Rockland,Rockland Senior High,12,,,,,,,,,,,,,,,,,,,,,,2017
+2520305,Rockport,Rockport Middle,215,,,,,,,,,,,,,,,,,,,,,,2017
+2520510,Rockport,Rockport High,76,,,,,,,,,,,,,,,,,,,,,,2017
+2580305,Salem,Collins Middle,5,,,,,,,,,,,,,,,,,,,,,,2017
+2580505,Salem,Salem High,27,,,,,,,,,,,,,,,,,,,,,,2017
+2580515,Salem,Salem Prep High School,1,,,,,,,,,,,,,,,,,,,,,,2017
+2610002,Sandwich,Forestdale School,4,,,,,,,,,,,,,,,,,,,,,,2017
+2610025,Sandwich,Oak Ridge,829,,,,,,,,,,,,,,,,,,,,,,2017
+2610305,Sandwich,Sandwich STEM Academy,20,,,,,,,,,,,,,,,,,,,,,,2017
+2610505,Sandwich,Sandwich High,223,261,8,0,1,0,0,0,0,7,0,0,0,1,7,0,1,,,,,,2017
+2620065,Saugus,Veterans Memorial,1,,,,,,,,,,,,,,,,,,,,,,2017
+2620305,Saugus,Belmonte Saugus Middle,434,,,,,,,,,,,,,,,,,,,,,,2017
+2620505,Saugus,Saugus High,96,262,19,0,1,4,0,0,0,14,2,1,0,2,17,0,,,,,,,2017
+2630010,Savoy,Emma L Miller Elementary School,10,,,,,,,,,,,,,,,,,,,,,,2017
+2640305,Scituate,Gates Middle School,461,,,,,,,,,,,,,,,,,,,,,,2017
+2640505,Scituate,Scituate High School,64,264,22,0,0,0,0,0,0,22,1,2,0,5,17,0,12,2,0,6,2,2,2017
+2650007,Seekonk,George R Martin,320,,,,,,,,,,,,,,,,,,,,,,2017
+2650015,Seekonk,Mildred Aitken School,269,,,,,,,,,,,,,,,,,,,,,,2017
+2650405,Seekonk,Dr. Kevin M. Hurley Middle School,288,,,,,,,,,,,,,,,,,,,,,,2017
+2650505,Seekonk,Seekonk High,66,,,,,,,,,,,,,,,,,,,,,,2017
+2660015,Sharon,Heights Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+2660305,Sharon,Sharon Middle,841,,,,,,,,,,,,,,,,,,,,,,2017
+2660505,Sharon,Sharon High,174,266,48,1,22,2,1,0,0,22,0,2,0,12,36,0,24,0,0,6,4,14,2017
+2690010,Sherborn,Pine Hill,392,,,,,,,,,,,,,,,,,,,,,,2017
+2710005,Shrewsbury,Beal School,310,,,,,,,,,,,,,,,,,,,,,,2017
+2710015,Shrewsbury,Calvin Coolidge,1,,,,,,,,,,,,,,,,,,,,,,2017
+2710020,Shrewsbury,Floral Street School,1,,,,,,,,,,,,,,,,,,,,,,2017
 2710025,Shrewsbury,Walter J Paton,20,,,,,,,,,,,,,,,,,,,,,,2017
-2710305,Shrewsbury,Sherwood Middle School,411,,,,,,,,,,,,,,,,,,,,,,2017
-2710505,Shrewsbury,Shrewsbury Sr High,213,,,,,,,,,,,,,,,,2,,,,,,2017
-2720005,Shutesbury,Shutesbury Elementary,105,,,,,,,,,,,,,,,,,,,,,,2017
-2730305,Somerset,Somerset Middle School,607,,,,,,,,,,,,,,,,,,,,,,2017
-2740505,Somerville,Somerville High,82,274,18,1,7,5,1,0,0,4,4,1,1,5,13,0,18,7,4,2,3,2,2017
-2760008,Southborough,Mary E Finn School,1,,,,,,,,,,,,,,,,,,,,,,2017
-2760305,Southborough,P Brent Trottier,14,,,,,,,,,,,,,,,,,,,,,,2017
-2770005,Southbridge,Charlton Street,71,,,,,,,,,,,,,,,,,,,,,,2017
-2770315,Southbridge,Southbridge Middle School,320,,,,,,,,,,,,,,,,,,,,,,2017
-2770515,Southbridge,Southbridge High School,167,,,,,,,,,,,,,,,,,,,,,,2017
+2710030,Shrewsbury,Oak Middle School,220,,,,,,,,,,,,,,,,,,,,,,2017
+2710305,Shrewsbury,Sherwood Middle School,365,,,,,,,,,,,,,,,,,,,,,,2017
+2710505,Shrewsbury,Shrewsbury Sr High,175,,,,,,,,,,,,,,,,1,,,,,,2017
+2720005,Shutesbury,Shutesbury Elementary,111,,,,,,,,,,,,,,,,,,,,,,2017
+2730005,Somerset,Chace Street,1,,,,,,,,,,,,,,,,,,,,,,2017
+2730008,Somerset,North Elementary,3,,,,,,,,,,,,,,,,,,,,,,2017
+2730015,Somerset,South,1,,,,,,,,,,,,,,,,,,,,,,2017
+2730305,Somerset,Somerset Middle School,613,,,,,,,,,,,,,,,,,,,,,,2017
+2740015,Somerville,Benjamin G Brown,1,,,,,,,,,,,,,,,,,,,,,,2017
+2740075,Somerville,Arthur D Healey,2,,,,,,,,,,,,,,,,,,,,,,2017
+2740083,Somerville,John F Kennedy,2,,,,,,,,,,,,,,,,,,,,,,2017
+2740087,Somerville,Albert F. Argenziano School at Lincoln Park,4,,,,,,,,,,,,,,,,,,,,,,2017
+2740111,Somerville,E Somerville Community,5,,,,,,,,,,,,,,,,,,,,,,2017
+2740115,Somerville,West Somerville Neighborhood,2,,,,,,,,,,,,,,,,,,,,,,2017
+2740120,Somerville,Winter Hill Community,3,,,,,,,,,,,,,,,,,,,,,,2017
+2740505,Somerville,Somerville High,60,274,18,1,7,5,1,0,0,4,4,1,1,5,13,0,7,,,,,,2017
+2760020,Southborough,Margaret A Neary,1,,,,,,,,,,,,,,,,,,,,,,2017
+2760305,Southborough,P Brent Trottier,25,,,,,,,,,,,,,,,,,,,,,,2017
+2770010,Southbridge,Eastford Road,4,,,,,,,,,,,,,,,,,,,,,,2017
+2770315,Southbridge,Southbridge Middle School,140,,,,,,,,,,,,,,,,,,,,,,2017
+2770515,Southbridge,Southbridge High School,232,,,,,,,,,,,,,,,,,,,,,,2017
+2780015,South Hadley,Plains Elementary,3,,,,,,,,,,,,,,,,,,,,,,2017
+2780020,South Hadley,Mosier,5,,,,,,,,,,,,,,,,,,,,,,2017
 2780305,South Hadley,Michael E. Smith Middle School,430,,,,,,,,,,,,,,,,,,,,,,2017
-2780505,South Hadley,South Hadley High,28,278,6,0,0,0,0,0,0,6,2,1,0,0,6,0,6,,,,,,2017
-2810005,Springfield,Springfield Public Day Elementary School,80,,,,,,,,,,,,,,,,,,,,,,2017
-2810010,Springfield,Edward P. Boland School,490,,,,,,,,,,,,,,,,,,,,,,2017
-2810015,Springfield,Thomas M Balliet,233,,,,,,,,,,,,,,,,,,,,,,2017
-2810020,Springfield,Samuel Bowles,280,,,,,,,,,,,,,,,,,,,,,,2017
-2810023,Springfield,Milton Bradley School,424,,,,,,,,,,,,,,,,,,,,,,2017
-2810025,Springfield,Brightwood,282,,,,,,,,,,,,,,,,,,,,,,2017
-2810030,Springfield,Elias Brookings,263,,,,,,,,,,,,,,,,,,,,,,2017
+2780505,South Hadley,South Hadley High,21,278,6,0,0,0,0,0,0,6,2,1,0,0,6,0,11,1,1,6,2,1,2017
+2810005,Springfield,Springfield Public Day Elementary School,87,,,,,,,,,,,,,,,,,,,,,,2017
+2810010,Springfield,Edward P. Boland School,510,,,,,,,,,,,,,,,,,,,,,,2017
+2810015,Springfield,Thomas M Balliet,250,,,,,,,,,,,,,,,,,,,,,,2017
+2810020,Springfield,Samuel Bowles,307,,,,,,,,,,,,,,,,,,,,,,2017
+2810023,Springfield,Milton Bradley School,454,,,,,,,,,,,,,,,,,,,,,,2017
+2810025,Springfield,Brightwood,298,,,,,,,,,,,,,,,,,,,,,,2017
+2810030,Springfield,Elias Brookings,277,,,,,,,,,,,,,,,,,,,,,,2017
 2810035,Springfield,Daniel B Brunton,394,,,,,,,,,,,,,,,,,,,,,,2017
-2810045,Springfield,William N. DeBerry,243,,,,,,,,,,,,,,,,,,,,,,2017
-2810050,Springfield,Hiram L Dorman,278,,,,,,,,,,,,,,,,,,,,,,2017
-2810055,Springfield,Rebecca M Johnson,555,,,,,,,,,,,,,,,,,,,,,,2017
-2810060,Springfield,Margaret C Ells,48,,,,,,,,,,,,,,,,,,,,,,2017
-2810065,Springfield,Glenwood,274,,,,,,,,,,,,,,,,,,,,,,2017
-2810068,Springfield,Glickman Elementary,298,,,,,,,,,,,,,,,,,,,,,,2017
-2810075,Springfield,Frank H Freedman,271,,,,,,,,,,,,,,,,,,,,,,2017
-2810080,Springfield,Frederick Harris,456,,,,,,,,,,,,,,,,,,,,,,2017
-2810085,Springfield,Homer Street,361,,,,,,,,,,,,,,,,,,,,,,2017
-2810095,Springfield,Alfred G. Zanetti Montessori Magnet School,276,,,,,,,,,,,,,,,,,,,,,,2017
-2810100,Springfield,Indian Orchard Elementary,493,,,,,,,,,,,,,,,,,,,,,,2017
-2810110,Springfield,Kensington International School,255,,,,,,,,,,,,,,,,,,,,,,2017
-2810115,Springfield,Liberty,233,,,,,,,,,,,,,,,,,,,,,,2017
-2810120,Springfield,Lincoln,321,,,,,,,,,,,,,,,,,,,,,,2017
-2810125,Springfield,Mary A. Dryden Veterans Memorial School,248,,,,,,,,,,,,,,,,,,,,,,2017
-2810140,Springfield,Mary M Lynch,219,,,,,,,,,,,,,,,,,,,,,,2017
-2810145,Springfield,Mary O Pottenger,376,,,,,,,,,,,,,,,,,,,,,,2017
-2810155,Springfield,Mary M Walsh,260,,,,,,,,,,,,,,,,,,,,,,2017
-2810160,Springfield,Sumner Avenue,445,,,,,,,,,,,,,,,,,,,,,,2017
-2810165,Springfield,Arthur T Talmadge,231,,,,,,,,,,,,,,,,,,,,,,2017
-2810175,Springfield,Alice B Beal Elementary,231,,,,,,,,,,,,,,,,,,,,,,2017
-2810180,Springfield,Warner,219,,,,,,,,,,,,,,,,,,,,,,2017
-2810185,Springfield,Washington,329,,,,,,,,,,,,,,,,,,,,,,2017
-2810190,Springfield,White Street,363,,,,,,,,,,,,,,,,,,,,,,2017
-2810195,Springfield,German Gerena Community School,500,,,,,,,,,,,,,,,,,,,,,,2017
-2810320,Springfield,John J Duggan Middle,11,,,,,,,,,,,,,,,,,,,,,,2017
-2810325,Springfield,Forest Park Middle,253,,,,,,,,,,,,,,,,,,,,,,2017
-2810328,Springfield,John F Kennedy Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
-2810330,Springfield,M Marcus Kiley Middle,284,,,,,,,,,,,,,,,,,,,,,,2017
-2810350,Springfield,STEM Middle Academy,1,,,,,,,,,,,,,,,,,,,,,,2017
-2810355,Springfield,South End Middle School,124,,,,,,,,,,,,,,,,,,,,,,2017
-2810360,Springfield,Balliet Middle School,2,,,,,,,,,,,,,,,,,,,,,,2017
-2810365,Springfield,Chestnut Accelerated Middle School (North),111,,,,,,,,,,,,,,,,,,,,,,2017
-2810366,Springfield,Chestnut Accelerated Middle School (South),1,,,,,,,,,,,,,,,,,,,,,,2017
-2810367,Springfield,Chestnut Accelerated Middle School (Talented and Gifted),119,,,,,,,,,,,,,,,,,,,,,,2017
-2810480,Springfield,Van Sickle Academy,2,,,,,,,,,,,,,,,,,,,,,,2017
-2810500,Springfield,Springfield Central High,355,281,26,4,6,8,0,0,0,8,9,0,0,6,20,0,26,22,2,2,0,0,2017
-2810510,Springfield,High School Of Commerce,71,,,,,,,,,,,,,,,,,,,,,,2017
-2810530,Springfield,Springfield High School of Science and Technology,102,,,,,,,,,,,,,,,,,,,,,,2017
-2810550,Springfield,Springfield Public Day High School,27,,,,,,,,,,,,,,,,,,,,,,2017
-2810620,Springfield,Roger L. Putnam Vocational Technical Academy,23,281,23,5,0,13,0,0,0,5,8,1,0,6,17,0,,,,,,,2017
-2840005,Stoneham,Colonial Park,227,,,,,,,,,,,,,,,,,,,,,,2017
-2840025,Stoneham,Robin Hood,326,,,,,,,,,,,,,,,,,,,,,,2017
-2840030,Stoneham,South,331,,,,,,,,,,,,,,,,,,,,,,2017
-2840405,Stoneham,Stoneham Central Middle School,470,,,,,,,,,,,,,,,,,,,,,,2017
-2840505,Stoneham,Stoneham High,148,,,,,,,,,,,,,,,,,,,,,,2017
-2850010,Stoughton,Helen Hansen Elementary,238,,,,,,,,,,,,,,,,,,,,,,2017
-2850014,Stoughton,Joseph R Dawe Jr Elementary,370,,,,,,,,,,,,,,,,,,,,,,2017
-2850015,Stoughton,South Elementary,256,,,,,,,,,,,,,,,,,,,,,,2017
-2850020,Stoughton,West Elementary,368,,,,,,,,,,,,,,,,,,,,,,2017
-2850025,Stoughton,Joseph H Gibbons,368,,,,,,,,,,,,,,,,,,,,,,2017
-2850405,Stoughton,O'Donnell Middle School,768,,,,,,,,,,,,,,,,,,,,,,2017
-2850505,Stoughton,Stoughton High,326,285,9,3,1,0,0,0,0,5,2,0,0,1,8,0,9,,,,,,2017
-2880305,Sudbury,Ephraim Curtis Middle,602,,,,,,,,,,,,,,,,,,,,,,2017
-2890005,Sunderland,Sunderland Elementary,223,,,,,,,,,,,,,,,,,,,,,,2017
-2900003,Sutton,Sutton Early Learning,203,,,,,,,,,,,,,,,,,,,,,,2017
-2900005,Sutton,Sutton Elementary,328,,,,,,,,,,,,,,,,,,,,,,2017
-2900305,Sutton,Sutton Middle School,362,,,,,,,,,,,,,,,,,,,,,,2017
-2900510,Sutton,Sutton High School,7,,,,,,,,,,,,,,,,1,,,,,,2017
-2910005,Swampscott,Clarke,199,,,,,,,,,,,,,,,,,,,,,,2017
-2910010,Swampscott,Hadley,292,,,,,,,,,,,,,,,,,,,,,,2017
-2910020,Swampscott,Stanley,293,,,,,,,,,,,,,,,,,,,,,,2017
-2910305,Swampscott,Swampscott Middle,711,,,,,,,,,,,,,,,,,,,,,,2017
-2910505,Swampscott,Swampscott High,182,,,,,,,,,,,,,,,,,,,,,,2017
+2810045,Springfield,William N. DeBerry,254,,,,,,,,,,,,,,,,,,,,,,2017
+2810050,Springfield,Hiram L Dorman,279,,,,,,,,,,,,,,,,,,,,,,2017
+2810055,Springfield,Rebecca M Johnson,617,,,,,,,,,,,,,,,,,,,,,,2017
+2810060,Springfield,Margaret C Ells,29,,,,,,,,,,,,,,,,,,,,,,2017
+2810065,Springfield,Glenwood,281,,,,,,,,,,,,,,,,,,,,,,2017
+2810068,Springfield,Glickman Elementary,311,,,,,,,,,,,,,,,,,,,,,,2017
+2810075,Springfield,Frank H Freedman,309,,,,,,,,,,,,,,,,,,,,,,2017
+2810080,Springfield,Frederick Harris,509,,,,,,,,,,,,,,,,,,,,,,2017
+2810085,Springfield,Homer Street,391,,,,,,,,,,,,,,,,,,,,,,2017
+2810095,Springfield,Alfred G. Zanetti Montessori Magnet School,313,,,,,,,,,,,,,,,,,,,,,,2017
+2810100,Springfield,Indian Orchard Elementary,537,,,,,,,,,,,,,,,,,,,,,,2017
+2810110,Springfield,Kensington International School,282,,,,,,,,,,,,,,,,,,,,,,2017
+2810115,Springfield,Liberty,251,,,,,,,,,,,,,,,,,,,,,,2017
+2810120,Springfield,Lincoln,368,,,,,,,,,,,,,,,,,,,,,,2017
+2810125,Springfield,Mary A. Dryden Veterans Memorial School,282,,,,,,,,,,,,,,,,,,,,,,2017
+2810140,Springfield,Mary M Lynch,223,,,,,,,,,,,,,,,,,,,,,,2017
+2810145,Springfield,Mary O Pottenger,391,,,,,,,,,,,,,,,,,,,,,,2017
+2810155,Springfield,Mary M Walsh,278,,,,,,,,,,,,,,,,,,,,,,2017
+2810160,Springfield,Sumner Avenue,465,,,,,,,,,,,,,,,,,,,,,,2017
+2810165,Springfield,Arthur T Talmadge,213,,,,,,,,,,,,,,,,,,,,,,2017
+2810175,Springfield,Alice B Beal Elementary,248,,,,,,,,,,,,,,,,,,,,,,2017
+2810180,Springfield,Warner,225,,,,,,,,,,,,,,,,,,,,,,2017
+2810185,Springfield,Washington,334,,,,,,,,,,,,,,,,,,,,,,2017
+2810190,Springfield,White Street,402,,,,,,,,,,,,,,,,,,,,,,2017
+2810195,Springfield,German Gerena Community School,531,,,,,,,,,,,,,,,,,,,,,,2017
+2810320,Springfield,John J Duggan Middle,31,,,,,,,,,,,,,,,,,,,,,,2017
+2810325,Springfield,Forest Park Middle,202,,,,,,,,,,,,,,,,,,,,,,2017
+2810328,Springfield,John F Kennedy Middle,13,,,,,,,,,,,,,,,,,,,,,,2017
+2810330,Springfield,M Marcus Kiley Middle,403,,,,,,,,,,,,,,,,,,,,,,2017
+2810345,Springfield,Springfield Public Day Middle School,1,,,,,,,,,,,,,,,,,,,,,,2017
+2810350,Springfield,STEM Middle Academy,12,,,,,,,,,,,,,,,,,,,,,,2017
+2810355,Springfield,South End Middle School,5,,,,,,,,,,,,,,,,,,,,,,2017
+2810360,Springfield,Balliet Middle School,1,,,,,,,,,,,,,,,,,,,,,,2017
+2810365,Springfield,Chestnut Academy,103,,,,,,,,,,,,,,,,,,,,,,2017
+2810366,Springfield,Impact Prep at Chestnut,238,,,,,,,,,,,,,,,,,,,,,,2017
+2810367,Springfield,Chestnut Accelerated Middle School (Talented and Gifted),4,,,,,,,,,,,,,,,,,,,,,,2017
+2810480,Springfield,Rise Academy at Van Sickle,13,,,,,,,,,,,,,,,,,,,,,,2017
+2810485,Springfield,Van Sickle Academy,12,,,,,,,,,,,,,,,,,,,,,,2017
+2810500,Springfield,Springfield Central High,359,281,26,4,6,8,0,0,0,8,9,0,0,6,20,0,,,,,,,2017
+2810510,Springfield,High School Of Commerce,139,,,,,,,,,,,,,,,,,,,,,,2017
+2810530,Springfield,Springfield High School of Science and Technology,154,,,,,,,,,,,,,,,,,,,,,,2017
+2810560,Springfield,Liberty Preparatory Academy,2,,,,,,,,,,,,,,,,,,,,,,2017
+2810620,Springfield,Roger L. Putnam Vocational Technical Academy,38,281,23,5,0,13,0,0,0,5,8,1,0,6,17,0,,,,,,,2017
+2840005,Stoneham,Colonial Park,233,,,,,,,,,,,,,,,,,,,,,,2017
+2840025,Stoneham,Robin Hood,337,,,,,,,,,,,,,,,,,,,,,,2017
+2840030,Stoneham,South,309,,,,,,,,,,,,,,,,,,,,,,2017
+2840405,Stoneham,Stoneham Central Middle School,461,,,,,,,,,,,,,,,,,,,,,,2017
+2840505,Stoneham,Stoneham High,127,,,,,,,,,,,,,,,,,,,,,,2017
+2850010,Stoughton,Helen Hansen Elementary,225,,,,,,,,,,,,,,,,,,,,,,2017
+2850014,Stoughton,Joseph R Dawe Jr Elementary,351,,,,,,,,,,,,,,,,,,,,,,2017
+2850015,Stoughton,South Elementary,249,,,,,,,,,,,,,,,,,,,,,,2017
+2850020,Stoughton,Richard L. Wilkins Elementary School,342,,,,,,,,,,,,,,,,,,,,,,2017
+2850025,Stoughton,Joseph H Gibbons,356,,,,,,,,,,,,,,,,,,,,,,2017
+2850405,Stoughton,O'Donnell Middle School,321,,,,,,,,,,,,,,,,,,,,,,2017
+2850505,Stoughton,Stoughton High,381,285,9,3,1,0,0,0,0,5,2,0,0,1,8,0,14,11,0,3,0,0,2017
+2870005,Sturbridge,Burgess Elementary,2,,,,,,,,,,,,,,,,,,,,,,2017
+2880030,Sudbury,Peter Noyes,3,,,,,,,,,,,,,,,,,,,,,,2017
+2880305,Sudbury,Ephraim Curtis Middle,831,,,,,,,,,,,,,,,,,,,,,,2017
+2890005,Sunderland,Sunderland Elementary,30,,,,,,,,,,,,,,,,,,,,,,2017
+2900003,Sutton,Sutton Early Learning,184,,,,,,,,,,,,,,,,,,,,,,2017
+2900005,Sutton,Sutton Elementary,326,,,,,,,,,,,,,,,,,,,,,,2017
+2900305,Sutton,Sutton Middle School,110,,,,,,,,,,,,,,,,,,,,,,2017
+2900510,Sutton,Sutton High School,15,,,,,,,,,,,,,,,,,,,,,,2017
+2910005,Swampscott,Clarke,188,,,,,,,,,,,,,,,,,,,,,,2017
+2910010,Swampscott,Hadley,291,,,,,,,,,,,,,,,,,,,,,,2017
+2910020,Swampscott,Stanley,295,,,,,,,,,,,,,,,,,,,,,,2017
+2910305,Swampscott,Swampscott Middle,694,,,,,,,,,,,,,,,,,,,,,,2017
+2910505,Swampscott,Swampscott High,157,,,,,,,,,,,,,,,,,,,,,,2017
+2920017,Swansea,Mark G Hoyle Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+2920020,Swansea,Joseph G Luther,1,,,,,,,,,,,,,,,,,,,,,,2017
 2920305,Swansea,Joseph Case Jr High,1,,,,,,,,,,,,,,,,,,,,,,2017
-2920505,Swansea,Joseph Case High,189,292,15,0,1,0,0,0,0,14,2,0,0,3,12,0,8,,,,,,2017
-2930042,Taunton,Joseph H Martin,705,,,,,,,,,,,,,,,,,,,,,,2017
-2930305,Taunton,John F Parker Middle,443,,,,,,,,,,,,,,,,,,,,,,2017
-2930315,Taunton,Benjamin Friedman Middle,775,,,,,,,,,,,,,,,,,,,,,,2017
-2930505,Taunton,Taunton High,300,293,36,2,1,0,0,0,0,33,4,0,0,5,31,0,2,,,,,,2017
-2930525,Taunton,Taunton Alternative High School,1,,,,,,,,,,,,,,,,,,,,,,2017
-2950023,Tewksbury,John F. Ryan,527,,,,,,,,,,,,,,,,,,,,,,2017
-2950305,Tewksbury,John W. Wynn Middle,301,,,,,,,,,,,,,,,,,,,,,,2017
-2950505,Tewksbury,Tewksbury Memorial High,252,,,,,,,,,,,,,,,,,,,,,,2017
-2960005,Tisbury,Tisbury Elementary,318,,,,,,,,,,,,,,,,,,,,,,2017
-3000005,Truro,Truro Central,96,,,,,,,,,,,,,,,,,,,,,,2017
-3010305,Tyngsborough,Tyngsborough Middle,126,,,,,,,,,,,,,,,,,,,,,,2017
-3010505,Tyngsborough,Tyngsborough High School,97,,,,,,,,,,,,,,,,,,,,,,2017
-3040005,Uxbridge,Taft Early Learning Center,385,,,,,,,,,,,,,,,,,,,,,,2017
-3040015,Uxbridge,McCloskey Middle School,384,,,,,,,,,,,,,,,,,,,,,,2017
-3040020,Uxbridge,Whitin Elementary School,408,,,,,,,,,,,,,,,,,,,,,,2017
-3040515,Uxbridge,Gateway to College,2,,,,,,,,,,,,,,,,,,,,,,2017
-3050005,Wakefield,Dolbeare,443,,,,,,,,,,,,,,,,,,,,,,2017
-3050015,Wakefield,Woodville School,441,,,,,,,,,,,,,,,,,,,,,,2017
-3050020,Wakefield,Greenwood,221,,,,,,,,,,,,,,,,,,,,,,2017
-3050040,Wakefield,Walton,198,,,,,,,,,,,,,,,,,,,,,,2017
-3050310,Wakefield,Galvin Middle School,988,,,,,,,,,,,,,,,,,,,,,,2017
-3050505,Wakefield,Wakefield Memorial High,57,305,21,0,5,0,0,0,0,16,2,0,0,5,16,0,3,,,,,,2017
+2920505,Swansea,Joseph Case High,186,292,15,0,1,0,0,0,0,14,2,0,0,3,12,0,17,8,2,7,0,0,2017
+2930042,Taunton,Joseph H Martin,663,,,,,,,,,,,,,,,,,,,,,,2017
+2930305,Taunton,John F Parker Middle,481,,,,,,,,,,,,,,,,,,,,,,2017
+2930315,Taunton,Benjamin Friedman Middle,747,,,,,,,,,,,,,,,,,,,,,,2017
+2930505,Taunton,Taunton High,378,293,36,2,1,0,0,0,0,33,4,0,0,5,31,0,13,5,2,1,4,1,2017
+2930525,Taunton,Taunton Alternative High School,5,,,,,,,,,,,,,,,,,,,,,,2017
+2950001,Tewksbury,L F Dewing,5,,,,,,,,,,,,,,,,,,,,,,2017
+2950020,Tewksbury,North Street,2,,,,,,,,,,,,,,,,,,,,,,2017
+2950023,Tewksbury,John F. Ryan,512,,,,,,,,,,,,,,,,,,,,,,2017
+2950025,Tewksbury,Louise Davy Trahan,1,,,,,,,,,,,,,,,,,,,,,,2017
+2950305,Tewksbury,John W. Wynn Middle,310,,,,,,,,,,,,,,,,,,,,,,2017
+2950505,Tewksbury,Tewksbury Memorial High,211,,,,,,,,,,,,,,,,,,,,,,2017
+2960005,Tisbury,Tisbury Elementary,306,,,,,,,,,,,,,,,,,,,,,,2017
+2980010,Topsfield,Steward Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+3000005,Truro,Truro Central,90,,,,,,,,,,,,,,,,,,,,,,2017
+3010305,Tyngsborough,Tyngsborough Middle,86,,,,,,,,,,,,,,,,,,,,,,2017
+3010505,Tyngsborough,Tyngsborough High School,91,,,,,,,,,,,,,,,,,,,,,,2017
+3040005,Uxbridge,Taft Early Learning Center,358,,,,,,,,,,,,,,,,,,,,,,2017
+3040015,Uxbridge,McCloskey Middle School,369,,,,,,,,,,,,,,,,,,,,,,2017
+3040020,Uxbridge,Whitin Elementary School,382,,,,,,,,,,,,,,,,,,,,,,2017
+3040505,Uxbridge,Uxbridge High,2,,,,,,,,,,,,,,,,,,,,,,2017
+3050005,Wakefield,Dolbeare,446,,,,,,,,,,,,,,,,,,,,,,2017
+3050015,Wakefield,Woodville School,436,,,,,,,,,,,,,,,,,,,,,,2017
+3050020,Wakefield,Greenwood,223,,,,,,,,,,,,,,,,,,,,,,2017
+3050040,Wakefield,Walton,210,,,,,,,,,,,,,,,,,,,,,,2017
+3050310,Wakefield,Galvin Middle School,751,,,,,,,,,,,,,,,,,,,,,,2017
+3050505,Wakefield,Wakefield Memorial High,46,305,21,0,5,0,0,0,0,16,2,0,0,5,16,0,2,,,,,,2017
+3060005,Wales,Wales Elementary,2,,,,,,,,,,,,,,,,,,,,,,2017
 3070010,Walpole,Boyden,1,,,,,,,,,,,,,,,,,,,,,,2017
-3070015,Walpole,Fisher,1,,,,,,,,,,,,,,,,,,,,,,2017
-3070505,Walpole,Walpole High,43,307,5,,,,,,,,,,,,,,4,,,,,,2017
-3080404,Waltham,John F Kennedy Middle,160,,,,,,,,,,,,,,,,,,,,,,2017
-3080415,Waltham,John W. McDevitt Middle School,184,,,,,,,,,,,,,,,,,,,,,,2017
-3080505,Waltham,Waltham Sr High,32,308,32,4,7,3,1,0,0,17,4,2,0,4,28,0,,,,,,,2017
-3090505,Ware,Ware Junior/Senior High School,238,,,,,,,,,,,,,,,,,,,,,,2017
-3100003,Wareham,John William Decas,587,,,,,,,,,,,,,,,,,,,,,,2017
-3100305,Wareham,Wareham Middle,2,,,,,,,,,,,,,,,,,,,,,,2017
-3100315,Wareham,Wareham Cooperative Alternative School,3,,,,,,,,,,,,,,,,,,,,,,2017
-3100505,Wareham,Wareham Senior High,141,,,,,,,,,,,,,,,,,,,,,,2017
-3140305,Watertown,Watertown Middle,540,,,,,,,,,,,,,,,,,,,,,,2017
-3140505,Watertown,Watertown High,91,314,6,0,0,1,0,0,0,5,2,0,0,2,4,0,5,,,,,,2017
-3150005,Wayland,Claypit Hill School,430,,,,,,,,,,,,,,,,,,,,,,2017
-3150015,Wayland,Happy Hollow School,332,,,,,,,,,,,,,,,,,,,,,,2017
-3150020,Wayland,Loker School,208,,,,,,,,,,,,,,,,,,,,,,2017
-3150505,Wayland,Wayland High School,130,,,,,,,,,,,,,,,,42,3,9,12,9,9,2017
-3160015,Webster,Park Avenue Elementary,781,,,,,,,,,,,,,,,,,,,,,,2017
-3160315,Webster,Webster Middle School,552,,,,,,,,,,,,,,,,,,,,,,2017
-3160505,Webster,Bartlett High School,117,,,,,,,,,,,,,,,,,,,,,,2017
-3170048,Wellesley,Sprague Elementary School,1,,,,,,,,,,,,,,,,,,,,,,2017
-3170505,Wellesley,Wellesley Sr High,160,317,45,1,5,2,3,0,0,34,3,1,1,25,20,0,48,6,9,12,9,12,2017
+3070310,Walpole,Eleanor N Johnson Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
+3070505,Walpole,Walpole High,50,307,5,,,,,,,,,,,,,,8,,,,,,2017
+3080005,Waltham,William F. Stanley Elementary School,3,,,,,,,,,,,,,,,,,,,,,,2017
+3080032,Waltham,Douglas MacArthur Elementary School,4,,,,,,,,,,,,,,,,,,,,,,2017
+3080040,Waltham,Northeast Elementary School,3,,,,,,,,,,,,,,,,,,,,,,2017
+3080050,Waltham,Thomas R Plympton Elementary School,1,,,,,,,,,,,,,,,,,,,,,,2017
+3080060,Waltham,James Fitzgerald Elementary School,2,,,,,,,,,,,,,,,,,,,,,,2017
+3080404,Waltham,John F Kennedy Middle,147,,,,,,,,,,,,,,,,,,,,,,2017
+3080415,Waltham,John W. McDevitt Middle School,209,,,,,,,,,,,,,,,,,,,,,,2017
+3080505,Waltham,Waltham Sr High,32,308,32,4,7,3,1,0,0,17,4,2,0,4,28,0,13,1,2,3,3,4,2017
+3090020,Ware,Stanley M Koziol Elementary School,17,,,,,,,,,,,,,,,,,,,,,,2017
+3090505,Ware,Ware Junior/Senior High School,236,,,,,,,,,,,,,,,,,,,,,,2017
+3100003,Wareham,John William Decas,573,,,,,,,,,,,,,,,,,,,,,,2017
+3100017,Wareham,Minot Forest,5,,,,,,,,,,,,,,,,,,,,,,2017
+3100305,Wareham,Wareham Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
+3100505,Wareham,Wareham Senior High,48,,,,,,,,,,,,,,,,,,,,,,2017
+3140305,Watertown,Watertown Middle,519,,,,,,,,,,,,,,,,,,,,,,2017
+3140505,Watertown,Watertown High,66,314,6,0,0,1,0,0,0,5,2,0,0,2,4,0,7,,,,,,2017
+3150005,Wayland,Claypit Hill School,454,,,,,,,,,,,,,,,,,,,,,,2017
+3150015,Wayland,Happy Hollow School,327,,,,,,,,,,,,,,,,,,,,,,2017
+3150020,Wayland,Loker School,227,,,,,,,,,,,,,,,,,,,,,,2017
+3150505,Wayland,Wayland High School,133,,,,,,,,,,,,,,,,44,1,3,9,18,13,2017
+3160015,Webster,Park Avenue Elementary,704,,,,,,,,,,,,,,,,,,,,,,2017
+3160315,Webster,Webster Middle School,1,,,,,,,,,,,,,,,,,,,,,,2017
+3160505,Webster,Bartlett High School,112,,,,,,,,,,,,,,,,,,,,,,2017
+3170505,Wellesley,Wellesley Sr High,172,317,45,1,5,2,3,0,0,34,3,1,1,25,20,0,37,4,4,3,12,14,2017
 3180005,Wellfleet,Wellfleet Elementary,97,,,,,,,,,,,,,,,,,,,,,,2017
-3210045,Westborough,Mill Pond School,886,,,,,,,,,,,,,,,,,,,,,,2017
-3210505,Westborough,Westborough High,181,321,20,0,12,0,0,0,0,8,0,0,0,1,19,0,17,0,0,1,5,11,2017
-3220005,West Boylston,Major Edwards Elementary,374,,,,,,,,,,,,,,,,,,,,,,2017
-3220505,West Boylston,West Boylston Junior/Senior High,188,,,,,,,,,,,,,,,,,,,,,,2017
-3230003,West Bridgewater,Rose L Macdonald,260,,,,,,,,,,,,,,,,,,,,,,2017
-3230005,West Bridgewater,Spring Street School,79,,,,,,,,,,,,,,,,,,,,,,2017
-3230305,West Bridgewater,Howard School,273,,,,,,,,,,,,,,,,,,,,,,2017
-3230505,West Bridgewater,West Bridgewater Junior/Senior,64,,,,,,,,,,,,,,,,,,,,,,2017
-3250015,Westfield,Franklin Ave,241,,,,,,,,,,,,,,,,,,,,,,2017
-3250020,Westfield,Abner Gibbs,220,,,,,,,,,,,,,,,,,,,,,,2017
-3250025,Westfield,Highland,409,,,,,,,,,,,,,,,,,,,,,,2017
-3250033,Westfield,Munger Hill,404,,,,,,,,,,,,,,,,,,,,,,2017
-3250036,Westfield,Paper Mill,417,,,,,,,,,,,,,,,,,,,,,,2017
-3250040,Westfield,Southampton Road,445,,,,,,,,,,,,,,,,,,,,,,2017
-3250055,Westfield,Russell Elementary School,182,,,,,,,,,,,,,,,,,,,,,,2017
-3250305,Westfield,North Middle School,154,,,,,,,,,,,,,,,,,,,,,,2017
-3250505,Westfield,Westfield High,80,325,2,,,,,,,,,,,,,,1,,,,,,2017
-3250605,Westfield,Westfield Technical Academy,85,,,,,,,,,,,,,,,,,,,,,,2017
-3260330,Westford,Stony Brook School,1,,,,,,,,,,,,,,,,,,,,,,2017
-3260505,Westford,Westford Academy,532,326,21,0,11,0,2,0,0,8,0,0,0,2,19,0,22,0,0,3,2,17,2017
-3300505,Weston,Weston High,229,330,32,1,12,0,0,0,0,19,0,1,0,10,22,0,33,1,5,8,10,9,2017
-3310030,Westport,Westport Elementary,362,,,,,,,,,,,,,,,,,,,,,,2017
-3310515,Westport,Westport Junior/Senior High School,162,,,,,,,,,,,,,,,,,,,,,,2017
-3320007,West Springfield,Philip G Coburn,226,,,,,,,,,,,,,,,,,,,,,,2017
-3320010,West Springfield,John R Fausey,461,,,,,,,,,,,,,,,,,,,,,,2017
-3320025,West Springfield,Memorial,229,,,,,,,,,,,,,,,,,,,,,,2017
-3320030,West Springfield,Mittineague,161,,,,,,,,,,,,,,,,,,,,,,2017
-3320040,West Springfield,Tatham,225,,,,,,,,,,,,,,,,,,,,,,2017
-3320305,West Springfield,West Springfield Middle,814,,,,,,,,,,,,,,,,,,,,,,2017
-3320505,West Springfield,West Springfield High,169,,,,,,,,,,,,,,,,,,,,,,2017
-3350505,Westwood,Westwood High,98,335,22,1,3,0,0,0,0,18,1,0,0,2,20,0,23,1,0,3,5,14,2017
-3360310,Weymouth,Abigail Adams Middle School,2,,,,,,,,,,,,,,,,,,,,,,2017
-3360505,Weymouth,Weymouth High School,258,336,13,1,1,0,1,0,0,10,3,0,0,0,13,0,12,3,3,4,2,0,2017
+3210045,Westborough,Mill Pond School,944,,,,,,,,,,,,,,,,,,,,,,2017
+3210505,Westborough,Westborough High,184,321,20,0,12,0,0,0,0,8,0,0,0,1,19,0,12,1,0,1,6,4,2017
+3220005,West Boylston,Major Edwards Elementary,388,,,,,,,,,,,,,,,,,,,,,,2017
+3220505,West Boylston,West Boylston Junior/Senior High,185,,,,,,,,,,,,,,,,,,,,,,2017
+3230003,West Bridgewater,Rose L Macdonald,245,,,,,,,,,,,,,,,,,,,,,,2017
+3230005,West Bridgewater,Spring Street School,77,,,,,,,,,,,,,,,,,,,,,,2017
+3230305,West Bridgewater,Howard School,283,,,,,,,,,,,,,,,,,,,,,,2017
+3230505,West Bridgewater,West Bridgewater Junior/Senior,91,,,,,,,,,,,,,,,,,,,,,,2017
+3250015,Westfield,Franklin Ave,233,,,,,,,,,,,,,,,,,,,,,,2017
+3250020,Westfield,Abner Gibbs,221,,,,,,,,,,,,,,,,,,,,,,2017
+3250025,Westfield,Highland,371,,,,,,,,,,,,,,,,,,,,,,2017
+3250033,Westfield,Munger Hill,379,,,,,,,,,,,,,,,,,,,,,,2017
+3250036,Westfield,Paper Mill,384,,,,,,,,,,,,,,,,,,,,,,2017
+3250040,Westfield,Southampton Road,409,,,,,,,,,,,,,,,,,,,,,,2017
+3250055,Westfield,Russell Elementary School,157,,,,,,,,,,,,,,,,,,,,,,2017
+3250305,Westfield,North Middle School,140,,,,,,,,,,,,,,,,,,,,,,2017
+3250310,Westfield,Westfield Middle School,2,,,,,,,,,,,,,,,,,,,,,,2017
+3250505,Westfield,Westfield High,95,325,2,,,,,,,,,,,,,,11,6,2,1,2,0,2017
+3250605,Westfield,Westfield Technical Academy,84,,,,,,,,,,,,,,,,,,,,,,2017
+3260310,Westford,Blanchard Middle,4,,,,,,,,,,,,,,,,,,,,,,2017
+3260505,Westford,Westford Academy,543,326,21,0,11,0,2,0,0,8,0,0,0,2,19,0,37,0,3,2,7,25,2017
+3300015,Weston,Woodland,1,,,,,,,,,,,,,,,,,,,,,,2017
+3300505,Weston,Weston High,64,330,32,1,12,0,0,0,0,19,0,1,0,10,22,0,47,2,6,12,13,14,2017
+3310030,Westport,Westport Elementary,496,,,,,,,,,,,,,,,,,,,,,,2017
+3310515,Westport,Westport Junior/Senior High School,170,,,,,,,,,,,,,,,,,,,,,,2017
+3320005,West Springfield,John Ashley,1,,,,,,,,,,,,,,,,,,,,,,2017
+3320007,West Springfield,Philip G Coburn,539,,,,,,,,,,,,,,,,,,,,,,2017
+3320010,West Springfield,John R Fausey,474,,,,,,,,,,,,,,,,,,,,,,2017
+3320025,West Springfield,Memorial,242,,,,,,,,,,,,,,,,,,,,,,2017
+3320030,West Springfield,Mittineague,177,,,,,,,,,,,,,,,,,,,,,,2017
+3320040,West Springfield,Tatham,253,,,,,,,,,,,,,,,,,,,,,,2017
+3320305,West Springfield,West Springfield Middle,705,,,,,,,,,,,,,,,,,,,,,,2017
+3320505,West Springfield,West Springfield High,151,,,,,,,,,,,,,,,,,,,,,,2017
+3350305,Westwood,E W Thurston Middle,744,,,,,,,,,,,,,,,,,,,,,,2017
+3350505,Westwood,Westwood High,112,335,22,1,3,0,0,0,0,18,1,0,0,2,20,0,16,0,1,2,6,7,2017
+3360005,Weymouth,Academy Avenue,1,,,,,,,,,,,,,,,,,,,,,,2017
+3360050,Weymouth,Frederick C Murphy,1,,,,,,,,,,,,,,,,,,,,,,2017
+3360065,Weymouth,Lawrence W Pingree,1,,,,,,,,,,,,,,,,,,,,,,2017
+3360080,Weymouth,William Seach,3,,,,,,,,,,,,,,,,,,,,,,2017
+3360085,Weymouth,Ralph Talbot,2,,,,,,,,,,,,,,,,,,,,,,2017
+3360105,Weymouth,Thomas W. Hamilton Primary School,3,,,,,,,,,,,,,,,,,,,,,,2017
+3360110,Weymouth,Wessagusset,1,,,,,,,,,,,,,,,,,,,,,,2017
+3360310,Weymouth,Abigail Adams Middle School,11,,,,,,,,,,,,,,,,,,,,,,2017
+3360505,Weymouth,Weymouth High School,241,336,13,1,1,0,1,0,0,10,3,0,0,0,13,0,6,,,,,,2017
 3370005,Whately,Whately Elementary,120,,,,,,,,,,,,,,,,,,,,,,2017
-3400020,Williamsburg,Anne T. Dunphy School,146,,,,,,,,,,,,,,,,,,,,,,2017
-3410010,Williamstown,Williamstown Elementary,414,,,,,,,,,,,,,,,,,,,,,,2017
+3400020,Williamsburg,Anne T. Dunphy School,148,,,,,,,,,,,,,,,,,,,,,,2017
+3410010,Williamstown,Williamstown Elementary,421,,,,,,,,,,,,,,,,,,,,,,2017
 3420005,Wilmington,Boutwell,117,,,,,,,,,,,,,,,,,,,,,,2017
-3420015,Wilmington,Wildwood,134,,,,,,,,,,,,,,,,,,,,,,2017
-3420020,Wilmington,Woburn Street,407,,,,,,,,,,,,,,,,,,,,,,2017
-3420025,Wilmington,Shawsheen Elementary,359,,,,,,,,,,,,,,,,,,,,,,2017
-3420060,Wilmington,North Intermediate,268,,,,,,,,,,,,,,,,,,,,,,2017
-3420080,Wilmington,West Intermediate,254,,,,,,,,,,,,,,,,,,,,,,2017
-3420330,Wilmington,Wilmington Middle School,786,,,,,,,,,,,,,,,,,,,,,,2017
-3420505,Wilmington,Wilmington High,78,342,1,,,,,,,,,,,,,,1,,,,,,2017
-3430040,Winchendon,Memorial,271,,,,,,,,,,,,,,,,,,,,,,2017
-3430050,Winchendon,Toy Town Elementary,282,,,,,,,,,,,,,,,,,,,,,,2017
-3430315,Winchendon,Murdock Middle School,290,,,,,,,,,,,,,,,,,,,,,,2017
-3430405,Winchendon,Murdock Academy for Success,3,,,,,,,,,,,,,,,,,,,,,,2017
-3430515,Winchendon,Murdock High School,44,,,,,,,,,,,,,,,,,,,,,,2017
-3440305,Winchester,McCall Middle,1005,,,,,,,,,,,,,,,,,,,,,,2017
-3440505,Winchester,Winchester High School,186,344,74,2,18,1,1,0,0,52,2,2,0,20,54,0,40,4,6,8,13,9,2017
-3460015,Winthrop,William P. Gorman/Fort Banks Elementary,432,,,,,,,,,,,,,,,,,,,,,,2017
-3460020,Winthrop,Arthur T. Cummings Elementary School,461,,,,,,,,,,,,,,,,,,,,,,2017
-3460505,Winthrop,Winthrop High School,49,,,,,,,,,,,,,,,,1,,,,,,2017
-3470065,Woburn,Mary D Altavesta,1,,,,,,,,,,,,,,,,,,,,,,2017
-3470405,Woburn,John F Kennedy Middle School,497,,,,,,,,,,,,,,,,,,,,,,2017
-3470410,Woburn,Daniel L Joyce Middle School,494,,,,,,,,,,,,,,,,,,,,,,2017
-3470505,Woburn,Woburn High,380,,,,,,,,,,,,,,,,,,,,,,2017
-3480052,Worcester,Chandler Magnet,1,,,,,,,,,,,,,,,,,,,,,,2017
-3480136,Worcester,Heard Street,1,,,,,,,,,,,,,,,,,,,,,,2017
-3480215,Worcester,Rice Square,1,,,,,,,,,,,,,,,,,,,,,,2017
-3480350,Worcester,Claremont Academy,109,,,,,,,,,,,,,,,,,,,,,,2017
-3480503,Worcester,Burncoat Senior High,15,,,,,,,,,,,,,,,,,,,,,,2017
-3480512,Worcester,Doherty Memorial High,190,348,12,2,0,1,1,0,0,8,4,3,0,1,11,0,9,,,,,,2017
-3480515,Worcester,North High,177,,,,,,,,,,,,,,,,,,,,,,2017
-3480520,Worcester,South High Community,11,,,,,,,,,,,,,,,,1,,,,,,2017
-3480605,Worcester,Worcester Technical High,53,348,24,3,2,7,1,0,0,11,8,1,0,4,20,0,23,10,4,8,1,0,2017
-3500003,Wrentham,Delaney,501,,,,,,,,,,,,,,,,,,,,,,2017
-3500010,Wrentham,Charles E Roderick,444,,,,,,,,,,,,,,,,,,,,,,2017
-4100205,Excel Academy Charter (District),Excel Academy Charter School,707,,,,,,,,,,,,,,,,,,,,,,2017
-4130505,Four Rivers Charter Public (District),Four Rivers Charter Public School,90,,,,,,,,,,,,,,,,,,,,,,2017
-4140305,Berkshire Arts and Technology Charter Public (District),Berkshire Arts and Technology Charter Public School,89,,,,,,,,,,,,,,,,,,,,,,2017
-4160305,Boston Preparatory Charter Public (District),Boston Preparatory Charter Public School,2,,,,,,,,,,,,,,,,,,,,,,2017
-4180305,Christa McAuliffe Charter Public (District),Christa McAuliffe Charter Public School,386,,,,,,,,,,,,,,,,,,,,,,2017
-4280305,Brooke Charter School (District),Brooke Charter School,467,,,,,,,,,,,,,,,,,,,,,,2017
-4290010,KIPP Academy Lynn Charter (District),KIPP Academy Lynn Charter School,40,,,,,,,,,,,,,,,,,,,,,,2017
-4300305,Advanced Math and Science Academy Charter (District),Advanced Math and Science Academy Charter School,611,430,35,3,15,0,1,0,0,16,0,1,0,14,21,0,35,2,1,8,15,9,2017
-4320530,Cape Cod Lighthouse Charter (District),Cape Cod Lighthouse Charter School,77,,,,,,,,,,,,,,,,,,,,,,2017
-4350305,Innovation Academy Charter (District),Innovation Academy Charter School,14,,,,,,,,,,,,,,,,,,,,,,2017
-4360305,Community Charter School of Cambridge (District),Community Charter School of Cambridge,83,,,,,,,,,,,,,,,,1,,,,,,2017
-4370505,City on a Hill Charter Public School Circuit Street (District),City on a Hill Charter Public School Circuit Street,64,,,,,,,,,,,,,,,,,,,,,,2017
-4410505,Sabis International Charter (District),Sabis International Charter School,1315,,,,,,,,,,,,,,,,,,,,,,2017
-4440205,Neighborhood House Charter (District),Neighborhood House Charter School,334,,,,,,,,,,,,,,,,,,,,,,2017
-4450105,Abby Kelley Foster Charter Public (District),Abby Kelley Foster Charter Public School,759,,,,,,,,,,,,,,,,,,,,,,2017
-4460550,Foxborough Regional Charter (District),Foxborough Regional Charter School,1073,446,7,2,1,1,0,0,0,3,1,0,0,2,5,0,6,,,,,,2017
-4470205,Benjamin Franklin Classical Charter Public (District),Benjamin Franklin Classical Charter Public School,441,,,,,,,,,,,,,,,,,,,,,,2017
-4490305,Boston Collegiate Charter (District),Boston Collegiate Charter School,216,,,,,,,,,,,,,,,,,,,,,,2017
-4500105,Hilltown Cooperative Charter Public (District),Hilltown Cooperative Charter Public School,92,,,,,,,,,,,,,,,,,,,,,,2017
-4530005,Holyoke Community Charter (District),Holyoke Community Charter School,601,,,,,,,,,,,,,,,,,,,,,,2017
-4540205,Lawrence Family Development Charter (District),Lawrence Family Development Charter School,105,,,,,,,,,,,,,,,,,,,,,,2017
-4560050,Lowell Community Charter Public (District),Lowell Community Charter Public School,626,,,,,,,,,,,,,,,,,,,,,,2017
-4660550,Martha's Vineyard Charter (District),Martha's Vineyard Charter School,29,,,,,,,,,,,,,,,,,,,,,,2017
-4680505,Ma Academy for Math and Science,Ma Academy for Math and Science School,16,,,,,,,,,,,,,,,,10,0,0,1,5,4,2017
-4690505,MATCH Charter Public School (District),MATCH Charter Public School,274,,,,,,,,,,,,,,,,,,,,,,2017
-4740505,Sizer School: A North Central Charter Essential (District),A North Central Charter Essential (District): Sizer School: A North Central Charter Essential School,108,,,,,,,,,,,,,,,,,,,,,,2017
-4810550,Boston Renaissance Charter Public (District),Boston Renaissance Charter Public School,75,,,,,,,,,,,,,,,,,,,,,,2017
-4820050,River Valley Charter (District),River Valley Charter School,104,,,,,,,,,,,,,,,,,,,,,,2017
-4830305,Rising Tide Charter Public (District),Rising Tide Charter Public School,47,,,,,,,,,,,,,,,,,,,,,,2017
-4840505,Roxbury Preparatory Charter (District),Roxbury Preparatory Charter School,282,,,,,,,,,,,,,,,,,,,,,,2017
-4850485,Salem Academy Charter (District),Salem Academy Charter School,179,,,,,,,,,,,,,,,,,,,,,,2017
-4860105,Seven Hills Charter Public (District),Seven Hills Charter School,478,,,,,,,,,,,,,,,,,,,,,,2017
-4870550,Prospect Hill Academy Charter (District),Prospect Hill Academy Charter School,144,487,44,16,5,14,1,0,0,8,4,1,0,19,25,0,13,3,2,4,2,2,2017
-4880550,South Shore Charter Public (District),South Shore Charter Public School,30,488,12,2,1,0,0,0,0,9,1,0,0,3,9,0,,,,,,,2017
-4890505,Sturgis Charter Public (District),Sturgis Charter Public School,24,,,,,,,,,,,,,,,,,,,,,,2017
-4910550,Atlantis Charter (District),Atlantis Charter School,807,,,,,,,,,,,,,,,,,,,,,,2017
-4920005,Martin Luther King Jr. Charter School of Excellence (District),Martin Luther King Jr. Charter School of Excellence,351,,,,,,,,,,,,,,,,,,,,,,2017
-4940205,Pioneer Charter School of Science (District),Pioneer Charter School of Science,222,494,7,0,2,0,0,0,0,5,1,0,0,3,4,0,7,,,,,,2017
-4960305,Global Learning Charter Public (District),Global Learning Charter Public School,346,,,,,,,,,,,,,,,,,,,,,,2017
-4990305,Hampden Charter School of Science (District),Hampden Charter School of Science,43,,,,,,,,,,,,,,,,,,,,,,2017
-6000405,Acton-Boxborough,Raymond J Grey Junior High,782,,,,,,,,,,,,,,,,,,,,,,2017
-6000505,Acton-Boxborough,Acton-Boxborough Regional High,118,,,,,,,,,,,,,,,,40,0,0,3,13,24,2017
-6030004,Adams-Cheshire,Cheshire Elementary,2,,,,,,,,,,,,,,,,,,,,,,2017
-6030505,Adams-Cheshire,Hoosac Valley Middle & High School,275,,,,,,,,,,,,,,,,,,,,,,2017
-6050505,Amherst-Pelham,Amherst Regional High,141,,,,,,,,,,,,,,,,1,,,,,,2017
-6100005,Ashburnham-Westminster,Westminster Elementary,374,,,,,,,,,,,,,,,,,,,,,,2017
-6100010,Ashburnham-Westminster,Meetinghouse School,160,,,,,,,,,,,,,,,,,,,,,,2017
-6100025,Ashburnham-Westminster,Briggs Elementary,469,,,,,,,,,,,,,,,,,,,,,,2017
-6100305,Ashburnham-Westminster,Overlook Middle School,118,,,,,,,,,,,,,,,,,,,,,,2017
-6100505,Ashburnham-Westminster,Oakmont Regional High School,149,,,,,,,,,,,,,,,,,,,,,,2017
-6150505,Athol-Royalston,Athol High,44,,,,,,,,,,,,,,,,,,,,,,2017
-6160001,Ayer Shirley School District,Lura A. White Elementary School,355,,,,,,,,,,,,,,,,,,,,,,2017
-6160002,Ayer Shirley School District,Page Hilltop Elementary School,481,,,,,,,,,,,,,,,,,,,,,,2017
-6160305,Ayer Shirley School District,Ayer Shirley Regional Middle School,384,,,,,,,,,,,,,,,,,,,,,,2017
-6160505,Ayer Shirley School District,Ayer Shirley Regional High School,117,,,,,,,,,,,,,,,,1,,,,,,2017
-6180035,Berkshire Hills,Muddy Brook Regional Elementary School,263,,,,,,,,,,,,,,,,,,,,,,2017
-6180310,Berkshire Hills,Monument Valley Regional Middle School,281,,,,,,,,,,,,,,,,,,,,,,2017
-6180505,Berkshire Hills,Monument Mt Regional High,54,,,,,,,,,,,,,,,,,,,,,,2017
+3420015,Wilmington,Wildwood,155,,,,,,,,,,,,,,,,,,,,,,2017
+3420020,Wilmington,Woburn Street,372,,,,,,,,,,,,,,,,,,,,,,2017
+3420025,Wilmington,Shawsheen Elementary,340,,,,,,,,,,,,,,,,,,,,,,2017
+3420060,Wilmington,North Intermediate,303,,,,,,,,,,,,,,,,,,,,,,2017
+3420080,Wilmington,West Intermediate,246,,,,,,,,,,,,,,,,,,,,,,2017
+3420330,Wilmington,Wilmington Middle School,700,,,,,,,,,,,,,,,,,,,,,,2017
+3420505,Wilmington,Wilmington High,69,342,1,,,,,,,,,,,,,,1,,,,,,2017
+3430040,Winchendon,Memorial,293,,,,,,,,,,,,,,,,,,,,,,2017
+3430050,Winchendon,Toy Town Elementary,285,,,,,,,,,,,,,,,,,,,,,,2017
+3430315,Winchendon,Murdock Middle School,270,,,,,,,,,,,,,,,,,,,,,,2017
+3430405,Winchendon,Murdock Academy for Success,1,,,,,,,,,,,,,,,,,,,,,,2017
+3430515,Winchendon,Murdock High School,33,,,,,,,,,,,,,,,,,,,,,,2017
+3440305,Winchester,McCall Middle,982,,,,,,,,,,,,,,,,,,,,,,2017
+3440505,Winchester,Winchester High School,171,344,74,2,18,1,1,0,0,52,2,2,0,20,54,0,30,1,6,7,7,9,2017
+3460015,Winthrop,William P. Gorman/Fort Banks Elementary,431,,,,,,,,,,,,,,,,,,,,,,2017
+3460020,Winthrop,Arthur T. Cummings Elementary School,457,,,,,,,,,,,,,,,,,,,,,,2017
+3460505,Winthrop,Winthrop High School,78,,,,,,,,,,,,,,,,2,,,,,,2017
+3470025,Woburn,Linscott-Rumford,1,,,,,,,,,,,,,,,,,,,,,,2017
+3470040,Woburn,Clyde Reeves,10,,,,,,,,,,,,,,,,,,,,,,2017
+3470043,Woburn,Shamrock,1,,,,,,,,,,,,,,,,,,,,,,2017
+3470065,Woburn,Mary D Altavesta,3,,,,,,,,,,,,,,,,,,,,,,2017
+3470405,Woburn,John F Kennedy Middle School,480,,,,,,,,,,,,,,,,,,,,,,2017
+3470410,Woburn,Daniel L Joyce Middle School,513,,,,,,,,,,,,,,,,,,,,,,2017
+3470505,Woburn,Woburn High,258,,,,,,,,,,,,,,,,,,,,,,2017
+3480285,Worcester,University Pk Campus School,23,,,,,,,,,,,,,,,,,,,,,,2017
+3480350,Worcester,Claremont Academy,53,,,,,,,,,,,,,,,,,,,,,,2017
+3480405,Worcester,Burncoat Middle School,3,,,,,,,,,,,,,,,,,,,,,,2017
+3480415,Worcester,Forest Grove Middle,3,,,,,,,,,,,,,,,,,,,,,,2017
+3480420,Worcester,Worcester East Middle,5,,,,,,,,,,,,,,,,,,,,,,2017
+3480423,Worcester,Sullivan Middle,3,,,,,,,,,,,,,,,,,,,,,,2017
+3480503,Worcester,Burncoat Senior High,16,,,,,,,,,,,,,,,,,,,,,,2017
+3480512,Worcester,Doherty Memorial High,202,348,12,2,0,1,1,0,0,8,4,3,0,1,11,0,6,,,,,,2017
+3480515,Worcester,North High,169,,,,,,,,,,,,,,,,19,18,0,1,0,0,2017
+3480520,Worcester,South High Community,31,,,,,,,,,,,,,,,,,,,,,,2017
+3480605,Worcester,Worcester Technical High,48,348,24,3,2,7,1,0,0,11,8,1,0,4,20,0,18,10,2,3,2,1,2017
+3500003,Wrentham,Delaney,496,,,,,,,,,,,,,,,,,,,,,,2017
+3500010,Wrentham,Charles E Roderick,470,,,,,,,,,,,,,,,,,,,,,,2017
+4070405,Dudley Street Neighborhood Charter School (District),Dudley Street Neighborhood Charter School,5,,,,,,,,,,,,,,,,,,,,,,2017
+4100205,Excel Academy Charter (District),Excel Academy Charter School,768,,,,,,,,,,,,,,,,,,,,,,2017
+4110305,Boston Green Academy Horace Mann Charter School (District),Boston Green Academy Horace Mann Charter School,10,,,,,,,,,,,,,,,,,,,,,,2017
+4130505,Four Rivers Charter Public (District),Four Rivers Charter Public School,92,,,,,,,,,,,,,,,,,,,,,,2017
+4140305,Berkshire Arts and Technology Charter Public (District),Berkshire Arts and Technology Charter Public School,50,,,,,,,,,,,,,,,,,,,,,,2017
+4160305,Boston Preparatory Charter Public (District),Boston Preparatory Charter Public School,3,,,,,,,,,,,,,,,,,,,,,,2017
+4180305,Christa McAuliffe Charter Public (District),Christa McAuliffe Charter Public School,377,,,,,,,,,,,,,,,,,,,,,,2017
+4190305,Helen Y. Davis Leadership Academy Charter Public (District),Helen Y. Davis Leadership Academy Charter Public School,7,,,,,,,,,,,,,,,,,,,,,,2017
+4200205,Benjamin Banneker Charter Public (District),Benjamin Banneker Charter Public School,2,,,,,,,,,,,,,,,,,,,,,,2017
+4240505,Boston Day and Evening Academy Charter (District),Boston Day and Evening Academy Charter School,1,,,,,,,,,,,,,,,,,,,,,,2017
+4280305,Brooke Charter School (District),Brooke Charter School,131,,,,,,,,,,,,,,,,,,,,,,2017
+4290010,KIPP Academy Lynn Charter (District),KIPP Academy Lynn Charter School,43,,,,,,,,,,,,,,,,,,,,,,2017
+4300305,Advanced Math and Science Academy Charter (District),Advanced Math and Science Academy Charter School,606,430,35,3,15,0,1,0,0,16,0,1,0,14,21,0,36,0,0,5,13,18,2017
+4320530,Cape Cod Lighthouse Charter (District),Cape Cod Lighthouse Charter School,72,,,,,,,,,,,,,,,,,,,,,,2017
+4350305,Innovation Academy Charter (District),Innovation Academy Charter School,23,,,,,,,,,,,,,,,,1,,,,,,2017
+4360305,Community Charter School of Cambridge (District),Community Charter School of Cambridge,91,,,,,,,,,,,,,,,,1,,,,,,2017
+4370505,City on a Hill Charter Public School Circuit Street (District),City on a Hill Charter Public School Circuit Street,2,,,,,,,,,,,,,,,,,,,,,,2017
+4380505,Codman Academy Charter Public (District),Codman Academy Charter Public School,33,,,,,,,,,,,,,,,,,,,,,,2017
+4390050,Conservatory Lab Charter (District),Conservatory Lab Charter School,5,,,,,,,,,,,,,,,,,,,,,,2017
+4410505,Sabis International Charter (District),Sabis International Charter School,1168,,,,,,,,,,,,,,,,1,,,,,,2017
+4440205,Neighborhood House Charter (District),Neighborhood House Charter School,368,,,,,,,,,,,,,,,,,,,,,,2017
+4450105,Abby Kelley Foster Charter Public (District),Abby Kelley Foster Charter Public School,752,,,,,,,,,,,,,,,,,,,,,,2017
+4460550,Foxborough Regional Charter (District),Foxborough Regional Charter School,1277,446,7,2,1,1,0,0,0,3,1,0,0,2,5,0,13,4,2,2,3,2,2017
+4470205,Benjamin Franklin Classical Charter Public (District),Benjamin Franklin Classical Charter Public School,444,,,,,,,,,,,,,,,,,,,,,,2017
+4490305,Boston Collegiate Charter (District),Boston Collegiate Charter School,35,,,,,,,,,,,,,,,,,,,,,,2017
+4500105,Hilltown Cooperative Charter Public (District),Hilltown Cooperative Charter Public School,94,,,,,,,,,,,,,,,,,,,,,,2017
+4520505,Edward M. Kennedy Academy for Health Careers (Horace Mann Charter) (District),Edward M. Kennedy Academy for Health Careers (Horace Mann Charter School),2,,,,,,,,,,,,,,,,,,,,,,2017
+4530005,Holyoke Community Charter (District),Holyoke Community Charter School,695,,,,,,,,,,,,,,,,,,,,,,2017
+4540205,Lawrence Family Development Charter (District),Lawrence Family Development Charter School,101,,,,,,,,,,,,,,,,,,,,,,2017
+4560050,Lowell Community Charter Public (District),Lowell Community Charter Public School,611,,,,,,,,,,,,,,,,,,,,,,2017
+4580505,Lowell Middlesex Academy Charter (District),Lowell Middlesex Academy Charter School,7,,,,,,,,,,,,,,,,,,,,,,2017
+4660550,Martha's Vineyard Charter (District),Martha's Vineyard Charter School,1,,,,,,,,,,,,,,,,,,,,,,2017
+4680505,Ma Academy for Math and Science,Ma Academy for Math and Science School,19,,,,,,,,,,,,,,,,16,0,2,5,5,4,2017
+4690505,MATCH Charter Public School (District),MATCH Charter Public School,7,,,,,,,,,,,,,,,,,,,,,,2017
+4700105,Mystic Valley Regional Charter (District),Mystic Valley Regional Charter School,3,,,,,,,,,,,,,,,,,,,,,,2017
+4740505,Sizer School: A North Central Charter Essential (District),Sizer School: A North Central Charter Essential School,110,,,,,,,,,,,,,,,,,,,,,,2017
+4770010,Silver Hill Horace Mann Charter (District),Silver Hill Horace Mann Charter School,2,,,,,,,,,,,,,,,,,,,,,,2017
+4780505,Francis W. Parker Charter Essential (District),Francis W. Parker Charter Essential School,1,,,,,,,,,,,,,,,,1,,,,,,2017
+4790505,Pioneer Valley Performing Arts Charter Public (District),Pioneer Valley Performing Arts Charter Public School,2,,,,,,,,,,,,,,,,,,,,,,2017
+4800405,UP Academy Charter School of Boston (District),UP Academy Charter School of Boston,1,,,,,,,,,,,,,,,,,,,,,,2017
+4810550,Boston Renaissance Charter Public (District),Boston Renaissance Charter Public School,102,,,,,,,,,,,,,,,,,,,,,,2017
+4820050,River Valley Charter (District),River Valley Charter School,97,,,,,,,,,,,,,,,,,,,,,,2017
+4830305,Rising Tide Charter Public (District),Rising Tide Charter Public School,23,,,,,,,,,,,,,,,,,,,,,,2017
+4840505,Roxbury Preparatory Charter (District),Roxbury Preparatory Charter School,10,,,,,,,,,,,,,,,,,,,,,,2017
+4850485,Salem Academy Charter (District),Salem Academy Charter School,106,,,,,,,,,,,,,,,,,,,,,,2017
+4860105,Seven Hills Charter Public (District),Seven Hills Charter School,464,,,,,,,,,,,,,,,,,,,,,,2017
+4870550,Prospect Hill Academy Charter (District),Prospect Hill Academy Charter School,185,487,44,16,5,14,1,0,0,8,4,1,0,19,25,0,22,19,2,0,1,0,2017
+4880550,South Shore Charter Public (District),South Shore Charter Public School,23,488,12,2,1,0,0,0,0,9,1,0,0,3,9,0,,,,,,,2017
+4890505,Sturgis Charter Public (District),Sturgis Charter Public School,28,,,,,,,,,,,,,,,,,,,,,,2017
+4910550,Atlantis Charter (District),Atlantis Charter School,845,,,,,,,,,,,,,,,,,,,,,,2017
+4920005,Martin Luther King Jr. Charter School of Excellence (District),Martin Luther King Jr. Charter School of Excellence,340,,,,,,,,,,,,,,,,,,,,,,2017
+4940205,Pioneer Charter School of Science (District),Pioneer Charter School of Science,386,494,7,0,2,0,0,0,0,5,1,0,0,3,4,0,7,,,,,,2017
+4960305,Global Learning Charter Public (District),Global Learning Charter Public School,398,,,,,,,,,,,,,,,,,,,,,,2017
+4990305,Hampden Charter School of Science East (District),Hampden Charter School of Science East,59,,,,,,,,,,,,,,,,,,,,,,2017
+6000405,Acton-Boxborough,Raymond J Grey Junior High,818,,,,,,,,,,,,,,,,,,,,,,2017
+6000505,Acton-Boxborough,Acton-Boxborough Regional High,158,,,,,,,,,,,,,,,,70,0,1,16,19,34,2017
+6030020,Adams-Cheshire,Hoosac Valley Elementary School,2,,,,,,,,,,,,,,,,,,,,,,2017
+6030315,Adams-Cheshire,Hoosac Valley Middle School,369,,,,,,,,,,,,,,,,,,,,,,2017
+6030505,Adams-Cheshire,Hoosac Valley High School,167,,,,,,,,,,,,,,,,,,,,,,2017
+6050505,Amherst-Pelham,Amherst Regional High,120,,,,,,,,,,,,,,,,,,,,,,2017
+6100005,Ashburnham-Westminster,Westminster Elementary,380,,,,,,,,,,,,,,,,,,,,,,2017
+6100010,Ashburnham-Westminster,Meetinghouse School,161,,,,,,,,,,,,,,,,,,,,,,2017
+6100025,Ashburnham-Westminster,Briggs Elementary,481,,,,,,,,,,,,,,,,,,,,,,2017
+6100305,Ashburnham-Westminster,Overlook Middle School,134,,,,,,,,,,,,,,,,,,,,,,2017
+6100505,Ashburnham-Westminster,Oakmont Regional High School,168,,,,,,,,,,,,,,,,,,,,,,2017
+6150020,Athol-Royalston,Athol Community Elementary School,3,,,,,,,,,,,,,,,,,,,,,,2017
+6150305,Athol-Royalston,Athol-Royalston Middle School,1,,,,,,,,,,,,,,,,,,,,,,2017
+6150505,Athol-Royalston,Athol High,38,,,,,,,,,,,,,,,,,,,,,,2017
+6160001,Ayer Shirley School District,Lura A. White Elementary School,354,,,,,,,,,,,,,,,,,,,,,,2017
+6160002,Ayer Shirley School District,Page Hilltop Elementary School,503,,,,,,,,,,,,,,,,,,,,,,2017
+6160305,Ayer Shirley School District,Ayer Shirley Regional Middle School,364,,,,,,,,,,,,,,,,,,,,,,2017
+6160505,Ayer Shirley School District,Ayer Shirley Regional High School,109,,,,,,,,,,,,,,,,,,,,,,2017
+6180035,Berkshire Hills,Muddy Brook Regional Elementary School,202,,,,,,,,,,,,,,,,,,,,,,2017
+6180310,Berkshire Hills,Monument Valley Regional Middle School,292,,,,,,,,,,,,,,,,,,,,,,2017
+6180505,Berkshire Hills,Monument Mt Regional High,59,,,,,,,,,,,,,,,,,,,,,,2017
 6200505,Berlin-Boylston,Tahanto Regional High,12,,,,,,,,,,,,,,,,,,,,,,2017
-6220008,Blackstone-Millville,John F Kennedy Elementary,294,,,,,,,,,,,,,,,,,,,,,,2017
-6220010,Blackstone-Millville,Millville Elementary,212,,,,,,,,,,,,,,,,,,,,,,2017
-6220015,Blackstone-Millville,A F Maloney,292,,,,,,,,,,,,,,,,,,,,,,2017
-6220405,Blackstone-Millville,Frederick W. Hartnett Middle School,2,,,,,,,,,,,,,,,,,,,,,,2017
-6220505,Blackstone-Millville,Blackstone Millville RHS,53,,,,,,,,,,,,,,,,,,,,,,2017
-6250300,Bridgewater-Raynham,Williams Intermediate School,72,,,,,,,,,,,,,,,,,,,,,,2017
-6250315,Bridgewater-Raynham,Raynham Middle School,87,,,,,,,,,,,,,,,,,,,,,,2017
-6250320,Bridgewater-Raynham,Bridgewater Middle School,124,,,,,,,,,,,,,,,,,,,,,,2017
-6250505,Bridgewater-Raynham,Bridgewater-Raynham Regional,449,625,13,0,0,0,1,0,0,12,0,0,0,3,10,0,12,1,3,4,0,4,2017
-6350305,Central Berkshire,Nessacus Regional Middle School,389,,,,,,,,,,,,,,,,,,,,,,2017
-6350505,Central Berkshire,Wahconah Regional High,41,,,,,,,,,,,,,,,,,,,,,,2017
-6400505,Concord-Carlisle,Concord Carlisle High,109,640,1,,,,,,,,,,,,,,15,0,1,4,4,6,2017
-6450005,Dennis-Yarmouth,Ezra H Baker Innovation School,1,,,,,,,,,,,,,,,,,,,,,,2017
-6450050,Dennis-Yarmouth,N H Wixon Innovation School,270,,,,,,,,,,,,,,,,,,,,,,2017
-6450505,Dennis-Yarmouth,Dennis-Yarmouth Regional High,194,645,20,0,3,1,0,0,0,16,1,0,0,2,18,0,16,10,1,4,0,1,2017
-6500005,Dighton-Rehoboth,Dighton Elementary,451,,,,,,,,,,,,,,,,,,,,,,2017
-6500010,Dighton-Rehoboth,Palmer River,560,,,,,,,,,,,,,,,,,,,,,,2017
-6500305,Dighton-Rehoboth,Dighton Middle School,366,,,,,,,,,,,,,,,,,,,,,,2017
-6500505,Dighton-Rehoboth,Dighton-Rehoboth Regional High School,3,,,,,,,,,,,,,,,,1,,,,,,2017
-6550405,Dover-Sherborn,Dover-Sherborn Regional Middle School,346,,,,,,,,,,,,,,,,,,,,,,2017
-6550505,Dover-Sherborn,Dover-Sherborn Regional High,48,655,1,,,,,,,,,,,,,,1,,,,,,2017
-6580005,Dudley-Charlton Reg,Dudley Elementary,366,,,,,,,,,,,,,,,,,,,,,,2017
-6580010,Dudley-Charlton Reg,Mason Road School,212,,,,,,,,,,,,,,,,,,,,,,2017
-6580020,Dudley-Charlton Reg,Charlton Elementary,288,,,,,,,,,,,,,,,,,,,,,,2017
-6580030,Dudley-Charlton Reg,Heritage School,495,,,,,,,,,,,,,,,,,,,,,,2017
-6580305,Dudley-Charlton Reg,Dudley Middle School,596,,,,,,,,,,,,,,,,,,,,,,2017
-6580310,Dudley-Charlton Reg,Charlton Middle School,705,,,,,,,,,,,,,,,,,,,,,,2017
-6580505,Dudley-Charlton Reg,Shepherd Hill Regional High,77,658,17,0,1,1,0,0,0,15,2,0,0,3,13,1,17,7,3,3,4,0,2017
-6600305,Nauset,Nauset Regional Middle,442,,,,,,,,,,,,,,,,,,,,,,2017
-6600505,Nauset,Nauset Regional High,43,660,1,,,,,,,,,,,,,,1,,,,,,2017
-6620020,Farmington River Reg,Farmington River Elementary,92,,,,,,,,,,,,,,,,,,,,,,2017
-6650505,Freetown-Lakeville,Apponequet Regional High,106,665,1,,,,,,,,,,,,,,1,,,,,,2017
-6700505,Frontier,Frontier Regional,230,670,11,0,0,0,1,0,0,10,1,0,0,0,11,0,,,,,,,2017
-6720505,Gateway,Gateway Regional High,12,,,,,,,,,,,,,,,,,,,,,,2017
-6730505,Groton-Dunstable,Groton Dunstable Regional,225,,,,,,,,,,,,,,,,1,,,,,,2017
-6740005,Gill-Montague,Gill Elementary,120,,,,,,,,,,,,,,,,,,,,,,2017
-6740015,Gill-Montague,Hillcrest Elementary School,147,,,,,,,,,,,,,,,,,,,,,,2017
-6740050,Gill-Montague,Sheffield Elementary School,207,,,,,,,,,,,,,,,,,,,,,,2017
+6220008,Blackstone-Millville,John F Kennedy Elementary,278,,,,,,,,,,,,,,,,,,,,,,2017
+6220010,Blackstone-Millville,Millville Elementary,227,,,,,,,,,,,,,,,,,,,,,,2017
+6220015,Blackstone-Millville,A F Maloney,296,,,,,,,,,,,,,,,,,,,,,,2017
+6220405,Blackstone-Millville,Frederick W. Hartnett Middle School,3,,,,,,,,,,,,,,,,,,,,,,2017
+6220505,Blackstone-Millville,Blackstone Millville RHS,50,,,,,,,,,,,,,,,,,,,,,,2017
+6250300,Bridgewater-Raynham,Williams Intermediate School,300,,,,,,,,,,,,,,,,,,,,,,2017
+6250315,Bridgewater-Raynham,Raynham Middle School,302,,,,,,,,,,,,,,,,,,,,,,2017
+6250320,Bridgewater-Raynham,Bridgewater Middle School,243,,,,,,,,,,,,,,,,,,,,,,2017
+6250415,Bridgewater-Raynham,Therapeutic Day School,1,,,,,,,,,,,,,,,,,,,,,,2017
+6250505,Bridgewater-Raynham,Bridgewater-Raynham Regional,466,625,13,0,0,0,1,0,0,12,0,0,0,3,10,0,,,,,,,2017
+6350305,Central Berkshire,Nessacus Regional Middle School,377,,,,,,,,,,,,,,,,,,,,,,2017
+6350505,Central Berkshire,Wahconah Regional High,53,,,,,,,,,,,,,,,,,,,,,,2017
+6400505,Concord-Carlisle,Concord Carlisle High,130,640,1,,,,,,,,,,,,,,20,0,0,1,7,12,2017
+6450005,Dennis-Yarmouth,Ezra H Baker Innovation School,8,,,,,,,,,,,,,,,,,,,,,,2017
+6450015,Dennis-Yarmouth,Marguerite E Small Elementary,5,,,,,,,,,,,,,,,,,,,,,,2017
+6450025,Dennis-Yarmouth,Station Avenue Elementary,2,,,,,,,,,,,,,,,,,,,,,,2017
+6450050,Dennis-Yarmouth,N H Wixon Innovation School,1,,,,,,,,,,,,,,,,,,,,,,2017
+6450305,Dennis-Yarmouth,Mattacheese Middle School,2,,,,,,,,,,,,,,,,,,,,,,2017
+6450505,Dennis-Yarmouth,Dennis-Yarmouth Regional High,209,645,20,0,3,1,0,0,0,16,1,0,0,2,18,0,14,11,3,0,0,0,2017
+6500005,Dighton-Rehoboth,Dighton Elementary,470,,,,,,,,,,,,,,,,,,,,,,2017
+6500010,Dighton-Rehoboth,Palmer River,563,,,,,,,,,,,,,,,,,,,,,,2017
+6500305,Dighton-Rehoboth,Dighton Middle School,370,,,,,,,,,,,,,,,,,,,,,,2017
+6500310,Dighton-Rehoboth,Dorothy L Beckwith,556,,,,,,,,,,,,,,,,,,,,,,2017
+6500505,Dighton-Rehoboth,Dighton-Rehoboth Regional High School,42,,,,,,,,,,,,,,,,,,,,,,2017
+6550405,Dover-Sherborn,Dover-Sherborn Regional Middle School,342,,,,,,,,,,,,,,,,,,,,,,2017
+6550505,Dover-Sherborn,Dover-Sherborn Regional High,62,655,1,,,,,,,,,,,,,,2,,,,,,2017
+6580005,Dudley-Charlton Reg,Dudley Elementary,398,,,,,,,,,,,,,,,,,,,,,,2017
+6580010,Dudley-Charlton Reg,Mason Road School,224,,,,,,,,,,,,,,,,,,,,,,2017
+6580020,Dudley-Charlton Reg,Charlton Elementary,295,,,,,,,,,,,,,,,,,,,,,,2017
+6580030,Dudley-Charlton Reg,Heritage School,482,,,,,,,,,,,,,,,,,,,,,,2017
+6580305,Dudley-Charlton Reg,Dudley Middle School,575,,,,,,,,,,,,,,,,,,,,,,2017
+6580310,Dudley-Charlton Reg,Charlton Middle School,673,,,,,,,,,,,,,,,,,,,,,,2017
+6580505,Dudley-Charlton Reg,Shepherd Hill Regional High,79,658,17,0,1,1,0,0,0,15,2,0,0,3,13,1,17,10,4,2,1,0,2017
+6600305,Nauset,Nauset Regional Middle,457,,,,,,,,,,,,,,,,,,,,,,2017
+6600505,Nauset,Nauset Regional High,11,660,1,,,,,,,,,,,,,,1,,,,,,2017
+6620020,Farmington River Reg,Farmington River Elementary,95,,,,,,,,,,,,,,,,,,,,,,2017
+6650002,Freetown-Lakeville,Assawompset Elementary School,3,,,,,,,,,,,,,,,,,,,,,,2017
+6650305,Freetown-Lakeville,Freetown-Lakeville Middle School,4,,,,,,,,,,,,,,,,,,,,,,2017
+6650505,Freetown-Lakeville,Apponequet Regional High,28,665,1,,,,,,,,,,,,,,3,,,,,,2017
+6700505,Frontier,Frontier Regional,254,670,11,0,0,0,1,0,0,10,1,0,0,0,11,0,1,,,,,,2017
+6720405,Gateway,Gateway Regional Middle School,1,,,,,,,,,,,,,,,,,,,,,,2017
+6720505,Gateway,Gateway Regional High,8,,,,,,,,,,,,,,,,,,,,,,2017
+6730010,Groton-Dunstable,Florence Roche School,1,,,,,,,,,,,,,,,,,,,,,,2017
+6730305,Groton-Dunstable,Groton Dunstable Regional Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
+6730505,Groton-Dunstable,Groton Dunstable Regional,162,,,,,,,,,,,,,,,,,,,,,,2017
+6740005,Gill-Montague,Gill Elementary,130,,,,,,,,,,,,,,,,,,,,,,2017
+6740015,Gill-Montague,Hillcrest Elementary School,159,,,,,,,,,,,,,,,,,,,,,,2017
+6740050,Gill-Montague,Sheffield Elementary School,212,,,,,,,,,,,,,,,,,,,,,,2017
 6740310,Gill-Montague,Great Falls Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
+6740505,Gill-Montague,Turners Fall High,3,,,,,,,,,,,,,,,,,,,,,,2017
 6750310,Hamilton-Wenham,Miles River Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
-6750505,Hamilton-Wenham,Hamilton-Wenham Regional High,21,675,21,0,1,0,1,0,0,19,1,0,0,0,21,0,19,1,4,5,4,5,2017
-6800305,Hampden-Wilbraham,Thornton Burgess,206,,,,,,,,,,,,,,,,,,,,,,2017
-6800310,Hampden-Wilbraham,Wilbraham Middle,344,,,,,,,,,,,,,,,,,,,,,,2017
-6800505,Hampden-Wilbraham,Minnechaug Regional High,102,680,9,0,0,0,0,0,0,9,1,0,0,2,7,0,1,,,,,,2017
-6830505,Hampshire,Hampshire Regional High,19,683,3,,,,,,,,,,,,,,2,,,,,,2017
-6900505,King Philip,King Philip Regional High,31,690,5,,,,,,,,,,,,,,4,,,,,,2017
-6950505,Lincoln-Sudbury,Lincoln-Sudbury Regional High,500,,,,,,,,,,,,,,,,11,1,2,3,1,4,2017
-6980010,Manchester Essex Regional,Manchester Memorial Elementary,357,,,,,,,,,,,,,,,,,,,,,,2017
-6980020,Manchester Essex Regional,Essex Elementary,226,,,,,,,,,,,,,,,,,,,,,,2017
-6980510,Manchester Essex Regional,Manchester Essex Regional High School,42,,,,,,,,,,,,,,,,12,0,2,5,3,2,2017
-7000505,Martha's Vineyard,Martha's Vineyard Regional High,50,700,13,0,0,1,0,0,0,12,0,2,1,1,12,0,,,,,,,2017
-7050505,Masconomet,Masconomet Regional High School,230,705,25,0,0,1,0,0,0,24,0,1,0,4,21,0,15,1,6,2,5,1,2017
-7100001,Mendon-Upton,Memorial School,408,,,,,,,,,,,,,,,,,,,,,,2017
-7100015,Mendon-Upton,Miscoe Hill School,503,,,,,,,,,,,,,,,,,,,,,,2017
-7100179,Mendon-Upton,Henry P Clough,397,,,,,,,,,,,,,,,,,,,,,,2017
-7100510,Mendon-Upton,Nipmuc Regional High,58,710,14,0,1,0,2,0,0,11,0,0,0,4,10,0,14,4,2,5,2,1,2017
-7120001,Monomoy Regional School District,Chatham Elementary School,253,,,,,,,,,,,,,,,,,,,,,,2017
-7120002,Monomoy Regional School District,Harwich Elementary School,517,,,,,,,,,,,,,,,,,,,,,,2017
+6750505,Hamilton-Wenham,Hamilton-Wenham Regional High,18,675,21,0,1,0,1,0,0,19,1,0,0,0,21,0,18,5,6,3,2,2,2017
+6800005,Hampden-Wilbraham,Green Meadows Elementary,3,,,,,,,,,,,,,,,,,,,,,,2017
+6800025,Hampden-Wilbraham,Mile Tree Elementary,3,,,,,,,,,,,,,,,,,,,,,,2017
+6800030,Hampden-Wilbraham,Soule Road,4,,,,,,,,,,,,,,,,,,,,,,2017
+6800050,Hampden-Wilbraham,Stony Hill School,7,,,,,,,,,,,,,,,,,,,,,,2017
+6800305,Hampden-Wilbraham,Thornton Burgess,1,,,,,,,,,,,,,,,,,,,,,,2017
+6800310,Hampden-Wilbraham,Wilbraham Middle,339,,,,,,,,,,,,,,,,,,,,,,2017
+6800505,Hampden-Wilbraham,Minnechaug Regional High,74,680,9,0,0,0,0,0,0,9,1,0,0,2,7,0,,,,,,,2017
+6830505,Hampshire,Hampshire Regional High,24,683,3,,,,,,,,,,,,,,1,,,,,,2017
+6900505,King Philip,King Philip Regional High,32,690,5,,,,,,,,,,,,,,23,8,5,5,1,4,2017
+6900510,King Philip,King Philip Middle School,2,,,,,,,,,,,,,,,,,,,,,,2017
+6950505,Lincoln-Sudbury,Lincoln-Sudbury Regional High,441,,,,,,,,,,,,,,,,1,,,,,,2017
+6980010,Manchester Essex Regional,Manchester Memorial Elementary,327,,,,,,,,,,,,,,,,,,,,,,2017
+6980020,Manchester Essex Regional,Essex Elementary,228,,,,,,,,,,,,,,,,,,,,,,2017
+6980510,Manchester Essex Regional,Manchester Essex Regional High School,44,,,,,,,,,,,,,,,,6,,,,,,2017
+7000505,Martha's Vineyard,Martha's Vineyard Regional High,53,700,13,0,0,1,0,0,0,12,0,2,1,1,12,0,,,,,,,2017
+7050505,Masconomet,Masconomet Regional High School,214,705,25,0,0,1,0,0,0,24,0,1,0,4,21,0,11,1,2,4,3,1,2017
+7100001,Mendon-Upton,Memorial School,454,,,,,,,,,,,,,,,,,,,,,,2017
+7100015,Mendon-Upton,Miscoe Hill School,586,,,,,,,,,,,,,,,,,,,,,,2017
+7100179,Mendon-Upton,Henry P Clough,354,,,,,,,,,,,,,,,,,,,,,,2017
+7100510,Mendon-Upton,Nipmuc Regional High,31,710,14,0,1,0,2,0,0,11,0,0,0,4,10,0,12,1,1,2,4,4,2017
+7120001,Monomoy Regional School District,Chatham Elementary School,221,,,,,,,,,,,,,,,,,,,,,,2017
+7120002,Monomoy Regional School District,Harwich Elementary School,502,,,,,,,,,,,,,,,,,,,,,,2017
 7120315,Monomoy Regional School District,Monomoy Regional Middle School,1,,,,,,,,,,,,,,,,,,,,,,2017
-7120515,Monomoy Regional School District,Monomoy Regional High School,62,,,,,,,,,,,,,,,,,,,,,,2017
-7150505,Mount Greylock,Mt Greylock Regional High,6,,,,,,,,,,,,,,,,,,,,,,2017
-7170505,Mohawk Trail,Mohawk Trail Regional High,139,,,,,,,,,,,,,,,,,,,,,,2017
-7200305,Narragansett,Narragansett Middle,268,,,,,,,,,,,,,,,,,,,,,,2017
-7200505,Narragansett,Narragansett Regional High,85,,,,,,,,,,,,,,,,,,,,,,2017
-7250010,Nashoba,Mary Rowlandson Elementary,445,,,,,,,,,,,,,,,,,,,,,,2017
-7250020,Nashoba,Center School,564,,,,,,,,,,,,,,,,,,,,,,2017
-7250025,Nashoba,Florence Sawyer School,624,,,,,,,,,,,,,,,,,,,,,,2017
-7250305,Nashoba,Luther Burbank Middle School,144,,,,,,,,,,,,,,,,,,,,,,2017
-7250310,Nashoba,Hale,37,,,,,,,,,,,,,,,,,,,,,,2017
-7250505,Nashoba,Nashoba Regional,169,725,38,0,2,1,2,1,0,32,0,0,0,14,24,0,2,,,,,,2017
-7300505,Northboro-Southboro,Algonquin Regional High,426,730,9,1,1,0,0,0,1,6,0,0,0,1,8,0,9,,,,,,2017
-7350005,North Middlesex,Spaulding Memorial,422,,,,,,,,,,,,,,,,,,,,,,2017
-7350010,North Middlesex,Ashby Elementary,207,,,,,,,,,,,,,,,,,,,,,,2017
-7350030,North Middlesex,Hawthorne Brook,241,,,,,,,,,,,,,,,,,,,,,,2017
-7350035,North Middlesex,Varnum Brook,571,,,,,,,,,,,,,,,,,,,,,,2017
-7350310,North Middlesex,Nissitissit Middle School,253,,,,,,,,,,,,,,,,,,,,,,2017
-7350505,North Middlesex,North Middlesex Regional,96,735,1,,,,,,,,,,,,,,1,,,,,,2017
-7400505,Old Rochester,Old Rochester Regional High,66,,,,,,,,,,,,,,,,,,,,,,2017
-7450405,Pentucket,Pentucket Regional Middle,184,,,,,,,,,,,,,,,,,,,,,,2017
-7450505,Pentucket,Pentucket Regional Sr High,1,,,,,,,,,,,,,,,,,,,,,,2017
-7500006,Pioneer Valley,Bernardston Elementary,137,,,,,,,,,,,,,,,,,,,,,,2017
-7500007,Pioneer Valley,Pearl E Rhodes Elementary,24,,,,,,,,,,,,,,,,,,,,,,2017
-7500008,Pioneer Valley,Northfield Elementary,172,,,,,,,,,,,,,,,,,,,,,,2017
-7500009,Pioneer Valley,Warwick Community School,52,,,,,,,,,,,,,,,,,,,,,,2017
-7500505,Pioneer Valley,Pioneer Valley Regional,92,,,,,,,,,,,,,,,,,,,,,,2017
-7530005,Quabbin,Hardwick Elementary,192,,,,,,,,,,,,,,,,,,,,,,2017
-7530010,Quabbin,Hubbardston Center,316,,,,,,,,,,,,,,,,,,,,,,2017
-7530020,Quabbin,New Braintree Grade,42,,,,,,,,,,,,,,,,,,,,,,2017
-7530025,Quabbin,Oakham Center,135,,,,,,,,,,,,,,,,,,,,,,2017
-7530030,Quabbin,Ruggles Lane,382,,,,,,,,,,,,,,,,,,,,,,2017
-7530505,Quabbin,Quabbin Regional High School,110,753,30,0,1,1,0,0,0,28,2,1,0,6,24,0,26,18,3,3,2,0,2017
-7550505,Ralph C Mahar,Ralph C Mahar Regional,119,,,,,,,,,,,,,,,,1,,,,,,2017
-7600405,Silver Lake,Silver Lake Regional Middle School,1,,,,,,,,,,,,,,,,,,,,,,2017
-7600505,Silver Lake,Silver Lake Regional High,199,760,13,0,0,0,0,0,0,13,0,0,0,2,11,0,7,,,,,,2017
-7630505,Somerset Berkley Regional School District,Somerset Berkley Regional High School,71,763,1,,,,,,,,,,,,,,1,,,,,,2017
-7660505,Southwick-Tolland-Granville Regional School District,Southwick Regional School,42,,,,,,,,,,,,,,,,1,,,,,,2017
-7670040,Spencer-E Brookfield,Wire Village School,1,,,,,,,,,,,,,,,,,,,,,,2017
-7670505,Spencer-E Brookfield,David Prouty High,103,767,1,,,,,,,,,,,,,,1,,,,,,2017
-7700405,Tantasqua,Tantasqua Regional Jr High,265,,,,,,,,,,,,,,,,,,,,,,2017
-7700505,Tantasqua,Tantasqua Regional Sr High,73,770,13,0,0,0,0,0,0,13,1,0,0,2,11,0,12,0,2,1,4,5,2017
-7700605,Tantasqua,Tantasqua Regional Vocational,27,,,,,,,,,,,,,,,,,,,,,,2017
-7730015,Triton,Salisbury Elementary,455,,,,,,,,,,,,,,,,,,,,,,2017
-7730020,Triton,Newbury Elementary,424,,,,,,,,,,,,,,,,,,,,,,2017
-7730025,Triton,Pine Grove,449,,,,,,,,,,,,,,,,,,,,,,2017
-7730505,Triton,Triton Regional High School,70,773,6,0,0,0,0,0,0,6,0,1,0,0,6,0,6,,,,,,2017
-7740020,Up-Island Regional,West Tisbury Elementary,329,,,,,,,,,,,,,,,,,,,,,,2017
-7750505,Wachusett,Wachusett Regional High,171,,,,,,,,,,,,,,,,1,,,,,,2017
-7780005,Quaboag Regional,Warren Elementary,432,,,,,,,,,,,,,,,,,,,,,,2017
-7780010,Quaboag Regional,West Brookfield Elementary,298,,,,,,,,,,,,,,,,,,,,,,2017
-7780305,Quaboag Regional,Quaboag Regional Middle Innovation School,3,,,,,,,,,,,,,,,,,,,,,,2017
-7780505,Quaboag Regional,Quaboag Regional High,89,,,,,,,,,,,,,,,,,,,,,,2017
-7800310,Whitman-Hanson,Whitman Middle,443,,,,,,,,,,,,,,,,,,,,,,2017
-7800315,Whitman-Hanson,Hanson Middle School,354,,,,,,,,,,,,,,,,,,,,,,2017
-7800505,Whitman-Hanson,Whitman Hanson Regional,202,,,,,,,,,,,,,,,,7,,,,,,2017
-8010605,Assabet Valley Regional Vocational Technical,Assabet Valley Vocational High School,25,,,,,,,,,,,,,,,,,,,,,,2017
-8050605,Blackstone Valley Regional Vocational Technical,Blackstone Valley,58,805,2,,,,,,,,,,,,,,2,,,,,,2017
-8060605,Blue Hills Regional Vocational Technical,Blue Hills Regional Vocational Technical,36,,,,,,,,,,,,,,,,,,,,,,2017
-8150605,Cape Cod Regional Vocational Technical,Cape Cod Region Vocational Technical,3,,,,,,,,,,,,,,,,,,,,,,2017
-8180605,Franklin County Regional Vocational Technical,Franklin County Technical,14,818,9,0,0,0,0,0,0,9,3,3,0,0,9,0,9,,,,,,2017
-8210605,Greater Fall River Regional Vocational Technical,Diman Regional Vocational Technical High,664,,,,,,,,,,,,,,,,,,,,,,2017
-8290605,South Middlesex Regional Vocational Technical,Joseph P Keefe Technical High School,32,829,12,0,0,3,1,0,0,8,3,1,0,5,7,0,,,,,,,2017
-8300605,Minuteman Regional Vocational Technical,Minuteman Regional High,99,,,,,,,,,,,,,,,,5,,,,,,2017
-8320605,Montachusett Regional Vocational Technical,Montachusett Regional Vocational Technical,246,,,,,,,,,,,,,,,,,,,,,,2017
-8510605,Northern Berkshire Regional Vocational Technical,Charles McCann Vocational Technical,151,,,,,,,,,,,,,,,,,,,,,,2017
-8520605,Nashoba Valley Regional Vocational Technical,Nashoba Valley Technical High School,9,852,9,0,0,0,1,0,0,8,0,1,0,1,8,0,9,,,,,,2017
-8530605,Northeast Metropolitan Regional Vocational Technical,Northeast Metro Regional Vocational,7,,,,,,,,,,,,,,,,,,,,,,2017
-8550605,Old Colony Regional Vocational Technical,Old Colony Regional Vocational Technical,283,,,,,,,,,,,,,,,,,,,,,,2017
-8600605,Pathfinder Regional Vocational Technical,Pathfinder Vocational Technical,17,860,17,0,0,2,1,1,0,13,5,0,0,5,12,0,5,,,,,,2017
-8720605,Southeastern Regional Vocational Technical,Southeastern Regional Vocational Technical,330,,,,,,,,,,,,,,,,,,,,,,2017
-8780605,Tri-County Regional Vocational Technical,Tri-County Regional Vocational Technical,275,,,,,,,,,,,,,,,,,,,,,,2017
-8850605,Whittier Regional Vocational Technical,Whittier Regional Vocational,59,,,,,,,,,,,,,,,,,,,,,,2017
-9150705,Norfolk County Agricultural,Norfolk County Agricultural,268,,,,,,,,,,,,,,,,,,,,,,2017
-35010505,Paulo Freire Social Justice Charter School (District),Paulo Freire Social Justice Charter School,1,,,,,,,,,,,,,,,,,,,,,,2017
-35030205,Collegiate Charter School of Lowell (District),Collegiate Charter School of Lowell,609,,,,,,,,,,,,,,,,,,,,,,2017
-35040505,City on a Hill Charter Public School Dudley Square (District),City on a Hill Charter Public School Dudley Square,53,,,,,,,,,,,,,,,,,,,,,,2017
-35060505,Pioneer Charter School of Science II (PCSS-II) (District),Pioneer Charter School of Science II (PCSS-II),200,,,,,,,,,,,,,,,,,,,,,,2017
-35070505,City on a Hill Charter Public School New Bedford (District),City on a Hill Charter Public School New Bedford,76,,,,,,,,,,,,,,,,,,,,,,2017
-39020900,TEC Connections Academy Commonwealth Virtual School District,TEC Connections Academy Commonwealth Virtual School,553,3902,1,,,,,,,,,,,,,,,,,,,,2017
-0,Massachusetts,Massachusetts,238936,0,1976,93,334,113,55,2,3,1317,186,52,10,417,1499,1,1697,283,172,281,314,349,2017
+7120515,Monomoy Regional School District,Monomoy Regional High School,110,,,,,,,,,,,,,,,,,,,,,,2017
+7150505,Mount Greylock,Mt Greylock Regional High,15,,,,,,,,,,,,,,,,2,,,,,,2017
+7170005,Mohawk Trail,Buckland-Shelburne Regional,1,,,,,,,,,,,,,,,,,,,,,,2017
+7170505,Mohawk Trail,Mohawk Trail Regional High,115,,,,,,,,,,,,,,,,,,,,,,2017
+7200003,Narragansett,Phillipston Memorial,1,,,,,,,,,,,,,,,,,,,,,,2017
+7200005,Narragansett,Baldwinville Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+7200020,Narragansett,Templeton Center,2,,,,,,,,,,,,,,,,,,,,,,2017
+7200305,Narragansett,Narragansett Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
+7200505,Narragansett,Narragansett Regional High,83,,,,,,,,,,,,,,,,,,,,,,2017
+7250010,Nashoba,Mary Rowlandson Elementary,439,,,,,,,,,,,,,,,,,,,,,,2017
+7250020,Nashoba,Center School,524,,,,,,,,,,,,,,,,,,,,,,2017
+7250025,Nashoba,Florence Sawyer School,472,,,,,,,,,,,,,,,,,,,,,,2017
+7250305,Nashoba,Luther Burbank Middle School,160,,,,,,,,,,,,,,,,,,,,,,2017
+7250310,Nashoba,Hale,3,,,,,,,,,,,,,,,,,,,,,,2017
+7250505,Nashoba,Nashoba Regional,136,725,38,0,2,1,2,1,0,32,0,0,0,14,24,0,3,,,,,,2017
+7300505,Northboro-Southboro,Algonquin Regional High,458,730,9,1,1,0,0,0,1,6,0,0,0,1,8,0,17,2,2,3,3,7,2017
+7350005,North Middlesex,Spaulding Memorial,430,,,,,,,,,,,,,,,,,,,,,,2017
+7350010,North Middlesex,Ashby Elementary,185,,,,,,,,,,,,,,,,,,,,,,2017
+7350030,North Middlesex,Hawthorne Brook,265,,,,,,,,,,,,,,,,,,,,,,2017
+7350035,North Middlesex,Varnum Brook,543,,,,,,,,,,,,,,,,,,,,,,2017
+7350310,North Middlesex,Nissitissit Middle School,264,,,,,,,,,,,,,,,,,,,,,,2017
+7350505,North Middlesex,North Middlesex Regional,55,735,1,,,,,,,,,,,,,,2,,,,,,2017
+7400405,Old Rochester,Old Rochester Regional Jr High,2,,,,,,,,,,,,,,,,,,,,,,2017
+7400505,Old Rochester,Old Rochester Regional High,74,,,,,,,,,,,,,,,,,,,,,,2017
+7450005,Pentucket,Elmer S Bagnall,3,,,,,,,,,,,,,,,,,,,,,,2017
+7450010,Pentucket,Helen R Donaghue School,4,,,,,,,,,,,,,,,,,,,,,,2017
+7450020,Pentucket,Dr Frederick N Sweetsir,1,,,,,,,,,,,,,,,,,,,,,,2017
+7450405,Pentucket,Pentucket Regional Middle,122,,,,,,,,,,,,,,,,,,,,,,2017
+7450505,Pentucket,Pentucket Regional Sr High,23,,,,,,,,,,,,,,,,22,4,3,10,4,1,2017
+7500006,Pioneer Valley,Bernardston Elementary,143,,,,,,,,,,,,,,,,,,,,,,2017
+7500007,Pioneer Valley,Pearl E Rhodes Elementary,29,,,,,,,,,,,,,,,,,,,,,,2017
+7500008,Pioneer Valley,Northfield Elementary,175,,,,,,,,,,,,,,,,,,,,,,2017
+7500009,Pioneer Valley,Warwick Community School,43,,,,,,,,,,,,,,,,,,,,,,2017
+7500505,Pioneer Valley,Pioneer Valley Regional,14,,,,,,,,,,,,,,,,,,,,,,2017
+7530005,Quabbin,Hardwick Elementary,165,,,,,,,,,,,,,,,,,,,,,,2017
+7530010,Quabbin,Hubbardston Center,268,,,,,,,,,,,,,,,,,,,,,,2017
+7530020,Quabbin,New Braintree Grade,60,,,,,,,,,,,,,,,,,,,,,,2017
+7530025,Quabbin,Oakham Center,96,,,,,,,,,,,,,,,,,,,,,,2017
+7530030,Quabbin,Ruggles Lane,330,,,,,,,,,,,,,,,,,,,,,,2017
+7530505,Quabbin,Quabbin Regional High School,96,753,30,0,1,1,0,0,0,28,2,1,0,6,24,0,2,,,,,,2017
+7550505,Ralph C Mahar,Ralph C Mahar Regional,108,,,,,,,,,,,,,,,,,,,,,,2017
+7600505,Silver Lake,Silver Lake Regional High,246,760,13,0,0,0,0,0,0,13,0,0,0,2,11,0,6,,,,,,2017
+7630505,Somerset Berkley Regional School District,Somerset Berkley Regional High School,24,763,1,,,,,,,,,,,,,,,,,,,,2017
+7650505,Southern Berkshire,Mt Everett Regional,8,,,,,,,,,,,,,,,,,,,,,,2017
+7660010,Southwick-Tolland-Granville Regional School District,Woodland School,4,,,,,,,,,,,,,,,,,,,,,,2017
+7660315,Southwick-Tolland-Granville Regional School District,Powder Mill School,3,,,,,,,,,,,,,,,,,,,,,,2017
+7660505,Southwick-Tolland-Granville Regional School District,Southwick Regional School,43,,,,,,,,,,,,,,,,,,,,,,2017
+7670008,Spencer-E Brookfield,East Brookfield Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+7670040,Spencer-E Brookfield,Wire Village School,4,,,,,,,,,,,,,,,,,,,,,,2017
+7670505,Spencer-E Brookfield,David Prouty High,96,767,1,,,,,,,,,,,,,,,,,,,,2017
+7700405,Tantasqua,Tantasqua Regional Jr High,283,,,,,,,,,,,,,,,,,,,,,,2017
+7700505,Tantasqua,Tantasqua Regional Sr High,65,770,13,0,0,0,0,0,0,13,1,0,0,2,11,0,5,,,,,,2017
+7700605,Tantasqua,Tantasqua Regional Vocational,38,,,,,,,,,,,,,,,,2,,,,,,2017
+7730015,Triton,Salisbury Elementary,461,,,,,,,,,,,,,,,,,,,,,,2017
+7730020,Triton,Newbury Elementary,399,,,,,,,,,,,,,,,,,,,,,,2017
+7730025,Triton,Pine Grove,414,,,,,,,,,,,,,,,,,,,,,,2017
+7730405,Triton,Triton Regional Middle School,1,,,,,,,,,,,,,,,,,,,,,,2017
+7730505,Triton,Triton Regional High School,58,773,6,0,0,0,0,0,0,6,0,1,0,0,6,0,7,,,,,,2017
+7740020,Up-Island Regional,West Tisbury Elementary,336,,,,,,,,,,,,,,,,,,,,,,2017
+7750018,Wachusett,Davis Hill Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+7750027,Wachusett,Houghton Elementary,1,,,,,,,,,,,,,,,,,,,,,,2017
+7750305,Wachusett,Mountview Middle,1,,,,,,,,,,,,,,,,,,,,,,2017
+7750505,Wachusett,Wachusett Regional High,180,,,,,,,,,,,,,,,,,,,,,,2017
+7780005,Quaboag Regional,Warren Elementary,407,,,,,,,,,,,,,,,,,,,,,,2017
+7780010,Quaboag Regional,West Brookfield Elementary,272,,,,,,,,,,,,,,,,,,,,,,2017
+7780305,Quaboag Regional,Quaboag Regional Middle Innovation School,4,,,,,,,,,,,,,,,,,,,,,,2017
+7780505,Quaboag Regional,Quaboag Regional High,138,,,,,,,,,,,,,,,,,,,,,,2017
+7800310,Whitman-Hanson,Whitman Middle,432,,,,,,,,,,,,,,,,,,,,,,2017
+7800315,Whitman-Hanson,Hanson Middle School,333,,,,,,,,,,,,,,,,,,,,,,2017
+7800505,Whitman-Hanson,Whitman Hanson Regional,297,,,,,,,,,,,,,,,,,,,,,,2017
+8010605,Assabet Valley Regional Vocational Technical,Assabet Valley Vocational High School,32,,,,,,,,,,,,,,,,2,,,,,,2017
+8050605,Blackstone Valley Regional Vocational Technical,Blackstone Valley,81,805,2,,,,,,,,,,,,,,7,,,,,,2017
+8060605,Blue Hills Regional Vocational Technical,Blue Hills Regional Vocational Technical,30,,,,,,,,,,,,,,,,,,,,,,2017
+8100605,Bristol-Plymouth Regional Vocational Technical,Bristol-Plymouth Vocational Technical,5,,,,,,,,,,,,,,,,,,,,,,2017
+8150605,Cape Cod Regional Vocational Technical,Cape Cod Region Vocational Technical,8,,,,,,,,,,,,,,,,,,,,,,2017
+8170505,Essex North Shore Agricultural and Technical School District,Essex North Shore Agricultural and Technical School,1,,,,,,,,,,,,,,,,,,,,,,2017
+8180605,Franklin County Regional Vocational Technical,Franklin County Technical,6,818,9,0,0,0,0,0,0,9,3,3,0,0,9,0,7,,,,,,2017
+8210605,Greater Fall River Regional Vocational Technical,Diman Regional Vocational Technical High,554,,,,,,,,,,,,,,,,,,,,,,2017
+8250605,Greater New Bedford Regional Vocational Technical,Gr New Bedford Vocational Technical,2,,,,,,,,,,,,,,,,2,,,,,,2017
+8280605,Greater Lowell Regional Vocational Technical,Gr Lowell Regional Vocational Technical,36,,,,,,,,,,,,,,,,,,,,,,2017
+8290605,South Middlesex Regional Vocational Technical,Joseph P Keefe Technical High School,36,829,12,0,0,3,1,0,0,8,3,1,0,5,7,0,,,,,,,2017
+8300605,Minuteman Regional Vocational Technical,Minuteman Regional High,116,,,,,,,,,,,,,,,,1,,,,,,2017
+8320605,Montachusett Regional Vocational Technical,Montachusett Regional Vocational Technical,247,,,,,,,,,,,,,,,,,,,,,,2017
+8510605,Northern Berkshire Regional Vocational Technical,Charles McCann Vocational Technical,141,,,,,,,,,,,,,,,,,,,,,,2017
+8520605,Nashoba Valley Regional Vocational Technical,Nashoba Valley Technical High School,1,852,9,0,0,0,1,0,0,8,0,1,0,1,8,0,3,,,,,,2017
+8530605,Northeast Metropolitan Regional Vocational Technical,Northeast Metro Regional Vocational,19,,,,,,,,,,,,,,,,,,,,,,2017
+8550605,Old Colony Regional Vocational Technical,Old Colony Regional Vocational Technical,105,,,,,,,,,,,,,,,,,,,,,,2017
+8600605,Pathfinder Regional Vocational Technical,Pathfinder Vocational Technical,8,860,17,0,0,2,1,1,0,13,5,0,0,5,12,0,,,,,,,2017
+8710605,Shawsheen Valley Regional Vocational Technical,Shawsheen Valley Vocational Technical High School,3,,,,,,,,,,,,,,,,,,,,,,2017
+8720605,Southeastern Regional Vocational Technical,Southeastern Regional Vocational Technical,192,,,,,,,,,,,,,,,,12,11,0,1,0,0,2017
+8730605,South Shore Regional Vocational Technical,So Shore Vocational Technical High,1,,,,,,,,,,,,,,,,,,,,,,2017
+8760605,Southern Worcester County Regional Vocational Technical,Bay Path Regional Vocational Technical High School,5,,,,,,,,,,,,,,,,12,1,0,3,6,2,2017
+8780605,Tri-County Regional Vocational Technical,Tri-County Regional Vocational Technical,242,,,,,,,,,,,,,,,,2,,,,,,2017
+8790605,Upper Cape Cod Regional Vocational Technical,Upper Cape Cod Vocational Technical,3,,,,,,,,,,,,,,,,6,,,,,,2017
+8850605,Whittier Regional Vocational Technical,Whittier Regional Vocational,66,,,,,,,,,,,,,,,,,,,,,,2017
+9150705,Norfolk County Agricultural,Norfolk County Agricultural,260,,,,,,,,,,,,,,,,,,,,,,2017
+35010505,Paulo Freire Social Justice Charter School (District),Paulo Freire Social Justice Charter School,20,,,,,,,,,,,,,,,,,,,,,,2017
+35020405,Baystate Academy Charter Public School (District),Baystate Academy Charter Public School,4,,,,,,,,,,,,,,,,,,,,,,2017
+35040505,City on a Hill Charter Public School Dudley Square (District),City on a Hill Charter Public School Dudley Square,118,,,,,,,,,,,,,,,,,,,,,,2017
+35050405,UP Academy Charter School of Dorchester (District),UP Academy Charter School of Dorchester,9,,,,,,,,,,,,,,,,,,,,,,2017
+35060505,Pioneer Charter School of Science II (PCSS-II) (District),Pioneer Charter School of Science II (PCSS-II),176,,,,,,,,,,,,,,,,5,,,,,,2017
+35070505,City on a Hill Charter Public School New Bedford (District),City on a Hill Charter Public School New Bedford,75,,,,,,,,,,,,,,,,,,,,,,2017
+35080505,Phoenix Academy Public Charter High School Springfield (District),Phoenix Academy Public Charter High School Springfield,1,,,,,,,,,,,,,,,,,,,,,,2017
+35090305,Argosy Collegiate Charter School (District),Argosy Collegiate Charter School,3,,,,,,,,,,,,,,,,,,,,,,2017
+35130305,New Heights Charter School of Brockton (District),New Heights Charter School of Brockton,14,,,,,,,,,,,,,,,,,,,,,,2017
+35140305,Libertas Academy Charter School (District),Libertas Academy Charter School,70,,,,,,,,,,,,,,,,,,,,,,2017
+39010900,Greenfield Commonwealth Virtual District,Greenfield Commonwealth Virtual School,21,,,,,,,,,,,,,,,,,,,,,,2017
+39020900,TEC Connections Academy Commonwealth Virtual School District,TEC Connections Academy Commonwealth Virtual School,681,3902,1,,,,,,,,,,,,,,,,,,,,2017
+0,Massachusetts,Massachusetts,235211,0,1976,93,334,113,55,2,3,1317,186,52,10,417,1499,1,1792,297,152,303,345,434,2017
