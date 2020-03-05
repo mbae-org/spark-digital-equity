@@ -153,27 +153,15 @@ function getPieCharts(schoolDataArray) {
                             isInteractive={true}
                             data={schoolData}
                             sortByValue={true}
-                            enableSlicesLabels={false}
+                            enableSlicesLabels={true}
                             enableRadialLabels={false}
-                            margin={{ top: 40, right: 40, bottom: 60, left: 40 }}
+                            slicesLabelsTextColor="white"
+                            margin={{ top: 40, right: 60, bottom: 40, left: 40 }}
                             innerRadius={0.5}
                             tooltip={data => {
                                 return getTooltipHTML(data);
                             }}
-                            legends={
-                                index + 1 === dataLength
-                                    ? [
-                                        {
-                                            anchor: "bottom",
-                                            direction: "row",
-                                            itemWidth: 120,
-                                            itemHeight: 20,
-                                            translateY: 30,
-                                            translateX: 10
-                                        }
-                                    ]
-                                    : undefined
-                            }
+
                         />
                     </div>
                     <div style={{ flexGrow: "1" }}>{schoolName}</div>

@@ -89,35 +89,68 @@ export const EthnicityDefaultMap = {
 export const YearList = [2017];
 // export const YearList = [2016];
 
-
-export const APScoreAcronymMap = {
-    AP1: {
-        id: "AP1",
-        desc: "AP1",
+export const APAcronymList = [
+    {
+        id: "Score=1",
+        desc: "Score=1",
         chartColor: "#F69A1F",
         value: 0
     },
-    AP2: {
-        id: "AP2",
-        desc: "AP2",
+    {
+        id: "Score=2",
+        desc: "Score=2",
         chartColor: "#FE8126",
         value: 0
     },
-    AP3: {
-        id: "AP3",
-        desc: "AP3",
+    {
+        id: "Score=3",
+        desc: "Score=3",
         chartColor: "#FBC184",
         value: 0
     },
-    AP4: {
-        id: "AP4",
-        desc: "AP4",
+    {
+        id: "Score=4",
+        desc: "Score=4",
         chartColor: "#0B89D3",
         value: 0
     },
-    AP5: {
-        id: "AP5",
-        desc: "AP5",
+    {
+        id: "Score=5",
+        desc: "Score=5",
+        chartColor: "#545454",
+        value: 0
+    },
+
+];
+
+export const APScoreAcronymMap = {
+    "Score=1": {
+        id: "Score=1",
+        desc: "1",
+        chartColor: "#F69A1F",
+        value: 0
+    },
+    "Score=2": {
+        id: "Score=2",
+        desc: "2",
+        chartColor: "#FE8126",
+        value: 0
+    },
+    "Score=3": {
+        id: "Score=3",
+        desc: "3",
+        chartColor: "#FBC184",
+        value: 0
+    },
+    "Score=4": {
+        id: "Score=4",
+        desc: "4",
+        chartColor: "#0B89D3",
+        value: 0
+    },
+    "Score=5": {
+        id: "Score=5",
+        desc: "5",
         chartColor: "#545454",
         value: 0
     },

@@ -10,7 +10,6 @@ import EthnicityChart from "./components/Charts/EthnicityChart";
 import EconDisChart from "./components/Charts/EconDisChart";
 import DisabilityChart from "./components/Charts/DisabilityChart";
 import ELLChart from "./components/Charts/ELLChart";
-import CourseEnrollmentChart from "./components/Charts/CourseEnrollment"
 import APCoursesChart from "./components/Charts/APCourses"
 import NextStepsPanel from "./components/NextSteps/NextStepsPanel"
 
@@ -21,6 +20,7 @@ import {
     EthnicityAcronymList,
     EthnicityDefaultMap,
     YearList,
+    APAcronymList,
     APScoreAcronymMap
 } from "./Constants";
 import School from "./School";
@@ -270,6 +270,7 @@ class App extends React.Component {
      * @param {Map} selectedYears
      * @returns {[]}
      */
+
     transformSchoolData(schoolDataArray, selectedSchools, selectedYears) {
         //let validDataArray = this.filterSchoolDataWithFields(schoolDataArray);
         let yearSchoolObjectMap = this.getYearSchoolObjectMapNew(schoolDataArray);
@@ -291,6 +292,7 @@ class App extends React.Component {
                     districtObject.setName(districtName);
                     districtObject.setType(EntityType.DISTRICT);
                     districtObject.setEthnicityMap(EthnicityDefaultMap);
+                    districtObject.setApMap(APScoreAcronymMap);
                     districtObject.setSchoolYear(schoolYear);
                 }
                 if (schoolObject._male && schoolObject._female) {
@@ -335,6 +337,27 @@ class App extends React.Component {
 
                 districtObject.setEthnicityMap(thisDistrictEthnicityMap);
                 districtObject.setEthnicity(thisDistrictEthnicityArray);
+
+                let thisDistrictAPArray = [];
+                let thisDistrictAPMap = JSON.parse(JSON.stringify(districtObject._apMap));
+
+                if (!isNaN(schoolObject._apMap["Score=1"].value)) {
+                    for (let key in schoolObject._apMap) {
+                        const apObj = schoolObject._apMap[key];
+                        if (thisDistrictAPMap[key].isInteger) {
+                            thisDistrictAPMap[key].value = JSON.parse(JSON.stringify(apObj.value))
+                                + JSON.parse(JSON.stringify(thisDistrictAPMap[key].value))
+                        }
+                        else {
+                            thisDistrictAPMap[key].value = JSON.parse(JSON.stringify(apObj.value))
+                        }
+                        thisDistrictAPArray.push(thisDistrictAPMap[key]);
+                    }
+                }
+
+                districtObject.setApMap(thisDistrictAPMap);
+                districtObject.setApArray(thisDistrictAPArray);
+
 
                 if (schoolObject._englishLanguageLearner) {
 
@@ -410,6 +433,7 @@ class App extends React.Component {
             let thisDistrictEthnicityArray = [];
             let thisDistrictEthnicityMap = districtObject._ethnicityMap;
 
+
             if (!isNaN(schoolObject._ethnicityMap["AA"].value)) {
                 for (let key in schoolObject._ethnicityMap) {
                     const ethnicityObj = schoolObject._ethnicityMap[key];
@@ -421,6 +445,7 @@ class App extends React.Component {
                         thisDistrictEthnicityMap[key].value = JSON.parse(JSON.stringify(ethnicityObj.value))
                     }
                     thisDistrictEthnicityArray.push(JSON.parse(JSON.stringify(thisDistrictEthnicityMap[key])));
+
                 }
             }
 
@@ -431,10 +456,16 @@ class App extends React.Component {
             let thisDistrictAPArray = [];
             let thisDistrictAPMap = districtObject._apMap;
 
-            if (schoolObject._apMap) {
+            if (!isNaN(schoolObject._apMap["Score=1"].value)) {
                 for (let key in schoolObject._apMap) {
                     const apObj = schoolObject._apMap[key];
-                    thisDistrictAPMap[key].value += apObj.value;
+                    if (thisDistrictAPMap[key].isInteger) {
+                        thisDistrictAPMap[key].value = JSON.parse(JSON.stringify(apObj.value))
+                            + JSON.parse(JSON.stringify(thisDistrictAPMap[key].value))
+                    }
+                    else {
+                        thisDistrictAPMap[key].value = JSON.parse(JSON.stringify(apObj.value))
+                    }
                     thisDistrictAPArray.push(thisDistrictAPMap[key]);
                 }
             }
@@ -471,11 +502,11 @@ class App extends React.Component {
                 Number.isInteger(parseInt(schoolRow["ELL"])) &&
                 Number.isInteger(parseInt(schoolRow["primary"])) &&
                 Number.isInteger(parseInt(schoolRow["secondary"])) &&
-                Number.isInteger(parseInt(schoolRow["AP1"])) &&
-                Number.isInteger(parseInt(schoolRow["AP2"])) &&
-                Number.isInteger(parseInt(schoolRow["AP3"])) &&
-                Number.isInteger(parseInt(schoolRow["AP4"])) &&
-                Number.isInteger(parseInt(schoolRow["AP5"]))
+                Number.isInteger(parseInt(schoolRow["Score=1"])) &&
+                Number.isInteger(parseInt(schoolRow["Score=2"])) &&
+                Number.isInteger(parseInt(schoolRow["Score=3"])) &&
+                Number.isInteger(parseInt(schoolRow["Score=4"])) &&
+                Number.isInteger(parseInt(schoolRow["Score=5"]))
             ) {
                 filteredArray.push(schoolRow);
             } else {
@@ -531,6 +562,27 @@ class App extends React.Component {
             thisSchool.setEthnicity(thisSchoolEthnicityArray);
             thisSchool.setEthnicityMap(thisSchoolEthnicityMap);
 
+            let thisSchoolAPArray = [];
+            let thisSchoolAPMap = {};
+
+            APAcronymList.forEach(APObj => {
+                let APArrayMember = {
+                    id: APObj.id,
+                    value: parseInt(schoolRow[APObj.id]),
+                    label: APObj.desc,
+                    desc: APObj.desc,
+                    chartColor: APObj.chartColor
+                };
+
+                thisSchoolAPArray.push(APArrayMember);
+                thisSchoolAPMap[
+                    APArrayMember.id
+                ] = APArrayMember;
+            });
+
+            thisSchool.setApArray(thisSchoolAPArray);
+            thisSchool.setApMap(thisSchoolAPMap);
+
             schoolObjectMap[schoolName] = thisSchool;
         });
 
@@ -566,8 +618,6 @@ class App extends React.Component {
             thisSchool.setStudentsWithDisability(parseInt(schoolRow["SWD"]));
             thisSchool.setSchoolYear(schoolYear);
             thisSchool.setEnglishLanguageLearner(parseInt(schoolRow["ELL"]));
-            // thisSchool.setPrimaryEnrolled(parseInt(schoolRow["primary"]));
-            // thisSchool.setSecondaryEnrolled(parseInt(schoolRow["secondary"]));
 
             let thisSchoolEthnicityArray = [];
             let thisSchoolEthnicityMap = {};
@@ -590,24 +640,26 @@ class App extends React.Component {
             thisSchool.setEthnicity(thisSchoolEthnicityArray);
             thisSchool.setEthnicityMap(thisSchoolEthnicityMap);
 
-            let thisSchoolApArray = [];
-            let thisSchoolApMap = {};
-            const APSchoolAcronymArray = Object.keys(APScoreAcronymMap);
-            APSchoolAcronymArray.forEach(apKey => {
-                let APSchoolObj = APScoreAcronymMap[apKey];
-                let APArrayMember = {
-                    id: APSchoolObj.id,
-                    value: parseInt(schoolRow[APSchoolObj.id]),
-                    label: APSchoolObj.desc,
-                    desc: APSchoolObj.desc,
-                    chartColor: APSchoolObj.chartColor
-                };
-                thisSchoolApArray.push(APArrayMember);
-                thisSchoolApMap[APSchoolObj.id] = APArrayMember;
-            });
-            thisSchool.setApArray(thisSchoolApArray);
-            thisSchool.setApMap(thisSchoolApMap);
+            let thisSchoolAPArray = [];
+            let thisSchoolAPMap = {};
 
+            APAcronymList.forEach(APObj => {
+                let APArrayMember = {
+                    id: APObj.id,
+                    value: parseInt(schoolRow[APObj.id]),
+                    label: APObj.desc,
+                    desc: APObj.desc,
+                    chartColor: APObj.chartColor
+                };
+
+                thisSchoolAPArray.push(APArrayMember);
+                thisSchoolAPMap[
+                    APArrayMember.id
+                ] = APArrayMember;
+            });
+
+            thisSchool.setApArray(thisSchoolAPArray);
+            thisSchool.setApMap(thisSchoolAPMap);
 
             schoolObjectMap[schoolName] = thisSchool;
             let thisYearSchoolObjectMap = yearSchoolObjectMap[schoolYear];

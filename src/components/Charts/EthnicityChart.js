@@ -63,6 +63,7 @@ function getGroupedEthnicData(schoolArrayForYear) {
                 ).toFixed(2))
         );
 
+
         thisSchoolData.schoolName = schoolName;
         thisSchoolData.dataArray = schoolDataArray;
         chartData.push(thisSchoolData);
@@ -121,32 +122,19 @@ function createPieCharts(chartData) {
                     <div style={{ height: "90%", flexGrow: "1" }}>
                         <ResponsivePie
                             key={row.schoolName}
-                            data={row.dataArray}
-                            margin={{ top: 40, right: 60, bottom: 40, left: 40 }}
                             colors={d => d.chartColor}
+                            isInteractive={true}
+                            data={row.dataArray}
                             sortByValue={true}
+                            enableSlicesLabels={true}
                             enableRadialLabels={false}
-                            enableSlicesLabels={false}
+                            slicesLabelsTextColor="white"
+                            margin={{ top: 40, right: 60, bottom: 40, left: 40 }}
                             innerRadius={0.5}
                             tooltip={data => {
                                 return getTooltipHTML(data);
                             }}
-                            legends={
-                                index + 1 === dataLength
-                                    ? [
-                                        {
-                                            anchor: "top-right",
-                                            direction: "column",
-                                            itemWidth: 20,
-                                            itemHeight: 20,
-                                            translateY: 20,
-                                            translateX: 30
-                                            // symbolSize: 18,
-                                            // symbolShape: "circle"
-                                        }
-                                    ]
-                                    : undefined
-                            }
+
                         />
                     </div>
                     <div style={{ flexGrow: "1" }}>{row.schoolName}</div>
