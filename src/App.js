@@ -12,8 +12,7 @@ import DisabilityChart from "./components/Charts/DisabilityChart";
 import ELLChart from "./components/Charts/ELLChart";
 import APCoursesChart from "./components/Charts/APCourses"
 import NextStepsPanel from "./components/NextSteps/NextStepsPanel"
-
-import schoolData from "./data/new data/2017";
+import schoolData from "./data/TotalData"
 
 import {
     EntityType,
@@ -110,7 +109,6 @@ class App extends React.Component {
 
     render() {
         const charts = this.createChartsFromFilterState();
-
         return (
             <div>
                 <div className="App">
