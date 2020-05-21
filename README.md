@@ -10,7 +10,7 @@
 3. Sign In using Github.com account
 4. Repositories should be shown now, including jpjosephh/spark-digital-equity. Click that link and clone.
 
-### 2. Getting data in usuable form
+### 2. Getting data in usable form
 
 There is examples of what the final CSV file should look like in the repository. To access them:
 
