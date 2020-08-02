@@ -47,6 +47,8 @@ class App extends React.Component {
             selectedYearsMap
         );
 
+        console.log(yearSchoolObjectMap)
+
         this.state = {
             newSchoolData: yearSchoolObjectMap,
             schoolData: this.extractSchoolData(schoolData),
@@ -698,7 +700,6 @@ class App extends React.Component {
 
             }
             selectedSchoolsArray.forEach(schoolName => {
-                console.log(yearSchoolObjectMap[year][schoolName]);
                 filteredSchoolDataMap[year].push(yearSchoolObjectMap[year][schoolName]);
             });
         });
