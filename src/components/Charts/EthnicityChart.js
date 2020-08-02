@@ -46,27 +46,30 @@ function EthnicityChart(props) {
 function getGroupedEthnicData(schoolArrayForYear) {
     let chartData = [];
     schoolArrayForYear.forEach(schoolObj => {
-        const schoolName = schoolObj._name;
-        let thisSchoolData = {};
-        let schoolDataArray = [];
+        if (schoolObj) {
+            const schoolName = schoolObj._name;
+            let thisSchoolData = {};
+            let schoolDataArray = [];
 
-        schoolDataArray = schoolObj._ethnicity;
+            schoolDataArray = schoolObj._ethnicity;
 
-        // get percentage calculation out of total students that we consider
-        let totalStudents = 0;
-        schoolDataArray.forEach(element => (totalStudents += element.value));
-        schoolDataArray.forEach(
-            element =>
-                (element.percentage = (
-                    (element.value / totalStudents) *
-                    100
-                ).toFixed(2))
-        );
+            // get percentage calculation out of total students that we consider
+            let totalStudents = 0;
+            schoolDataArray.forEach(element => (totalStudents += element.value));
+            schoolDataArray.forEach(
+                element =>
+                    (element.percentage = (
+                        (element.value / totalStudents) *
+                        100
+                    ).toFixed(2))
+            );
 
 
-        thisSchoolData.schoolName = schoolName;
-        thisSchoolData.dataArray = schoolDataArray;
-        chartData.push(thisSchoolData);
+            thisSchoolData.schoolName = schoolName;
+            thisSchoolData.dataArray = schoolDataArray;
+            chartData.push(thisSchoolData);
+        }
+
     });
 
     return chartData;

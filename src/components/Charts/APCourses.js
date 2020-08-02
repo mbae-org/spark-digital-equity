@@ -49,67 +49,69 @@ function APCoursesChart(props) {
  */
 function getGroupedAPData(schoolArrayForYear) {
     let chartData = [];
-
+    console.log(schoolArrayForYear);
     schoolArrayForYear.forEach(schoolObj => {
-        const schoolName = schoolObj._name;
-        let thisSchoolData = {};
-        let schoolDataArray = [];
-        let totalCount = 0;
-        schoolDataArray = schoolObj._apArray;
+        if (schoolObj) {
+            const schoolName = schoolObj._name;
+            let thisSchoolData = {};
+            let schoolDataArray = [];
+            let totalCount = 0;
+            schoolDataArray = schoolObj._apArray;
 
-        thisSchoolData.id = schoolName;
-        schoolDataArray.forEach(apObject => {
-            totalCount += apObject.value;
-        });
-        schoolDataArray.forEach(apObject => {
-            thisSchoolData[apObject.id] = ((apObject.value / totalCount) * 100).toFixed(2);
-        });
+            thisSchoolData.id = schoolName;
+            schoolDataArray.forEach(apObject => {
+                totalCount += apObject.value;
+            });
+            schoolDataArray.forEach(apObject => {
+                thisSchoolData[apObject.id] = ((apObject.value / totalCount) * 100).toFixed(2);
+            });
 
-        schoolDataArray = [
-            {
-                id: "Score=1",
-                desc: "Score=1",
-                value: schoolDataArray[0].value,
-                percentage: thisSchoolData["Score=1"],
-                color: "#545454",
-                label: "Score=1"
-            },
-            {
-                id: "Score=2",
-                desc: "Score=2",
-                value: schoolDataArray[1].value,
-                percentage: thisSchoolData["Score=2"],
-                color: "#0B89D3",
-                label: "Score=2"
-            },
-            {
-                id: "Score=3",
-                desc: "Score=3",
-                value: schoolDataArray[2].value,
-                percentage: thisSchoolData["Score=3"],
-                color: "#FBC184",
-                label: "Score=3"
-            },
-            {
-                id: "Score=4",
-                desc: "Score=4",
-                value: schoolDataArray[3].value,
-                percentage: thisSchoolData["Score=4"],
-                color: "#FE8126",
-                label: "Score=4"
-            },
-            {
-                id: "Score=5",
-                desc: "Score=5",
-                value: schoolDataArray[4].value,
-                percentage: thisSchoolData["Score=5"],
-                color: "#222C49",
-                label: "Score=5"
-            }
-        ];
-        thisSchoolData.schoolName = schoolName;
-        thisSchoolData.dataArray = schoolDataArray;
-        chartData.push(thisSchoolData);
+            schoolDataArray = [
+                {
+                    id: "Score=1",
+                    desc: "Score=1",
+                    value: schoolDataArray[0].value,
+                    percentage: thisSchoolData["Score=1"],
+                    color: "#545454",
+                    label: "Score=1"
+                },
+                {
+                    id: "Score=2",
+                    desc: "Score=2",
+                    value: schoolDataArray[1].value,
+                    percentage: thisSchoolData["Score=2"],
+                    color: "#0B89D3",
+                    label: "Score=2"
+                },
+                {
+                    id: "Score=3",
+                    desc: "Score=3",
+                    value: schoolDataArray[2].value,
+                    percentage: thisSchoolData["Score=3"],
+                    color: "#FBC184",
+                    label: "Score=3"
+                },
+                {
+                    id: "Score=4",
+                    desc: "Score=4",
+                    value: schoolDataArray[3].value,
+                    percentage: thisSchoolData["Score=4"],
+                    color: "#FE8126",
+                    label: "Score=4"
+                },
+                {
+                    id: "Score=5",
+                    desc: "Score=5",
+                    value: schoolDataArray[4].value,
+                    percentage: thisSchoolData["Score=5"],
+                    color: "#222C49",
+                    label: "Score=5"
+                }
+            ];
+            thisSchoolData.schoolName = schoolName;
+            thisSchoolData.dataArray = schoolDataArray;
+            chartData.push(thisSchoolData);
+        }
     });
 
     return chartData;
@@ -119,45 +121,47 @@ function getGroupedAPData(schoolArrayForYear) {
 function getEnrollementForSchool(schoolArrayForYear) {
     let chartData = [];
     schoolArrayForYear.forEach(schoolObject => {
-        const schoolName = schoolObject._name;
-        const totalCountEnrolled = schoolObject._enrolled;
-        let totalCountTested = 0;
-        let schoolData = schoolObject._apArray;
+        if (schoolObject) {
+            const schoolName = schoolObject._name;
+            const totalCountEnrolled = schoolObject._enrolled;
+            let totalCountTested = 0;
+            let schoolData = schoolObject._apArray;
 
-        schoolData.forEach(apObject => {
-            totalCountTested += apObject.value;
-        });
-        const EnrolledPercentage = (
-            (totalCountEnrolled / (totalCountEnrolled + totalCountTested)) *
-            100
-        ).toFixed(2);
-        const TestedPercentage = (
-            (totalCountTested / (totalCountEnrolled)) *
-            100
-        ).toFixed(2);
+            schoolData.forEach(apObject => {
+                totalCountTested += apObject.value;
+            });
+            const EnrolledPercentage = (
+                (totalCountEnrolled / (totalCountEnrolled + totalCountTested)) *
+                100
+            ).toFixed(2);
+            const TestedPercentage = (
+                (totalCountTested / (totalCountEnrolled)) *
+                100
+            ).toFixed(2);
 
-        let thisSchoolData = {};
-        let schoolDataArray = [
-            {
-                id: "Only Enrolled",
-                value: totalCountEnrolled - totalCountTested,
-                percentage: 100 - TestedPercentage,
-                color: "#222C49",
-                label: "Enrolled but did not take AP test",
-                desc: "Enrolled but did not take AP test"
-            },
-            {
-                id: "Tested",
-                value: totalCountTested,
-                percentage: TestedPercentage,
-                color: "#FE8126",
-                label: "Took AP test",
-                desc: "Took AP test"
-            }
-        ];
-        thisSchoolData.schoolName = schoolName;
-        thisSchoolData.dataArray = schoolDataArray;
-        chartData.push(thisSchoolData);
+            let thisSchoolData = {};
+            let schoolDataArray = [
+                {
+                    id: "Only Enrolled",
+                    value: totalCountEnrolled - totalCountTested,
+                    percentage: 100 - TestedPercentage,
+                    color: "#222C49",
+                    label: "Enrolled but did not take AP test",
+                    desc: "Enrolled but did not take AP test"
+                },
+                {
+                    id: "Tested",
+                    value: totalCountTested,
+                    percentage: TestedPercentage,
+                    color: "#FE8126",
+                    label: "Took AP test",
+                    desc: "Took AP test"
+                }
+            ];
+            thisSchoolData.schoolName = schoolName;
+            thisSchoolData.dataArray = schoolDataArray;
+            chartData.push(thisSchoolData);
+        }
     });
 
     return chartData;

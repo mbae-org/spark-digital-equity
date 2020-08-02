@@ -39,40 +39,43 @@ function getGenderForSchool(schoolArrayForYear) {
     let chartData = [];
 
     schoolArrayForYear.forEach(schoolRow => {
-        const schoolName = schoolRow._name;
-        const schoolYear = schoolRow._schoolYear;
-        const maleCount = schoolRow._male;
-        const femaleCount = schoolRow._female;
-        const malePercentage = (
-            (maleCount / (maleCount + femaleCount)) *
-            100
-        ).toFixed(2);
-        const femalePercentage = (
-            (femaleCount / (maleCount + femaleCount)) *
-            100
-        ).toFixed(2);
+        if (schoolRow) {
+            const schoolName = schoolRow._name;
+            const schoolYear = schoolRow._schoolYear;
+            const maleCount = schoolRow._male;
+            const femaleCount = schoolRow._female;
+            const malePercentage = (
+                (maleCount / (maleCount + femaleCount)) *
+                100
+            ).toFixed(2);
+            const femalePercentage = (
+                (femaleCount / (maleCount + femaleCount)) *
+                100
+            ).toFixed(2);
 
-        let thisSchoolData = {};
-        let schoolDataArray = [
-            {
-                id: "Male",
-                value: maleCount,
-                percentage: malePercentage,
-                color: "#222C49",
-                label: "Male"
-            },
-            {
-                id: "Female",
-                value: femaleCount,
-                percentage: femalePercentage,
-                color: "#FE8126",
-                label: "Female"
-            }
-        ];
-        thisSchoolData.schoolName = schoolName;
-        thisSchoolData.dataArray = schoolDataArray;
-        thisSchoolData.schoolYear = schoolYear;
-        chartData.push(thisSchoolData);
+            let thisSchoolData = {};
+            let schoolDataArray = [
+                {
+                    id: "Male",
+                    value: maleCount,
+                    percentage: malePercentage,
+                    color: "#222C49",
+                    label: "Male"
+                },
+                {
+                    id: "Female",
+                    value: femaleCount,
+                    percentage: femalePercentage,
+                    color: "#FE8126",
+                    label: "Female"
+                }
+            ];
+            thisSchoolData.schoolName = schoolName;
+            thisSchoolData.dataArray = schoolDataArray;
+            thisSchoolData.schoolYear = schoolYear;
+            chartData.push(thisSchoolData);
+        }
+
     });
 
     return chartData;

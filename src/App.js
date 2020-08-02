@@ -698,6 +698,7 @@ class App extends React.Component {
 
             }
             selectedSchoolsArray.forEach(schoolName => {
+                console.log(yearSchoolObjectMap[year][schoolName]);
                 filteredSchoolDataMap[year].push(yearSchoolObjectMap[year][schoolName]);
             });
         });
