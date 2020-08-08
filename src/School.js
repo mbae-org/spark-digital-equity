@@ -15,8 +15,6 @@ class School {
         this._studentsWithDisability = 0;
         this._schoolYear = 2016;
         this._englishLanguageLearner = 0;
-        // this._primaryEnrolled = 0;
-        // this._secondaryEnrolled = 0;
 
         this._apArray = [];
         this._apMap = {};

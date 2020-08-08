@@ -41,18 +41,10 @@ class App extends React.Component {
         selectedYearsMap[YearList[YearList.length - 1]] = true;
         const selectedSchools = ["Massachusetts"];
 
-        const yearSchoolObjectMap = this.transformSchoolData(
-            schoolData,
-            selectedSchools,
-            selectedYearsMap
-        );
-
-        console.log(yearSchoolObjectMap)
+        const schoolDataModified = this.transformSchoolData(schoolData)
 
         this.state = {
-            newSchoolData: yearSchoolObjectMap,
-            schoolData: this.extractSchoolData(schoolData),
-            // schoolOptions: selectedSchools,
+            schoolDataModified: schoolDataModified,
             selectedFilters: {
                 gender: true,
                 ethnicity: true,
@@ -68,7 +60,7 @@ class App extends React.Component {
             },
             selectedSchoolArray: selectedSchools,
             selectedYearsMap: selectedYearsMap,
-            filteredSchoolData: this.filterYearSchoolObjectMap(yearSchoolObjectMap, selectedSchools, selectedYearsMap)
+            filteredSchoolData: this.filterYearSchoolObjectMap(schoolDataModified, selectedSchools, selectedYearsMap)
         };
 
     }
@@ -80,16 +72,11 @@ class App extends React.Component {
         });
         selectedYearsMap[YearList[YearList.length - 1]] = true;
         const selectedSchools = ["Massachussets"];
-        const yearSchoolObjectMap = this.transformSchoolData(
-            schoolData,
-            selectedSchools,
-            selectedYearsMap
-        );
+
+        const schoolDataModified = this.transformSchoolData(schoolData)
 
         this.setState({
-            newSchoolData: yearSchoolObjectMap,
-            schoolData: this.extractSchoolData(schoolData),
-            // schoolOptions: selectedSchools,
+            schoolDataModified: schoolDataModified,
             selectedFilters: {
                 gender: true,
                 ethnicity: true,
@@ -106,7 +93,7 @@ class App extends React.Component {
             },
             selectedSchoolArray: selectedSchools,
             selectedYearsMap: selectedYearsMap,
-            filteredSchoolData: this.filterYearSchoolObjectMap(yearSchoolObjectMap, selectedSchools, selectedYearsMap)
+            filteredSchoolData: this.filterYearSchoolObjectMap(schoolDataModified, selectedSchools, selectedYearsMap)
         });
     }
 
@@ -122,7 +109,7 @@ class App extends React.Component {
                     <div className="Body">
                         <div className="filter-panel">
                             <FilterPanel
-                                data={this.state.schoolData}
+                                data={this.state.schoolDataModified[2016]}
                                 selectedFilters={this.state.selectedFilters}
                                 selectedYears={this.state.selectedYearsMap}
                                 onSchoolFilterChange={(opts, actionMeta) =>
@@ -161,8 +148,6 @@ class App extends React.Component {
         if (selectedFilters.ethnicity === true) {
             charts.push(
                 <EthnicityChart
-                    // options={this.state.schoolOptions}
-                    // schoolData={this.state.schoolData}
                     yearToSchoolArrayDataMap={this.state.filteredSchoolData}
                     key="ethnicityChart"
                 />
@@ -189,8 +174,6 @@ class App extends React.Component {
             charts.push(
                 <EconDisChart
                     yearToSchoolArrayDataMap={this.state.filteredSchoolData}
-                    // options={this.state.schoolOptions}
-                    // schoolData={this.state.schoolData}
                     key="economicallyDisadvantagedChart"
                 />
             );
@@ -200,8 +183,6 @@ class App extends React.Component {
             charts.push(
                 <DisabilityChart
                     yearToSchoolArrayDataMap={this.state.filteredSchoolData}
-                    // options={this.state.schoolOptions}
-                    // schoolData={this.state.schoolData}
                     key="disabilityChart"
                 />
             );
@@ -211,29 +192,10 @@ class App extends React.Component {
             charts.push(
                 <ELLChart
                     yearToSchoolArrayDataMap={this.state.filteredSchoolData}
-                    // options={this.state.schoolOptions}
-                    // schoolData={this.state.schoolData}
                     key="ellChart"
                 />
             );
         }
-
-        // if (selectedFilters.courseEnrollment === true) {
-
-        //     const options = {
-        //         primary: selectedFilters.courseEnrollmentPrimary,
-        //         secondary: selectedFilters.courseEnrollmentSecondary,
-        //         total: selectedFilters.courseEnrollmentTotal
-        //     };
-
-        //     charts.push(
-        //         <CourseEnrollmentChart
-        //             yearToSchoolArrayDataMap={this.state.filteredSchoolData}
-        //             key="enrollmentChart"
-        //             options={options}
-        //         />
-        //     );
-        // }
 
         return charts;
     }
@@ -247,11 +209,11 @@ class App extends React.Component {
     yearSelectionChangeHandler(newSelection) {
         this.setState({
             selectedYears: newSelection,
-            filteredSchoolData: this.filterYearSchoolObjectMap(this.state.newSchoolData, this.state.selectedSchoolArray, newSelection)
+            filteredSchoolData: this.filterYearSchoolObjectMap(this.state.schoolDataModified, this.state.selectedSchoolArray, newSelection)
         });
     }
 
-    schoolFilterChangeHandler(selectedOptions, actionMeta) {
+    schoolFilterChangeHandler(selectedOptions) {
 
         if (!selectedOptions) {
             selectedOptions = [];
@@ -260,20 +222,27 @@ class App extends React.Component {
         const selectedSchoolOptions = this.transformSelectedOptions(selectedOptions);
         this.setState({
             selectedSchoolArray: selectedSchoolOptions,
-            filteredSchoolData: this.filterYearSchoolObjectMap(this.state.newSchoolData, selectedSchoolOptions, this.state.selectedYearsMap)
+            filteredSchoolData: this.filterYearSchoolObjectMap(this.state.schoolDataModified, selectedSchoolOptions, this.state.selectedYearsMap)
         });
     }
 
-    /**
-     *
-     * @param {array} schoolDataArray
-     * @param {array} selectedSchools list of selected schools
-     * @param {Map} selectedYears
-     * @returns {[]}
-     */
+    transformSelectedOptions(selectedOptions) {
+        let schoolNameArray = [];
+        selectedOptions.forEach(row => {
+            schoolNameArray.push(row.label);
+        });
+        return schoolNameArray;
+    }
 
-    transformSchoolData(schoolDataArray, selectedSchools, selectedYears) {
-        //let validDataArray = this.filterSchoolDataWithFields(schoolDataArray);
+    /**
+ *
+ * @param {array} schoolDataArray
+ * @param {array} selectedSchools list of selected schools
+ * @param {Map} selectedYears
+ * @returns {[]}
+ */
+
+    transformSchoolData(schoolDataArray) {
         let yearSchoolObjectMap = this.getYearSchoolObjectMapNew(schoolDataArray);
 
         // add info for all districts
@@ -368,10 +337,8 @@ class App extends React.Component {
                     );
 
                 }
-                // districtObject.setPrimaryEnrolled(districtObject._primaryEnrolled + schoolObject._primaryEnrolled);
-                // districtObject.setSecondaryEnrolled(districtObject._secondaryEnrolled + schoolObject._secondaryEnrolled);
 
-                if (!schoolName == "Massachusetts") {
+                if (!schoolName === "Massachusetts") {
                     thisYearSchoolObjectMap[districtName] = districtObject;
                 }
 
@@ -381,225 +348,12 @@ class App extends React.Component {
         return yearSchoolObjectMap;
     }
 
-    transformSelectedOptions(selectedOptions) {
-        let schoolNameArray = [];
-        selectedOptions.forEach(row => {
-            schoolNameArray.push(row.label);
-        });
-        return schoolNameArray;
-    }
-
-    extractSchoolData(schoolDataArray) {
-        let filteredArray = [];
-        let schoolObjectMap = {};
-
-        //filteredArray = this.filterSchoolDataWithFields(schoolDataArray);
-        schoolObjectMap = this.getSchoolObjectMap(schoolDataArray);
-
-        // add info for all districts
-        const allSchoolNames = Object.keys(schoolObjectMap);
-        for (let schoolName of allSchoolNames) {
-            const schoolObject = schoolObjectMap[schoolName];
-            const districtName = schoolObject._districtName + " District";
-
-            let districtObject = schoolObjectMap[districtName];
-            if (!districtObject) {
-                districtObject = new School();
-                districtObject.setName(districtName);
-                districtObject.setType(EntityType.DISTRICT);
-                districtObject.setEthnicityMap(EthnicityDefaultMap);
-                districtObject.setApMap(APScoreAcronymMap);
-            }
-            if (!isNaN(schoolObject._male) && !isNaN(schoolObject._female)) {
-                districtObject.setMale(districtObject._male + schoolObject._male);
-                districtObject.setFemale(districtObject._female + schoolObject._female);
-            }
-            if (!isNaN(schoolObject._economicallyDisadvantaged)) {
-                districtObject.setEconomicallyDisadvantaged(
-                    districtObject._economicallyDisadvantaged +
-                    schoolObject._economicallyDisadvantaged
-                );
-            }
-            if (!isNaN(schoolObject._enrolled)) {
-                districtObject.setEnrolled(
-                    districtObject._enrolled + schoolObject._enrolled
-                );
-            }
-            if (!isNaN(schoolObject._studentsWithDisability)) {
-                districtObject.setStudentsWithDisability(
-                    districtObject._studentsWithDisability +
-                    schoolObject._studentsWithDisability
-                );
-            }
-
-
-            let thisDistrictEthnicityArray = [];
-            let thisDistrictEthnicityMap = districtObject._ethnicityMap;
-
-
-            if (!isNaN(schoolObject._ethnicityMap["AA"].value)) {
-                for (let key in schoolObject._ethnicityMap) {
-                    const ethnicityObj = schoolObject._ethnicityMap[key];
-                    if (thisDistrictEthnicityMap[key].isInteger) {
-                        thisDistrictEthnicityMap[key].value = JSON.parse(JSON.stringify(ethnicityObj.value))
-                            + JSON.parse(JSON.stringify(thisDistrictEthnicityMap[key].value))
-                    }
-                    else {
-                        thisDistrictEthnicityMap[key].value = JSON.parse(JSON.stringify(ethnicityObj.value))
-                    }
-                    thisDistrictEthnicityArray.push(JSON.parse(JSON.stringify(thisDistrictEthnicityMap[key])));
-
-                }
-            }
-
-            districtObject.setEthnicityMap(thisDistrictEthnicityMap);
-            districtObject.setEthnicity(thisDistrictEthnicityArray);
-
-
-            let thisDistrictAPArray = [];
-            let thisDistrictAPMap = districtObject._apMap;
-
-            if (!isNaN(schoolObject._apMap["Score=1"].value)) {
-                for (let key in schoolObject._apMap) {
-                    const apObj = schoolObject._apMap[key];
-                    if (thisDistrictAPMap[key].isInteger) {
-                        thisDistrictAPMap[key].value = JSON.parse(JSON.stringify(apObj.value))
-                            + JSON.parse(JSON.stringify(thisDistrictAPMap[key].value))
-                    }
-                    else {
-                        thisDistrictAPMap[key].value = JSON.parse(JSON.stringify(apObj.value))
-                    }
-                    thisDistrictAPArray.push(thisDistrictAPMap[key]);
-                }
-            }
-
-            districtObject.setApMap(thisDistrictAPMap);
-            districtObject.setApArray(thisDistrictAPArray);
-
-            if (!isNaN(schoolObject._englishLanguageLearner)) {
-                districtObject.setEnglishLanguageLearner(
-                    districtObject._englishLanguageLearner +
-                    schoolObject._englishLanguageLearner
-                );
-            }
-
-            if (!schoolName == "Massachusetts") {
-                schoolObjectMap[districtName] = districtObject;
-            }
-
-        }
-
-        return schoolObjectMap;
-    }
-
-    // only use schooldata that have the fields available
-    filterSchoolDataWithFields(schoolDataArray) {
-        let filteredArray = [];
-        let schoolsWithMissingEntry = [];
-        // filter out schools with all available data
-        schoolDataArray.forEach(schoolRow => {
-            if (
-                Number.isInteger(parseInt(schoolRow["FEMALE"])) &&
-                Number.isInteger(parseInt(schoolRow["MALE"])) &&
-                schoolRow["DIST_NAME"] &&
-                Number.isInteger(parseInt(schoolRow["ECODIS"])) &&
-                Number.isInteger(parseInt(schoolRow["SWD"])) &&
-                Number.isInteger(parseInt(schoolRow["SY"])) &&
-                Number.isInteger(parseInt(schoolRow["ELL"])) &&
-                Number.isInteger(parseInt(schoolRow["primary"])) &&
-                Number.isInteger(parseInt(schoolRow["secondary"])) &&
-                Number.isInteger(parseInt(schoolRow["Score=1"])) &&
-                Number.isInteger(parseInt(schoolRow["Score=2"])) &&
-                Number.isInteger(parseInt(schoolRow["Score=3"])) &&
-                Number.isInteger(parseInt(schoolRow["Score=4"])) &&
-                Number.isInteger(parseInt(schoolRow["Score=5"]))
-            ) {
-                filteredArray.push(schoolRow);
-            } else {
-                schoolsWithMissingEntry.push(schoolRow);
-            }
-        });
-
-        return filteredArray;
-    }
-
-
-    getSchoolObjectMap(filteredArray) {
-        let schoolObjectMap = {};
-
-        // add all school data
-        filteredArray.forEach(schoolRow => {
-            const schoolName = schoolRow["School Name"];
-            const districtName = schoolRow["District"];
-
-            let thisSchool = new School();
-            thisSchool.setName(schoolName);
-            thisSchool.setType(EntityType.SCHOOL);
-            thisSchool.setMale(parseInt(schoolRow["MALE"]));
-            thisSchool.setFemale(parseInt(schoolRow["FEMALE"]));
-            thisSchool.setDistrictName(districtName);
-            thisSchool.setEthnicity([]);
-            thisSchool.setEconomicallyDisadvantaged(
-                parseInt(schoolRow["EcoDis"])
-            );
-            thisSchool.setEnrolled(parseInt(schoolRow["STUDENTS_ENROLLED"]));
-            thisSchool.setStudentsWithDisability(parseInt(schoolRow["SWD"]));
-            thisSchool.setSchoolYear(parseInt(schoolRow["SY"]));
-            thisSchool.setEnglishLanguageLearner(parseInt(schoolRow["ELL"]));
-
-            let thisSchoolEthnicityArray = [];
-            let thisSchoolEthnicityMap = {};
-
-            EthnicityAcronymList.forEach(ethnicityObj => {
-                let ethnicityArrayMember = {
-                    id: ethnicityObj.id,
-                    value: parseInt(schoolRow[ethnicityObj.id]),
-                    label: ethnicityObj.desc,
-                    desc: ethnicityObj.desc,
-                    chartColor: ethnicityObj.chartColor
-                };
-
-                thisSchoolEthnicityArray.push(ethnicityArrayMember);
-                thisSchoolEthnicityMap[
-                    ethnicityArrayMember.id
-                ] = ethnicityArrayMember;
-            });
-
-            thisSchool.setEthnicity(thisSchoolEthnicityArray);
-            thisSchool.setEthnicityMap(thisSchoolEthnicityMap);
-
-            let thisSchoolAPArray = [];
-            let thisSchoolAPMap = {};
-
-            APAcronymList.forEach(APObj => {
-                let APArrayMember = {
-                    id: APObj.id,
-                    value: parseInt(schoolRow[APObj.id]),
-                    label: APObj.desc,
-                    desc: APObj.desc,
-                    chartColor: APObj.chartColor
-                };
-
-                thisSchoolAPArray.push(APArrayMember);
-                thisSchoolAPMap[
-                    APArrayMember.id
-                ] = APArrayMember;
-            });
-
-            thisSchool.setApArray(thisSchoolAPArray);
-            thisSchool.setApMap(thisSchoolAPMap);
-
-            schoolObjectMap[schoolName] = thisSchool;
-        });
-
-        return schoolObjectMap;
-    }
 
     /**
-     *
-     * @param {array} filteredArray
-     * @returns {Map} yearSchoolObjectMap
-     */
+  *
+  * @param {array} filteredArray
+  * @returns {Map} yearSchoolObjectMap
+  */
     getYearSchoolObjectMapNew(filteredArray) {
         let schoolObjectMap = {};
         let yearSchoolObjectMap = {};
@@ -678,6 +432,109 @@ class App extends React.Component {
         return yearSchoolObjectMap;
     }
 
+    // only use schooldata that have the fields available
+    filterSchoolDataWithFields(schoolDataArray) {
+        let filteredArray = [];
+        let schoolsWithMissingEntry = [];
+        // filter out schools with all available data
+        schoolDataArray.forEach(schoolRow => {
+            if (
+                Number.isInteger(parseInt(schoolRow["FEMALE"])) &&
+                Number.isInteger(parseInt(schoolRow["MALE"])) &&
+                schoolRow["DIST_NAME"] &&
+                Number.isInteger(parseInt(schoolRow["ECODIS"])) &&
+                Number.isInteger(parseInt(schoolRow["SWD"])) &&
+                Number.isInteger(parseInt(schoolRow["SY"])) &&
+                Number.isInteger(parseInt(schoolRow["ELL"])) &&
+                Number.isInteger(parseInt(schoolRow["primary"])) &&
+                Number.isInteger(parseInt(schoolRow["secondary"])) &&
+                Number.isInteger(parseInt(schoolRow["Score=1"])) &&
+                Number.isInteger(parseInt(schoolRow["Score=2"])) &&
+                Number.isInteger(parseInt(schoolRow["Score=3"])) &&
+                Number.isInteger(parseInt(schoolRow["Score=4"])) &&
+                Number.isInteger(parseInt(schoolRow["Score=5"]))
+            ) {
+                filteredArray.push(schoolRow);
+            } else {
+                schoolsWithMissingEntry.push(schoolRow);
+            }
+        });
+
+        return filteredArray;
+    }
+
+
+    getSchoolObjectMap(filteredArray) {
+        let schoolObjectMap = {};
+        console.log(filteredArray)
+        // add all school data
+        filteredArray.forEach(schoolRow => {
+            const schoolName = schoolRow["School Name"];
+            const districtName = schoolRow["District"];
+
+            let thisSchool = new School();
+            thisSchool.setName(schoolName);
+            thisSchool.setType(EntityType.SCHOOL);
+            thisSchool.setMale(parseInt(schoolRow["MALE"]));
+            thisSchool.setFemale(parseInt(schoolRow["FEMALE"]));
+            thisSchool.setDistrictName(districtName);
+            thisSchool.setEthnicity([]);
+            thisSchool.setEconomicallyDisadvantaged(
+                parseInt(schoolRow["EcoDis"])
+            );
+            thisSchool.setEnrolled(parseInt(schoolRow["STUDENTS_ENROLLED"]));
+            thisSchool.setStudentsWithDisability(parseInt(schoolRow["SWD"]));
+            thisSchool.setSchoolYear(parseInt(schoolRow["SY"]));
+            thisSchool.setEnglishLanguageLearner(parseInt(schoolRow["ELL"]));
+
+            let thisSchoolEthnicityArray = [];
+            let thisSchoolEthnicityMap = {};
+
+            EthnicityAcronymList.forEach(ethnicityObj => {
+                let ethnicityArrayMember = {
+                    id: ethnicityObj.id,
+                    value: parseInt(schoolRow[ethnicityObj.id]),
+                    label: ethnicityObj.desc,
+                    desc: ethnicityObj.desc,
+                    chartColor: ethnicityObj.chartColor
+                };
+
+                thisSchoolEthnicityArray.push(ethnicityArrayMember);
+                thisSchoolEthnicityMap[
+                    ethnicityArrayMember.id
+                ] = ethnicityArrayMember;
+            });
+
+            thisSchool.setEthnicity(thisSchoolEthnicityArray);
+            thisSchool.setEthnicityMap(thisSchoolEthnicityMap);
+
+            let thisSchoolAPArray = [];
+            let thisSchoolAPMap = {};
+
+            APAcronymList.forEach(APObj => {
+                let APArrayMember = {
+                    id: APObj.id,
+                    value: parseInt(schoolRow[APObj.id]),
+                    label: APObj.desc,
+                    desc: APObj.desc,
+                    chartColor: APObj.chartColor
+                };
+
+                thisSchoolAPArray.push(APArrayMember);
+                thisSchoolAPMap[
+                    APArrayMember.id
+                ] = APArrayMember;
+            });
+
+            thisSchool.setApArray(thisSchoolAPArray);
+            thisSchool.setApMap(thisSchoolAPMap);
+
+            schoolObjectMap[schoolName] = thisSchool;
+        });
+
+        return schoolObjectMap;
+    }
+
     /**
      * Filter School data on schools and years selected
      * @param {Map} yearSchoolObjectMap
@@ -685,8 +542,8 @@ class App extends React.Component {
      * @param {Map} selectedYearsMap
      * @returns {Map} filteredSchoolDataMap of type Map[year] -> Array{SchoolObject}
      */
-    filterYearSchoolObjectMap(yearSchoolObjectMap, selectedSchoolsArray, selectedYearsMap) {
-
+    filterYearSchoolObjectMap(schoolData, selectedSchoolsArray, selectedYearsMap) {
+        console.log(schoolData);
         let filteredSchoolDataMap = {};
         let selectedYearsArray = [];
         Object.keys(selectedYearsMap).forEach((key) => {
@@ -700,10 +557,10 @@ class App extends React.Component {
 
             }
             selectedSchoolsArray.forEach(schoolName => {
-                filteredSchoolDataMap[year].push(yearSchoolObjectMap[year][schoolName]);
+                filteredSchoolDataMap[year].push(schoolData[year][schoolName]);
             });
         });
-
+        console.log(filteredSchoolDataMap)
         return filteredSchoolDataMap;
     }
 

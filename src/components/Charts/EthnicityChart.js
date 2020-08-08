@@ -107,8 +107,7 @@ const styles = {
 
 function createPieCharts(chartData) {
     let pieCharts = [];
-    const dataLength = chartData.length;
-    chartData.forEach((row, index) => {
+    chartData.forEach((row) => {
         if (isNaN(row.dataArray[0].value)) {
             pieCharts.push(
                 <div className="NoDataWrapper">

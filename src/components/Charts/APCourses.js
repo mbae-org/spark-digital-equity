@@ -15,7 +15,7 @@ function APCoursesChart(props) {
         const thisYearSchoolDataArrayScore = getGroupedAPData(yearToSchoolArrayDataMap[year]);
         const thisYearSchoolDataArrayEnrollement = getEnrollementForSchool(yearToSchoolArrayDataMap[year]);
         let thisYearPieCharts;
-        if (props.options.score == true) {
+        if (props.options.score === true) {
             thisYearPieCharts = getPieChartsScores(thisYearSchoolDataArrayScore);
         }
         else {
@@ -130,10 +130,6 @@ function getEnrollementForSchool(schoolArrayForYear) {
             schoolData.forEach(apObject => {
                 totalCountTested += apObject.value;
             });
-            const EnrolledPercentage = (
-                (totalCountEnrolled / (totalCountEnrolled + totalCountTested)) *
-                100
-            ).toFixed(2);
             const TestedPercentage = (
                 (totalCountTested / (totalCountEnrolled)) *
                 100
@@ -169,10 +165,9 @@ function getEnrollementForSchool(schoolArrayForYear) {
 
 
 function getPieChartsScores(schoolDataArray) {
-    const dataLength = schoolDataArray.length;
     let pieCharts = [];
 
-    schoolDataArray.forEach((row, index) => {
+    schoolDataArray.forEach((row) => {
         const schoolName = row.schoolName;
         const schoolData = row.dataArray;
         if (isNaN(schoolData[0].value)) {
@@ -216,10 +211,9 @@ function getPieChartsScores(schoolDataArray) {
 
 
 function getPieChartsEnrollment(schoolDataArray) {
-    const dataLength = schoolDataArray.length;
     let pieCharts = [];
 
-    schoolDataArray.forEach((row, index) => {
+    schoolDataArray.forEach((row) => {
         const schoolName = row.schoolName;
         const schoolData = row.dataArray;
         if (isNaN(schoolData[0].value)) {

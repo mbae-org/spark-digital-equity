@@ -112,9 +112,8 @@ const styles = {
 };
 
 function getPieCharts(schoolDataArray) {
-    const dataLength = schoolDataArray.length;
     let pieCharts = [];
-    schoolDataArray.forEach((row, index) => {
+    schoolDataArray.forEach((row) => {
         const schoolName = row.schoolName;
         const schoolData = row.dataArray;
         if (isNaN(schoolData[0].value)) {

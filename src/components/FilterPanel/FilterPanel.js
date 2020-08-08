@@ -32,16 +32,7 @@ function FilterPanel(props) {
                     props.onGraphSelectionChange(newSelection)
                 }
             />
-            {/* <div className={"buttonPanel"}>
-                <button className={"resetAllButton"} onClick={props.onResetButtonClick}>
-                    Reset All
-                </button>
-                <button className={"downloadDataButton"}>
-                    <a href="./data/data-out.csv" download className={"downloadDataLink"}>
-                        Download Data
-                    </a>
-                </button>
-            </div> */}
+            {}
         </div>
     );
 }

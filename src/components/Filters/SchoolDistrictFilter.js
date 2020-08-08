@@ -1,5 +1,4 @@
 import React from "react";
-// import Select from "react-select";
 
 import Creatable from "react-select/creatable";
 import { components } from "react-select";
@@ -21,27 +20,10 @@ class SchoolDistrictFilter extends React.Component {
 
 
         this.state = {
-            // valueObj: this.getOptionsArray(props.selectedSchoolArray, allOptionsArray),
             allOptionsArray: allOptionsArray
         };
 
     }
-
-    // Menu(props) {
-    //     const optionSelectedLength = props.getValue().length || 0;
-    //     return (
-    //         <components.Menu {...props}>
-    //             {optionSelectedLength < 3 ? (
-    //                 props.children
-    //             ) : (
-    //                 <div style={{ margin: 15 }}>
-    //                     Cannot view more than 3 schools/districts
-    //                 </div>
-    //             )}
-    //         </components.Menu>
-    //     );
-    // }
-
 
     render() {
 
@@ -58,7 +40,7 @@ class SchoolDistrictFilter extends React.Component {
                     ) : (
                             <div style={{ margin: 15 }}>
                                 Cannot view more than 3 schools/districts
-                        </div>
+                            </div>
                         )}
                 </components.Menu>
             );
@@ -75,7 +57,6 @@ class SchoolDistrictFilter extends React.Component {
                         isMulti
                         required
                         onChange={(selectedOptions, actionMeta) =>
-                            // this.props.onOptionsChange(selectedOptions, actionMeta)
                             this.onOptionsChange(selectedOptions, actionMeta)
                         }
                         value={this.getOptionsArray(this.props.selectedSchoolArray, this.state.allOptionsArray)}
