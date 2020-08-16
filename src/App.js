@@ -466,7 +466,6 @@ class App extends React.Component {
 
     getSchoolObjectMap(filteredArray) {
         let schoolObjectMap = {};
-        console.log(filteredArray)
         // add all school data
         filteredArray.forEach(schoolRow => {
             const schoolName = schoolRow["School Name"];
@@ -543,7 +542,6 @@ class App extends React.Component {
      * @returns {Map} filteredSchoolDataMap of type Map[year] -> Array{SchoolObject}
      */
     filterYearSchoolObjectMap(schoolData, selectedSchoolsArray, selectedYearsMap) {
-        console.log(schoolData);
         let filteredSchoolDataMap = {};
         let selectedYearsArray = [];
         Object.keys(selectedYearsMap).forEach((key) => {
@@ -560,7 +558,6 @@ class App extends React.Component {
                 filteredSchoolDataMap[year].push(schoolData[year][schoolName]);
             });
         });
-        console.log(filteredSchoolDataMap)
         return filteredSchoolDataMap;
     }
 

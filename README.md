@@ -28,20 +28,45 @@ There is examples of what the final CSV file should look like in the repository.
 
 1. Go back to where the project is saved on the computer
 2. In the folder spark-digital-equity/data-processing/initial_data add the file in the format of year.json (ex. 2019.json)
+    - the json file should be formatted with following following columns
+        - STUDENTS_ENROLLED
+        - AA 
+        - AS 
+        - District 
+        - ELL
+        - EcoDis
+        - FEMALE
+        - HI
+        - MALE
+        - MR
+        - NA
+        - NH_PI
+        - NONBINARY
+        - ORG_CODE
+        - SWD
+        - SY
+        - School Code
+        - School Name
+        - Score=1
+        - Score=2
+        - Score=3
+        - Score=4
+        - Score=5
+        - Tests Taken
+        - WH
 
-
-5. Add the corresponding year to the year array in the year.js file under the path of src/data/year.js - example below
+3. Add the corresponding year to the year array in the year.js file under the path of src/data/year.js - example below
 
     ```javascript
     var year = [2016, 2017, 2018, 2019]
     ```
-6. Run the python script data_process.py inside of the data_processing folder (make sure to have python installed). This will populate the final_data.json file with the new data file added in. 
+4. Run the python script data_process.py inside of the data_processing folder (make sure to have python installed). This will populate the final_data.json file with the new data file added in. 
 
     ```bash
     python3 data-processing/data_process.py
     ```
 
-7. Save changes
+5. Save changes
 
 ### 4. Pushing changes to the live site
 

@@ -1,6 +1,5 @@
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
-// import { EntityType, EthnicityAcronymList } from "../../Constants";
 
 /**
  * Main class component
@@ -55,7 +54,9 @@ function getGroupedEthnicData(schoolArrayForYear) {
 
             // get percentage calculation out of total students that we consider
             let totalStudents = 0;
-            schoolDataArray.forEach(element => (totalStudents += element.value));
+            schoolDataArray.forEach(element => {
+                if (element.value) { totalStudents += element.value }
+            });
             schoolDataArray.forEach(
                 element =>
                     (element.percentage = (
@@ -63,7 +64,6 @@ function getGroupedEthnicData(schoolArrayForYear) {
                         100
                     ).toFixed(2))
             );
-
 
             thisSchoolData.schoolName = schoolName;
             thisSchoolData.dataArray = schoolDataArray;
@@ -91,7 +91,6 @@ const styles = {
     categoryChartsParent: {
         display: "flex",
         flexDirection: "column",
-        // height: "50%",
         width: "100%",
         borderBottomStyle: "solid",
         borderBottomWidth: "thin",
@@ -144,12 +143,6 @@ function createPieCharts(chartData) {
             );
         }
     });
-
-    // if (pieCharts && pieCharts.length > 0) {
-    //     const heading = [];
-    //     heading.push(<h3 key="ethnicityHeading">Ethnicity</h3>);
-    //     pieCharts = heading.concat(pieCharts);
-    // }
 
     return pieCharts;
 }

@@ -10,10 +10,6 @@ class Data_process:
         self.data_by_year =[]
     def clean_up_data(self):
         for key in self.data_array.keys():
-            if 'NONBINARY' not in self.data_array[key]:
-                self.data_array[key]['NONBINARY'] = np.nan
-            if 'STUDENTS_ENROLLED' in self.data_array[key]:
-                self.data_array[key] = self.data_array[key].drop(columns=['STUDENTS_ENROLLED'])
             self.data_array[key] = self.data_array[key].applymap(lambda x: np.nan if not x else x)
 
     def set_up_data(self):
@@ -32,11 +28,11 @@ class Data_process:
             self.data_by_year.append(currentYear)
 
         all_merged = pd.concat(self.data_by_year)
-        all_merged_json = all_merged.to_json("initial_data/final_data.json", orient='records')
-        all_merged_json2 = all_merged.to_json("../src/data/final_data.json", orient='records')
+        all_merged.to_json("data-processing/initial_data/final_data.json", orient='records')
+        all_merged.to_json("src/data/final_data.json", orient='records')
     
 def main():
-    data = Data_process("initial_data")
+    data = Data_process("data-processing/initial_data")
     data.set_up_data()
     data.merge_data()
 
