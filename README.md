@@ -27,24 +27,18 @@ There is examples of what the final CSV file should look like in the repository.
 ### 3. Editing the repository
 
 1. Go back to where the project is saved on the computer
-2. In the folder spark-digital-equity/src/data/new data, add the 2019.json file
-3. In the folder spark-digital-equity/src/data, and open TotalData.js
-4. Add the following line to import data from the 2019.json file
+2. In the folder spark-digital-equity/data-processing/initial_data add the file in the format of year.json (ex. 2019.json)
+
+
+5. Add the corresponding year to the year array in the year.js file under the path of src/data/year.js - example below
 
     ```javascript
-    import nineteenData from "./new data/2019.json"
+    var year = [2016, 2017, 2018, 2019]
     ```
+6. Run the python script data_process.py inside of the data_processing folder (make sure to have python installed). This will populate the final_data.json file with the new data file added in. 
 
-5. Add 2019 to YearList
-
-    ```javascript
-    export const YearList = [2016,2017, 2018, 2019];
-    ```
-
-6. Add nineteenData to be added to the combined data variable
-
-    ```javascript
-    let combined = seventeenData.concat(eighteenData).concat(nineteenData)
+    ```bash
+    python3 data-processing/data_process.py
     ```
 
 7. Save changes
