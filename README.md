@@ -1,5 +1,8 @@
 # spark-digital-equity
 
+[![Actions Status](https://github.com/rishabnayak/spark-digital-equity/workflows/Build/badge.svg)](https://github.com/rishabnayak/spark-digital-equity/actions)
+[![License](http://img.shields.io/badge/License-MIT-brightgreen.svg)](./LICENSE)
+
 ## Adding new year of data
 
 ### 1. Access the repository
