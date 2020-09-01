@@ -2,6 +2,7 @@ import React from "react";
 import SchoolDistrictFilter from "../Filters/SchoolDistrictFilter";
 import PrimaryGraphsChoose from "../Filters/PrimaryGraphsChoose";
 import YearFilter from "../Filters/YearFilter";
+import Login from "../addData/login";
 import '../Filters/Filters.css'
 
 // defaultSchoolOptions =
@@ -32,6 +33,7 @@ function FilterPanel(props) {
                     props.onGraphSelectionChange(newSelection)
                 }
             />
+            {/* <Login /> */}
             {}
         </div>
     );
