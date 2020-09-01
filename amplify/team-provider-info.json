@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-digitalequitybackend-dev-13811-authRole",
+            "UnauthRoleArn": "arn:aws:iam::921561771160:role/amplify-digitalequitybackend-dev-13811-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::921561771160:role/amplify-digitalequitybackend-dev-13811-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-digitalequitybackend-dev-13811-deployment",
+            "UnauthRoleName": "amplify-digitalequitybackend-dev-13811-unauthRole",
+            "StackName": "amplify-digitalequitybackend-dev-13811",
+            "StackId": "arn:aws:cloudformation:us-east-1:921561771160:stack/amplify-digitalequitybackend-dev-13811/53898050-ec15-11ea-b64c-0a90b7832da7",
+            "AmplifyAppId": "d1ndjmgxm7hwyn"
+        },
+        "categories": {
+            "auth": {
+                "digitalequitybackend8c187d3a": {}
+            }
+        }
+    }
+}

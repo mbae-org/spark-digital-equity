@@ -15,6 +15,10 @@ import NextStepsPanel from "./components/NextSteps/NextStepsPanel"
 import schoolData from "./data/TotalData"
 import { YearList } from "./data/TotalData"
 import School from "./School";
+import { Storage } from "aws-amplify";
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+import { withAuthenticator } from "@aws-amplify/ui-react"
 
 import {
     EntityType,
@@ -24,7 +28,7 @@ import {
     APScoreAcronymMap
 } from "./Constants";
 
-
+Amplify.configure(awsconfig);
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -40,10 +44,11 @@ class App extends React.Component {
         });
         selectedYearsMap[YearList[YearList.length - 1]] = true;
         const selectedSchools = ["Massachusetts"];
-
         const schoolDataModified = this.transformSchoolData(schoolData)
-
         this.state = {
+            fileUrl: '',
+            file: '',
+            filename: '',
             schoolDataModified: schoolDataModified,
             selectedFilters: {
                 gender: true,
@@ -65,6 +70,24 @@ class App extends React.Component {
 
     }
 
+    handleChange = e => {
+        const file = e.target.files[0]
+        this.setState({
+            fileUrl: URL.createObjectURL(file),
+            file,
+            filename: file.name
+        })
+    }
+    SaveFile = () => {
+        Storage.put(this.state.filename, this.state.file)
+            .then(() => {
+                this.setState({ fileUrl: "", file: "", filename: "" })
+                console.log("sucessfully saved file!")
+            })
+            .catch(err => {
+                console.log("error loading the file", err)
+            })
+    }
     resetDefaultState() {
         let selectedYearsMap = {};
         YearList.forEach(year => {
@@ -122,6 +145,9 @@ class App extends React.Component {
                                 onResetButtonClick={this.resetDefaultState}
                                 selectedSchoolArray={this.state.selectedSchoolArray}
                             />
+                            <input type="file" onChange={this.handleChange} />
+                            <img src={this.state.fileUrl} alt="" />
+                            <button onClick={this.SaveFile}>Add file</button>
                         </div>
                         <div className="chart-panel">{charts}</div>
                     </div>
@@ -563,4 +589,4 @@ class App extends React.Component {
 
 }
 
-export default App;
+export default withAuthenticator(App, { includeGreetings: true });
