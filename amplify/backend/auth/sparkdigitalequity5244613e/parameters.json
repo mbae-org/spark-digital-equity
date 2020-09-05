@@ -1,6 +1,8 @@
 {
-    "resourceNameTruncated": "digita8c187d3a",
-    "userPoolName": "digitalequitybackend8c187d3a_userpool_8c187d3a",
+    "identityPoolName": "sparkdigitalequity5244613e_identitypool_5244613e",
+    "allowUnauthenticatedIdentities": true,
+    "resourceNameTruncated": "sparkd5244613e",
+    "userPoolName": "sparkdigitalequity5244613e_userpool_5244613e",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -19,18 +21,18 @@
         "email"
     ],
     "userpoolClientGenerateSecret": true,
-    "userpoolClientRefreshTokenValidity": "30",
+    "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
         "email"
     ],
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "digita8c187d3a_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "sparkd5244613e_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "8c187d3a",
-    "resourceName": "digitalequitybackend8c187d3a",
-    "authSelections": "userPoolOnly",
+    "sharedId": "5244613e",
+    "resourceName": "sparkdigitalequity5244613e",
+    "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
             "AuthRole",
@@ -43,18 +45,12 @@
             "Arn"
         ]
     },
-    "useDefault": "manual",
-    "usernameAttributes": [
-        "email"
-    ],
+    "useDefault": "default",
     "triggers": "{}",
     "userPoolGroupList": [],
     "parentStack": {
         "Ref": "AWS::StackId"
     },
     "permissions": [],
-    "dependsOn": [],
-    "userPoolGroups": false,
-    "adminQueries": false,
-    "hostedUI": false
+    "dependsOn": []
 }

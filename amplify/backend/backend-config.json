@@ -1,15 +1,15 @@
 {
-    "auth": {
-        "digitalequitybackend8c187d3a": {
-            "service": "Cognito",
-            "providerPlugin": "awscloudformation",
-            "dependsOn": []
-        }
-    },
-    "storage": {
-        "digitalequitystorage": {
-            "service": "S3",
-            "providerPlugin": "awscloudformation"
-        }
-    }
+	"auth": {
+		"sparkdigitalequity5244613e": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"storage": {
+		"digitalequitystorage": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
 }
