@@ -15,9 +15,8 @@ import NextStepsPanel from "./components/NextSteps/NextStepsPanel"
 import schoolData from "./data/TotalData"
 import { YearList } from "./data/TotalData"
 import School from "./School";
-import { Storage } from "aws-amplify";
-import Amplify, { Auth } from 'aws-amplify';
-import awsconfig from './aws-exports';
+import Amplify, { Storage } from 'aws-amplify';
+import awsmobile from "./aws-exports.js"
 import { withAuthenticator } from "@aws-amplify/ui-react"
 
 
@@ -29,7 +28,7 @@ import {
     APScoreAcronymMap
 } from "./Constants";
 
-Amplify.configure(awsconfig);
+Amplify.configure(awsmobile);
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -48,8 +47,9 @@ class App extends React.Component {
         const schoolDataModified = this.transformSchoolData(schoolData)
         this.state = {
             fileUrl: '',
-            file: '',
             filename: '',
+            file: "",
+            retrievedFiles: [],
             schoolDataModified: schoolDataModified,
             selectedFilters: {
                 gender: true,
@@ -81,14 +81,19 @@ class App extends React.Component {
     }
     SaveFile = () => {
         Storage.put(this.state.filename, this.state.file)
-            .then(() => {
+            .then(async () => {
                 this.setState({ fileUrl: "", file: "", filename: "" })
                 console.log("sucessfully saved file!")
+                const files = await Storage.list("")
+                const data = await Storage.get(files[0].key);
+                console.log(data)
+                this.setState({ retrievedFiles: files })
             })
             .catch(err => {
                 console.log("error loading the file", err)
             })
     }
+
     resetDefaultState() {
         let selectedYearsMap = {};
         YearList.forEach(year => {
@@ -149,6 +154,17 @@ class App extends React.Component {
                             <input type="file" onChange={this.handleChange} />
                             <img src={this.state.fileUrl} alt="" />
                             <button onClick={this.SaveFile}>Add file</button>
+                            <div>
+                                {
+                                    console.log(this.state.retrievedFiles)
+                                }
+                                {/* this.state.retrievedFiles.map(file => (
+                                        <li>
+                                            file
+                                        </li>
+                                    ))
+                                } */}
+                            </div>
                         </div>
                         <div className="chart-panel">{charts}</div>
                     </div>

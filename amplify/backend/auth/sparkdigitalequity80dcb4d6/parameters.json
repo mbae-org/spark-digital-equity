@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "sparkdigitalequity5244613e_identitypool_5244613e",
+    "identityPoolName": "sparkdigitalequity80dcb4d6_identitypool_80dcb4d6",
     "allowUnauthenticatedIdentities": true,
-    "resourceNameTruncated": "sparkd5244613e",
-    "userPoolName": "sparkdigitalequity5244613e_userpool_5244613e",
+    "resourceNameTruncated": "sparkd80dcb4d6",
+    "userPoolName": "sparkdigitalequity80dcb4d6_userpool_80dcb4d6",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,10 +28,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "sparkd5244613e_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "sparkd80dcb4d6_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "5244613e",
-    "resourceName": "sparkdigitalequity5244613e",
+    "sharedId": "80dcb4d6",
+    "resourceName": "sparkdigitalequity80dcb4d6",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -46,11 +46,6 @@
         ]
     },
     "useDefault": "default",
-    "triggers": "{}",
     "userPoolGroupList": [],
-    "parentStack": {
-        "Ref": "AWS::StackId"
-    },
-    "permissions": [],
     "dependsOn": []
 }

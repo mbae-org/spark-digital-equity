@@ -1,19 +1,19 @@
 {
     "dev": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-sparkdigitalequity-dev-10422-authRole",
-            "UnauthRoleArn": "arn:aws:iam::921561771160:role/amplify-sparkdigitalequity-dev-10422-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::921561771160:role/amplify-sparkdigitalequity-dev-10422-authRole",
+            "AuthRoleName": "amplify-sparkdigitalequity-dev-175953-authRole",
+            "UnauthRoleArn": "arn:aws:iam::921561771160:role/amplify-sparkdigitalequity-dev-175953-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::921561771160:role/amplify-sparkdigitalequity-dev-175953-authRole",
             "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-sparkdigitalequity-dev-10422-deployment",
-            "UnauthRoleName": "amplify-sparkdigitalequity-dev-10422-unauthRole",
-            "StackName": "amplify-sparkdigitalequity-dev-10422",
-            "StackId": "arn:aws:cloudformation:us-east-1:921561771160:stack/amplify-sparkdigitalequity-dev-10422/4467f430-ef35-11ea-85f3-0e5e10b6c293",
-            "AmplifyAppId": "d3qnz8vbzlsrwp"
+            "DeploymentBucketName": "amplify-sparkdigitalequity-dev-175953-deployment",
+            "UnauthRoleName": "amplify-sparkdigitalequity-dev-175953-unauthRole",
+            "StackName": "amplify-sparkdigitalequity-dev-175953",
+            "StackId": "arn:aws:cloudformation:us-east-1:921561771160:stack/amplify-sparkdigitalequity-dev-175953/4ba47c20-f08c-11ea-90c1-0ad9172a6ca8",
+            "AmplifyAppId": "d8ibnjm6cpwsb"
         },
         "categories": {
             "auth": {
-                "sparkdigitalequity5244613e": {}
+                "sparkdigitalequity80dcb4d6": {}
             }
         }
     }
