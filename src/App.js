@@ -169,17 +169,7 @@ class App extends React.Component {
                             <input type="file" onChange={this.handleChange} />
                             <img src={this.state.fileUrl} alt="" />
                             <button onClick={this.readFile}>Add file</button>
-                            <div>
-                                {
-                                    console.log(this.state.retrievedFiles)
-                                }
-                                {/* this.state.retrievedFiles.map(file => (
-                                        <li>
-                                            file
-                                        </li>
-                                    ))
-                                } */}
-                            </div>
+
                         </div>
                         <div className="chart-panel">{charts}</div>
                     </div>
