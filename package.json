@@ -3,13 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@aws-amplify/ui-react": "^0.2.16",
     "@nivo/bar": "^0.61.1",
     "@nivo/legends": "^0.61.1",
     "@nivo/pie": "^0.61.1",
-    "aws-amplify": "^3.0.25",
-    "aws-amplify-react": "^4.2.0",
-    "aws-sdk": "^2.747.0",
     "convert-csv-to-json": "0.0.15",
     "csvjson": "^5.1.0",
     "csvtojson": "^2.0.10",

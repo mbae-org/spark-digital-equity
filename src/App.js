@@ -15,10 +15,6 @@ import NextStepsPanel from "./components/NextSteps/NextStepsPanel"
 import schoolData from "./data/TotalData"
 import { YearList } from "./data/TotalData"
 import School from "./School";
-import Amplify, { Storage, API } from 'aws-amplify';
-import awsmobile from "./aws-exports.js"
-import { withAuthenticator } from "@aws-amplify/ui-react"
-
 
 import {
     EntityType,
@@ -27,7 +23,8 @@ import {
     APAcronymList,
     APScoreAcronymMap
 } from "./Constants";
-Amplify.configure(awsmobile);
+
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -43,12 +40,10 @@ class App extends React.Component {
         });
         selectedYearsMap[YearList[YearList.length - 1]] = true;
         const selectedSchools = ["Massachusetts"];
+
         const schoolDataModified = this.transformSchoolData(schoolData)
+
         this.state = {
-            fileUrl: '',
-            filename: '',
-            file: "",
-            retrievedFiles: [],
             schoolDataModified: schoolDataModified,
             selectedFilters: {
                 gender: true,
@@ -68,45 +63,6 @@ class App extends React.Component {
             filteredSchoolData: this.filterYearSchoolObjectMap(schoolDataModified, selectedSchools, selectedYearsMap)
         };
 
-    }
-
-    handleChange = e => {
-        const file = e.target.files[0]
-        this.setState({
-            fileUrl: URL.createObjectURL(file),
-            file,
-            filename: file.name
-        })
-    }
-    saveFile = () => {
-        Storage.put(this.state.filename, this.state.file)
-            .then(async () => {
-                this.setState({ fileUrl: "", file: "", filename: "" })
-                console.log("sucessfully saved file!")
-                const files = await Storage.list("")
-                const data = await Storage.get(files[0].key);
-                console.log(data)
-                this.setState({ retrievedFiles: files })
-            })
-            .catch(err => {
-                console.log("error loading the file", err)
-            })
-    }
-
-    async readFile() {
-        // var fs = require('fs');
-        // var path = require('path');
-
-        // var params = {
-        //     Bucket: "digitalequitybucket175953-dev",
-        //     Key: "data.json"
-        // };
-
-        // var tempFileName = path.join('/tmp', 'new_data.json');
-        // var tempFile = fs.createWriteStream(tempFileName);
-        // s3.getObject(params).createReadStream().pipe(tempFile);
-        const data = await API.get('digitalequity', '/items');
-        console.log(data);
     }
 
     resetDefaultState() {
@@ -166,10 +122,6 @@ class App extends React.Component {
                                 onResetButtonClick={this.resetDefaultState}
                                 selectedSchoolArray={this.state.selectedSchoolArray}
                             />
-                            <input type="file" onChange={this.handleChange} />
-                            <img src={this.state.fileUrl} alt="" />
-                            <button onClick={this.readFile}>Add file</button>
-
                         </div>
                         <div className="chart-panel">{charts}</div>
                     </div>
@@ -611,4 +563,4 @@ class App extends React.Component {
 
 }
 
-export default withAuthenticator(App, { includeGreetings: true });
+export default App;
