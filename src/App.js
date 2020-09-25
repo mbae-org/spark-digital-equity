@@ -13,8 +13,10 @@ import ELLChart from "./components/Charts/ELLChart";
 import APCoursesChart from "./components/Charts/APCourses"
 import NextStepsPanel from "./components/NextSteps/NextStepsPanel"
 import schoolData from "./data/TotalData"
+import UploadData from "./components/addData/UploadData";
 import { YearList } from "./data/TotalData"
 import School from "./School";
+
 
 import {
     EntityType,
@@ -45,6 +47,7 @@ class App extends React.Component {
 
         this.state = {
             schoolDataModified: schoolDataModified,
+            file: null,
             selectedFilters: {
                 gender: true,
                 ethnicity: true,
@@ -126,6 +129,8 @@ class App extends React.Component {
                         <div className="chart-panel">{charts}</div>
                     </div>
                 </div>
+                <h1>hi</h1>
+                <UploadData />
                 <NextStepsPanel />
                 <footer>Contact Info</footer>
             </div>
