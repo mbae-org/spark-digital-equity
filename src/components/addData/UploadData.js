@@ -1,4 +1,5 @@
 import React from "react";
+import { functions } from "@/firebase/init";
 
 function UploadData(props) {
     return (
@@ -12,6 +13,7 @@ function UploadData(props) {
 }
 export default UploadData;
 
-function optionChangeHandler(props, event) {
-    console.log(event.target.files[0])
+async function optionChangeHandler(props, event) {
+    const test = await functions.httpsCallable("uploadFile")({ file: event.target.files[0] });
+    console.log(test);
 }
