@@ -1,27 +1,73 @@
-import React from "react";
+import React, { Component } from "react";
+import firebase from "firebase/app";
 
-// defaultSchoolOptions =
+export default class Login extends Component {
+    constructor(props) {
+        super(props);
 
-function login() {
+        this.state = {
+            email: "",
+            password: ""
+        };
 
-    return (
-        <div className="YearFilter">
-            <p>Login as admin to add data</p>
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({
+            [event.target.name]: event.target.value
+        });
+    }
+
+    async handleSubmit(event) {
+        const { email, password } = this.state;
+        // await functions.httpsCallable("signUp")({
+        //     email: email,
+        //     password: password
+        // });
+
+        firebase.auth().signInWithEmailAndPassword(email, password)
+            .then(() => {
+                return console.log("submitted user!")
+            })
+            .catch((error) => {
+                // Handle Errors here.
+                var errorMessage = error.message;
+                alert(errorMessage);
+
+            });
+        event.preventDefault();
+    }
+
+    render() {
+        return (
             <div>
-                <form>
-                    <label>
-                        Username:
-    <input type="text" name="name" />
-                    </label>
-                    <label>
-                        Password:
-    <input type="text" name="password" />
-                    </label>
-                    <input type="submit" value="Submit" />
-                </form>
-            </div>
-        </div>
-    );
-}
+                <form onSubmit={this.handleSubmit}>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        value={this.state.email}
+                        onChange={this.handleChange}
+                        required
+                    />
 
-export default login;
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        value={this.state.password}
+                        onChange={this.handleChange}
+                        required
+                    />
+
+                    <button type="submit">Login</button>
+                </form>
+
+            </div>
+
+
+        );
+    }
+}

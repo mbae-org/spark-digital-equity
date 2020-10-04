@@ -35,13 +35,11 @@ class Data_process:
 
         all_merged = pd.concat(self.data_by_year)
         all_merged.to_json(
-            "data-processing/initial_data/final_data.json", orient='records')
+            self.data_array[1], orient='records')
         all_merged.to_json("src/data/final_data2.json", orient='records')
 
 
 def main(dataPath, dataFile):
-    data = Data_process("data-processing/initial_data",
-                        ["2018.json", "final_data.json"])
     data = Data_process(dataPath,
                         dataFile)
     data.set_up_data()

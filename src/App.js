@@ -14,8 +14,10 @@ import APCoursesChart from "./components/Charts/APCourses"
 import NextStepsPanel from "./components/NextSteps/NextStepsPanel"
 import schoolData from "./data/TotalData"
 import UploadData from "./components/addData/UploadData";
+import Login from "./components/addData/Login";
 import { YearList } from "./data/TotalData"
 import School from "./School";
+import firebase from "firebase/app";
 
 
 import {
@@ -48,6 +50,7 @@ class App extends React.Component {
         this.state = {
             schoolDataModified: schoolDataModified,
             file: null,
+            logined: false,
             selectedFilters: {
                 gender: true,
                 ethnicity: true,
@@ -66,6 +69,17 @@ class App extends React.Component {
             filteredSchoolData: this.filterYearSchoolObjectMap(schoolDataModified, selectedSchools, selectedYearsMap)
         };
 
+    }
+
+    componentDidMount() {
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                this.setState({ logined: true });
+            }
+            else {
+                this.setState({ logined: false });
+            }
+        });
     }
 
     resetDefaultState() {
@@ -102,6 +116,14 @@ class App extends React.Component {
 
     render() {
         const charts = this.createChartsFromFilterState();
+
+        let comp;
+        if (this.state.logined) {
+            comp = <UploadData />;
+        }
+        else {
+            comp = <Login />;
+        }
         return (
             <div>
                 <div className="App">
@@ -129,13 +151,13 @@ class App extends React.Component {
                         <div className="chart-panel">{charts}</div>
                     </div>
                 </div>
-                <h1>hi</h1>
-                <UploadData />
+                {comp}
                 <NextStepsPanel />
                 <footer>Contact Info</footer>
             </div>
         );
     }
+
 
     createChartsFromFilterState() {
         const selectedFilters = this.state.selectedFilters;

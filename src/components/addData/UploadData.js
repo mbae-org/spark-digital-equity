@@ -1,5 +1,6 @@
 import React from "react";
-import { functions } from "@/firebase/init";
+import { functions } from "../../firebase/init";
+import * as firebase from "firebase/app";
 
 function UploadData(props) {
     return (
@@ -8,12 +9,26 @@ function UploadData(props) {
             <div><input type="file" onChange={event =>
                 optionChangeHandler(props, event)
             } /></div>
+            <button onClick={logout}>Logout</button>
         </div>
     );
 }
 export default UploadData;
 
+async function logout() {
+    await firebase.auth().signOut();
+}
+
 async function optionChangeHandler(props, event) {
-    const test = await functions.httpsCallable("uploadFile")({ file: event.target.files[0] });
-    console.log(test);
+    //await functions.httpsCallable("uploadFile")({ file: event.target.files[0] });
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = async () => {
+        functions
+            .httpsCallable("uploadFile")({
+                file: reader.result.split(",")[1],
+                type: file.type
+            });
+    };
 }
