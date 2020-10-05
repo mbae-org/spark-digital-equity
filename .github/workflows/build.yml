@@ -15,6 +15,7 @@ jobs:
     - uses: actions/setup-node@master
       with: 
         node-version: '14.x'
+    - run: ls
     - run: cd src
     - run: ls
     - run: cd data
@@ -23,8 +24,8 @@ jobs:
     - run: wget -O ./final_data.json ${{ github.event.inputs.downloadURL }}
     - run: cd .. && cd ..
     - run: npm run build
-    - uses: w9jds/firebase-action@v1.5.0
-      with:
-        args: deploy
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+    # - uses: w9jds/firebase-action@v1.5.0
+    #   with:
+    #     args: deploy
+    #   env:
+    #     FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
