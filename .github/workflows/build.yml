@@ -15,11 +15,13 @@ jobs:
     - uses: actions/setup-node@master
       with: 
         node-version: '14.x'
-    - run: npm install
+    - name: Install Packages
+      run: npm install
     - name: Get Data
-      run: rm final_data.json && wget -O ./final_data.json ${{ github.event.inputs.downloadURL }}
-      working-directory: ./src/data/
-    - run: npm run build
+      run: rm final_data.json && wget -O final_data.json ${{ github.event.inputs.downloadURL }} && ls
+      working-directory: /src/data/
+    - name: Build
+      run: npm run build
     # - uses: w9jds/firebase-action@v1.5.0
     #   with:
     #     args: deploy
