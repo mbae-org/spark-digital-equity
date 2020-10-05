@@ -16,14 +16,10 @@ jobs:
       with: 
         node-version: '14.x'
     - run: npm install
-    - run: ls
-    - run: cd src
-    - run: ls
-    - run: cd functions
-    - run: ls
-    - run: rm final_data.json
-    - run: wget -O ./final_data.json ${{ github.event.inputs.downloadURL }}
-    - run: cd .. && cd ..
+    - name: Get Data
+      run: rm final_data.json
+      run: wget -O ./final_data.json ${{ github.event.inputs.downloadURL }}
+      working-directory: ./src/data/
     - run: npm run build
     # - uses: w9jds/firebase-action@v1.5.0
     #   with:
