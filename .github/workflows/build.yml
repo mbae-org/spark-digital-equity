@@ -19,7 +19,7 @@ jobs:
     - run: ls
     - run: cd src
     - run: ls
-    - run: cd data
+    - run: cd src
     - run: ls
     - run: rm final_data.json
     - run: wget -O ./final_data.json ${{ github.event.inputs.downloadURL }}
