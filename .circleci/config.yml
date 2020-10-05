@@ -3,12 +3,19 @@ version: 2.1
 parameters:
   downloadURL:
     type: string
+    default: none
+  run_workflow:
+    type: boolean
+    default: false
 
 jobs:
   build:
     docker:
       - image: circleci/node:latest
     steps:
-      - run: checkout
-      - run: npm install
+      - checkout
+      - unless:
+        condition: << pipeline.parameters.run_workflow >>
+        steps:
+          - run: npm install
       - run: echo "This is pipeline ID << pipeline.id >>"
