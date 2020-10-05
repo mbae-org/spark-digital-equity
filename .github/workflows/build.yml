@@ -18,10 +18,11 @@ jobs:
     - name: Install Packages
       run: npm install
     - name: Get Data
-      run: rm final_data.json && wget -O final_data.json ${{ github.event.inputs.downloadURL }} && ls
+      run: rm final_data.json && wget -O final_data.json ${{ github.event.inputs.downloadURL }}
       working-directory: ./src/data/
     - name: Build
-      run: ls && npm run build
+      run: npm run build
+      working-directory: ./src/
     # - uses: w9jds/firebase-action@v1.5.0
     #   with:
     #     args: deploy
