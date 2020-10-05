@@ -9,18 +9,18 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x]
-
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - uses: actions/setup-node@master
+      with: 
+        node-version: '14.x'
+    - run: cd src/data/
+    - run: rm final_data.json
+    - run: wget -O ./final_data.json ${{ github.event.inputs.downloadURL }}
+    - run: npm run build
+    - uses: w9jds/firebase-action@v1.5.0
       with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build --if-present
+        args: deploy
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

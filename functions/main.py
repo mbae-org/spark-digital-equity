@@ -2,9 +2,11 @@ from google.cloud import storage
 import tempfile as tempfile
 import numpy as np
 import pandas as pd
+import requests
+import os
 
 
-def data_process(event, context):
+async def data_process(event, context):
     """Background Cloud Function to be triggered by Cloud Storage.
        This generic function logs relevant data when a file is changed.
 
@@ -38,7 +40,7 @@ def data_process(event, context):
         school_names = [d["School Name"] for d in data_array]
         allschoolnames = pd.concat(
             school_names).drop_duplicates().reset_index(drop=True)
-        tempYear = data_array[1].at[0, 'SY']+1
+        tempYear = data_array[1].at[len(data_array[1])-1, 'SY']+1
         currentYear = pd.merge(
             data_array[0], allschoolnames, on='School Name', how="outer")
         currentYear['SY'] = tempYear
@@ -57,12 +59,18 @@ def data_process(event, context):
         # uploading new file
         updatedTotal = bucket.blob("totalDataFile")
         updatedTotal.upload_from_filename(tempFilePath+"/totalDataFile2.json")
-        updatedTotal.pub
+
         print(
             "File {} uploaded to {}.".format(
                 tempFilePath+"/totalDataFile2.json", "totalDataFile"
             )
         )
+        data = {"downloadURL": updatedTotal.public_url}
+        headers = {"Accept":  "application/vnd.github.everest-preview+json",
+                   "Content-Type": "application/json",
+                   "Authorization": "token" + os.environ.get('access_token')}
+        requests.post(
+            "https://api.github.com/repos/mbae-org/spark-digital-equity/actions/workflows/build.yml/dispatches", headers=headers, data=data)
 
     else:
         print("did not update")
