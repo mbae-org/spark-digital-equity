@@ -1,7 +1,14 @@
 version: 2.1
-orbs:
-  node: circleci/node@3.0.0
-workflows:
-  node-tests:
-    jobs:
-      - node/test
+
+parameters:
+  downloadURL:
+    type: string
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - run: checkout
+      - run: npm install
+      - run: echo "This is pipeline ID << pipeline.id >>"
