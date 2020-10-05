@@ -15,6 +15,7 @@ jobs:
     - uses: actions/setup-node@master
       with: 
         node-version: '14.x'
+    - run: npm install
     - run: ls
     - run: cd src
     - run: ls
