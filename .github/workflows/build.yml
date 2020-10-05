@@ -17,9 +17,9 @@ jobs:
         node-version: '14.x'
     - name: Install Packages
       run: npm install
-    - name: Get Data
-      run: rm final_data.json && wget -O final_data.json ${{ github.event.inputs.downloadURL }}
-      working-directory: ./src/data/
+    # - name: Get Data
+    #   run: rm final_data.json && wget -O final_data.json ${{ github.event.inputs.downloadURL }}
+    #   working-directory: ./src/data/
     - name: Build
       run: npm run build
       working-directory: ./src/
