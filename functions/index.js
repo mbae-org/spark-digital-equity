@@ -12,7 +12,7 @@ exports.uploadFile = functions.https.onCall(async (data, context) => {
     var file = bucket.file(
         "newDataFile"
     );
-    console.log()
+
     await file.save(fileBuffer, {
         metadata: {
             contentType: data.type,

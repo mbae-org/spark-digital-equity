@@ -21,7 +21,6 @@ async def data_process(event, context):
     """
     print(event['name'])
     if event['name'] == "newDataFile":
-        print("updated")
         tempFilePath = tempfile.mkdtemp()
         storage_client = storage.Client()
 
@@ -34,43 +33,44 @@ async def data_process(event, context):
         # cleaning up the data
         data_array = [pd.read_json(
             tempFilePath+"/newDataFile.json"), pd.read_json(tempFilePath+"/totalDataFile.json")]
+        if 'School Name' in data_array[0].columns:
+            data_array[0] = data_array[0].applymap(
+                lambda x: np.nan if not x else x)
+            school_names = [d["School Name"] for d in data_array]
+            allschoolnames = pd.concat(
+                school_names).drop_duplicates().reset_index(drop=True)
+            currentYear = pd.merge(
+                data_array[0], allschoolnames, on='School Name', how="outer")
+            data_array[0] = currentYear
+            currentTempYear = currentYear['SY'][0]
+            all_merged = pd.concat(data_array)
+            all_merged.to_json(
+                tempFilePath+"/totalDataFile2.json", orient='records')
+            tempYear = all_merged.at[len(data_array[1])-1, 'SY']
+            renameYear = max(currentTempYear, tempYear)
+            # renaming the old
+            new_blob = bucket.rename_blob(
+                blobOld, "totalDataFile"+str(renameYear))
 
-        data_array[0] = data_array[0].applymap(
-            lambda x: np.nan if not x else x)
-        school_names = [d["School Name"] for d in data_array]
-        allschoolnames = pd.concat(
-            school_names).drop_duplicates().reset_index(drop=True)
-        tempYear = data_array[1].at[len(data_array[1])-1, 'SY']+1
-        currentYear = pd.merge(
-            data_array[0], allschoolnames, on='School Name', how="outer")
-        currentYear['SY'] = tempYear
-        data_array[0] = currentYear
+            print("Blob {} has been renamed to {}".format(
+                blobOld.name, new_blob.name))
 
-        all_merged = pd.concat(data_array)
-        all_merged.to_json(
-            tempFilePath+"/totalDataFile2.json", orient='records')
+            # uploading new file
+            updatedTotal = bucket.blob("totalDataFile")
+            updatedTotal.upload_from_filename(
+                tempFilePath+"/totalDataFile2.json")
 
-        # renaming the old
-        new_blob = bucket.rename_blob(blobOld, "totalDataFile"+str(tempYear-1))
-
-        print("Blob {} has been renamed to {}".format(
-            blobOld.name, new_blob.name))
-
-        # uploading new file
-        updatedTotal = bucket.blob("totalDataFile")
-        updatedTotal.upload_from_filename(tempFilePath+"/totalDataFile2.json")
-
-        print(
-            "File {} uploaded to {}.".format(
-                tempFilePath+"/totalDataFile2.json", "totalDataFile"
+            print(
+                "File {} uploaded to {}.".format(
+                    tempFilePath+"/totalDataFile2.json", "totalDataFile"
+                )
             )
-        )
-        data = {"downloadURL": updatedTotal.public_url}
-        headers = {"Accept":  "application/vnd.github.everest-preview+json",
-                   "Content-Type": "application/json",
-                   "Authorization": "token" + os.environ.get('access_token')}
-        requests.post(
-            "https://api.github.com/repos/mbae-org/spark-digital-equity/actions/workflows/build.yml/dispatches", headers=headers, data=data)
+            data = {"downloadURL": updatedTotal.public_url}
+            headers = {"Accept":  "application/vnd.github.everest-preview+json",
+                       "Content-Type": "application/json",
+                       "Authorization": "token" + os.environ.get('access_token')}
+            requests.post(
+                "https://api.github.com/repos/mbae-org/spark-digital-equity/actions/workflows/build.yml/dispatches", headers=headers, data=data)
 
     else:
         print("did not update")

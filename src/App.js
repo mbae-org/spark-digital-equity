@@ -49,7 +49,6 @@ class App extends React.Component {
 
         this.state = {
             schoolDataModified: schoolDataModified,
-            file: null,
             logined: false,
             selectedFilters: {
                 gender: true,
@@ -147,11 +146,12 @@ class App extends React.Component {
                                 onResetButtonClick={this.resetDefaultState}
                                 selectedSchoolArray={this.state.selectedSchoolArray}
                             />
+                            {comp}
                         </div>
                         <div className="chart-panel">{charts}</div>
                     </div>
                 </div>
-                {comp}
+
                 <NextStepsPanel />
                 <footer>Contact Info</footer>
             </div>
