@@ -34,6 +34,7 @@ async def data_process(event, context):
         data_array = [pd.read_json(
             tempFilePath+"/newDataFile.json"), pd.read_json(tempFilePath+"/totalDataFile.json")]
         if 'School Name' in data_array[0].columns:
+            print('data not found')
             data_array[0] = data_array[0].applymap(
                 lambda x: np.nan if not x else x)
             school_names = [d["School Name"] for d in data_array]
