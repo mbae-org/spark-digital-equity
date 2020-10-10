@@ -26,12 +26,7 @@ There is examples of what the final CSV file should look like in the repository.
 7. Select the option CSV to JSON Array
 8. Download the Results and save as Year.json, assume for this example we are assing 2019 data, so 2019.json
 9. Ensure that empty fields are saved as null, not {}. If empty field values are saved as {}, use Find and Replace to replace with null.
-
-### 3. Editing the repository
-
-1. Go back to where the project is saved on the computer
-2. In the folder spark-digital-equity/data-processing/initial_data add the file in the format of year.json (ex. 2019.json)
-    - the json file should be formatted with following following columns
+10. - the json file should be formatted with following following columns
         - STUDENTS_ENROLLED
         - AA 
         - AS 
@@ -57,26 +52,14 @@ There is examples of what the final CSV file should look like in the repository.
         - Score=5
         - Tests Taken
         - WH
-
-3. Add the corresponding year to the year array in the year.js file under the path of src/data/year.js - example below
-
-    ```javascript
-    var year = [2016, 2017, 2018, 2019]
-    ```
-4. Run the python script data_process.py inside of the data_processing folder (make sure to have python installed). This will populate the final_data.json file with the new data file added in. 
-
-    ```bash
-    python3 data-processing/data_process.py
     ```
 
-5. Save changes
+### 3. Uploading the file
+    
+3. On the website, there is a section for admin login on the left hand side. After logging with admin credentials, there is a upload file button. IMPORTANT: Make sure select the correct json file, with the proper columns and is the right year. Click submit to upload the file. 
 
 ### 4. Pushing changes to the live site
 
-1. Go back to the Github Desktop application
-2. The changes you have made to the repository should show up under changes
-3. On the top, click on "Pull Orgin"/ "Fetch Orgin"
-4. Click on "commit to master"
-5. Click on "Push remote"
+4. After clicking submit, it will take around 5 - 10 for the change to reflect on the live site. If the changes are not being made, then either the wrong formatted file are being uploaded, or something went wrong check back with tech team. 
 
 Finished!

@@ -72,6 +72,5 @@ async def data_process(event, context):
                        "Authorization": "token" + os.environ.get('access_token')}
             requests.post(
                 "https://api.github.com/repos/mbae-org/spark-digital-equity/actions/workflows/build.yml/dispatches", headers=headers, data=data)
-
     else:
         print("did not update")
