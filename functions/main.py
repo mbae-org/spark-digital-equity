@@ -19,7 +19,6 @@ async def data_process(event, context):
     Returns:
         None; the output is written to Stackdriver Logging
     """
-    print(event['name'])
     if event['name'] == "newDataFile":
         tempFilePath = tempfile.mkdtemp()
         storage_client = storage.Client()
@@ -50,33 +49,18 @@ async def data_process(event, context):
             tempYear = int(all_merged.at[len(data_array[1])-1, 'SY'])
             renameYear = max(currentTempYear, tempYear)
             # renaming the old
-            new_blob = bucket.rename_blob(
+            bucket.rename_blob(
                 blobOld, "totalDataFile"+str(renameYear))
-
-            print("Blob {} has been renamed to {}".format(
-                blobOld.name, new_blob.name))
 
             # uploading new file
             updatedTotal = bucket.blob("totalDataFile")
             updatedTotal.upload_from_filename(
                 tempFilePath+"/totalDataFile2.json")
 
-            print(
-                "File {} uploaded to {}.".format(
-                    tempFilePath+"/totalDataFile2.json", "totalDataFile"
-                )
-            )
-            # payload = {"inputs": {
-            #     "downloadURL": updatedTotal.public_url},  "ref": "master"}
-            # headers = {"Accept":  "application/vnd.github.everest-preview+json",
-            #            "Content-Type": "application/json",
-            #            "Authorization": "token" + os.environ.get('access_token')}
-            # requests.post(
-            #     "https://api.github.com/repos/mbae-org/spark-digital-equity/actions/workflows/build.yml/dispatches", headers=headers, data=payload)
-
+            # redeployment
             url = "https://api.github.com/repos/mbae-org/spark-digital-equity/actions/workflows/build.yml/dispatches"
 
-            payload = "{\n    \"inputs\": {\n        \"downloadURL\": \"updatedTotal.public_url\"\n    },\n    \"ref\": \"master\"\n}"
+            payload = "{\n    \"inputs\": {\n        \"downloadURL\": \"https://storage.googleapis.com/digital-equity.appspot.com/totalDataFile \"\n    },\n    \"ref\": \"master\"\n}"
             headers = {
                 'Content-Type': 'application/json',
                 'Accept': 'application/vnd.github.v3+json',
@@ -84,8 +68,7 @@ async def data_process(event, context):
 
             response = requests.request(
                 "POST", url, headers=headers, data=payload)
-
             print(response)
-            print(updatedTotal.public_url)
+
     else:
         print("did not update")
