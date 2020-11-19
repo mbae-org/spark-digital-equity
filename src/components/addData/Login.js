@@ -22,10 +22,18 @@ export default class Login extends Component {
 
     async handleSubmit(event) {
         const { email, password } = this.state;
-        // await functions.httpsCallable("signUp")({
-        //     email: email,
-        //     password: password
-        // });
+
+        //sign user up with a new account
+        // firebase.auth().createUserWithEmailAndPassword(email, password)
+        //     .then(() => {
+        //         return console.log("new submitted user!")
+        //     })
+        //     .catch((error) => {
+        //         // Handle Errors here.
+        //         var errorMessage = error.message;
+        //         alert(errorMessage);
+
+        //     });
 
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(() => {
